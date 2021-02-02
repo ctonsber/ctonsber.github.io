@@ -1,0 +1,10 @@
+References
+==========
+.. [I]
+   Durbin, T.J., and C. Berenbrock. 1985. Three-dimensional simulation
+   of free-surface aquifers by the finite-element method. U.S.
+   Geological Survey Water-Supply Paper 2270, pp. 51–67.
+
+.. [II]
+   Carslaw, H.S., and J.C. Jaeger. 1959. Conduction of heat in solids.
+   2nd ed. Oxford, UK: Oxford University Press.

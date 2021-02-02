@@ -1,0 +1,758 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6.0 Nodes and Elements &mdash; MINEDW 3.05 225 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7.0 Model Input Data" href="7_model_input_data_manual.html" />
+    <link rel="prev" title="5.0 Mesh Generator" href="5_mesh_generator_manual.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MINEDW 3.05
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">USER MANUAL</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1_introduction_manual.html">1.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_features_of_minedw_manual.html">2.0 Features of MINEDW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_minedw_interface_manual.html">3.0 MINEDW Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_minedw_interface_manual.html#view-pane">3.1 View Pane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_minedw_interface_manual.html#main-menu">3.2 Main Menu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-file-menu">3.2.1 The File Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-project-menu">3.2.2 The Project Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-mesh-menu">3.2.3 The Mesh Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-bcs-menu">3.2.4 The BCs Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-mining-menu">3.2.5 The Mining Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-run-menu">3.2.6 The Run Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-results-menu">3.2.7 The Results Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-view-menu">3.2.8 The View Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-tools-menu">3.2.9 The Tools Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-windows-menu">3.2.10 The Windows Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-help-menu">3.2.11 The Help Menu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3_minedw_interface_manual.html#toolbar">3.3 Toolbar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_minedw_interface_manual.html#control-panel-pane">3.4 Control Panel Pane</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#plot-items">3.4.1 Plot Items</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#legend">3.4.1.1 Legend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#display-settings">3.4.1.2 Display Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#global-settings">3.4.1.3 Global Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#axes">3.4.1.4 Axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#observation">3.4.1.5 Observation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#boundary-conditions">3.4.1.6 Boundary Conditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#element">3.4.1.7 Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#file-data">3.4.1.8 File Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#node">3.4.1.9 Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#post-processing">3.4.1.10 Post Processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#cutting-planes">3.4.1.11 Cutting Planes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#clip-box">3.4.1.12 Clip Box</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#view">3.4.2 View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#information">3.4.3 Information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4_importing_data_sets_manual.html">4.0 Importing Data Sets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_importing_data_sets_manual.html#importing-earlier-versions-of-minedw-model-data-sets">4.1 Importing Earlier Versions of <strong>MINEDW</strong> Model Data Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_importing_data_sets_manual.html#display-the-imported-model">4.2 Display the Imported Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5_mesh_generator_manual.html">5.0 Mesh Generator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#creating-a-mesh">5.1 Creating a Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#the-mesh-components">5.2 The Mesh Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-domain-component">5.2.1 The “Domain” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-mining-area-mining-and-fine-area-components">5.2.2 The “Mining Area,” “Mining,” and “Fine Area” Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-fault-component">5.2.3 The “Fault” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-points-component">5.2.4 The “Points” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-polylines-component">5.2.5 The “Polylines” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-regions-component">5.2.6 The “Regions” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-all-faults-component">5.2.7 The “All Faults” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-mmesh-component">5.2.8 The “MMesh” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-toggle-component">5.2.9 The “Toggle” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-area-tolerance-component">5.2.10 The “Area Tolerance” Component</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#exporting-a-completed-mesh">5.3 Exporting a Completed Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#the-rhino-drop-command">5.4 The Rhino “Drop” Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6.0 Nodes and Elements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#selecting-elements">6.1 Selecting Elements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#selecting-elements-in-2-d">6.1.1 Selecting Elements in 2-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selecting-elements-in-3-d">6.1.2 Selecting Elements in 3-D</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#selecting-nodes">6.2 Selecting Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="7_model_input_data_manual.html">7.0 Model Input Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#project-definition">7.1 Project Definition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#project-properties">7.1.1 Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#time-steps">7.1.2 Time Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#model-geometry">7.2 Model Geometry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#generating-the-mesh">7.2.1 Generating the Mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#adding-main-model-layers">7.2.2 Adding Main Model Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#using-topography-data">7.2.3 Using Topography Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#importing-node-elevations">7.2.4 Importing Node Elevations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#defining-a-pinch-out">7.2.5 Defining a Pinch-Out</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#modifying-the-mesh">7.2.6 Modifying the Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#zone-properties-hydraulic-parameters">7.3 Zone Properties – Hydraulic Parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#zone-distributions-para-fem">7.3.1 Zone Distributions (para.fem)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#zone-properties-kfile-dat">7.3.2 Zone Properties (kfile.dat)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#boundary-conditions">7.4 Boundary Conditions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#time-series-data">7.4.1 Time-Series Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#constant-head">7.4.2 Constant Head</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#variable-flux">7.4.3 Variable-Flux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#pumping-well">7.4.4 Pumping Well</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#rivers">7.4.5 Rivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#recharge">7.4.6 Recharge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#evaporation">7.4.7 Evaporation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#initial-conditions">7.5 Initial Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#mining-plan">7.6 Mining Plan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#creating-a-mining-plan">7.6.1 Creating a Mining Plan</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="7_model_input_data_manual.html#converting-dxf-to-dat-files">7.6.1.1 Converting .DXF to .DAT files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="7_model_input_data_manual.html#creating-a-mining-plan-from-pit-topography-files">7.6.1.2 Creating a Mining Plan from Pit Topography files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="7_model_input_data_manual.html#creating-a-mining-plan-from-final-pit-topography">7.6.1.3 Creating a Mining Plan from Final-Pit Topography</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#importing-a-mine-plan-into-minedw">7.6.2 Importing a Mine Plan into MINEDW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#pit-lake">7.6.3 Pit Lake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#zone-of-relaxation-for-pit">7.6.4 Zone of Relaxation for Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#open-pit-backfilling">7.6.5 Open-Pit Backfilling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#zone-of-relaxation-for-caving">7.6.5 Zone of Relaxation for Caving</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#dewatering-and-underground-mining">7.6.6 Dewatering and Underground Mining</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="8_model_execution_manual.html">8.0 Model Execution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="8_model_execution_manual.html#validate">8.1 Validate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_model_execution_manual.html#create-data-set">8.2 Create Data Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_model_execution_manual.html#execute">8.3 Execute</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="9_model_output_manual.html">9.0 Model Output</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#read-results-and-export-results-as-text-file">9.1 Read Results and Export Results as Text File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#observations">9.2 Observations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#hydrograph">9.3 Hydrograph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#particle-tracking">9.4 Particle Tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#section-flux">9.5 Section Flux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#seepage-component-to-pit">9.6 Seepage Component to Pit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9_model_output_manual.html#calculating-seepage-to-the-pit">9.6.1 Calculating Seepage to the Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9_model_output_manual.html#visualizing-seepage-and-drains">9.6.2 Visualizing Seepage and Drains</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#pit-node-elevation-and-water-table">9.7 Pit Node Elevation and Water Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#export-state">9.8 Export State</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#exporting-pore-pressure">9.9 Exporting Pore Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#export-cross-section-pore-pressure">9.10 Export Cross-Section Pore Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#drawdown-base-time-step">9.11 Drawdown-Base Time Step</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#visualizing-the-results">9.12 Visualizing the Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#cross-sections">9.13 Cross Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#pit-lake-water-level-vs-time">9.14 Pit Lake – Water Level vs. Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#pumping-well-discharge-vs-time">9.15 Pumping Well – Discharge vs. Time</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references_manual.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acronyms_abbreviations_manual.html">Acronyms and Abbreviations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">TUTORIAL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1_steady_state_tutorial.html">Tutorial 1 - Initial Condition</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_steady_state_tutorial.html#problem-description">1.1 Problem Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_steady_state_tutorial.html#minedw-model-construction">1.2 <em>MINEDW</em> Model Construction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-1-generating-a-mesh">Step 1. Generating a Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1_steady_state_tutorial.html#building-the-model-in-minedw">1.3 Building the model in <em>MINEDW</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-2-defining-project-properties">Step 2. Defining Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-3-defining-time-steps">Step 3. Defining Time Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-4-importing-ground-surface-elevation">Step 4. Importing Ground-Surface Elevation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-5-adding-layers">Step 5. Adding Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-6-defining-zone-properties">Step 6. Defining Zone Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-7-assigning-hydraulic-zones-to-elements">Step 7. Assigning Hydraulic Zones to Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-8-defining-pinch-outs">Step 8. Defining “Pinch-Outs”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-9-defining-initial-heads">Step 9. Defining Initial Heads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-10-assigning-the-boundary-conditions">Step 10. Assigning the Boundary Conditions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="1_steady_state_tutorial.html#constant-head-boundary">Constant-Head Boundary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="1_steady_state_tutorial.html#river-boundary-condition">River Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="1_steady_state_tutorial.html#no-flow-boundary">No-Flow Boundary</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-11-assigning-recharge">Step 11. Assigning Recharge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-12-adding-evaporation">Step 12. Adding Evaporation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-13-saving-the-project">Step 13. Saving the Project</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1_steady_state_tutorial.html#running-the-model">1.4 Running the Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_steady_state_tutorial.html#results">1.5 Results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html">Tutorial 2 - Open Pit Mining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#problem-description">2.1 Problem Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-1-opening-the-project-file">Step 1. Opening the Project File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-2-defining-project-properties">Step 2. Defining Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-3-defining-model-time-steps">Step 3. Defining Model Time Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-3-defining-initial-heads">Step 3. Defining Initial Heads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-4-creating-a-mining-plan-for-an-open-pit">Step 4. Creating a Mining Plan for an Open Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-5-creating-a-zone-of-relaxation-for-an-open-pit">Step 5. Creating a Zone of Relaxation for an Open Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-6-open-pit-backfilling">Step 6. Open-Pit Backfilling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-7-creating-a-pit-lake">Step 7. Creating a Pit Lake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-8-adding-pumping-wells">Step 8. Adding Pumping Wells</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-9-defining-the-boundary-conditions">Step 9. Defining the Boundary Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#running-the-model">2.2 Running the Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#results">2.3 Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#creating-monitoring-points">Creating Monitoring Points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#creating-hydrographs">Creating Hydrographs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#pit-node-elevation-and-water-table">Pit-Node Elevation and Water Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#head-distribution-in-3-d">Head Distribution in 3-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#head-distribution-cross-section">Head Distribution Cross Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#exporting-pore-pressures-to-a-different-grid-in-2-d">Exporting Pore Pressures to a Different Grid in 2-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#exporting-pore-pressures-to-a-different-grid-in-3-d">Exporting Pore Pressures to a Different Grid in 3-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#seepage-component-to-pit">Seepage Component to Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#pit-lake-water-level-vs-time">Pit Lake – Water Level vs. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#pumping-wells-discharge-vs-time">Pumping Wells – Discharge vs. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#particle-tracking">Particle Tracking</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_transient_state_underground_tutorial.html">Tutorial 3 - Underground Mining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#problem-description">3.1 Problem Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#transient-simulation">3.2 Transient Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-1-opening-the-project-file">Step 1. Opening the Project File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-2-defining-project-properties">Step 2. Defining Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-3-defining-initial-heads">Step 3. Defining Initial Heads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-4-creating-the-zor-file-for-caving">Step 4. Creating the ZOR file for Caving</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-5-adding-the-zor-for-caving-to-the-model">Step 5. Adding the ZOR for Caving to the Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-6-adding-the-drain-nodes-for-the-cave-zone">Step 6. Adding the Drain Nodes for the Cave Zone</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#running-the-model">3.5 Running the Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#results">3.6 Results</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MINEDW 3.05</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>6.0 Nodes and Elements</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/6_nodes_and_elements_manual.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="7_model_input_data_manual.html" class="btn btn-neutral float-right" title="7.0 Model Input Data" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="5_mesh_generator_manual.html" class="btn btn-neutral float-left" title="5.0 Mesh Generator" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nodes-and-elements">
+<h1>6.0 Nodes and Elements<a class="headerlink" href="#nodes-and-elements" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="selecting-elements">
+<h2>6.1 Selecting Elements<a class="headerlink" href="#selecting-elements" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>MINEDW</strong> software provides tools for selecting nodes and
+elements to perform the following tasks:</p>
+<ol class="arabic simple">
+<li><p>Assign and edit properties that are defined on elements, such as
+hydraulic conductivity and storage zones, recharge zones, and
+evaporation zones;</p></li>
+<li><p>Assign and edit the boundary conditions related to nodes, such as
+constant heads, pumping wells, and variable-flux boundary conditions;</p></li>
+<li><p>Move nodes within the finite-element mesh;</p></li>
+<li><p>Add pinch-outs for increased vertical model discretization; and</p></li>
+<li><p>Refine and extend the mesh.</p></li>
+</ol>
+<p>The tool buttons that are used to select nodes and elements are listed
+in Table 6.1, below.</p>
+<p>Table 6.1 The Nodes and Elements Tool Buttons</p>
+<table border="1" class="docutils" style="width:100%">
+<tbody valign="top">
+
+<tr class="row-odd">
+        <td>
+                <a class="reference internal" href="_images/figure_3_1f_manual.png">
+                        <img alt="figure_3_1f_manual" src="_images/figure_3_1f_manual.png" style="width: 0.23437in; height: 0.30000in;" />
+                </a>
+        </td>
+        <td>Select Elements or Nodes</td>
+</tr>
+
+<tr class="row-even">
+        <td>
+                <a class="reference internal" href="_images/figure_3_1l_manual.png">
+                        <img alt="figure_3_1l_manual" src="_images/figure_3_1l_manual.png" style="width: 0.32143in; height: 0.30000in;" />
+                </a>
+        </td>
+        <td>Select with Polygon</td>
+</tr>
+
+<tr class="row-odd">
+        <td>
+                <a class="reference internal" href="_images/figure_3_1m_manual.png">
+                        <img alt="figure_3_1m_manual" src="_images/figure_3_1m_manual.png" style="width: 0.30000in; height: 0.30000in;" />
+                </a>
+        </td>
+        <td>Select with Overlay</td>
+</tr>
+
+<tr class="row-even">
+        <td>
+                <a class="reference internal" href="_images/figure_3_1g_manual.png">
+                        <img alt="figure_3_1g_manual" src="_images/figure_3_1g_manual.png" style="width: 0.25312in; height: 0.30000in;" />
+                </a>
+        </td>
+        <td>Move Nodes</td>
+</tr>
+
+<tr class="row-odd">
+        <td>
+                <a class="reference internal" href="_images/figure_3_1h_manual.png">
+                        <img alt="figure_3_1h_manual" src="_images/figure_3_1h_manual.png" style="width: 0.24193in; height: 0.30000in;" />
+                </a>
+        </td>
+        <td>Search Node/Element</td>
+</tr>
+
+<tr class="row-even">
+        <td>
+                <a class="reference internal" href="_images/figure_3_1e_manual.png">
+                        <img alt="figure_3_1e_manual" src="_images/figure_3_1e_manual.png" style="width: 0.25312in; height: 0.30000in;" />
+                </a>
+        </td>
+        <td>View Mode</td>
+</tr>
+
+</table><p>When modifying the element- or node-related properties, it is important
+that the plot item being modified (node or element) is the first active
+plot item in the “<em>Plot Items</em>” pane. When selecting elements and
+assigning new hydrogeologic zones, for example, the “<em>Element</em>” plot
+item should be the first active plot item in the “<em>Plot Items</em>”
+pane. Conversely, when selecting nodes and assigning a ground-surface
+elevation, the “<em>Node</em>” plot item should be the first active plot
+item in the “<em>Plot Items</em>” pane. To select elements, use the
+“<em>Select</em>” tool when element-related plots are displayed in the View
+Pane. Element-related plots include “<em>2-D Plane”</em> and “<em>3D Element”</em>
+plots, which can be found in the “<em>Control Panel</em>” under the
+“<em>List</em>” menu. In the “<em>Control Panel</em>” Pane, under either the
+2-D or 3-D plot attributes, the user can specify the elemental data
+(e.g., hydraulic zones using the “<em>3D Element</em>” plot item or
+evaporation and recharge using <em>“2-D Plane”</em> plot items) to view,
+select, and edit.</p>
+<div class="section" id="selecting-elements-in-2-d">
+<h3>6.1.1 Selecting Elements in 2-D<a class="headerlink" href="#selecting-elements-in-2-d" title="Permalink to this headline">¶</a></h3>
+<p>If an element-related plot is displayed, then the elements can be
+selected using the following approaches:</p>
+<ul class="simple">
+<li><p>Click the “<em>Select</em>” tool and then click individual elements in
+the View Pane. To deselect individual elements, right-click on the
+selected element. To deselect all selected elements, press the [Esc]
+key.</p></li>
+<li><p>Click the “<em>Select</em>” tool and then click and drag the cursor to
+select the elements in a rectangle. Right-clicking and dragging a
+selection box around selected elements will deselect the elements.</p></li>
+<li><p>Click the “<em>Select</em>” tool and then click the “<em>Select with
+Polygon</em>” tool, shown in Table 6.1 Use the “<em>Select with
+Polygon</em>” tool to select multiple elements in a desired area in the
+model domain. To close the polygon, press the [Enter] key.</p></li>
+<li><p>Add a point, polyline, or polygon file to the View Pane using the
+<em>“BLN,” “ESRI Shape File</em>,” or “<em>Point Data</em>” plot items. The
+file that will be used as an overlay must be added to the View Pane
+(see Section 3.4.1.8) before the “<em>Select with Overlay</em>” tool is
+clicked. If multiple overlays are added to the View Pane, only the
+topmost listed in the <em>“Plot Items”</em> pane will be used to select. To
+use the overlay below the topmost overlay, the latter should be
+deactivated. Click the “<em>Select</em>” tool and then click the
+“<em>Select with Overlay</em>” tool. When the “<em>Select with
+Overlay</em>” tool is activated, the dialog box shown in Figure 6.1
+appears. To deselect a selected element, right-click on that element
+or right-click and drag a rectangle around multiple selected
+elements. Press the [ESC] key to deselect all selected elements.</p></li>
+</ul>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/figure_6_1_manual.png"><img alt="_images/figure_6_1_manual.png" src="_images/figure_6_1_manual.png" style="width: 2.29167in; height: 1.47902in;" /></a>
+<p class="caption"><span class="caption-text">Figure 6.1 The “<em>Choose Method of Selection</em>” dialog box</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>To exit the select mode, click the “<em>View Mode</em>” tool. To deselect
+all elements before editing, press the [ESC] key.</p>
+<p>As previously described, there are three options when selecting elements
+with an overlay file. If the “<em>Point</em>” option is selected, then the
+closest elements for each point are selected. If the “<em>Polyline</em>”
+option is selected, then elements along the polyline are selected. If
+the “<em>Polygon</em>” option is selected, then the elements inside the
+polygon are selected.</p>
+<p>After the elements are selected, press the [Enter] key, and one of the
+dialog boxes shown in Figures 6.2, 6.3, and 6.4 appears. These dialog
+boxes can be used to edit the recharge zone (Figure 6.2), evaporation
+zone (Figure 6.3), or geological zone (Figure 6.4) input data.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/figure_6_2_manual.png"><img alt="_images/figure_6_2_manual.png" src="_images/figure_6_2_manual.png" style="width: 2.66667in; height: 1.07292in;" /></a>
+<p class="caption"><span class="caption-text">Figure 6.2 The “<em>Select Recharge Zone</em>” dialog box</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>To edit the spatial distribution of recharge zones, select elements
+using a “<em>2-D Plane</em>” plot item and change the “<em>Color By</em>”
+attribute to “<em>Recharge</em>.” When the “<em>Select Recharge Zone</em>”
+dialog box appears, the recharge zone for the selected elements can be
+assigned using the drop-down box next to “<em>Zone</em>.”</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/figure_6_3_manual.png"><img alt="_images/figure_6_3_manual.png" src="_images/figure_6_3_manual.png" style="width: 2.67708in; height: 1.07292in;" /></a>
+<p class="caption"><span class="caption-text">Figure 6.3 The “<em>Select Evaporation Zone</em>” dialog box</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Evaporation zones can be assigned and modified in a manner similar to
+recharge zones. Change the “<em>Color By</em>” attribute on the “<em>2-D
+Plane</em>” plot item to “<em>Evaporation</em>,” select the desired region as
+previously described, and then press the [Enter] key; the “<em>Select
+Evaporation Zone</em>” dialog box then appears. Using the drop-down box in
+the “<em>Select Evaporation Zone</em>” dialog box, select the desired
+evaporation zone to assign the zone to the selected elements. More
+information on assigning recharge and evaporation is provided in Section
+7.4.</p>
+<p>Use a “<em>2D Element</em>” or “<em>3D Element</em>” plot item to assign
+geologic properties to elements. When the desired elements are selected,
+press the [Enter] key, and then the “<em>Select Geological Zone</em>”
+dialog box shown in Figure 6.4 appears.</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/figure_6_4_manual.png"><img alt="_images/figure_6_4_manual.png" src="_images/figure_6_4_manual.png" style="width: 4.72983in; height: 1.98986in;" /></a>
+<p class="caption"><span class="caption-text">Figure 6.4 The “<em>Select Geological Zone</em>” dialog box</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Element properties in multiple layers can be changed by entering the
+layer to extend the selected elements to, as shown in Figure 6.5. The
+layer selected in the attribute panel of the “<em>Element</em>” plot item
+determines the uppermost layer that the change affects.</p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="_images/figure_6_5_manual.png"><img alt="_images/figure_6_5_manual.png" src="_images/figure_6_5_manual.png" style="width: 4.62565in; height: 0.28129in;" /></a>
+<p class="caption"><span class="caption-text">Figure 6.5 The “<em>Select Geological Zone</em>” dialog box showing the
+multiple layers option</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Selected element numbers can be exported by using the “<em>Export</em>”
+function shown in Figure 6.4 and specifying an output file. If elements
+are exported, then the output file will contain the selected element
+numbers.</p>
+</div>
+<div class="section" id="selecting-elements-in-3-d">
+<h3>6.1.2 Selecting Elements in 3-D<a class="headerlink" href="#selecting-elements-in-3-d" title="Permalink to this headline">¶</a></h3>
+<p>Another option to select elements and assign the zone properties to the
+elements is to use a .DXF file. To assign a geologic unit to an element
+using a 3-D .DXF file, add a “<em>DXF”</em> plot item to the View Pane by
+selecting “<em>List</em>” and then “<em>File Data.</em>” Under “<em>File
+Data</em>,” double-click “<em>DXF</em>.” The “<em>Attributes</em>” tab then appears.
+Click on the “<strong>+</strong>” next to “<em>File</em>” and the <em>“Select DXF Data
+File”</em> dialog box opens. Select the desired 3-D .DXF file and click
+“<em>Open</em>.” If multiple geologic units are represented in the .DXF file,
+the assignment of each geologic unit to the model elements should be
+done individually. Click the “<em>Layers</em>” button under the
+“<em>Attributes</em>” tab shown in Figure 6.6 and disable the other units
+if there are multiple.</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="_images/figure_6_6_manual.png"><img alt="_images/figure_6_6_manual.png" src="_images/figure_6_6_manual.png" style="width: 3.51091in; height: 2.59411in;" /></a>
+<p class="caption"><span class="caption-text">Figure 6.6 The “<em>Attributes</em>” dialog box</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>Click the symbol next to “<em>To Zone</em>,” as shown in Figure 6.6. The
+“<em>DXF to Zone</em>” dialog box appears. Select the desired zone to
+assign to the elements in the drop-down box. For geologic units (i.e.,
+objects that have a volume), select “<em>Volume</em>”; for structures
+(e.g., faults), select “<em>Face</em>,” as shown in Figure 6.7. For element
+selection, if the “<em>Whole</em>” option is selected, only the elements
+that are completely inside of the .DXF file are selected. If the
+“<em>Center</em>” option is selected, the elements are selected if the
+element centers are inside the .DXF file. Click “<em>OK</em>” to complete
+the assignment.</p>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="_images/figure_6_7_manual.png"><img alt="_images/figure_6_7_manual.png" src="_images/figure_6_7_manual.png" style="width: 3.20878in; height: 1.81275in;" /></a>
+<p class="caption"><span class="caption-text">Figure 6.7 The “<em>DXF to Zone</em>” dialog box</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>To exit the <em>“Select”</em> mode, click the “<em>View Mode</em>” button. To
+deselect all elements before editing, press the [ESC] key.</p>
+</div>
+</div>
+<div class="section" id="selecting-nodes">
+<h2>6.2 Selecting Nodes<a class="headerlink" href="#selecting-nodes" title="Permalink to this headline">¶</a></h2>
+<p>The “<em>Select</em>” tool can also be used when node-related plots are
+displayed in the View Pane. Node-related plots include 2-D and 3-D
+contour plots, which can be found in the “<em>Control Panel</em>” on the
+“<em>List</em>” tab under the <em>“Node”</em> plot items group. The operations
+that can be performed are described in the sections that follow. To
+select the node, the node plot item should be the first active plot item
+in the “<em>Plot Item</em>” pane. Nodes can be selected using the following
+methods:</p>
+<ul class="simple">
+<li><p>Click the “<em>Select</em>” tool and then click on the nodes in the View
+Pane. To deselect individual nodes, right-click on the selected node.</p></li>
+<li><p>Click the “<em>Select</em>” tool and then click and drag the cursor to
+select nodes in a rectangle. Deselect with a right click.</p></li>
+<li><p>Click the “<em>Select</em>” tool and then click the “<em>Select with
+Polygon</em>” tool. Use the “<em>Select with Polygon</em>” tool to select
+multiple nodes in a desired area in the model domain. To close the
+polygon, press the [Enter] key.</p></li>
+<li><p>Add a point, polyline, or polygon file to the View Pane using the
+<em>“BLN,” “ESRI Shape File</em>,” or “<em>Point Data</em>” plot items. Click
+the “<em>Select</em>” tool and then click the “<em>Select with
+Overlay</em>” tool. When the “<em>Select with Overlay</em>” tool is
+activated, the <em>“Choose Method of Selection:”</em> dialog box appears
+(Figure 6.1). The file that will be used as an overlay must be added
+to the View Pane before the “<em>Select with Overlay</em>” tool is
+clicked. If multiple overlays are added to the View Pane, only the
+topmost listed in the <em>“Plot Items”</em> pane will be used to select. To
+use the overlay below the topmost overlay, the latter should be
+deactivated. To deselect a selected node, right-click on that node or
+right-click and drag a rectangle around multiple selected nodes.
+Press the [ESC] key to deselect all selected nodes.</p></li>
+</ul>
+<p>After the nodes are selected, press the [Enter] key to open the
+“<em>Assign Properties for Nodes</em>” dialog box shown in Figure 6.8.</p>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="_images/figure_6_8_manual.png"><img alt="_images/figure_6_8_manual.png" src="_images/figure_6_8_manual.png" style="width: 6.00000in; height: 2.37708in;" /></a>
+<p class="caption"><span class="caption-text">Figure 6.8 The “<em>Assign Properties for Nodes</em>” dialog box</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>Several operations can be performed on the selected nodes.</p>
+<ul class="simple">
+<li><p>Assign boundary conditions (constant head, variable flux, or pumping
+wells), as shown in Figure 6.9 After selecting one of the options,
+the number of layers to be assigned with the boundary conditions
+should also be specified, as discussed later in this section.</p></li>
+</ul>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="_images/figure_6_9_manual.png"><img alt="_images/figure_6_9_manual.png" src="_images/figure_6_9_manual.png" style="width: 4.11516in; height: 1.07307in;" /></a>
+<p class="caption"><span class="caption-text">Figure 6.9 Assign boundary conditions to selected nodes</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Change the elevation of the selected nodes, as shown in Figure 6.10</p></li>
+</ul>
+<div class="figure align-center" id="id10">
+<a class="reference internal image-reference" href="_images/figure_6_10_manual.png"><img alt="_images/figure_6_10_manual.png" src="_images/figure_6_10_manual.png" style="width: 2.81364in; height: 0.28136in;" /></a>
+<p class="caption"><span class="caption-text">Figure 6.10 Assign constant elevation to selected nodes</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Interpolate the elevations of the selected nodes using a data file by
+clicking on the button next to “<em>Interpolated from File</em>,<em>”</em> as
+shown in Figure 6.11. The format of the data file is a series of x,
+y, z space delimited data.</p></li>
+</ul>
+<div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="_images/figure_6_11_manual.png"><img alt="_images/figure_6_11_manual.png" src="_images/figure_6_11_manual.png" style="width: 3.89741in; height: 0.31263in;" /></a>
+<p class="caption"><span class="caption-text">Figure 6.11 Assign elevation by interpolating elevation data</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>After the selection of one of the boundary conditions as shown in
+Figure 6.9, specify the number of layers. If nodes in more than one
+layer are to be selected, then the number of layers to be modified
+can be selected (Figure 6.12).</p></li>
+</ul>
+<div class="figure align-center" id="id12">
+<a class="reference internal image-reference" href="_images/figure_6_12_manual.png"><img alt="_images/figure_6_12_manual.png" src="_images/figure_6_12_manual.png" style="width: 2.70871in; height: 0.71885in;" /></a>
+<p class="caption"><span class="caption-text">Figure 6.12 The multiple layers specification dialog box</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p>Export the data. The selected node numbers can be exported to a .DAT
+file by using the export button, as shown in Figure 6.13. If nodes
+are exported, then the output file will contain the selected node
+numbers and the corresponding node elevations.</p></li>
+</ul>
+<div class="figure align-center" id="id13">
+<a class="reference internal image-reference" href="_images/figure_6_13_manual.png"><img alt="_images/figure_6_13_manual.png" src="_images/figure_6_13_manual.png" style="width: 2.56250in; height: 0.34375in;" /></a>
+<p class="caption"><span class="caption-text">Figure 6.13 The options available for both nodes and elements</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<p>To exit out of the <em>“Select”</em> mode, click the “<em>View Mode</em>” tool
+after closing the <em>“Assign Properties for Nodes”</em> dialog box. To
+deselect all the selected elements before editing, press the [ESC] key.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="7_model_input_data_manual.html" class="btn btn-neutral float-right" title="7.0 Model Input Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="5_mesh_generator_manual.html" class="btn btn-neutral float-left" title="5.0 Mesh Generator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Itasca Denver, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'G-VY7FB9D8LM', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

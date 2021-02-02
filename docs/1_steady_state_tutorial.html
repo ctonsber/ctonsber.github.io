@@ -1,0 +1,1673 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorial 1 - Initial Condition &mdash; MINEDW 3.05 225 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorial 2 - Open Pit Mining" href="2_transient_state_open_pit_tutorial.html" />
+    <link rel="prev" title="Acronyms and Abbreviations" href="acronyms_abbreviations_manual.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MINEDW 3.05
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">USER MANUAL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1_introduction_manual.html">1.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_features_of_minedw_manual.html">2.0 Features of MINEDW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_minedw_interface_manual.html">3.0 MINEDW Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_minedw_interface_manual.html#view-pane">3.1 View Pane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_minedw_interface_manual.html#main-menu">3.2 Main Menu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-file-menu">3.2.1 The File Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-project-menu">3.2.2 The Project Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-mesh-menu">3.2.3 The Mesh Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-bcs-menu">3.2.4 The BCs Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-mining-menu">3.2.5 The Mining Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-run-menu">3.2.6 The Run Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-results-menu">3.2.7 The Results Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-view-menu">3.2.8 The View Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-tools-menu">3.2.9 The Tools Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-windows-menu">3.2.10 The Windows Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-help-menu">3.2.11 The Help Menu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3_minedw_interface_manual.html#toolbar">3.3 Toolbar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_minedw_interface_manual.html#control-panel-pane">3.4 Control Panel Pane</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#plot-items">3.4.1 Plot Items</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#legend">3.4.1.1 Legend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#display-settings">3.4.1.2 Display Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#global-settings">3.4.1.3 Global Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#axes">3.4.1.4 Axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#observation">3.4.1.5 Observation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#boundary-conditions">3.4.1.6 Boundary Conditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#element">3.4.1.7 Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#file-data">3.4.1.8 File Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#node">3.4.1.9 Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#post-processing">3.4.1.10 Post Processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#cutting-planes">3.4.1.11 Cutting Planes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#clip-box">3.4.1.12 Clip Box</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#view">3.4.2 View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#information">3.4.3 Information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4_importing_data_sets_manual.html">4.0 Importing Data Sets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_importing_data_sets_manual.html#importing-earlier-versions-of-minedw-model-data-sets">4.1 Importing Earlier Versions of <strong>MINEDW</strong> Model Data Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_importing_data_sets_manual.html#display-the-imported-model">4.2 Display the Imported Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5_mesh_generator_manual.html">5.0 Mesh Generator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#creating-a-mesh">5.1 Creating a Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#the-mesh-components">5.2 The Mesh Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-domain-component">5.2.1 The “Domain” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-mining-area-mining-and-fine-area-components">5.2.2 The “Mining Area,” “Mining,” and “Fine Area” Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-fault-component">5.2.3 The “Fault” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-points-component">5.2.4 The “Points” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-polylines-component">5.2.5 The “Polylines” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-regions-component">5.2.6 The “Regions” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-all-faults-component">5.2.7 The “All Faults” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-mmesh-component">5.2.8 The “MMesh” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-toggle-component">5.2.9 The “Toggle” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-area-tolerance-component">5.2.10 The “Area Tolerance” Component</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#exporting-a-completed-mesh">5.3 Exporting a Completed Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#the-rhino-drop-command">5.4 The Rhino “Drop” Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="6_nodes_and_elements_manual.html">6.0 Nodes and Elements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_nodes_and_elements_manual.html#selecting-elements">6.1 Selecting Elements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="6_nodes_and_elements_manual.html#selecting-elements-in-2-d">6.1.1 Selecting Elements in 2-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="6_nodes_and_elements_manual.html#selecting-elements-in-3-d">6.1.2 Selecting Elements in 3-D</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="6_nodes_and_elements_manual.html#selecting-nodes">6.2 Selecting Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="7_model_input_data_manual.html">7.0 Model Input Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#project-definition">7.1 Project Definition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#project-properties">7.1.1 Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#time-steps">7.1.2 Time Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#model-geometry">7.2 Model Geometry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#generating-the-mesh">7.2.1 Generating the Mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#adding-main-model-layers">7.2.2 Adding Main Model Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#using-topography-data">7.2.3 Using Topography Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#importing-node-elevations">7.2.4 Importing Node Elevations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#defining-a-pinch-out">7.2.5 Defining a Pinch-Out</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#modifying-the-mesh">7.2.6 Modifying the Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#zone-properties-hydraulic-parameters">7.3 Zone Properties – Hydraulic Parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#zone-distributions-para-fem">7.3.1 Zone Distributions (para.fem)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#zone-properties-kfile-dat">7.3.2 Zone Properties (kfile.dat)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#boundary-conditions">7.4 Boundary Conditions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#time-series-data">7.4.1 Time-Series Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#constant-head">7.4.2 Constant Head</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#variable-flux">7.4.3 Variable-Flux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#pumping-well">7.4.4 Pumping Well</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#rivers">7.4.5 Rivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#recharge">7.4.6 Recharge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#evaporation">7.4.7 Evaporation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#initial-conditions">7.5 Initial Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#mining-plan">7.6 Mining Plan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#creating-a-mining-plan">7.6.1 Creating a Mining Plan</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="7_model_input_data_manual.html#converting-dxf-to-dat-files">7.6.1.1 Converting .DXF to .DAT files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="7_model_input_data_manual.html#creating-a-mining-plan-from-pit-topography-files">7.6.1.2 Creating a Mining Plan from Pit Topography files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="7_model_input_data_manual.html#creating-a-mining-plan-from-final-pit-topography">7.6.1.3 Creating a Mining Plan from Final-Pit Topography</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#importing-a-mine-plan-into-minedw">7.6.2 Importing a Mine Plan into MINEDW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#pit-lake">7.6.3 Pit Lake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#zone-of-relaxation-for-pit">7.6.4 Zone of Relaxation for Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#open-pit-backfilling">7.6.5 Open-Pit Backfilling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#zone-of-relaxation-for-caving">7.6.5 Zone of Relaxation for Caving</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#dewatering-and-underground-mining">7.6.6 Dewatering and Underground Mining</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="8_model_execution_manual.html">8.0 Model Execution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="8_model_execution_manual.html#validate">8.1 Validate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_model_execution_manual.html#create-data-set">8.2 Create Data Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_model_execution_manual.html#execute">8.3 Execute</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="9_model_output_manual.html">9.0 Model Output</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#read-results-and-export-results-as-text-file">9.1 Read Results and Export Results as Text File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#observations">9.2 Observations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#hydrograph">9.3 Hydrograph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#particle-tracking">9.4 Particle Tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#section-flux">9.5 Section Flux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#seepage-component-to-pit">9.6 Seepage Component to Pit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9_model_output_manual.html#calculating-seepage-to-the-pit">9.6.1 Calculating Seepage to the Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9_model_output_manual.html#visualizing-seepage-and-drains">9.6.2 Visualizing Seepage and Drains</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#pit-node-elevation-and-water-table">9.7 Pit Node Elevation and Water Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#export-state">9.8 Export State</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#exporting-pore-pressure">9.9 Exporting Pore Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#export-cross-section-pore-pressure">9.10 Export Cross-Section Pore Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#drawdown-base-time-step">9.11 Drawdown-Base Time Step</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#visualizing-the-results">9.12 Visualizing the Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#cross-sections">9.13 Cross Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#pit-lake-water-level-vs-time">9.14 Pit Lake – Water Level vs. Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#pumping-well-discharge-vs-time">9.15 Pumping Well – Discharge vs. Time</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references_manual.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acronyms_abbreviations_manual.html">Acronyms and Abbreviations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">TUTORIAL</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutorial 1 - Initial Condition</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#problem-description">1.1 Problem Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#minedw-model-construction">1.2 <em>MINEDW</em> Model Construction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-1-generating-a-mesh">Step 1. Generating a Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#building-the-model-in-minedw">1.3 Building the model in <em>MINEDW</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#step-2-defining-project-properties">Step 2. Defining Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-3-defining-time-steps">Step 3. Defining Time Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-4-importing-ground-surface-elevation">Step 4. Importing Ground-Surface Elevation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-5-adding-layers">Step 5. Adding Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-6-defining-zone-properties">Step 6. Defining Zone Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-7-assigning-hydraulic-zones-to-elements">Step 7. Assigning Hydraulic Zones to Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-8-defining-pinch-outs">Step 8. Defining “Pinch-Outs”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-9-defining-initial-heads">Step 9. Defining Initial Heads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-10-assigning-the-boundary-conditions">Step 10. Assigning the Boundary Conditions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#constant-head-boundary">Constant-Head Boundary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#river-boundary-condition">River Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#no-flow-boundary">No-Flow Boundary</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#step-11-assigning-recharge">Step 11. Assigning Recharge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-12-adding-evaporation">Step 12. Adding Evaporation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#step-13-saving-the-project">Step 13. Saving the Project</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-model">1.4 Running the Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#results">1.5 Results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html">Tutorial 2 - Open Pit Mining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#problem-description">2.1 Problem Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-1-opening-the-project-file">Step 1. Opening the Project File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-2-defining-project-properties">Step 2. Defining Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-3-defining-model-time-steps">Step 3. Defining Model Time Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-3-defining-initial-heads">Step 3. Defining Initial Heads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-4-creating-a-mining-plan-for-an-open-pit">Step 4. Creating a Mining Plan for an Open Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-5-creating-a-zone-of-relaxation-for-an-open-pit">Step 5. Creating a Zone of Relaxation for an Open Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-6-open-pit-backfilling">Step 6. Open-Pit Backfilling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-7-creating-a-pit-lake">Step 7. Creating a Pit Lake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-8-adding-pumping-wells">Step 8. Adding Pumping Wells</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-9-defining-the-boundary-conditions">Step 9. Defining the Boundary Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#running-the-model">2.2 Running the Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#results">2.3 Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#creating-monitoring-points">Creating Monitoring Points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#creating-hydrographs">Creating Hydrographs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#pit-node-elevation-and-water-table">Pit-Node Elevation and Water Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#head-distribution-in-3-d">Head Distribution in 3-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#head-distribution-cross-section">Head Distribution Cross Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#exporting-pore-pressures-to-a-different-grid-in-2-d">Exporting Pore Pressures to a Different Grid in 2-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#exporting-pore-pressures-to-a-different-grid-in-3-d">Exporting Pore Pressures to a Different Grid in 3-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#seepage-component-to-pit">Seepage Component to Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#pit-lake-water-level-vs-time">Pit Lake – Water Level vs. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#pumping-wells-discharge-vs-time">Pumping Wells – Discharge vs. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#particle-tracking">Particle Tracking</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_transient_state_underground_tutorial.html">Tutorial 3 - Underground Mining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#problem-description">3.1 Problem Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#transient-simulation">3.2 Transient Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-1-opening-the-project-file">Step 1. Opening the Project File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-2-defining-project-properties">Step 2. Defining Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-3-defining-initial-heads">Step 3. Defining Initial Heads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-4-creating-the-zor-file-for-caving">Step 4. Creating the ZOR file for Caving</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-5-adding-the-zor-for-caving-to-the-model">Step 5. Adding the ZOR for Caving to the Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-6-adding-the-drain-nodes-for-the-cave-zone">Step 6. Adding the Drain Nodes for the Cave Zone</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#running-the-model">3.5 Running the Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#results">3.6 Results</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MINEDW 3.05</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Tutorial 1 - Initial Condition</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/1_steady_state_tutorial.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="2_transient_state_open_pit_tutorial.html" class="btn btn-neutral float-right" title="Tutorial 2 - Open Pit Mining" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="acronyms_abbreviations_manual.html" class="btn btn-neutral float-left" title="Acronyms and Abbreviations" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorial-1-initial-condition">
+<h1>Tutorial 1 - Initial Condition<a class="headerlink" href="#tutorial-1-initial-condition" title="Permalink to this headline">¶</a></h1>
+<p>Disclaimer: The following tutorials are for training purposes only. The
+three tutorials provided are not designed to simulate real conditions or
+actual mine-dewatering systems. The problem descriptions are provided
+solely for the purpose of training a user to use the features of
+<strong>MINEDW</strong> and should not be assumed to be representative of actual
+groundwater modeling methodology or real-world problems. Professional
+judgment and experience are required to set up a well-defined
+groundwater flow model to produce meaningful results.</p>
+<p>The following examples are prepared for new users of <strong>MINEDW</strong>. They
+provide information on the capabilities and functions of <strong>MINEDW</strong> as
+well as explain the step-by-step procedure for setting up a <strong>MINEDW</strong>
+model.</p>
+<p>These tutorials do not cover detailed operations of each <strong>MINEDW</strong>
+feature; users should refer to the User Manual for detailed
+explanations.</p>
+<p>General Procedures for Model Construction and Simulation</p>
+<p>A steady-state simulation includes the following steps:</p>
+<ul class="simple">
+<li><p>Constructing a mesh using a two-dimensional (2-D) Mesh Generator.
+(Note: The Mesh Generator is a third-party program,
+<a class="reference external" href="https://www.rhino3d.com/">Rhinoceros</a>)<em>.</em> The 2-D mesh needs to be saved and then imported
+into the <strong>MINEDW</strong> graphical user interface (GUI) to create a
+three-dimensional (3-D) mesh.</p></li>
+<li><p>Assigning additional layers using the “pinch-out” method.</p></li>
+<li><p>Defining project properties, such as units (meters or feet), type of
+simulation (i.e., steady state), closure criteria, solver type, and
+solver parameters.</p></li>
+<li><p>Importing the 2-D mesh and adding layers for the 3-D mesh.</p></li>
+<li><p>Adding topographic information for land surface and geology.</p></li>
+<li><p>Defining hydraulic conductivity zone properties and then assigning
+the zones to elements.</p></li>
+<li><p>Assigning boundary conditions, which may include constant heads,
+drains, rivers, recharge, or evaporation.</p></li>
+</ul>
+<p>Transient model runs include additional steps such as the following:</p>
+<ul class="simple">
+<li><p>Assigning initial conditions from a steady-state simulation.</p></li>
+<li><p>Creating a mine plan for open-pit/underground mine(s).</p></li>
+<li><p>Defining a zone of relaxation (ZOR) around the open pit or
+underground excavation, if needed.</p></li>
+<li><p>Defining a pit lake if pit-lake formation will be considered.</p></li>
+<li><p>Defining pumping wells, pumping rates, and other mining-related
+structures, such as drain notes.</p></li>
+<li><p>Assigning boundary conditions, which may include variable fluxes,
+constant heads, drains, rivers, evaporation, or recharge.</p></li>
+</ul>
+<div class="section" id="problem-description">
+<h2>1.1 Problem Description<a class="headerlink" href="#problem-description" title="Permalink to this headline">¶</a></h2>
+<p>Tutorial 1 simulates groundwater flow prior to mining under steady-state
+conditions. The finite-element mesh for the model is constructed so that
+the model boundary is well beyond the area that will be affected by
+drawdown. The model domain is approximately 10,000 meters (m) by 10,000
+m and has an average thickness of 1,470 m. The surface topography is
+incorporated in the model with an elevation range of approximately
+800–1,858 meters above mean sea level (mamsl). The grid consists of
+approximately 136,000 nodes and 260,000 elements within 19 main element
+layers. The number of elements and nodes will vary depending on how the
+mesh is constructed in the mesh generator and how many layers and
+pinch-outs are added in <strong>MINEDW.</strong> Finer discretization is used to
+resolve geology, geologic structures, rivers, and mining in the model
+domain. The simulated geology includes nine hydrogeologic units
+(overburden, alluvium, weathered bedrock, sandstone, granite,
+kimberlite, and two faults). The hydraulic parameters of the model were
+assigned as shown in Table 1.1.</p>
+<blockquote>
+<div><p>Table 1.1. Hydraulic Parameters Simulated in the Groundwater Flow Model</p>
+</div></blockquote>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Properties</p></th>
+<th class="head"><p>K<sub>x</sub></p></th>
+<th class="head"><p>K<sub>y</sub></p></th>
+<th class="head"><p>K<sub>z</sub></p></th>
+<th class="head"><p>S<sub>s</sub></p></th>
+<th class="head"><p>S<sub>y</sub></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Overburden</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>0.1</p></td>
+<td><p>5e-06</p></td>
+<td><p>0.005</p></td>
+</tr>
+<tr class="row-odd"><td><p>Alluvium</p></td>
+<td><p>0.6</p></td>
+<td><p>0.6</p></td>
+<td><p>0.6</p></td>
+<td><p>5e-06</p></td>
+<td><p>0.005</p></td>
+</tr>
+<tr class="row-even"><td><p>Weathered Bedrock</p></td>
+<td><p>0.0009</p></td>
+<td><p>0.0009</p></td>
+<td><p>0.0009</p></td>
+<td><p>5e-06</p></td>
+<td><p>0.005</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sandstone</p></td>
+<td><p>0.00125</p></td>
+<td><p>0.00125</p></td>
+<td><p>0.00125</p></td>
+<td><p>5e-06</p></td>
+<td><p>0.005</p></td>
+</tr>
+<tr class="row-even"><td><p>Granite</p></td>
+<td><p>0.0005</p></td>
+<td><p>0.0005</p></td>
+<td><p>0.0005</p></td>
+<td><p>5e-06</p></td>
+<td><p>0.005</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kimberlite</p></td>
+<td><p>0.0005</p></td>
+<td><p>0.0005</p></td>
+<td><p>0.0005</p></td>
+<td><p>5e-06</p></td>
+<td><p>0.005</p></td>
+</tr>
+<tr class="row-even"><td><p>Fault-1</p></td>
+<td><p>0.002</p></td>
+<td><p>0.002</p></td>
+<td><p>0.002</p></td>
+<td><p>5e-06</p></td>
+<td><p>0.005</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fault-2</p></td>
+<td><p>0.0002</p></td>
+<td><p>0.0002</p></td>
+<td><p>0.0002</p></td>
+<td><p>5e-06</p></td>
+<td><p>0.005</p></td>
+</tr>
+<tr class="row-even"><td><p>Contact</p></td>
+<td><p>0.003</p></td>
+<td><p>0.003</p></td>
+<td><p>0.003</p></td>
+<td><p>5e-06</p></td>
+<td><p>0.005</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="minedw-model-construction">
+<h2>1.2 <em>MINEDW</em> Model Construction<a class="headerlink" href="#minedw-model-construction" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="step-1-generating-a-mesh">
+<h3>Step 1. Generating a Mesh<a class="headerlink" href="#step-1-generating-a-mesh" title="Permalink to this headline">¶</a></h3>
+<p>It is important to note that the finite-element mesh is constructed
+using a third-party program, <em>Rhinoceros</em> (<em>Rhino</em>). In order to follow
+the steps in this tutorial for constructing a model mesh, <em>Rhino</em> must
+be installed. Additionally, <em>Grasshopper</em>, an algorithmic modeling tool
+for <em>Rhino</em>, must be installed if <em>Rhino</em> Version 5.0 is used
+(<em>Grasshopper</em> comes pre-installed in newer versions of <em>Rhino</em>).
+<em>Rhino</em> is used to create a 2-D mesh that can be imported into the
+<strong>MINEDW</strong> GUI, where the remaining model setup occurs.</p>
+<p>Open <em>Rhino</em> (if using <em>Rhino</em> 5.0, use the 64-bit option), click on the
+“<em>File”</em> menu, then select “<em>Import,”</em> as shown in Figure 1.1. Using
+the <em>“Import”</em> dialog box that opens, navigate to the location where the
+tutorial files are stored, INPUT&gt;MESH_INPUT&gt;DXF, and select
+“BOUNDARY.dxf,” then click “<em>Open.”</em> Repeat these steps for each of
+the files in the INPUT&gt;MESH_INPUT&gt;DXF directory. If the imported
+objects do not appear in the view ports, select the “<em>Zoom Extents</em>”
+on the “<em>Standard</em>” tool tab. All imported objects should now be
+visible.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/figure_1_1_tutorial.png"><img alt="_images/figure_1_1_tutorial.png" src="_images/figure_1_1_tutorial.png" style="width: 6.5in; height: 4.82in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.1 The “<em>File</em>” menu</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p><em>Rhino</em> has four default layout view ports to view the imported data:
+“<em>Perspective,” “Top,” “Front,”</em> and <em>“Right”</em> (Figure 1.2). Because
+<strong>MINEDW</strong> requires a 2-D mesh, all work can be conducted using the
+“<em>Top”</em> layout. The other layouts are useful for checking that all
+mesh input items lie within the same plane, as the mesh generator in
+<em>Rhino</em> requires that all mesh items be within the same plane. Verify
+that all imported items are within the same plane by using the
+<em>“Perspective”</em> layout to rotate the imported data in 3-D. To do this,
+right-click and drag within the layout.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/figure_1_2_tutorial.png"><img alt="_images/figure_1_2_tutorial.png" src="_images/figure_1_2_tutorial.png" style="width: 6.49in; height: 1.45in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.2 The default view ports in <em>Rhino</em></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>After importing the required files, the result should appear similar to
+Figure 1.3 The <em>“MODEL BOUNDARY”</em> must be a completely closed region in
+order to generate a mesh. The <em>“OPEN PIT”</em> and “<em>TRANSITION ZONE”</em>
+(Figures 1.3 and 1.4) regions will contain a refined mesh and must be
+closed as well. The “<em>STREAM NETWORK”</em> represents a series of
+interconnected streams. The mesh generator will create a mesh that
+honors the stream network by placing mesh nodes along each stream
+segment. The <em>“PUMPING WELL”</em> points are the locations of dewatering
+wells in and around the open pit. The mesh generator will honor these
+locations by placing a node at each one of the points. Adding additional
+wells to an existing <strong>MINEDW</strong> model is done within <strong>MINEDW</strong> and
+does not require the mesh to be re-created. For existing models, the
+user can move the closest mesh node to the location of the pump that is
+being added.</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/figure_1_3_tutorial.png"><img alt="_images/figure_1_3_tutorial.png" src="_images/figure_1_3_tutorial.png" style="width: 6.5in; height: 5.07in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.3 The overlay data used to create a mesh</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>To create the transition zone, click on the “<em>Polyline”</em> tool on the
+“<em>Standard”</em> tab (Figure 1.4). Next, draw a circle around the <em>“OPEN
+PIT”</em> object. To finish and close the transition zone, click on the
+first point of the circle; the drawing tool will likely snap to this
+point once the mouse pointer gets close enough. The completed transition
+zone should appear similar to the one shown in Figure 1.4.</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/figure_1_4_tutorial.png"><img alt="_images/figure_1_4_tutorial.png" src="_images/figure_1_4_tutorial.png" style="width: 6.5in; height: 5.07in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.4 The completed transition zone</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>After completing the transition zone, open <em>Grasshopper</em> by typing
+“<em>grasshopper”</em> into the command line and pressing [ENTER]. A new
+window will open for <em>Grasshopper</em>. If you are using <em>Rhino</em> 5 and
+<em>Grasshopper</em> is not installed yet, download and install <em>Grasshopper</em>
+for <em>Rhino</em>. <em>Grasshopper</em> does not require an additional license or
+fee. In <em>Grasshopper,</em> select <em>“File&gt;New Document”</em> to create a new mesh
+algorithm. Next, click the <em>“MMesh”</em> tab. The <em>“MMesh Util”</em> contains
+three components, <em>“Fault,”</em> “<em>Region,”</em> and <em>“MMesh.”</em> To create the
+finite-element mesh for this tutorial, one (1) “<em>Fault”</em> component,
+three (3) <em>“Region”</em> components, and one (1) <em>“MMesh”</em> component will be
+needed. Place these components on the canvas by clicking on them in the
+banner menu and then clicking on the canvas. Each component can be moved
+around on the canvas as necessary by clicking and holding then dragging
+the component to the desired location. Each component can be renamed by
+right-clicking on it and then entering a new name where the component’s
+current name appears.</p>
+<p>In order to complete the mesh, additional components are needed: one (1)
+<em>“Panel,”</em> five (5) “<em>Number Sliders,”</em> one (1) “<em>Boolean Toggle,”</em>
+one (1) <em>“Curve,”</em> one (1) <em>“Point,”</em> and one (1) <em>“Merge.”</em> All of
+these components, except for the <em>“Merge”</em> component, can be found on
+the <em>“Params”</em> tab under the “<em>Geometry”</em> or “<em>Input”</em> groups
+(Figure 1.5).</p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="_images/figure_1_5_tutorial.png"><img alt="_images/figure_1_5_tutorial.png" src="_images/figure_1_5_tutorial.png" style="width: 6.09in; height: 5.25in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.5 <em>Grasshopper</em> components used to create the finite-element
+mesh</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>The <em>“Merge”</em> component is used to merge generic streams of data. For
+example, it is used in this tutorial demonstration to merge the three
+regions (“<em>MODEL BOUNDARY,” “TRANSITION ZONE,”</em> and <em>“OPEN PIT”</em>) into
+one data stream for processing. This component is found on the
+“<em>Sets”</em> tab under the <em>“Tree”</em> group (Figure 1.6).</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="_images/figure_1_6_tutorial.png"><img alt="_images/figure_1_6_tutorial.png" src="_images/figure_1_6_tutorial.png" style="width: 6.5in; height: 5.06in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.6 The <em>“Merge”</em> component in <em>Grasshopper</em></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>After adding all of the necessary components to the canvas, connect them
+together following the example in Figure 1.7. The easiest method for
+connecting components is to click on the half circles that appear to the
+left or right of the component parameter and drag them to the
+appropriate component. Figure 1.7 can be used as an example of how to
+arrange and connect the various components.</p>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="_images/figure_1_7_tutorial.png"><img alt="_images/figure_1_7_tutorial.png" src="_images/figure_1_7_tutorial.png" style="width: 6.5in; height: 5.78in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.7 Connected <em>Grasshopper</em> components and parameters</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>Once the components are properly connected, it is time to define
+parameters for each component. For each number slider, add a name and
+define the range. In this tutorial demonstration, the number sliders
+have been named <em>“Model Domain,” “Transition Zone,” “Open Pit,” “Area
+Tolerance,” and “Fault Width.”</em> The ranges for these number sliders are
+the following, respectively: 25,000–250,000, 1,000–10,000, 100–1,000,
+0.001–0.1, and 25–250. To define the initial value, specify the ranges,
+and name the number sliders, right-click on each number slider and
+select <em>“Edit”</em> in the drop-down list. In the “<em>Slider”</em> window, you
+can enter a <em>“Name”</em> and specify the <em>“Min”</em> and <em>“Max”</em> and set the
+current value. After completing the changes, click <em>“OK”</em> to save the
+changes and close the <em>“Slider”</em> window. The other components can be
+renamed by right-clicking on the component and entering a new name where
+the current name appears in the drop-down menu. At this point, it may be
+advisable to save the <em>Grasshopper</em> document so as not to lose any work
+should anything happen.</p>
+<p>After saving the <em>Grasshopper</em> document, assign the <em>“Polygon (PG)”</em> and
+“<em>Primary Region (PR)”</em> parameters for the <em>“Region”</em> components. Note
+that the <em>“Area (A)”</em> parameters are defined by connecting the
+parameters to the number sliders. The <em>“MODEL DOMAIN”</em> curve will be
+assigned to the <em>“PG”</em> parameter of the <em>“Model Domain”</em> component, the
+<em>“TRANSITION ZONE”</em> curve will be assigned to the “<em>Transition Zone,”</em>
+and the <em>“OPEN PIT”</em> curve will be assigned to the <em>“Open Pit”</em>
+component. To assign a component to a curve, right-click on <em>“PG”</em> and
+then select <em>“Set One Curve”</em> from the drop-down menu. The <em>Grasshopper</em>
+window will disappear to show the <em>Rhino</em> window. In the <em>Rhino</em> window,
+click on the appropriate curve and the <em>Grasshopper</em> window will
+reappear. Repeat these steps for the other regions.</p>
+<p>By default, the <em>“Primary Region (PR)”</em> parameter will be assigned
+<em>“False”</em> for each of the <em>“Region”</em> components. For the <em>“Model
+Domain”</em> component, this will need to be changed, and the <em>“PR”</em>
+component will need to be assigned <em>“True.”</em> To do this, right-click on
+the <em>“PG”</em> parameter of the <em>“Model Domain”</em> component and then select
+<em>“Set Boolean&gt;True”</em> from the drop-down list. This parameter identifies
+the outermost boundary of the mesh to be created. As many regions as
+needed can be added to the mesh, but only one can be the primary region
+and must include (surround) all of the other regions.</p>
+<p>To assign the fault, repeat the previously described steps, but instead
+of a <em>“PG”</em> parameter, <em>“PL”</em> is the parameter that will need to be set.
+The <em>“Streams”</em> component needs to be assigned to the <em>“STREAM NETWORK”</em>
+in the <em>Rhino</em> window. This assignment is done the same way as the other
+assignments previously described, but instead of selecting <em>“Set One
+Curve,”</em> click on <em>“Set Multiple Curves.”</em> Using this option, you can
+select all of the curves that represent the streams in the <em>Rhino</em>
+window. After selecting all of the curves, simply press [ENTER] to
+finish the assignment. The final component that needs to be assigned is
+the <em>“Pumping Borehole,”</em> which requires points. Follow the same steps
+as previously described for the other components and select <em>“Set
+Multiple Points.”</em> In the <em>Rhino</em> window, you can select each point
+representing the pumping boreholes by hand as you did with the streams,
+or you can use a <em>Rhino</em> function to do it all at once. To use the
+<em>Rhino</em> function, type “s<em>elpt”</em> into the command line and press
+[ENTER]. <em>Rhino</em> will select the points and print out how many points
+were selected, in this case 15 points. After completing the selection,
+press [ENTER] again to complete the assignment.</p>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="_images/figure_1_8_tutorial.png"><img alt="_images/figure_1_8_tutorial.png" src="_images/figure_1_8_tutorial.png" style="width: 6.5in; height: 4.7in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.8 The output from the <em>Grasshopper</em> algorithm</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>Once properly configured, the <em>Grasshopper</em> algorithm will generate a
+mesh that is visible in the <em>Rhino</em> window. If it is not visible, be
+sure to toggle the <em>“Draw shaded preview geometry”</em> as shown in Figure
+1.8. If the mesh still does not display, check that <em>“Preview Mesh
+Edges”</em> is turned on by selecting it under the <em>“Display”</em> menu or
+pressing the [Ctrl] and [M] keys together. The <em>“Panel”</em> item that was
+connected to the “<em>MMesh”</em> region will display details about the mesh,
+such as the number of nodes and elements and the minimum and maximum
+size of the elements. Figure 1.9 is an example of what the mesh created
+by the <em>Grasshopper</em> algorithm should look like. Note, if you close the
+<em>Grasshopper</em> window, this mesh will disappear, but as long as you have
+saved the changes to the <em>Grasshopper</em> document, opening the
+<em>Grasshopper</em> document will regenerate this mesh.</p>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="_images/figure_1_9_tutorial.png"><img alt="_images/figure_1_9_tutorial.png" src="_images/figure_1_9_tutorial.png" style="width: 6.5in; height: 5.65in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.9 The <em>Grasshopper</em>-generated mesh</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>In order to finalize the mesh and export it in a format that is useable
+by <strong>MINEDW</strong>, the <em>Grasshopper</em>-generated mesh needs to be
+<em>“Bake[d].”</em> To do this, right-click on the <em>“MMesh”</em> component in
+<em>Grasshopper</em> and select <em>“Bake”</em> from the drop-down menu. An
+<em>“Attributes”</em> window will open where you can select the layer where you
+wish to <em>“Bake”</em> the mesh. Any layer is acceptable. The result of this
+operation should look similar to that in Figure 1.10.</p>
+<div class="figure align-center" id="id10">
+<a class="reference internal image-reference" href="_images/figure_1_10_tutorial.png"><img alt="_images/figure_1_10_tutorial.png" src="_images/figure_1_10_tutorial.png" style="width: 6.5in; height: 5.65in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.10 The completed mesh in <em>Rhino</em></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>After the mesh has been <em>“Bake[d]”</em> to <em>Rhino,</em> it should be checked to
+ensure there are no problems with the mesh. To check the mesh, click on
+the <em>“Mesh Tools”</em> tab and then click <em>“Check objects”</em> as shown in
+Figure 1.10. If there are problems with the mesh, these can be fixed
+using the mesh tools available in <em>Rhino</em>. Refer to <em>Rhino</em>
+documentation for instructions on using these functions.</p>
+<p>Once the mesh is finished in <em>Rhino,</em> it needs to be exported as an .STL
+file for import into <strong>MINEDW.</strong> Select the mesh in <em>Rhino</em> by
+clicking on it, then select <em>“File&gt;Export Selected…”</em> Using the
+<em>“Export”</em> dialog box, navigate to where you wish to save the mesh file,
+then enter a name and select <em>“STL (Stereolithography)(*.stl)”</em> from
+the <em>“Save as type”</em> drop-down box and click <em>“Save.”</em> Next, in the
+<em>“STL Export Options,”</em> select the option to export the .STL file in
+ASCII format, then click <em>“OK.”</em></p>
+</div>
+</div>
+<div class="section" id="building-the-model-in-minedw">
+<h2>1.3 Building the model in <em>MINEDW</em><a class="headerlink" href="#building-the-model-in-minedw" title="Permalink to this headline">¶</a></h2>
+<p>Now that the mesh has been created, the mesh is ready to be imported
+into <strong>MINEDW</strong>. Open a new <strong>MINEDW</strong> window and click “<em>File</em>”
+on the Main Menu banner, and then select “<em>Import.</em>” The “<em>Import
+File</em>” dialog box appears (Figure 1.11). Select <em>“STL
+(Stereolithograph) Ascii Files (*.STL)”</em> from the list of options under
+the <em>“Files of Type”</em> drop-down list. Navigate to the location where you
+created the mesh file, select it, and click “<em>Open.</em>”
+<strong>IMPORTANT</strong>: No mesh will appear in <strong>MINEDW</strong> at this time; a few
+more steps must be taken before the mesh is displayed.</p>
+<div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="_images/figure_1_11_tutorial.png"><img alt="_images/figure_1_11_tutorial.png" src="_images/figure_1_11_tutorial.png" style="width: 6.49in; height: 4.4in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.11 The “<em>Import File</em>” dialog box</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<p>After importing the mesh, save the <strong>MINEDW</strong> project file. Select
+“<em>File</em>”&gt;“Save as” and, using the <em>“Create a MINEDW Project File”</em>
+dialog box that opens, navigate to the location where you wish to save
+the model files. In the <em>“File Name”</em> box, enter the name of the
+project, for example, “<em>SS-TUTORIAL,”</em> and then click on <em>“Save”</em> to
+create the project file and close the dialog box.</p>
+<div class="section" id="step-2-defining-project-properties">
+<h3>Step 2. Defining Project Properties<a class="headerlink" href="#step-2-defining-project-properties" title="Permalink to this headline">¶</a></h3>
+<p>To define the project properties such as units (meters or feet), type of
+simulation, closure criteria, and type of solver, click “<em>Project</em>”
+and then select “<em>Project Properties.</em>” The “<em>Project</em>
+<em>Properties</em>” dialog box shown in Figure 1.9 appears. Make sure that
+all the fields contain the values shown in Figure 1.12. For steady-state
+simulations, the “<em>Steady State</em>” option should be selected.</p>
+<p>For this simulation, the SAMG solver will be used. The outer closure
+criterion is based on head, while the inner closure criterion is based
+on mass. Because of this, the inner closure criterion needs be less than
+1 x 10<sup>-10</sup>, while the outer closure criterion is likely to be
+greater than 1 x 10<sup>-3</sup>. Differences in the closure criterion
+selection will affect the residual error in the model. Users should
+check the budget (.BUD) and output (.OUT) files to evaluate the accuracy
+of the model run and whether more stringent closure criteria are
+necessary. Maximum inner iterations should be large (i.e., greater than
+250); however, the user can evaluate the optimal amount by consulting
+the <strong>MINEDW</strong> output file.</p>
+<div class="figure align-center" id="id12">
+<a class="reference internal image-reference" href="_images/figure_1_12_tutorial.png"><img alt="_images/figure_1_12_tutorial.png" src="_images/figure_1_12_tutorial.png" style="width: 2.77in; height: 4.12in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.12 The “<em>Project Properties</em>” dialog box</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="step-3-defining-time-steps">
+<h3>Step 3. Defining Time Steps<a class="headerlink" href="#step-3-defining-time-steps" title="Permalink to this headline">¶</a></h3>
+<p>To define the time steps for the project, click “<em>Project</em>” on the
+Main Menu banner, then select “<em>Time Steps.</em>” The “<em>Set Up Time
+Step</em>” dialog box (Figure 1.13) appears. Set the “<em>Maximum</em> <em>Time
+Steps</em>” to 100 or greater. Enter “31” for the <em>“Initial Time Step
+Length.”</em> For steady-state simulations, only the length of the first
+time step will be used. Each subsequent time step will be 1.2 times
+longer than the previous time step. For transient simulations, the
+multiplication factor is 1 and the time-step length is defined in the
+“<em>Set Up Time Step</em>” dialog box for transient model runs. Ensure
+that the <em>“# of Time Steps for This Simulation</em>” slider is set to 100
+or greater and that the “<em>Start at Time Step</em>” combo box is set to
+1. Click “<em>OK</em>” to save the changes and close the <em>“Set Up Time
+Step”</em> dialog box.</p>
+<div class="figure align-center" id="id13">
+<a class="reference internal image-reference" href="_images/figure_1_13_tutorial.png"><img alt="_images/figure_1_13_tutorial.png" src="_images/figure_1_13_tutorial.png" style="width: 2.77in; height: 4.12in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.13 The “<em>Set Up Time Step</em>” dialog box</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="step-4-importing-ground-surface-elevation">
+<h3>Step 4. Importing Ground-Surface Elevation<a class="headerlink" href="#step-4-importing-ground-surface-elevation" title="Permalink to this headline">¶</a></h3>
+<p>To incorporate the ground-surface elevation in the model, select the
+“<em>List</em>” tab in the “<em>Control Panel</em>” pane on the right-hand
+side of the <strong>MINEDW</strong> interface. Expand the “<em>Node</em>” item by
+double-clicking the “<em>Node</em>” item or clicking on the small triangle
+next to “<em>Node.</em>” Next, double-click “<em>2D Contour</em>” as shown in
+Figure 1.14. The mesh will be displayed in the plot pane.</p>
+<div class="figure align-center" id="id14">
+<a class="reference internal image-reference" href="_images/figure_1_14_tutorial.png"><img alt="_images/figure_1_14_tutorial.png" src="_images/figure_1_14_tutorial.png" style="width: 3in; height: 3.08in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.14 The “<em>Control Panel</em>” with activated “<em>List</em>” tab
+and “<em>Node</em>” plot item</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<p>From the “<em>Control Panel</em>” pane on the right-hand side of the
+<strong>MINEDW</strong> interface, select the “<em>Attributes</em>” tab. Make sure
+that the <em>“Color By”</em> attribute is set to “<em>Elevation</em>” and that the
+“<em>Layer</em>” attribute is set to 1 (Figure 1.15). Next, click the
+“<em>Select</em>” tool on the Main Menu banner.</p>
+<div class="figure align-center" id="id15">
+<a class="reference internal image-reference" href="_images/figure_1_15_tutorial.png"><img alt="_images/figure_1_15_tutorial.png" src="_images/figure_1_15_tutorial.png" style="width: 2.57in; height: 4.35in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.15 The “<em>Control Panel</em>” pane showing the
+“<em>Attributes</em>” tab with “<em>Layer</em>” set to “1”</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+<p>In the <strong>MINEDW</strong> View Pane, use the cursor to click and drag a box
+around the whole domain to select all of the nodes in Layer 1. Press the
+[Enter] key to open the “<em>Assign Properties for Nodes</em>” dialog box
+shown in Figure 1.16. Click “<em>Interpolate From File</em>” and the
+“<em>Open Data File</em>” dialog box appears. Select the data file in the
+directory <em>“/INPUT/SURFACE</em>” named “<em>SURFACEELEV.DAT</em>” and click
+“<em>Open.</em>” The “<em>Grid</em>” dialog box shown in Figure 1.17 appears.
+Define the interpolation method (Inverse Distance or Kriging) and the
+required parameters and then click “<em>OK.</em>” The interpolation
+procedure assigns the ground-surface elevation contained in the
+<em>“SURFACEELEV.DAT”</em> file to the first layer of the model.</p>
+<div class="figure align-center" id="id16">
+<a class="reference internal image-reference" href="_images/figure_1_16_tutorial.png"><img alt="_images/figure_1_16_tutorial.png" src="_images/figure_1_16_tutorial.png" style="width: 5.19in; height: 3.14in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.16 The “<em>Assign Properties for Nodes</em>” operations dialog
+box</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id17">
+<a class="reference internal image-reference" href="_images/figure_1_17_tutorial.png"><img alt="_images/figure_1_17_tutorial.png" src="_images/figure_1_17_tutorial.png" style="width: 5.5in; height: 1.72in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.17 The “<em>Grid</em>” dialog box and example values for surface
+interpolation</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+<p>View the ground-surface elevation as contours by clicking on the
+“<em>Attributes</em>” tab in the “<em>Control Panel</em>” pane. Next, click on
+the small triangle next to “<em>Contour.</em>” Deselect the “<em>Auto</em>”
+box next to “<em>Minimum</em>” and replace the default value with 800. You
+may also wish to change the contour interval; smaller numbers produce a
+smoother color flood. Press [Enter] and the model will appear similar to
+what is displayed in Figure 1.18.</p>
+<div class="figure align-center" id="id18">
+<a class="reference internal image-reference" href="_images/figure_1_18_tutorial.png"><img alt="_images/figure_1_18_tutorial.png" src="_images/figure_1_18_tutorial.png" style="width: 6in; height: 3.16in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.18 <em>MINEDW</em> color flood of topography</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="step-5-adding-layers">
+<h3>Step 5. Adding Layers<a class="headerlink" href="#step-5-adding-layers" title="Permalink to this headline">¶</a></h3>
+<p>To add layers, select “<em>Mesh</em>” from the Main Menu banner, then
+select “<em>Define Main Layer.</em>” The “<em>Define Main Nodal Layers</em>”
+dialog box (Figure 1.19) appears. Select the bottom layer. To add a node
+layer above the selected node layer, click “<em>Insert.</em>” For this
+model, three layers will be created using the “<em>Depth”</em> method with
+thicknesses of 20, 30, and 50 m (Figure 1.20). Next, add three more
+layers but choose the <em>“Average”</em> method. Finally, add 11 more layers
+for a total of 19 layers and choose “<em>Constant</em>” from the
+“<em>Method</em>” drop-down box (Figure 1.20). For the layers with the
+<em>“Constant”</em> method selected, enter the values displayed in Figure 1.20.
+<strong>Note</strong>: Do not change the elevation of the first node layer because
+its elevation was assigned by interpolation. Once you have finished
+entering the required information, click <em>“OK”</em> to add the layers.
+<strong>MINEDW</strong> will produce a warning stating that the ZOR may need to be
+updated. Disregard this message, as no ZOR has been defined. For more
+information on adding layers, refer to the User Manual section 7.2.2.</p>
+<div class="figure align-center" id="id19">
+<a class="reference internal image-reference" href="_images/figure_1_19_tutorial.png"><img alt="_images/figure_1_19_tutorial.png" src="_images/figure_1_19_tutorial.png" style="width: 3.76in; height: 2.56in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.19 The “<em>Define Main Nodal Layers</em>” dialog box</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id20">
+<a class="reference internal image-reference" href="_images/figure_1_20_tutorial.png"><img alt="_images/figure_1_20_tutorial.png" src="_images/figure_1_20_tutorial.png" style="width: 3.76in; height: 6.8in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.20 The “<em>Define Main Nodal Layers</em>” dialog box showing
+different methods available</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="step-6-defining-zone-properties">
+<h3>Step 6. Defining Zone Properties<a class="headerlink" href="#step-6-defining-zone-properties" title="Permalink to this headline">¶</a></h3>
+<p>To define the properties of a hydraulic zone, click “<em>Project</em>” on
+the Main Menu banner and then select “<em>Zone Properties.</em>” The
+“<em>Zone Properties</em>” dialog box (Figure 1.21) appears. To add a new
+zone, click the “<em>Add</em>” button. Enter the zones and related
+hydraulic properties as listed in Figure 1.21 and then click “<em>OK.</em>”</p>
+<div class="figure align-center" id="id21">
+<a class="reference internal image-reference" href="_images/figure_1_21_tutorial.png"><img alt="_images/figure_1_21_tutorial.png" src="_images/figure_1_21_tutorial.png" style="width: 6.13in; height: 3.89in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.21 The “Zone Properties” dialog box</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="step-7-assigning-hydraulic-zones-to-elements">
+<h3>Step 7. Assigning Hydraulic Zones to Elements<a class="headerlink" href="#step-7-assigning-hydraulic-zones-to-elements" title="Permalink to this headline">¶</a></h3>
+<p>From the <strong>MINEDW</strong> main window, select the “<em>List</em>” tab in the
+“<em>Control Panel</em>” pane. Expand the “<em>Element</em>” item and
+double-click “<em>3D Element</em>,” as shown in Figure 1.22. While working on
+element-related operations, such as assigning hydraulic zones, ensure
+that all other plot items related to “<em>Node,</em>” such as a
+“<em>Contour</em>” plot, are deactivated or deleted from the View Pane
+(MINEDW Manual 3.4.1).</p>
+<div class="figure align-center" id="id22">
+<a class="reference internal image-reference" href="_images/figure_1_22_tutorial.png"><img alt="_images/figure_1_22_tutorial.png" src="_images/figure_1_22_tutorial.png" style="width: 2.7in; height: 4.13in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.22 The “<em>Control Panel</em>” with the <em>“List”</em> tab and
+<em>“Element”</em> plot item activated</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id23">
+<a class="reference internal image-reference" href="_images/figure_1_23_tutorial.png"><img alt="_images/figure_1_23_tutorial.png" src="_images/figure_1_23_tutorial.png" style="width: 6.49in; height: 3.95in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.23 A wireframe format of a geological block model</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+<p>In <strong>MINEDW</strong>, the assignment of hydraulic zones can be done using a
+3-D .DXF with a wireframe format of a geological block model (Figure
+1.23). In this tutorial, hydraulic zones will be assigned in two steps.
+First, regional geology will be assigned by layers and then a kimberlite
+and a contact zone will be assigned using a 3-D wireframe .DXF file. The
+regional geology consists of overburden, weathered bedrock, sandstone,
+and granite. To assign the regional hydraulic zones, click the
+“<em>Select</em>” tool. Make sure that “<em>Layer</em>” under the
+“<em>Attributes</em>” tab shown in Figure 1.24 under the “<em>Control
+Panel</em>” pane is set to 1.</p>
+<div class="figure align-center" id="id24">
+<a class="reference internal image-reference" href="_images/figure_1_24_tutorial.png"><img alt="_images/figure_1_24_tutorial.png" src="_images/figure_1_24_tutorial.png" style="width: 2.76in; height: 2.93in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.24 The “<em>Attributes”</em> tab with <em>“Layer”</em> set to 1</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</div>
+<p>Select all the elements on the first layer by using the cursor to click
+and drag a selection box as shown in Figure 1.25, then press the [Enter]
+key.</p>
+<div class="figure align-center" id="id25">
+<a class="reference internal image-reference" href="_images/figure_1_25_tutorial.png"><img alt="_images/figure_1_25_tutorial.png" src="_images/figure_1_25_tutorial.png" style="width: 6.49in; height: 3.89in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.25 Selection of first layer of elements</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</div>
+<p>The “<em>Select</em> <em>Geological</em> <em>Zone:</em>” dialog box shown in Figure 1.26
+appears. Change the “<em>Zone</em>” to “<em>Overburden,</em>” change the value
+in the box next to “<em>From Current Layer #1 To”</em> from 1 to 2<em>,</em> and
+then click “<em>OK.</em>”</p>
+<div class="figure align-center" id="id26">
+<a class="reference internal image-reference" href="_images/figure_1_26_tutorial.png"><img alt="_images/figure_1_26_tutorial.png" src="_images/figure_1_26_tutorial.png" style="width: 4.73in; height: 1.99in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.26 The “<em>Select Geological Zone:</em>” operations dialog box</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+</div>
+<p>To assign the weathered unit, change the value for the <em>“Layer”</em>
+attribute on the <em>“Attributes”</em> tab to 3. Select all the elements on the
+third layer by using the cursor to click and drag a selection box, then
+press the [Enter] key. The “<em>Select</em> <em>Geological</em> <em>Zone:</em>”
+operations dialog box appears. Change the “<em>Zone</em>” to
+“<em>Weathered,</em>” leave the value in the box next to “<em>From Current
+Layer #3 To”</em> as 3, and then click “<em>OK</em>”.</p>
+<p>The “S<em>andstone”</em> unit is below the “<em>Weathered”</em> unit. To assign it
+to the model, click the “<em>Select</em>” button. Make sure that the
+“<em>Layer</em>” attribute on the “<em>Attributes</em>” tab under the
+“<em>Control Panel</em>” is set to 4. Select all the elements in the fourth
+layer by using the cursor to click and drag a selection box and then
+press the [Enter] key. The “<em>Select Geological Zone:</em>” operations
+dialog box appears. Change the “<em>Zone</em>” to “<em>Sandstone</em>” and the
+value in the “<em>From Current Layer #4 To”</em> box to 6 and then click
+“<em>OK.</em>” Finally, assign <em>“Granite”</em> using the same steps as above,
+from <em>“Layer 7”</em> to <em>“Layer 18,”</em> if it has not already been done<em>.</em></p>
+<p>This model also includes an alluvial zone in a river channel, two fault
+zones, and a contact zone between the kimberlite pipe and surrounding
+geology. The alluvial zone representing the river channel can be
+selected using an ESRI shapefile. The shapefile was created by using the
+buffer tool in ArcMap and the River.BLN files used in the Mesh
+Generator. To select elements in the river channel, click the “<em>List”</em>
+tab and then click the arrow next to “<em>File Data.”</em> Double-click
+<em>“ESRI Shape File”</em> and then on the <em>“Attributes”</em> tab click the plus
+sign. Browse to the <em>“STREAM_ALLUVIUM.SHP”</em> file and select it, then
+click “<em>Open.”</em> If you do not see the polygon buffer representing the
+river, ensure the <em>“Project to Surface”</em> box is checked. Make sure that
+“<em>Layer</em>” under the “<em>Attributes</em>” tab under the “<em>Control
+Panel</em>” pane is set to 1.</p>
+<p>Next, click the <em>“Select With Overlay”</em> tool and click the “<em>Polygon”</em>
+radio button, then click “<em>OK.”</em> The elements that form the river
+channel should now be selected; press [Enter]. Change the “<em>Zone”</em>
+combo box to “<em>Alluvium”</em> and change the “<em>To Layer”</em> value to 3
+(Figure 1.27), then click “<em>OK.”</em></p>
+<div class="figure align-center" id="id27">
+<a class="reference internal image-reference" href="_images/figure_1_27_tutorial.png"><img alt="_images/figure_1_27_tutorial.png" src="_images/figure_1_27_tutorial.png" style="width: 4.73in; height: 1.99in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.27 The “<em>Select Geological Zone</em>” dialog box</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+</div>
+<p>To assign the “<em>Kimberlite</em>” and <em>“Contact”</em> zones using a 3-D .DXF,
+add a <em>“DXF”</em> plot item from the “<em>Control Panel</em>” pane by choosing
+“<em>List</em>” then “<em>File Data.</em>” Expand “<em>File Data</em>” by
+clicking on the small triangle next to “<em>File Data.</em>” Under “<em>File
+Data,</em>” double-click on “<em>DXF.</em>” The “<em>Attributes</em>” tab will
+appear (Figure 1.28). Click on the “<strong>+</strong>” next to “<em>File.</em>” The
+“<em>Select DXF data file</em>” window will appear. Select the
+“<em>GEOLOGY.DXF</em>” file. All of the geologic units are present in this
+3-D .DXF file. In order to view just the geologic units of interest,
+select the <em>“Attributes”</em> tab, then click the triangle next to
+<em>“Layers.”</em> Uncheck the boxes next to <em>“OVB”</em> and <em>“GNS.”</em> The remaining
+geologic units will be used to represent the contact zone and the
+kimberlite pipe.</p>
+<div class="figure align-center" id="id28">
+<a class="reference internal image-reference" href="_images/figure_1_28_tutorial.png"><img alt="_images/figure_1_28_tutorial.png" src="_images/figure_1_28_tutorial.png" style="width: 3.24in; height: 2.67in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.28 The “<em>Attributes</em>” tab</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+</div>
+<p>To define the contact zone, click on the <em>“To Zone”</em> button (Figure
+1.28) and then select <em>“Contact”</em> from the combo box (Figure 1.29). Then
+check “<em>Face</em>” in the box next to <em>“Layer Thickness,”</em> enter 20,
+then click <em>“OK.”</em> The process may take some time, but the area will be
+assigned to the contact zone. <strong>Note:</strong> The contact zone may need to be
+adjusted manually by selecting elements with the <em>“Select”</em> tool. To
+assign elements with “<em>Kimberlite”</em> properties, repeat the steps above
+but select <em>“Kimberlite”</em> instead of <em>“Contact”</em> and check
+“<em>Volume</em>” and “<em>Whole.</em>” The volume representing the kimberlite
+pipe will need to be adjusted manually by adjusting element properties
+individually; see Figure 1.30 for a reference of what the final
+kimberlite and contact zones look like.</p>
+<p>Figure 1.30 shows the two fault zones that intersect the kimberlite
+pipe. The fault zones are assigned using the “<em>Select with Overlay”</em>
+tool. To do this, click on the <em>“List”</em> tab in the “<em>Control Panel”</em>
+pane, click <em>“File Data,”</em> and then double-click “<em>BLN.”</em> Next, click
+on the button next to <em>“File”</em> on the <em>“Attributes”</em> tab and navigate to
+the “<em>FAULT.BLN</em>” file. The “<em>FAULT.BLN</em>” should be projected to
+the surface automatically, making it visible. If it is not visible when
+opened, check the <em>“Project to Surface”</em> box on the attributes tab. If
+the “<em>RIVER.SHP”</em> file is still visible in the View Pane or <em>“Plot
+Items”</em> pane, remove it before proceeding. Make sure that “<em>Layer</em>”
+under the “<em>Attributes</em>” tab under the “<em>Control Panel</em>” pane is
+set to 1. Next, click on the “S<em>elect</em>” tool if it is not already
+selected and click the “<em>Select with Overlay”</em> button. Then check the
+button next to <em>“Polyline”</em> and click <em>“OK.”</em> Fault-zone elements should
+now be selected. Press the [Enter] key to bring up the <em>“Select
+Geological Zone:”</em> dialog box. In the box next to <em>“From Current Layer
+#1 to,”</em> enter “18,” which is the bottom, and select “<em>Fault 1,”</em> then
+click <em>“OK.”</em> The section of the fault that intersects the contact and
+kimberlite zones will need to be selected by hand and assigned to
+<em>“Fault 2”</em> (Figure 1.30).</p>
+<div class="figure align-center" id="id29">
+<a class="reference internal image-reference" href="_images/figure_1_29_tutorial.png"><img alt="_images/figure_1_29_tutorial.png" src="_images/figure_1_29_tutorial.png" style="width: 3.21in; height: 1.81in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.29 The “<em>DXF to Zone</em>” dialog box</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id30">
+<a class="reference internal image-reference" href="_images/figure_1_30_tutorial.png"><img alt="_images/figure_1_30_tutorial.png" src="_images/figure_1_30_tutorial.png" style="width: 6.49in; height: 3.89in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.30 The completed contact zone, kimberlite pipe, and fault
+zones</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+</div>
+<p>For a detailed explanation of how to cut cross sections, please refer to
+the <strong>MINEDW</strong> User Manual section 9.12. Briefly, to create a cross
+section, add a “<em>3D Element</em>” plot item to the View Pane, then
+select the “<em>Create Plane…”</em> tool on the menu banner. Select two
+points on the <em>“3D Element”</em> plot item, and the cross section will
+appear. Rotate the cross section manually or click the “<em>Snap View”</em>
+button on the <em>“Attributes”</em> tab of the <em>“Plane”</em> plot item to better
+orient the cross section. To create a cross section similar to the one
+displayed in Figure 1.31, click on the “<em>3D Element</em>” plot item,
+then select its “<em>Attributes</em>” tab and locate the “<em>Cutplane</em>”
+attribute. Check the boxes next to “O<em>n</em>” and “<em>Front.</em>”</p>
+<div class="figure align-center" id="id31">
+<a class="reference internal image-reference" href="_images/figure_1_31_tutorial.png"><img alt="_images/figure_1_31_tutorial.png" src="_images/figure_1_31_tutorial.png" style="width: 6.49in; height: 4.05in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.31 Cross section of the geological units in the model</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="step-8-defining-pinch-outs">
+<h3>Step 8. Defining “Pinch-Outs”<a class="headerlink" href="#step-8-defining-pinch-outs" title="Permalink to this headline">¶</a></h3>
+<p><strong>MINEDW</strong> is able to simulate locally refined vertical discretization
+in areas of interest. The enhanced discretization is referred to as a
+pinch-out since layers pinch out where the vertical discretization is
+not needed. Defining pinch-outs in the steady-state model is necessary
+because hydraulic heads from the steady-state model will be used as
+initial conditions for the transient model run, which requires that both
+models have identical meshes. To define the pinch-out types, select
+“<em>Mesh</em>” from the Main Menu banner and then select “<em>Define</em>
+<em>Pinch-Out</em>…” The “<em>Define Pinch-Outs</em>” dialog box appears (Figure
+1.32).</p>
+<div class="figure align-center" id="id32">
+<a class="reference internal image-reference" href="_images/figure_1_32_tutorial.png"><img alt="_images/figure_1_32_tutorial.png" src="_images/figure_1_32_tutorial.png" style="width: 3.76in; height: 6.65in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.32 The “<em>Define Pinch-Outs</em>” dialog box</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
+</div>
+<p>In <strong>MINEDW</strong>, various pinch-out configurations can be defined and
+simulated. Each configuration is defined as one type of pinch-out. Based
+on modeling needs, the user can define as many pinch-out configurations
+as necessary.</p>
+<p>Figure 1.33 illustrates the working principle of the pinch-out method.
+For example, suppose a model has four regional layers that are each
+represented (sequentially, Layer 1 to Layer 4, from top to bottom) by a
+black square. The column labeled <em>“# of Layer after Pinch-out</em>” shows
+the number of pinch-out layers (shown in blue) allowed for each model
+layer. For illustration purposes, pinch-outs have been created in two
+layers, and using these pinch-outs, three different pinch-out types have
+been created (Figure 1.33). Type 1 consists of three pinch-outs in model
+Layer 2 (depicted by red lines). Type 2 consists of three pinch-outs in
+model Layer 2 and two pinch-outs in model Layer 3 (depicted by a green
+line). Type 3 consists of two pinch-outs in model Layer 3. When
+assigning pinch-outs to the elements, only one type can be assigned to a
+selected location. It should be noted that, for each model layer,
+<strong>MINEDW</strong> only allows one value for the number of pinch-outs (e.g.,
+Layer 3 can only have two pinch-outs. It cannot have two pinch-outs in
+one area and three pinch-outs in another area).</p>
+<div class="figure align-center" id="id33">
+<a class="reference internal image-reference" href="_images/figure_1_33_tutorial.png"><img alt="_images/figure_1_33_tutorial.png" src="_images/figure_1_33_tutorial.png" style="width: 4.18in; height: 1.96in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.33 Schematic explanation of pinch-outs</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+</div>
+<p>To define pinch-outs, click the “<em>Add</em>” button on the right side of
+the “<em>Define Pinch-Outs</em>” dialog box to add pinch-out types.</p>
+<p>In this tutorial model, there is one type of pinch-out. This pinch-out
+type (“<em>Type 1</em>”) has two pinch-outs in Layers 3 through 15. Type in
+the number of pinch-outs in the <em>“# of Sublayers</em>” column and create
+the pinch-out type by checking the box next to the appropriate layer
+under the <em>“Type #”</em> field (Figure 1.34), then click “<em>OK.</em>”</p>
+<div class="figure align-center" id="id34">
+<a class="reference internal image-reference" href="_images/figure_1_34_tutorial.png"><img alt="_images/figure_1_34_tutorial.png" src="_images/figure_1_34_tutorial.png" style="width: 3.83in; height: 6.46in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.34 The “<em>Define Pinch-Outs</em>” dialog box</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
+</div>
+<p>To add pinch-outs to a selected area, select the “<em>List</em>” tab in the
+“<em>Control Panel</em>” pane. Expand the “<em>Element</em>” item, and
+double-click “<em>Pinch-Out</em>,” as shown in Figure 1.35.</p>
+<div class="figure align-center" id="id35">
+<a class="reference internal image-reference" href="_images/figure_1_35_tutorial.png"><img alt="_images/figure_1_35_tutorial.png" src="_images/figure_1_35_tutorial.png" style="width: 3.26in; height: 4.1in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.35 The “<em>Pinch-Out”</em> plot item “<em>Attributes”</em></span><a class="headerlink" href="#id35" title="Permalink to this image">¶</a></p>
+</div>
+<p>From the main window, click the “<em>Select</em>” button on the Main Menu
+banner. Select the nodes that define the elements where the “<em>Type
+1</em>” pinch-out will be created by clicking the “<em>Select with
+Polygon</em>” button and selecting the nodes as shown in Figure 1.36.</p>
+<div class="figure align-center" id="id36">
+<a class="reference internal image-reference" href="_images/figure_1_36_tutorial.png"><img alt="_images/figure_1_36_tutorial.png" src="_images/figure_1_36_tutorial.png" style="width: 6.49in; height: 3.73in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.36 The View Pane with the selected nodes for pinch-out Type 1</span><a class="headerlink" href="#id36" title="Permalink to this image">¶</a></p>
+</div>
+<p>Press the [Enter] key. The “<em>Select Pinch-Out Type</em>” dialog box
+appears. Select “<em>Type 1</em>” (Figure 1.37) and click “<em>OK.</em>”</p>
+<div class="figure align-center" id="id37">
+<a class="reference internal image-reference" href="_images/figure_1_37_tutorial.png"><img alt="_images/figure_1_37_tutorial.png" src="_images/figure_1_37_tutorial.png" style="width: 2.68in; height: 1.07in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.37 The “<em>Select Pinch-Out Type</em>” dialog box showing
+“<em>Type 1</em>” selected</span><a class="headerlink" href="#id37" title="Permalink to this image">¶</a></p>
+</div>
+<p>To view the pinch-out in a cross-section view, delete or turn off the
+<em>“Pinch-Out”</em> plot item by right-clicking on it and choosing <em>“Delete
+plot item”</em> or <em>“Deactivate plot item.”</em> Next, add a <em>“3D Element”</em> plot
+item to the View Pane by clicking the arrow next to <em>“Element”</em> in the
+<em>“Control Panel”</em> pane and double-clicking on <em>“3D Element.”</em> Next,
+select the <em>“Create Plane…”</em> tool and select two points on either side
+of the area where the pinch-out was added. The result should look
+similar to Figure 1.38.</p>
+<div class="figure align-center" id="id38">
+<a class="reference internal image-reference" href="_images/figure_1_38_tutorial.png"><img alt="_images/figure_1_38_tutorial.png" src="_images/figure_1_38_tutorial.png" style="width: 6.49in; height: 3.89in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.38 The View Pane with the cross-sectional view with pinch-out
+Type 1</span><a class="headerlink" href="#id38" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="step-9-defining-initial-heads">
+<h3>Step 9. Defining Initial Heads<a class="headerlink" href="#step-9-defining-initial-heads" title="Permalink to this headline">¶</a></h3>
+<p>To define the initial heads, click “<em>Project</em>” on the Main Menu
+banner, then select “<em>Initial Heads.</em>” The “<em>Set Up Initial
+Head</em>” dialog box appears. Choose “<em>Constant</em>” with a level of 800
+m as shown in Figure 1.39.</p>
+<div class="figure align-center" id="id39">
+<a class="reference internal image-reference" href="_images/figure_1_39_tutorial.png"><img alt="_images/figure_1_39_tutorial.png" src="_images/figure_1_39_tutorial.png" style="width: 3.08in; height: 1.37in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.39 The “<em>Set Up Initial Head</em>” dialog box</span><a class="headerlink" href="#id39" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="step-10-assigning-the-boundary-conditions">
+<h3>Step 10. Assigning the Boundary Conditions<a class="headerlink" href="#step-10-assigning-the-boundary-conditions" title="Permalink to this headline">¶</a></h3>
+<p>To assign boundary conditions, select the “<em>List</em>” tab in the
+“<em>Control Panel</em>” pane. Expand the “<em>Node</em>” item, and then
+double-click “<em>3D Contour</em>” (Figure 1.40).</p>
+<div class="figure align-center" id="id40">
+<a class="reference internal image-reference" href="_images/figure_1_40_tutorial.png"><img alt="_images/figure_1_40_tutorial.png" src="_images/figure_1_40_tutorial.png" style="width: 2.92in; height: 2.91in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.40 The “<em>Control Panel</em>” pane with the “<em>Node</em>” item
+expanded to show the “<em>3D Contour</em>” option</span><a class="headerlink" href="#id40" title="Permalink to this image">¶</a></p>
+</div>
+<p>In this tutorial, three types of boundary conditions are used:
+constant-head, river, and no-flow boundaries. Assignment of these
+boundary conditions is discussed in the following sections.</p>
+<div class="section" id="constant-head-boundary">
+<h4>Constant-Head Boundary<a class="headerlink" href="#constant-head-boundary" title="Permalink to this headline">¶</a></h4>
+<p>In order to add constant-head boundary conditions to the model, begin by
+defining groups for the constant-head boundary conditions. To do this,
+select the <em>“Constant Head…”</em> menu item under <em>“BCs”</em> on the Main Menu
+banner. In the <em>“Constant-Head Boundary”</em> dialog box that opens, click
+on the “<em>Add”</em> button (at the top of the dialog box) to add a blank
+group (Figure 1.41). To change the name of the group, click in the
+drop-down box where the group name appears and change the text (Figure
+1.41). Three constant-head groups will be used for this tutorial
+simulation, “<em>Pond,” “LowLand,”</em> and “<em>MtBlock.”</em> Create these
+groups as described above and then click <em>“OK”</em> in the <em>“Constant-Head
+Boundary”</em> dialog box to close the dialog box and save the changes.</p>
+<div class="figure align-center" id="id41">
+<a class="reference internal image-reference" href="_images/figure_1_41_tutorial.png"><img alt="_images/figure_1_41_tutorial.png" src="_images/figure_1_41_tutorial.png" style="width: 6.5in; height: 3.99in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.41 The “<em>Define Group for Constant Heads &amp; Drain Nodes</em>”
+dialog box</span><a class="headerlink" href="#id41" title="Permalink to this image">¶</a></p>
+</div>
+<p>To add constant-head boundary conditions to the mesh, select the <em>“3D
+Contour”</em> plot item from the <em>“Plot Items”</em> list in the <em>“Control
+Panel”</em> pane. Ensure that the <em>“Layer”</em> attribute under the
+<em>“Attributes”</em> tab is set to 5, then click the “<em>Select</em>” button on
+the Main Menu banner. Using the “<em>Select</em>” tool, select the nodes
+along the southwest perimeter as shown in Figure 1.42 and then press
+[Enter]. In the “<em>Assign Properties for Nodes</em>” dialog box that
+appears, select “<em>Add to Constant Head Boundary</em>” (Figure 1.43).
+Next, select the <em>“MtBlock”</em> group from the drop-down menu that becomes
+active and then enter the bottommost layer in the box to the right next
+to <em>“From Current Layer.”</em> This will assign the constant-head boundary
+from Layer 5 to the bottom of the model domain.</p>
+<div class="figure align-center" id="id42">
+<a class="reference internal image-reference" href="_images/figure_1_42_tutorial.png"><img alt="_images/figure_1_42_tutorial.png" src="_images/figure_1_42_tutorial.png" style="width: 6.49in; height: 3.91in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.42 The View Pane with the selected constant head boundary
+nodes</span><a class="headerlink" href="#id42" title="Permalink to this image">¶</a></p>
+</div>
+<p>Repeat the steps described above for the remaining perimeter nodes that
+have not been assigned a boundary condition. The constant-head boundary
+group to be used for the remaining nodes that have not been assigned a
+boundary condition should be <em>“LowLand.”</em> Now that the constant-head
+nodes have been added to the boundary of the model domain, the
+constant-head values need to be modified. The default values assigned to
+the constant-head nodes by <strong>MINEDW</strong> are the elevations of the nodes.
+Using these default values would result in a downward hydraulic
+gradient. The constant-head values for nodes beneath the fifth layer
+should be the constant-head value of the fifth-layer node directly
+above. To assign these values, the constant-head value for each of the
+nodes needs to be recorded then copied to each of the nodes below. This
+can be done using the <em>“Constant-Head Boundary”</em> dialog box but would be
+very tedious. The following describes a method to do this using a
+provided Excel document.</p>
+<div class="figure align-center" id="id43">
+<a class="reference internal image-reference" href="_images/figure_1_43_tutorial.png"><img alt="_images/figure_1_43_tutorial.png" src="_images/figure_1_43_tutorial.png" style="width: 6.49in; height: 2.57in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.43 The “<em>Assign Properties for Nodes</em>” dialog box</span><a class="headerlink" href="#id43" title="Permalink to this image">¶</a></p>
+</div>
+<p>Begin by executing the <em>“Create Data Set”</em> function under the <em>“Run”</em>
+menu on the Main Menu banner. This function will create several text
+files in a directory that the user selects. Two of the text files,
+<em>“chead.dat”</em> and <em>“nodel.fem,”</em> are needed to update the constant-head
+values. After running the <em>“Create Data Set”</em> function, locate the Excel
+file named <em>“UpdateCHead.xlsm”</em> in the “<em>INPUT</em>” directory
+containing the other input files for this tutorial. Copy the file and
+paste it in the directory where the <em>“Create Data Set”</em> function was
+executed. Open the Excel document and, if not already active, select the
+sheet labeled <em>“Input-chead.dat.”</em> Click on the button <em>“Import
+CHead.dat”</em> to import the chead file that was just created by
+<strong>MINEDW.</strong> Using the <em>“Import Text File”</em> dialog box that opens,
+navigate to the directory where the <strong>MINEDW</strong> files were created. The
+files may not be visible in the <em>“Import Text File”</em> dialog box because
+Excel by default looks for files that have a “.TXT” extension. To view
+all of the files in the directory through the <em>“Import Text File”</em>
+dialog box, select <em>“All Files (*.*)”</em> from the drop-down menu on the
+lower right-hand corner of the dialog box. Now that the all of the files
+that <strong>MINEDW</strong> created are visible, select the file named
+<em>“chead.dat,”</em> then click <em>“Open.”</em> Repeat these steps on the
+<em>“Input-node.FEM”</em> tab, but this time select the file labeled
+<em>“node.fem.”</em> Now that the input data are imported, create the new
+constant-head file. Select the <em>“Output-chead.dat”</em> tab and click
+<em>“Run.”</em> Copy the results from the run function beginning with row 1.
+Paste the contents into a text editor and save the file as
+<em>“newChead.dat.”</em> Now that the new chead file has been created, use the
+<em>“Constant-Head Boundary”</em> dialog box in <strong>MINEDW</strong> to import the
+file. Click the <em>“Import”</em> button on the left side of the
+<em>“Constant-Head Boundary”</em> dialog box and navigate to the location where
+<em>“newChead.dat”</em> was saved, select it, and click <em>“Open.”</em> The new
+constant-head values will be imported into the model.</p>
+<p>The remaining constant-head group that should be added is the <em>“Pond”</em>
+group. This group is used to simulate an open-water body located some
+distance to the northeast of the open pit. Using a <em>“3D Contour”</em> plot
+item, with the <em>“Layer”</em> attribute set to 1 on the <em>“Attributes”</em> tab,
+select a few nodes somewhere to the northeast of the pit (Figure 1.45).
+For this tutorial, it does not matter where the nodes are selected so
+long as they are not adjacent to the pit. With the nodes selected, press
+[Enter] to open the <em>“Add Properties for Nodes”</em> dialog box. Click on
+<em>“Assign to Constant-Head Boundary”</em> and ensure that <em>“Pond”</em> is
+selected. Leave the “<em>From Current Layer #1 To</em>” as “<em>1</em>” and
+then click “<em>OK.</em>” The nodes that compose the <em>“Pond”</em> group should
+all be assigned with the same head value to simulate the water body. To
+view and edit the assigned constant-head nodes, go to “<em>BCs</em>” on the
+Main Menu banner and select “<em>Constant Head.</em>”</p>
+<div class="figure align-center" id="id44">
+<a class="reference internal image-reference" href="_images/figure_1_44_tutorial.png"><img alt="_images/figure_1_44_tutorial.png" src="_images/figure_1_44_tutorial.png" style="width: 6.49in; height: 3.95in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.44 The “<em>Constant-Head Boundary</em>” dialog box</span><a class="headerlink" href="#id44" title="Permalink to this image">¶</a></p>
+</div>
+<p>Ensure the <em>“Pond”</em> group is the currently selected group in the <em>“Group
+Definition”</em> drop-down box. Select all of the nodes in the <em>“Pond”</em>
+constant-head group by clicking in the top left square of the
+constant-head node box, highlighted in red in Figure 1.44. After
+selecting the constant-head nodes that will compose the pond feature,
+change the constant-head value to the desired value, e.g., 950 m. This
+will update the constant-head value for each of the nodes to 950 m
+(Figure 1.44). Ensure that the leakance value is also set to a high
+value to ensure flow to or from the constant-head nodes is not
+restricted.</p>
+<div class="figure align-center" id="id45">
+<a class="reference internal image-reference" href="_images/figure_1_45_tutorial.png"><img alt="_images/figure_1_45_tutorial.png" src="_images/figure_1_45_tutorial.png" style="width: 6.49in; height: 3.96in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.45 The completed constant-head boundary conditions</span><a class="headerlink" href="#id45" title="Permalink to this image">¶</a></p>
+</div>
+<p>Figure 1.45 shows the completed constant-head boundary conditions that
+have been assigned to the model. The <em>“LowLand”</em> and <em>“MtBlock”</em>
+constant-head values were modified using an Excel document to assign the
+nodes below the fifth layer a constant-head elevation equal to the
+elevation of the fifth-layer node directly above. The <em>“Pond”</em> group was
+used to simulate a body of open water. The constant-head elevation for
+the <em>“Pond”</em> group was modified in the <em>“Constant-Head Boundary”</em> dialog
+box.</p>
+</div>
+<div class="section" id="river-boundary-condition">
+<h4>River Boundary Condition<a class="headerlink" href="#river-boundary-condition" title="Permalink to this headline">¶</a></h4>
+<p>The “<em>River</em>” boundary condition is used to simulate interactions
+between a routed river and an aquifer. There are several methods that
+can be used to add a river boundary condition to a model. This tutorial
+describes a method using .BLN files to create the river network boundary
+condition.</p>
+<p>To begin, open the <em>“River”</em> dialog box by clicking <em>“BCs”</em> on the Main
+Menu banner and selecting the <em>“River”</em> menu item. On the <em>“River”</em> tab
+in the <em>“River”</em> dialog box, click <em>“Add”</em> to add a river segment. Click
+<em>“Create”</em> in the lower right-hand corner of the <em>“River”</em> tab to open
+the <em>“Select BLN file”</em> dialog box. Navigate to the directory containing
+the .BLN files representing the river. These are the same files that
+were used to create the mesh in <em>Rhino</em> but in individual files for each
+of the reaches of the river network. Begin by selecting
+<em>“STREAM_1.BLN”</em> and clicking <em>“Open.”</em> <strong>MINEDW</strong> will select the
+appropriate nodes to simulate the river reach and assign a bed elevation
+at each of the nodes based on the node elevation. The slope of the
+riverbed will be variable between nodes depending on the nodes’
+elevations. Because of this, the <em>“Bed Elev.”</em> of some nodes will need
+to be adjusted to ensure there is a downward slope from the highest to
+lowest node. <strong>MINEDW</strong> will produce a warning if the slope at any of
+the nodes is incorrect. If a constant riverbed slope is desired, click
+the <em>“Constant Slope”</em> button to calculate a constant slope for the
+entire river reach. The slope will be calculated based on the highest
+and lowest node elevations. Change the default values for the <em>“Manning
+Coefficient,” “Width,”</em> and <em>“River Bed Thickness”</em> as necessary. The
+<em>“River”</em> tab is shown in Figure 1.46 with the completed fields.</p>
+<div class="figure align-center" id="id46">
+<a class="reference internal image-reference" href="_images/figure_1_46_tutorial.png"><img alt="_images/figure_1_46_tutorial.png" src="_images/figure_1_46_tutorial.png" style="width: 6.5in; height: 3.6in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.46 Completed river segment 1 and simulation parameters</span><a class="headerlink" href="#id46" title="Permalink to this image">¶</a></p>
+</div>
+<p>Repeat the steps above for river reaches 2 through 7. Once all of the
+river reaches have been created, ensure the connections between reaches
+are properly defined. To do this, click the <em>“Connection”</em> tab in the
+<em>“River”</em> dialog box. Click the <em>“Refresh”</em> button at the bottom of the
+tab. <strong>MINEDW</strong> will automatically create the connections between
+connected river reaches. If the bed elevations of the nodes where the
+river reaches connect do not match, <strong>MINEDW</strong> will produce a warning
+indicating where the problem is located. The easiest way to resolve the
+issue is to adjust the elevation of the upstream reach rather than the
+downstream reach. Figure 1.47 shows the <em>“Connection”</em> tab with the
+correctly defined connections for the tutorial.</p>
+<div class="figure align-center" id="id47">
+<a class="reference internal image-reference" href="_images/figure_1_47_tutorial.png"><img alt="_images/figure_1_47_tutorial.png" src="_images/figure_1_47_tutorial.png" style="width: 6.49in; height: 3.28in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.47 The <em>“Connection”</em> tab with connections between river
+reaches defined</span><a class="headerlink" href="#id47" title="Permalink to this image">¶</a></p>
+</div>
+<p>The <em>“Tributary”</em> tab is used to define inflows to river reaches that
+come from outside of the model domain or from some other external
+source, such as a pipeline that discharges flow to a river. In this
+tutorial, two tributaries are simulated, one for River 5 and one for
+River 7. Although the tributary function can except temporally varying
+inputs for a transient simulation, this tutorial will use constant
+inflow for both the steady-state and transient simulations. Figure 1.48
+shows the <em>“Tributary”</em> tab with the tributary for River 5 defined. To
+correctly define a tributary, it must be on one of the nodes that make
+up a river reach. In this example, the uppermost node of River 5 was
+chosen as the tributary node. If a node that is not connected to any
+river is used, <strong>MINEDW</strong> will produce a warning indicating that the
+tributary is not used. If the tributary is correctly defined, the
+tributary connection to the river will appear on the <em>“Connection”</em> tab
+when <em>“Refresh”</em> is clicked.</p>
+<div class="figure align-center" id="id48">
+<a class="reference internal image-reference" href="_images/figure_1_48_tutorial.png"><img alt="_images/figure_1_48_tutorial.png" src="_images/figure_1_48_tutorial.png" style="width: 6.5in; height: 3.6in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.48 The “<em>Tributary</em>” tab showing the tributary for River 5</span><a class="headerlink" href="#id48" title="Permalink to this image">¶</a></p>
+</div>
+<p>The completed river boundary condition can be displayed in the view pane
+by selecting the <em>“River”</em> plot item under the <em>“Boundary Conditions”</em>
+group in the <em>“Control Panel”</em> pane. Figure 1.49 shows the completed
+river network and two tributaries that were added to the model.</p>
+<div class="figure align-center" id="id49">
+<a class="reference internal image-reference" href="_images/figure_1_49_tutorial.png"><img alt="_images/figure_1_49_tutorial.png" src="_images/figure_1_49_tutorial.png" style="width: 6.49in; height: 3.89in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.49 The completed river network</span><a class="headerlink" href="#id49" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="no-flow-boundary">
+<h4>No-Flow Boundary<a class="headerlink" href="#no-flow-boundary" title="Permalink to this headline">¶</a></h4>
+<p>No-flow boundary conditions are assumed by <strong>MINEDW</strong> for any location
+along the model domain where other boundary conditions have not been
+assigned. In this tutorial, the bottom of the model is a no-flow
+boundary condition.</p>
+</div>
+</div>
+<div class="section" id="step-11-assigning-recharge">
+<h3>Step 11. Assigning Recharge<a class="headerlink" href="#step-11-assigning-recharge" title="Permalink to this headline">¶</a></h3>
+<p>In this tutorial, recharge is applied to the first wet layer of the
+model. The default option in <strong>MINEDW</strong> is to apply recharge to the
+first wet layer, but this can be changed if needed (Figure 1.50). To
+create recharge zones, click “<em>BCs</em>” on the Main Menu banner, then
+select “<em>Recharge.</em>” The “<em>Recharge</em>” dialog box (Figure 1.50)
+appears. Click the “<em>Add Zone</em>” button at the bottom of the dialog
+box to add a recharge zone. Complete the fields for Zone #1 (Figure
+1.50).</p>
+<div class="figure align-center" id="id50">
+<a class="reference internal image-reference" href="_images/figure_1_50_tutorial.png"><img alt="_images/figure_1_50_tutorial.png" src="_images/figure_1_50_tutorial.png" style="width: 6.49in; height: 3.69in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.50 The “<em>Recharge</em>” dialog box showing Zone #1</span><a class="headerlink" href="#id50" title="Permalink to this image">¶</a></p>
+</div>
+<p>Next, click on the <em>“Elevation”</em> tab and define the parameters for the
+elevation-based recharge equation (Figure 1.51). This zone will be used
+to simulate orographically controlled recharge in the model. The
+parameter values for parameters <em>“A,”</em> “<em>B,”</em> and <em>“C”</em> can be
+calculated by fitting the equation (Figure 1.51) to a precipitation
+versus elevation data set. For this tutorial, the parameter values for
+<em>“A,”</em> “<em>B,”</em> and <em>“C”</em> are provided. The <em>“Factor”</em> that is used is a
+scaling factor and is explained in further detail in section 7.4.6 of
+the <strong>MINEDW</strong> manual.</p>
+<p>After entering the parameters required to define the first recharge zone
+(Figures 1.50 and 1.51), return to the <em>“Temporal”</em> tab. Click <em>“Add
+Zone”</em> at the bottom of the <em>“Recharge</em>” dialog box to add a second
+recharge zone. This zone will be used to simulate recharge in the
+lower-elevation region of the model domain and will not use the
+elevation equation for orographically controlled precipitation. The
+recharge value that is used for this zone is 0.25 millimeters per day
+(mm/day) and should be entered on the <em>“Temporal”</em> tab. Once the
+recharge value for Zone #2 has been entered, click <em>“Apply”</em> on the
+right side of the <em>“Recharge”</em> dialog box, then click <em>“OK.”</em></p>
+<div class="figure align-center" id="id51">
+<a class="reference internal image-reference" href="_images/figure_1_51_tutorial.png"><img alt="_images/figure_1_51_tutorial.png" src="_images/figure_1_51_tutorial.png" style="width: 6.49in; height: 3.69in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.51 Parameters for orographically controlled recharge</span><a class="headerlink" href="#id51" title="Permalink to this image">¶</a></p>
+</div>
+<p>To assign recharge zones to the model domain, select the “<em>List</em>”
+tab in the “<em>Control Panel</em>” pane. Expand the “<em>Element</em>” item
+and double-click “<em>2D Plane</em>” (Figure 1.52).</p>
+<div class="figure align-center" id="id52">
+<a class="reference internal image-reference" href="_images/figure_1_52_tutorial.png"><img alt="_images/figure_1_52_tutorial.png" src="_images/figure_1_52_tutorial.png" style="width: 3.55in; height: 3.07in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.52 The location of the <em>“2D Plane”</em> plot item</span><a class="headerlink" href="#id52" title="Permalink to this image">¶</a></p>
+</div>
+<p>While the 2-D plane is selected in the “<em>Control Panel</em>” pane,
+select the “<em>Attributes</em>” tab and select “<em>Recharge</em>” from the
+“<em>Color By</em>” drop-down menu (Figure 1.53).</p>
+<div class="figure align-center" id="id53">
+<a class="reference internal image-reference" href="_images/figure_1_53_tutorial.png"><img alt="_images/figure_1_53_tutorial.png" src="_images/figure_1_53_tutorial.png" style="width: 3.1in; height: 4.4in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.53 The <em>“Attributes”</em> of the <em>“2D Plane”</em> plot item</span><a class="headerlink" href="#id53" title="Permalink to this image">¶</a></p>
+</div>
+<p>Click the “<em>Select</em>” tool and drag a box around the mountainous
+region of the model domain to assign Recharge Zone #1 to the model.
+After selecting the elements, press the [Enter] key, and the “<em>Select
+Recharge Zone</em>” dialog box appears (Figure 1.54). Make sure that Zone
+#1 is selected (Figure 1.54) and then click “<em>OK.</em>”</p>
+<div class="figure align-center" id="id54">
+<a class="reference internal image-reference" href="_images/figure_1_54_tutorial.png"><img alt="_images/figure_1_54_tutorial.png" src="_images/figure_1_54_tutorial.png" style="width: 2.5in; height: 1.07in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.54 The “<em>Select Recharge Zone</em>” dialog box</span><a class="headerlink" href="#id54" title="Permalink to this image">¶</a></p>
+</div>
+<p>Repeat the steps above, but this time select the elements that form the
+lowland area of the model domain and select <em>“Zone#2”</em> from the <em>“Select
+Recharge Zone”</em> dialog box. When assignment of the recharge zones is
+complete, the result should appear similar to what is shown in Figure
+1.55.</p>
+<div class="figure align-center" id="id55">
+<a class="reference internal image-reference" href="_images/figure_1_55_tutorial.png"><img alt="_images/figure_1_55_tutorial.png" src="_images/figure_1_55_tutorial.png" style="width: 6.49in; height: 3.89in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.55 Assignment of recharge zones to the model</span><a class="headerlink" href="#id55" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="step-12-adding-evaporation">
+<h3>Step 12. Adding Evaporation<a class="headerlink" href="#step-12-adding-evaporation" title="Permalink to this headline">¶</a></h3>
+<p>To finalize the boundary condition definitions, evaporation will need to
+be added to the model. Unlike recharge, only one evaporation zone can be
+created. Evaporation rates can vary over time or be constant for a
+transient simulation. For the steady-state simulation, a constant-rate
+evaporation zone will be used.</p>
+<p>To create an evaporation zone, select <em>“Evaporation”</em> under the
+“<em>BCs”</em> menu. The <em>“Define Evaporation Zones”</em> dialog box appears.
+Enter the evaporation values in the appropriate dialog boxes (Figure
+1.56). For this tutorial, evaporation will be simulated as constant over
+time. Once the appropriate evaporation values have been entered in the
+“<em>Define Evaporation Zones”</em> dialog box, click <em>“OK”</em> to finalize the
+evaporation zone definition.</p>
+<div class="figure align-center" id="id56">
+<a class="reference internal image-reference" href="_images/figure_1_56_tutorial.png"><img alt="_images/figure_1_56_tutorial.png" src="_images/figure_1_56_tutorial.png" style="width: 6.5in; height: 3.55in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.56 The “<em>Define Evaporation Zones</em>” dialog box</span><a class="headerlink" href="#id56" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now that the evaporation zone has been created, it needs to be assigned
+to the mesh. To assign evaporation to the mesh, add a “<em>2D Plane”</em>
+plot item and select “<em>Evaporation”</em> as the “<em>Color By”</em> attribute.
+Next, select all the elements that are not adjacent to the <em>“River”</em> or
+“<em>Pond”</em> boundary conditions. It may be easiest to use the <em>“Select
+With Polygon”</em> tool and select elements that do not border the <em>“River”</em>
+or “<em>Constant Head”</em> boundary conditions (Figure 1.57). When the
+appropriate elements have been selected, press [Enter] to open the
+<em>“Select Evaporation Zone”</em> dialog box. Select <em>“Evaporation”</em> in the
+drop-down box and then click <em>“OK”</em> to finalize the evaporation zone.</p>
+<div class="figure align-center" id="id57">
+<a class="reference internal image-reference" href="_images/figure_1_57_tutorial.png"><img alt="_images/figure_1_57_tutorial.png" src="_images/figure_1_57_tutorial.png" style="width: 6.49in; height: 3.89in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.57 The assigned evaporation zones</span><a class="headerlink" href="#id57" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="step-13-saving-the-project">
+<h3>Step 13. Saving the Project<a class="headerlink" href="#step-13-saving-the-project" title="Permalink to this headline">¶</a></h3>
+<p>After completing the model setup, click “<em>File</em>” on the Main Menu
+banner. Select “<em>Save Project</em>” to save the changes to the project.</p>
+</div>
+</div>
+<div class="section" id="running-the-model">
+<h2>1.4 Running the Model<a class="headerlink" href="#running-the-model" title="Permalink to this headline">¶</a></h2>
+<p>To run the model, click “<em>Run</em>” on the Main Menu banner, then select
+“<em>Validate.”</em> The <em>“Validate”</em> function checks for errors, such as
+defining a constant-head level for a constant-head node that is lower
+than the node itself, and for multiple assignments to a node, such as
+assigning two constant-head boundary conditions to one node. The
+function also summarizes the model construction, such as the number of
+nodes, elements, pumps, etc. After reviewing the model, click
+<em>“Validate,”</em> and <strong>MINEDW</strong> will check for errors in the model. Any
+errors will be highlighted in the window. If errors are found, review
+the relevant definitions by following the steps outlined in the previous
+sections. If no errors are found, click “<em>OK</em>” to complete the
+validation process.</p>
+<p>If the model passes the validation process, then click “<em>Run</em>” again
+and select “<em>Create Data Set.</em>” Select the folder where you want to
+create your input data set. All input files for <strong>MINEDW</strong> model runs
+will be created in the chosen directory. <strong>NOTE: FILES MUST BE CREATED
+BEFORE RUNNING THE MODEL</strong>. Next, click “<em>Run</em>” on the Main Menu
+banner and select “<em>Execute</em>” to run the model. A window will appear
+showing the simulation progress.</p>
+</div>
+<div class="section" id="results">
+<h2>1.5 Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<p><strong>MINEDW</strong> has several functions that allow the user to do most of the
+post-processing they will need.</p>
+<p>Under the <em>“Element”</em> plot item category on the <em>“List”</em> tab, the <em>“3D
+Element”</em> plot item can be used with the <em>“Isoline”</em> or <em>“Isosurface”</em>
+plot items under <em>“Node”</em> to plot geology and head, pore-pressure, or
+water-table contours. The <em>“2D Contour”</em> and <em>“3D Contour”</em> plot items
+can also be used to plot contours or color floods of head, pore
+pressure, or the water table.</p>
+<p>To visualize the simulation results, click “<em>Results</em>” on the Main
+Menu banner and then choose “<em>Read Results.</em>” Select the .PLB file
+from the folder where <strong>MINEDW</strong> was executed. (Note: The .PLB file is
+a binary file that contains the calculated head over time.) <strong>MINEDW</strong>
+will read the entire file.</p>
+<p>Water-Table Contour:</p>
+<p>To plot the water-table contours, select the “<em>List</em>” tab from the
+“<em>Control Panel</em>” pane, expand the “<em>Node</em>” item, and then
+double-click “<em>2D Contour</em>” (Figure 1.58).</p>
+<div class="figure align-center" id="id58">
+<a class="reference internal image-reference" href="_images/figure_1_58_tutorial.png"><img alt="_images/figure_1_58_tutorial.png" src="_images/figure_1_58_tutorial.png" style="width: 3.4in; height: 3.8in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.58 The “<em>2D Contour</em>” plot item</span><a class="headerlink" href="#id58" title="Permalink to this image">¶</a></p>
+</div>
+<p>On the “<em>Attributes</em>” tab, from the “<em>Color By</em>” drop-down menu,
+select “<em>Water Table.</em>” The water-table contour appears in the View
+Pane. To view the desired time step, enter it in the variable field or
+move the time step slider bar found on the Main Menu banner. The slider
+is shown in Figure 1.59. For the steady-state simulation, view the last
+time step (time step 100 in this tutorial).</p>
+<div class="figure align-center" id="id59">
+<a class="reference internal image-reference" href="_images/figure_1_59_tutorial.png"><img alt="_images/figure_1_59_tutorial.png" src="_images/figure_1_59_tutorial.png" style="width: 2.53in; height: 0.33in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.59 Time step slider</span><a class="headerlink" href="#id59" title="Permalink to this image">¶</a></p>
+</div>
+<p>To export the water-table contour as a bitmap, select “<em>Export
+Base</em>” from the “<em>File</em>” item on the Main Menu banner and choose
+“<em>Bitmap.</em>” The exported bitmap is provided in Figure 1.60.</p>
+<div class="figure align-center" id="id60">
+<a class="reference internal image-reference" href="_images/figure_1_60_tutorial.png"><img alt="_images/figure_1_60_tutorial.png" src="_images/figure_1_60_tutorial.png" style="width: 6.49in; height: 3.89in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.60 Water-table contours from steady-state simulations</span><a class="headerlink" href="#id60" title="Permalink to this image">¶</a></p>
+</div>
+<p>2-D or 3-D Head Contour:</p>
+<p>To create a 2-D or 3-D contour plot of the head distribution, select the
+<em>“Node”</em> item under <em>“List”</em> on the <em>“Control Panel”</em> pane and
+double-click on either <em>“2D Contour”</em> or <em>“3D Contour.”</em> A 2-D contour
+is ideal for creating a 2-D color flood image of head distribution
+within any of the model layers, while a 3-D contour item is best for
+creating 3-D images of head distributions or cross sections. Figure 1.61
+is a cross section through the model displaying head. To recreate this
+image, choose <em>“3D Contour”</em> and then choose <em>“Head”</em> in the <em>“Color
+By”</em> drop-down menu on the “A<em>ttributes”</em> tab. Next, double-click on
+<em>“Plane”</em> located under <em>“Cutting Planes.”</em> Enter the following values
+for the <em>“Plane”</em> on the <em>“Attribute”</em> tab: <em>Origin</em> = (466236,
+9.07489e+6, 250), <em>Normal</em> = (-0.429008, 0.903301, 0) <em>Dip/DD</em> = (90,
+-25.4046). Then click the <em>“Snap View”</em> button. Note: Cross sections can
+be created using the “<em>Create Plane with two selected points on the
+plot”</em> tool, but the location of the cross section is not as precise.
+Select the “<em>3D Contour</em>” in the “<em>Plot Items</em>” pane and then
+expand the <em>“Cutplane”</em> item on the <em>“Attributes”</em> tab. The cross
+section can easily be modified to display pore “<em>Pressures”</em> or <em>“Head
+Difference”</em> by selecting the appropriate item from the drop-down menu
+next to “<em>Color By”</em> on the <em>“Attributes”</em> tab for the <em>“3D Contour”</em>
+plot item.</p>
+<div class="figure align-center" id="id61">
+<a class="reference internal image-reference" href="_images/figure_1_61_tutorial.png"><img alt="_images/figure_1_61_tutorial.png" src="_images/figure_1_61_tutorial.png" style="width: 6.49in; height: 3.89in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.61 A 3-D cross section of head exported from <em>MINEDW</em></span><a class="headerlink" href="#id61" title="Permalink to this image">¶</a></p>
+</div>
+<p>Geologic Cross Section and Water Table:</p>
+<p><strong>MINEDW</strong> can create cross sections showing the geology represented
+in the model overlaid by the groundwater table. To construct a figure
+similar to the one shown in Figure 1.62, select <em>“3D Element”</em> (found
+under <em>“Element”</em>) from the <em>“List”</em> tab in the <em>“Control Panel”</em> pane.
+Next, add a <em>“2D Contour”</em> (under <em>“Node”</em>) and select <em>“Water Table”</em>
+from the <em>“Color By”</em> drop-down menu on the <em>“Attributes”</em> tab. Finally,
+create a cross section using the <em>“Create Plane with two selected points
+on the plot”</em> tool. Colors for both the <em>“3D Element”</em> and <em>“2D
+Contour”</em> plot items can be modified by expanding the <em>“Contour”</em>
+attribute and choosing a different color ramp.</p>
+<div class="figure align-center" id="id62">
+<a class="reference internal image-reference" href="_images/figure_1_62_tutorial.png"><img alt="_images/figure_1_62_tutorial.png" src="_images/figure_1_62_tutorial.png" style="width: 6.49in; height: 3.89in;" /></a>
+<p class="caption"><span class="caption-text">Figure 1.62 A cross section of the geology and water table</span><a class="headerlink" href="#id62" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="2_transient_state_open_pit_tutorial.html" class="btn btn-neutral float-right" title="Tutorial 2 - Open Pit Mining" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="acronyms_abbreviations_manual.html" class="btn btn-neutral float-left" title="Acronyms and Abbreviations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Itasca Denver, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'G-VY7FB9D8LM', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

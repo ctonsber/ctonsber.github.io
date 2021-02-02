@@ -1,0 +1,69 @@
+1.0 Introduction
+================
+
+For mining operations that are conducted below the water table, there
+are two important water-related problems that mine operators could face:
+groundwater inflow into an underground excavation or an open pit if the
+country rock is relatively permeable or, if the rock is impermeable,
+pore pressure affecting the stability of open-pit highwalls or
+underground excavation. For economic and safety purposes, it is
+important to be able to predict the nature and magnitude of these
+potential problems so that appropriate dewatering or depressurizing
+systems may be installed.
+
+Numerical groundwater flow models are now routinely used to predict
+inflows and pore-pressure distributions for both open-pit and
+underground mines and to help design mine dewatering systems. Although
+adequate for addressing broad issues such as the impact of mining
+operations on regional water resources, available groundwater numerical
+codes are limited in their ability to quantify the more detailed
+problems of the phreatic surface in highwalls and inflows to both open
+pits and underground openings. These limitations arise primarily from
+the following:
+
+-  How the flow domain is subdivided into finite, geometric pieces—the
+   discretiza­tion used in a numerical model—could strongly affect the
+   predictions of inflow and the shape of the phreatic surface near an
+   excavation. Not only must discrete features, such as faults and
+   contacts between different hydrogeologic materials, be included in
+   the discretization, but predicting the essentially radial flow toward
+   an excavation is more accurately performed by using small,
+   approximately logarithmic mesh spacing. Finite-difference codes have
+   an inherent limitation relative to finite-element discretization when
+   applied to any problem that is hydrogeologically or geometrically
+   complex.
+
+-  The seepage face—the surface of the highwall of an open pit through
+   which lateral flow occurs—is usually not properly estimated in most
+   commonly used finite-difference codes. The height of the seepage face
+   affects both the amount of lateral inflow and the height of the water
+   table behind the highwall. A poor estimate of the height of the
+   seepage face can introduce significant errors to the predicted
+   inflows and pore pressures.
+
+-  For slope-stability analysis, it is critical that the output of the
+   pore pressure can be readily used in the geomechanical model. The
+   pore pressure data from the groundwater flow model that are not
+   compatible with the data requirements of the geomechanical model will
+   delay the integration between these two models.
+
+To overcome limitations such as those described above, Itasca Denver,
+Inc. (Itasca) developed **MINEDW**, a three-dimensional (3-D),
+finite-element groundwater flow code. The core of the code is based on
+algorithms previously developed by Durbin and Berenbrock [I]_ 
+for the United States Geological Survey (USGS) code 
+`FEMFLOW3D <https://pubs.er.usgs.gov/publication/ofr97810>`_. As of early
+2018, **MINEDW** has been used successfully at more than 50 mines
+located throughout the world and in diverse hydrogeologic and climatic
+conditions. The code has been in use for approximately 30 years, and its
+predictions have been validated by field data collected over many years.
+
+Since Itasca first commercially released **MINEDW** in 2012, Itasca
+has continued to improve the functionality of **MINEDW**. The current
+version, **MINEDW** 3.05, represents over 20 years of development and
+is commercially available.
+
+Itasca would like to acknowledge the contributions from the past and
+current employees of Itasca and its predecessor, Hydrologic Consulting,
+Inc. Among them, Mr. Timothy Durbin and Dr. Lee Atkinson were
+instrumental in the inception and early development of **MINEDW**.

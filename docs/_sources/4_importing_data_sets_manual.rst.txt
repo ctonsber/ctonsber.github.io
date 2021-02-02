@@ -1,0 +1,70 @@
+4.0 Importing Data Sets
+=======================
+
+The **MINEDW** program can import **MINEDW** model data sets as well
+as *FEFLOW* data sets.
+
+4.1 Importing Earlier Versions of **MINEDW** Model Data Sets
+------------------------------------------------------------
+
+To import a **MINEDW** model data set or *FEFLOW* data set into
+**MINEDW**, select “\ *File/Import*\ ” from the Main Menu banner at
+the top of the screen. The “\ *Import File*\ ” dialog box opens, as
+shown in Figure 4.1.
+
+.. figure:: media/figure_4_1_manual.png
+   :width: 4.96250in
+   :height: 3.47153in
+   :align: center
+
+   Figure 4.1 The “\ *Import File*\ ” dialog box
+
+When selecting a data file, five options are available: 1) **MINEDW**
+geometry file (.PST), 2) **MINEDW** data-set file (.FEL), 3) *FEFLOW*
+data-set file (.FEM), 4) *FEFLOW* results data file (.DAC), or 5)
+stereolithography (.STL) file, which is used to import a finite-element
+mesh. If a **MINEDW** geometry file (.PST) is selected, then only
+geometry and zone information are imported; however, if a **MINEDW**
+data-set file (.FEL) is selected, then all information related to the
+model inputs is imported. After selecting the desired model data file,
+click “\ *Open*\ ” to continue.
+
+The **MINEDW** data-set file (.FEL) contains a list of references to
+**MINEDW** model files, which must be in the same directory as the
+.FEL file when the model is imported. If a .FEL file was created using a
+prior version (e.g., before **MINEDW** **3.0**) of **MINEDW**,
+then the “\ *Define Simulation Start Date/Time*\ ” dialog box appears
+(as shown in Figure 4.2). If the **MINEDW** data set was created with
+**MINEDW** version **3.0** or greater, the time-step information is
+imported automatically.
+
+.. figure:: media/figure_4_2_manual.png
+   :width: 3.38542in
+   :height: 1.07292in
+   :align: center
+
+   Figure 4.2 The “\ *Define Simulation Start Date/Time*\ ” dialog box
+
+When importing data from a .FEL file created by versions prior to
+**MINEDW** version **3.0**, the simulation start date refers to time
+step = 0 in the simulation. After entering the simulation start date,
+click “\ *OK*\ ” to complete the importing process. A progress window
+appears (Figure 4.3), showing the completion percentage of the import.
+
+.. figure:: media/figure_4_3_manual.png
+   :width: 2.33056in
+   :height: 1.27847in
+   :align: center
+
+   Figure 4.3 The “\ *Importing*\ ” data progress window
+
+Time-varying conductivity (e.g., ZOR) information cannot be imported
+into **MINEDW** when importing from .FEL files created by **MINEDW**
+prior to version **3.0** and has to be regenerated using the “\ *Open
+Pit*\ ” menu.
+
+4.2 Display the Imported Model
+------------------------------
+
+After the model files are imported, the model can be displayed using
+plot items, as described in Chapter 3.

@@ -1,0 +1,270 @@
+Tutorial 3 - Underground Mining
+===============================
+
+3.1 Problem Description
+-----------------------
+
+Tutorial 3 uses the steady-state (pre-mining) model generated in
+Tutorial 1 and describes how to construct a transient model for an
+underground mine that uses the sublevel caving method. This tutorial
+describes the procedure for creating an enhanced permeability zone for
+displaced rocks caused by sublevel caving. This enhanced permeability
+zone is referred to as the “zone of relaxation for caving” in this
+tutorial. Incorporating this permeable zone into the model will be
+discussed below.
+
+3.2 Transient Simulation
+------------------------
+
+The results from the steady-state simulation in Tutorial 1 are used as
+the initial conditions for the transient simulation.
+
+Step 1. Opening the Project File
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The model created in Tutorial 1 is used for this problem. To open the
+project file created in the first tutorial, click “\ *File*\ ” on the
+Main Menu banner, then select “\ *Open Project.*\ ” The “\ *Load a
+MINEDW Project File*\ ” dialog box appears, as shown in Figure 3.1.
+
+.. figure:: media/figure_3_1_tutorial.png
+   :width: 6.49in
+   :height: 4.4in
+   :align: center
+
+   Figure 3.1 The “\ *Load a MINEDW Project File*\ ” dialog box
+
+Select the project (.PRJ) file and click “\ *Open.*\ ” Next, select
+“\ *File*\ ” from the Main Menu banner and then select “\ *Save Project
+As*\ ” to save the project as a different .PRJ file for the transient
+underground simulation (e.g., UG.PRJ).
+
+Step 2. Defining Project Properties
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To change the project property, click “\ *Project*\ ” and then select
+“\ *Project Property*.” The “\ *Project Properties*\ ” dialog box shown
+in Figure 3.2 appears. Make sure all the fields contain the same values
+as shown in Figure 3.2. Select the “\ *Transient*\ ” option for this
+simulation.
+
+.. figure:: media/figure_3_2_tutorial.png
+   :width: 2.77in
+   :height: 4.12in
+   :align: center
+
+   Figure 3.2 The “\ *Project Properties*\ ” dialog box
+
+Step 3. Defining Initial Heads
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To define initial heads, click “\ *Project*\ ” on the Main Menu banner,
+then select “\ *Initial Heads.*\ ” The “\ *Set Up Initial Head*\ ”
+dialog box appears. Choose the “\ *Varied*\ ” option and select the
+water levels file (“\*.MDL”) created during Tutorial 1 by clicking on
+the “…” button as shown in Figure 3.3, then click “\ *OK.*\ ”
+
+.. figure:: media/figure_3_3_tutorial.png
+   :width: 3.2in
+   :height: 1.37in
+   :align: center
+
+   Figure 3.3 The “\ *Set Up Initial Head*\ ” dialog box
+
+Step 4. Creating the ZOR file for Caving
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In **MINEDW**, the enhanced permeability of displaced rock as a result
+of sublevel caving can be simulated. The two zones can be represented
+with different *K* values for the displaced rock.
+
+To create the enhanced permeability zone of displaced rock, select
+“\ *Zone of Relaxation for Caving*\ ” from the “\ *Mining*\ ” drop-down
+menu on the Main Menu banner. The “\ *Create Zone of Relaxation for Cave
+Zone*\ ” dialog box appears (Figure 3.4).
+
+.. figure:: media/figure_3_4_tutorial.png
+   :width: 5.27in
+   :height: 5.82in
+   :align: center
+
+   Figure 3.4 The “\ *Create Zone of Relaxation for Cave Zone*\ ” dialog
+   box
+
+First, enter or select the input data directory where the files you will
+be working with are located. This can be done by entering the path
+directly into the box next to “\ *Input Data Directory”* or by clicking
+the “…” button and navigating to the location of the files. Next, enter
+the dates of the mining schedule and the related .DXF file names in the
+*“Date,” “Layer #1 File,”* and “\ *Layer #2 File”* columns manually or
+use an underground-mining schedule file (Appendix B) to load data for
+Years 0 to 9. To use an underground-mining schedule file to load dates
+and file names, click on the “\ *Open*\ ” button and select the
+“\ *UG.DAT*\ ” file found in the “\ *INPUT*\ ” folder. When the
+“\ *UG.DAT*\ ” file is selected, the dates and file names will be listed
+as shown in Figure 3.3. In this example, “\ *2000\_A.DXF*\ ” represents
+a zone with the most displaced rock and “\ *2000\_B.DXF*\ ” represents a
+second zone with less displaced rock for the first year of mining. The
+other .DXF files are for subsequent years of mining.
+
+Click “\ *Search Zone*,” and the geological units that are within the
+displaced volume will appear. Leaving the value under the field labeled
+“\ *Layer #...”* equal to 1 will exclude that geologic unit from the
+ZOR. For this simulation, use values of 25 and 10 for *“Layer #1”* and
+*“Layer #2,”* respectively. Select the folder where you wish to create
+the zone of relaxation for caving file by clicking the *“…”* button and
+navigating to the location. Next, enter the file name in the box at the
+bottom of the dialog box and then click “\ *OK.*\ ”
+
+Step 5. Adding the ZOR for Caving to the Model
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To include the block caving ZOR in the model, select “\ *Underground
+Mining and Dewatering*\ ” under the “\ *Mining*\ ” drop-down menu on the
+Main Menu banner. The “\ *Dewatering and Underground Mining*\ ” dialog
+box appears (Figure 3.5). Click *“Add”* and then select the “\ *ZOR”*
+tab. On the *“ZOR”* tab, click on *“Assign”* and, using the *“Open Time
+Varied Conductivity File”* dialog box, browse to the location where the
+ZOR file is located, select it, and click *“Open.”* After choosing the
+ZOR file, make sure that the *“Activate”* box on the *“ZOR”* tab is
+checked, then click *“OK.”* Multiple cave ZORs can be added to the model
+using this dialog box.
+
+.. figure:: media/figure_3_5_tutorial.png
+   :width: 4.35in
+   :height: 5.42in
+   :align: center
+
+   Figure 3.5 The “\ *Time-Varied Conductivity*\ ” dialog box
+
+Step 6. Adding the Drain Nodes for the Cave Zone
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Drain nodes are used to simulate groundwater extraction via the
+underground workings. To add the drain nodes to the model for
+simulation, begin by creating the necessary groups in the
+*“Constant-Head Boundary”* dialog box. Click on *“BCs”* on the Main Menu
+banner, then select *“Constant Head”* from the drop-down menu. Using the
+*“Constant-Head* *Boundary”* dialog box, click *“Add”* in the top center
+of the dialog box. Change the group name to *“2000”* for the first drain
+group. Select *“Drain”* from the drop-down box next to the group name.
+Repeat these steps to add drain groups *“2001”* through *“2009.”* Once
+the groups have been created in the *“Constant-Head Boundary*\ ” dialog
+box, click *“OK”* on the left-hand side of the dialog box.
+
+The drain groups have been created in the model, but currently no drains
+are assigned to the model domain. To correctly assign the drains to the
+model to simulate the dewatering of the underground workings, begin by
+adding the file named *“Mine\_Workings.DXF”* in the *“Input/Cave”*
+directory to the View Pane. Using the *“Layer”* attribute, turn on only
+the *“2000”* layer. Next, add a *“3D Contour”* plot item to the View
+Pane. Toggle through the *“Layers,”* starting from layer 1, until the
+top of the *“Mine\_Workings.DXF”* file becomes visible. Using the
+*“Select”* tool on the Main Menu banner, select the nodes around this
+portion of the *“Mine\_Workings.DXF”* file\ *.* Once the nodes are
+selected, press [Enter] to open the *“Assign Properties for Nodes”*
+dialog box. Check the radio button next to *“Add to Constant-Head
+Boundary”* and then select the *“2000”* group from the constant-head
+group drop-down box, then click *“OK.”* Repeat these steps for all of
+the layers in the *“Mine\_Workings.DXF”* file. The results should look
+similar to those displayed in Figure 3.6.
+
+.. figure:: media/figure_3_6_tutorial.png
+   :width: 6.49in
+   :height: 3.89in
+   :align: center
+
+   Figure 3.6 The drain nodes used to simulate the underground workings
+
+Once the drain nodes have been assigned to the model domain, the
+activation time will need to modified for each one of the drain nodes.
+Each drain group should be activated on the date indicated by the group
+name to simulate the progressive excavation of the underground workings.
+For example, group *“2000”* should be activated on 1 January 2000 and
+group *“2001”* should be activated on 1 January 2001 and so on. All the
+drain groups should cease operation on 1 January 2010 to simulate the
+end of mining. To turn off the drain nodes, enter “\ *˗9,999,999*\ ” for
+the drain level in the time-series window. Now that the underground mine
+has been added to the model, they should be added as part of the mining
+simulation.
+
+Adding the created drain nodes to the mining simulation will instruct
+**MINEDW** to summarize flow to these drain nodes in a special file
+ending in *“\*.MNE.”* The summarized flow data in the *“\*.MNE”* file
+could be calculated from the data reported in the *“\*.FLW*\ ” file, but
+adding the drain nodes to the mining simulation simplifies these steps.
+To add the drain nodes that are dewatering the underground workings to
+the mining simulation, open the *“Dewatering and Underground Mining”*
+dialog box by clicking *“Mining”* then selecting *“Underground Mining
+and Dewatering”* on the Main Menu banner. Under the *“General”* tab in
+the *“Dewatering and Underground Mining”* dialog box there is a
+drop-down box next to the window titled *“Drain Group Used.”* The
+drop-down box should contain the constant-head and drain groups that
+were previously added to the model using the *“Constant-Head Boundary”*
+dialog box. Select the *“2000”* group, then below the drop-down box,
+click *“Add.”* The drain group name should now be visible in the *“Drain
+Group Used”* window and should not appear in the drop-down box. Repeat
+these steps for drain groups *“2001”* through *“2009.”* The completed
+*“Dewatering and Underground Mining*\ ” dialog box should appear similar
+to what is shown in Figure 3.7. Now the model is ready to run. Refer to
+the following section for running the underground mining simulation.
+
+.. figure:: media/figure_3_7_tutorial.png
+   :width: 4.35in
+   :height: 5.42in
+   :align: center
+
+   Figure 3.7 Drain groups used to simulated underground mining
+
+3.5 Running the Model
+---------------------
+
+To run the model, click “\ *Run*\ ” on the Main Menu banner, then select
+“\ *Validate.*\ ” If the model passes the validation process, then click
+“\ *Run*\ ” on the Main Menu banner and select “\ *Create Data Set*.”
+Select the folder where you want to create the data set. Next, click
+“\ *Run*\ ” on the Main Menu banner and select “\ *Execute*\ ” to run
+the model.
+
+3.6 Results
+-----------
+
+Once the simulation has ended, click “\ *Results*\ ” on the Main Menu
+banner, and then choose “\ *Read Results.*\ ” Select the “\*.\ *PLB*\ ”
+file from the folder where **MINEDW** was executed to import the
+simulation results into **MINEDW** for visualization. Next, add a *“3D
+Contour”* plot item to the View Pane and use the time-step slider to
+view the desired time step. Figure 3.8 displays a cross section of head
+at the end of mining just before dewatering operations end.
+
+.. figure:: media/figure_3_8_tutorial.png
+   :width: 6.49in
+   :height: 3.89in
+   :align: center
+
+   Figure 3.8 Cross section through the mining area displaying hydraulic
+   head
+
+As previously mentioned, **MINEDW** computes the total inflow to the
+underground workings. This information is recorded in the file
+“\*.\ *MNE*\ ” extension in the folder where **MINEDW** was executed.
+To plot seepage to the underground workings below the cave zone, open
+the “\*.\ *MNE*\ ” file using Microsoft\ :sup:`®` Excel or other
+plotting software. Figure 3. 9 shows total inflow to the underground
+workings.
+
+.. figure:: media/figure_3_9_tutorial.png
+   :width: 5.12in
+   :height: 3.6in
+   :align: center
+
+   Figure 3.9 Total inflow to the underground workings through time
+
+For additional outputs that can be generated from a model simulation,
+please refer to section 2.3. All of the outputs, with the exception of
+the *“Pit Node Elevation and Water Table,” “Seepage Component to Pit,”*
+and *“Pit Lake Water Level vs. Time,”* can be generated for the
+underground mining simulation. This tutorial did not use pumping wells
+for dewatering the underground mine; however, if pumping wells had been
+used, the discharge over time could also be plotted. Discharge from
+pumping wells is recorded in the file with the extension *“\*.FLW.”*

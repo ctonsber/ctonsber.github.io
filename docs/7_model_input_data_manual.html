@@ -1,0 +1,2429 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7.0 Model Input Data &mdash; MINEDW 3.05 225 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="8.0 Model Execution" href="8_model_execution_manual.html" />
+    <link rel="prev" title="6.0 Nodes and Elements" href="6_nodes_and_elements_manual.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MINEDW 3.05
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">USER MANUAL</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1_introduction_manual.html">1.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_features_of_minedw_manual.html">2.0 Features of MINEDW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_minedw_interface_manual.html">3.0 MINEDW Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_minedw_interface_manual.html#view-pane">3.1 View Pane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_minedw_interface_manual.html#main-menu">3.2 Main Menu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-file-menu">3.2.1 The File Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-project-menu">3.2.2 The Project Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-mesh-menu">3.2.3 The Mesh Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-bcs-menu">3.2.4 The BCs Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-mining-menu">3.2.5 The Mining Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-run-menu">3.2.6 The Run Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-results-menu">3.2.7 The Results Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-view-menu">3.2.8 The View Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-tools-menu">3.2.9 The Tools Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-windows-menu">3.2.10 The Windows Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#the-help-menu">3.2.11 The Help Menu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3_minedw_interface_manual.html#toolbar">3.3 Toolbar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_minedw_interface_manual.html#control-panel-pane">3.4 Control Panel Pane</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#plot-items">3.4.1 Plot Items</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#legend">3.4.1.1 Legend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#display-settings">3.4.1.2 Display Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#global-settings">3.4.1.3 Global Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#axes">3.4.1.4 Axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#observation">3.4.1.5 Observation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#boundary-conditions">3.4.1.6 Boundary Conditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#element">3.4.1.7 Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#file-data">3.4.1.8 File Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#node">3.4.1.9 Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#post-processing">3.4.1.10 Post Processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#cutting-planes">3.4.1.11 Cutting Planes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3_minedw_interface_manual.html#clip-box">3.4.1.12 Clip Box</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#view">3.4.2 View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_minedw_interface_manual.html#information">3.4.3 Information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4_importing_data_sets_manual.html">4.0 Importing Data Sets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_importing_data_sets_manual.html#importing-earlier-versions-of-minedw-model-data-sets">4.1 Importing Earlier Versions of <strong>MINEDW</strong> Model Data Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_importing_data_sets_manual.html#display-the-imported-model">4.2 Display the Imported Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5_mesh_generator_manual.html">5.0 Mesh Generator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#creating-a-mesh">5.1 Creating a Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#the-mesh-components">5.2 The Mesh Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-domain-component">5.2.1 The “Domain” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-mining-area-mining-and-fine-area-components">5.2.2 The “Mining Area,” “Mining,” and “Fine Area” Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-fault-component">5.2.3 The “Fault” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-points-component">5.2.4 The “Points” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-polylines-component">5.2.5 The “Polylines” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-regions-component">5.2.6 The “Regions” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-all-faults-component">5.2.7 The “All Faults” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-mmesh-component">5.2.8 The “MMesh” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-toggle-component">5.2.9 The “Toggle” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-area-tolerance-component">5.2.10 The “Area Tolerance” Component</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#exporting-a-completed-mesh">5.3 Exporting a Completed Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#the-rhino-drop-command">5.4 The Rhino “Drop” Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="6_nodes_and_elements_manual.html">6.0 Nodes and Elements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_nodes_and_elements_manual.html#selecting-elements">6.1 Selecting Elements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="6_nodes_and_elements_manual.html#selecting-elements-in-2-d">6.1.1 Selecting Elements in 2-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="6_nodes_and_elements_manual.html#selecting-elements-in-3-d">6.1.2 Selecting Elements in 3-D</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="6_nodes_and_elements_manual.html#selecting-nodes">6.2 Selecting Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7.0 Model Input Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#project-definition">7.1 Project Definition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#project-properties">7.1.1 Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#time-steps">7.1.2 Time Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#model-geometry">7.2 Model Geometry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#generating-the-mesh">7.2.1 Generating the Mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-main-model-layers">7.2.2 Adding Main Model Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-topography-data">7.2.3 Using Topography Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#importing-node-elevations">7.2.4 Importing Node Elevations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#defining-a-pinch-out">7.2.5 Defining a Pinch-Out</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modifying-the-mesh">7.2.6 Modifying the Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#zone-properties-hydraulic-parameters">7.3 Zone Properties – Hydraulic Parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#zone-distributions-para-fem">7.3.1 Zone Distributions (para.fem)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zone-properties-kfile-dat">7.3.2 Zone Properties (kfile.dat)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#boundary-conditions">7.4 Boundary Conditions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#time-series-data">7.4.1 Time-Series Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constant-head">7.4.2 Constant Head</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#variable-flux">7.4.3 Variable-Flux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pumping-well">7.4.4 Pumping Well</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rivers">7.4.5 Rivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recharge">7.4.6 Recharge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#evaporation">7.4.7 Evaporation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#initial-conditions">7.5 Initial Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mining-plan">7.6 Mining Plan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-mining-plan">7.6.1 Creating a Mining Plan</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#converting-dxf-to-dat-files">7.6.1.1 Converting .DXF to .DAT files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-mining-plan-from-pit-topography-files">7.6.1.2 Creating a Mining Plan from Pit Topography files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-mining-plan-from-final-pit-topography">7.6.1.3 Creating a Mining Plan from Final-Pit Topography</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#importing-a-mine-plan-into-minedw">7.6.2 Importing a Mine Plan into MINEDW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pit-lake">7.6.3 Pit Lake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zone-of-relaxation-for-pit">7.6.4 Zone of Relaxation for Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#open-pit-backfilling">7.6.5 Open-Pit Backfilling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zone-of-relaxation-for-caving">7.6.5 Zone of Relaxation for Caving</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dewatering-and-underground-mining">7.6.6 Dewatering and Underground Mining</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="8_model_execution_manual.html">8.0 Model Execution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="8_model_execution_manual.html#validate">8.1 Validate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_model_execution_manual.html#create-data-set">8.2 Create Data Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_model_execution_manual.html#execute">8.3 Execute</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="9_model_output_manual.html">9.0 Model Output</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#read-results-and-export-results-as-text-file">9.1 Read Results and Export Results as Text File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#observations">9.2 Observations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#hydrograph">9.3 Hydrograph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#particle-tracking">9.4 Particle Tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#section-flux">9.5 Section Flux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#seepage-component-to-pit">9.6 Seepage Component to Pit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9_model_output_manual.html#calculating-seepage-to-the-pit">9.6.1 Calculating Seepage to the Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9_model_output_manual.html#visualizing-seepage-and-drains">9.6.2 Visualizing Seepage and Drains</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#pit-node-elevation-and-water-table">9.7 Pit Node Elevation and Water Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#export-state">9.8 Export State</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#exporting-pore-pressure">9.9 Exporting Pore Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#export-cross-section-pore-pressure">9.10 Export Cross-Section Pore Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#drawdown-base-time-step">9.11 Drawdown-Base Time Step</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#visualizing-the-results">9.12 Visualizing the Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#cross-sections">9.13 Cross Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#pit-lake-water-level-vs-time">9.14 Pit Lake – Water Level vs. Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#pumping-well-discharge-vs-time">9.15 Pumping Well – Discharge vs. Time</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references_manual.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acronyms_abbreviations_manual.html">Acronyms and Abbreviations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">TUTORIAL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1_steady_state_tutorial.html">Tutorial 1 - Initial Condition</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_steady_state_tutorial.html#problem-description">1.1 Problem Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_steady_state_tutorial.html#minedw-model-construction">1.2 <em>MINEDW</em> Model Construction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-1-generating-a-mesh">Step 1. Generating a Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1_steady_state_tutorial.html#building-the-model-in-minedw">1.3 Building the model in <em>MINEDW</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-2-defining-project-properties">Step 2. Defining Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-3-defining-time-steps">Step 3. Defining Time Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-4-importing-ground-surface-elevation">Step 4. Importing Ground-Surface Elevation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-5-adding-layers">Step 5. Adding Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-6-defining-zone-properties">Step 6. Defining Zone Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-7-assigning-hydraulic-zones-to-elements">Step 7. Assigning Hydraulic Zones to Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-8-defining-pinch-outs">Step 8. Defining “Pinch-Outs”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-9-defining-initial-heads">Step 9. Defining Initial Heads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-10-assigning-the-boundary-conditions">Step 10. Assigning the Boundary Conditions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="1_steady_state_tutorial.html#constant-head-boundary">Constant-Head Boundary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="1_steady_state_tutorial.html#river-boundary-condition">River Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="1_steady_state_tutorial.html#no-flow-boundary">No-Flow Boundary</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-11-assigning-recharge">Step 11. Assigning Recharge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-12-adding-evaporation">Step 12. Adding Evaporation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-13-saving-the-project">Step 13. Saving the Project</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1_steady_state_tutorial.html#running-the-model">1.4 Running the Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_steady_state_tutorial.html#results">1.5 Results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html">Tutorial 2 - Open Pit Mining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#problem-description">2.1 Problem Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-1-opening-the-project-file">Step 1. Opening the Project File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-2-defining-project-properties">Step 2. Defining Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-3-defining-model-time-steps">Step 3. Defining Model Time Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-3-defining-initial-heads">Step 3. Defining Initial Heads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-4-creating-a-mining-plan-for-an-open-pit">Step 4. Creating a Mining Plan for an Open Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-5-creating-a-zone-of-relaxation-for-an-open-pit">Step 5. Creating a Zone of Relaxation for an Open Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-6-open-pit-backfilling">Step 6. Open-Pit Backfilling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-7-creating-a-pit-lake">Step 7. Creating a Pit Lake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-8-adding-pumping-wells">Step 8. Adding Pumping Wells</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-9-defining-the-boundary-conditions">Step 9. Defining the Boundary Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#running-the-model">2.2 Running the Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#results">2.3 Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#creating-monitoring-points">Creating Monitoring Points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#creating-hydrographs">Creating Hydrographs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#pit-node-elevation-and-water-table">Pit-Node Elevation and Water Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#head-distribution-in-3-d">Head Distribution in 3-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#head-distribution-cross-section">Head Distribution Cross Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#exporting-pore-pressures-to-a-different-grid-in-2-d">Exporting Pore Pressures to a Different Grid in 2-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#exporting-pore-pressures-to-a-different-grid-in-3-d">Exporting Pore Pressures to a Different Grid in 3-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#seepage-component-to-pit">Seepage Component to Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#pit-lake-water-level-vs-time">Pit Lake – Water Level vs. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#pumping-wells-discharge-vs-time">Pumping Wells – Discharge vs. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#particle-tracking">Particle Tracking</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_transient_state_underground_tutorial.html">Tutorial 3 - Underground Mining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#problem-description">3.1 Problem Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#transient-simulation">3.2 Transient Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-1-opening-the-project-file">Step 1. Opening the Project File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-2-defining-project-properties">Step 2. Defining Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-3-defining-initial-heads">Step 3. Defining Initial Heads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-4-creating-the-zor-file-for-caving">Step 4. Creating the ZOR file for Caving</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-5-adding-the-zor-for-caving-to-the-model">Step 5. Adding the ZOR for Caving to the Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-6-adding-the-drain-nodes-for-the-cave-zone">Step 6. Adding the Drain Nodes for the Cave Zone</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#running-the-model">3.5 Running the Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#results">3.6 Results</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MINEDW 3.05</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>7.0 Model Input Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/7_model_input_data_manual.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="8_model_execution_manual.html" class="btn btn-neutral float-right" title="8.0 Model Execution" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="6_nodes_and_elements_manual.html" class="btn btn-neutral float-left" title="6.0 Nodes and Elements" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="model-input-data">
+<h1>7.0 Model Input Data<a class="headerlink" href="#model-input-data" title="Permalink to this headline">¶</a></h1>
+<p>This chapter describes generating inputs for a <strong>MINEDW</strong> model using
+the user interface menus and tool buttons. <strong>MINEDW</strong> saves the model
+files and results as a project file format (.PRJ) from which ASCII input
+files can be generated for the calculation portion of the program. From
+these files, users can easily restore a saved modeling project and
+restart the model simulation from any selected time.</p>
+<div class="section" id="project-definition">
+<h2>7.1 Project Definition<a class="headerlink" href="#project-definition" title="Permalink to this headline">¶</a></h2>
+<p>The first step to create a new model is to define the project
+properties. This section describes the project properties, including
+simulation parameters, units, type of simulation, solver types, and file
+output names.</p>
+<div class="section" id="project-properties">
+<h3>7.1.1 Project Properties<a class="headerlink" href="#project-properties" title="Permalink to this headline">¶</a></h3>
+<p>Project properties are defined by selecting “<em>Project Properties</em>”
+from the “<em>Project</em>” drop-down menu on the Main Menu banner at the
+top of the window. Select “<em>Project Properties,</em>” and the
+“<em>Project</em> <em>Properties</em>” dialog box shown in Figure 7.1 appears. The
+required information for project properties is described below.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/figure_7_1_manual.png"><img alt="_images/figure_7_1_manual.png" src="_images/figure_7_1_manual.png" style="width: 2.60453in; height: 3.86763in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.1 The “<em>Project Properties</em>” dialog box</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Project Name:</dt><dd><p>The user-defined name of the project.</p>
+</dd>
+<dt>Output File Name:</dt><dd><p>The prefix assigned to all <strong>*MINEDW*</strong>-created
+data-set files (e.g., the model file would be labeled
+“<em>TR_model.dat</em>” when “<em>TR_”</em> is the output file name)<em>.</em></p>
+</dd>
+<dt>Unit:</dt><dd><p>Length units used in the model (meters and feet are the
+supported units in <strong>MINEDW</strong>).</p>
+</dd>
+<dt>Type of Simulation:</dt><dd><p>The means by which to select whether the model is
+a steady-state or transient-state simulation. In steady-state
+simulations, it is good practice to make sure that the storage changes
+are smaller than 1.0 x 10<sup>-10</sup> cubic meters per day
+(m:sup:<cite>3</cite>/day) at the end of the model simulation. This information can
+be found in the budget and output files (.BUD and .OUT) that are created
+in the simulation directory. For steady-state simulations, only the
+first time step defined in the “<em>Time Steps</em>” item in the
+“<em>Project</em>” drop-down menu on the Main Menu banner is used and,
+starting from the second time step, the time-step length is multiplied
+by a factor of 1.2. For transient simulations, the time-step
+multiplication factor is 1, and the time steps defined in the “<em>Time
+Steps</em>” dialog box are used. The “<em>Time Steps</em>” item is discussed
+in Section 7.1.2.</p>
+</dd>
+<dt>Maximum Outer Iterations:</dt><dd><p>The maximum number of outer iterations (an
+even number generally less than 10) that are to be used to precondition
+the matrices of equations prior to solving. The appropriate number of
+maximum outer iterations depends on the solver that is used and the
+model that is being run. Starting with a smaller number of maximum outer
+iterations and increasing the iteration value as necessary (review the
+.BUD or .OUT files for percent residuals) is recommended to ensure the
+fastest solution time.</p>
+</dd>
+<dt>Solver:</dt><dd><p>Option for the solver type to be used in the model simulation.
+There are two solver options available in <strong>MINEDW</strong>: PCG
+(Preconditioned Conjugate Gradient) and SAMG (Algebraic Multigrid
+Methods for Systems) (Fraunhofer SCAI 2013).</p>
+</dd>
+<dt>Outer Iteration Closure Criterion:</dt><dd><p>The head closing criteria for outer
+iterations. Determination of the iteration value depends on the scale of
+the model being simulated. It generally should be less than 1 meter (m)
+or 3 feet (ft). The value should be defined based on computational time,
+accuracy, and mass balance.</p>
+</dd>
+<dt>Maximum Inner Iterations:</dt><dd><p>Maximum number of inner iterations to solve
+the matrices of equations. This value generally is greater than 1,000,
+depending on the value of the inner iteration closure criterion. Inner
+iterations may often be set to a large value without compromising model
+run time because the solvers use the minimum number of iterations
+necessary to meet the closure criteria.</p>
+</dd>
+<dt>Inner Iteration Closure Criterion:</dt><dd><p>The closure criterion for the inner
+iterations. This value is generally less than 1 x 10<sup>-10</sup>. The
+smaller the inner closure criterion is, the greater the computational
+accuracy of the results and the longer the computational time.</p>
+</dd>
+<dt>Output Time Step Frequency to PLB File:</dt><dd><p>The time-step intervals at which <strong>MINEDW</strong> saves the simulated heads
+to the output file with a .PLB extension. The default value is 1.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="time-steps">
+<h3>7.1.2 Time Steps<a class="headerlink" href="#time-steps" title="Permalink to this headline">¶</a></h3>
+<p>The time steps are defined using the “<em>Time Steps</em>” item in the
+“<em>Project</em>” drop-down menu on the Main Menu banner. During the model
+setup, if the user selects “<em>Steady State”</em> in the <em>“Project
+Properties”</em> dialog box, then the <em>“Setup Time Step”</em> dialog box appears
+as shown in Figure 7.2 when “<em>Time Steps</em>” is selected from the
+“<em>Project</em>” drop-down menu. If the user selects <em>“Transient”</em> for
+the model run, then the dialog box shown in Figure 7.3 appears. For a
+steady-state model, the <em>“Start Date/Time,”</em> <em>“Maximum # of Time
+Steps,”</em> and <em>“Initial Time Step Length”</em> are the only inputs that need
+to be defined. The <em>“# of Time steps for this simulation”</em> defines the
+number of time steps to use for a particular model run, but this
+parameter is typically the same value as <em>“Maximum # of Time Steps”</em> for
+steady-state models.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/figure_7_2_manual.png"><img alt="_images/figure_7_2_manual.png" src="_images/figure_7_2_manual.png" style="width: 2.68750in; height: 3.66667in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.2 The “<em>Setup Time Step</em>” dialog box for steady-state
+simulations</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>There are three different options for defining time steps for a
+transient simulation: 1) “<em>Constant</em>,” 2) “<em>Month</em>,” or 3)
+“<em>Varied</em>.” If the “<em>Varied</em>” option is selected, then the data
+can be imported from an ASCII data file (the format for the ASCII file
+is one column that contains the time-step number and another column that
+contains the number of days for each time step; the input time-step file
+created by <strong>MINEDW</strong> is in this format). The time steps and the
+corresponding dates are shown on the right-hand side of the window
+(Figure 7.3). The maximum number of time steps can be defined from the
+same window (Figure 7.3). The “<em>Maximum # of Time Steps</em>” setting
+covers all of the time steps for different simulations for a project.</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/figure_7_3_manual.png"><img alt="_images/figure_7_3_manual.png" src="_images/figure_7_3_manual.png" style="width: 5.51118in; height: 4.25059in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.3 The “<em>Setup Time Step</em>” dialog box for a transient
+simulation</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Under the simulation time-step section (Figure 7.3), the number of time
+steps to simulate for a simulation can be set. Using the simulation
+time-step slider or entry, the user can specify the number of time steps
+to simulate by choosing either a complete model simulation or an
+abbreviated model simulation. An abbreviated model simulation will run
+for the number of specified time steps.</p>
+<p>In the simulation start time drop-down box, a model can be restarted
+from a specified time step by selecting the time step at which the
+simulation will begin. The simulated head output file (.PLB) must be
+read before selecting the restart time step; otherwise, the only
+available option is the first time step. Reading in an output file in
+<strong>MINEDW</strong> is described in section 9.1. A model simulation should not
+be restarted during any part of pit-lake filling.</p>
+</div>
+</div>
+<div class="section" id="model-geometry">
+<h2>7.2 Model Geometry<a class="headerlink" href="#model-geometry" title="Permalink to this headline">¶</a></h2>
+<p>While the horizontal geometry of the model domain is defined in the mesh
+generator, the 3-D layering within the model is defined within the
+<strong>MINEDW</strong> GUI using the <em>“Mesh”</em> menu. The following sections
+describe the functions in the “<em>Mesh”</em> menu.</p>
+<div class="section" id="generating-the-mesh">
+<h3>7.2.1 Generating the Mesh<a class="headerlink" href="#generating-the-mesh" title="Permalink to this headline">¶</a></h3>
+<p>The finite-element mesh defines the geometry to simulate a groundwater
+system. The <strong>MINEDW</strong> finite-element mesh consists of a solid
+configuration of tetrahedrons. Tetrahedrons are difficult solids to use;
+therefore, the actual mesh is assembled from prismatic elements that are
+triangular in plan view. The prisms are oriented spatially with
+sub-horizontal triangular faces and sub-vertical quadrilateral faces.
+Three tetrahedrons then are automatically fitted into each prismatic
+element.</p>
+<p>To allow flexibility in the construction of 3-D meshes, the <strong>MINEDW</strong>
+program accepts prismatic elements that have edges with a height of
+zero. A prismatic element with one zero-height edge contains two
+tetrahedrons and an element with two zero-height edges. These special
+elements can be used to represent geologic features that taper to a
+thickness of zero or to add vertical refinement in areas of particular
+interest. Without these special elements, a vertical zone of fine
+vertical discretization can be terminated only by carrying it to the
+edge of the model domain.</p>
+<p>Generating a <strong>MINEDW</strong> mesh involves performing the following steps:</p>
+<ol class="arabic simple">
+<li><p>Generate a one-model-layer mesh that incorporates the hydrogeologic
+features in plan view using <em>Rhinoceros 3D</em> and Grasshopper (as
+described in Chapter 5) or another mesh generator.</p></li>
+<li><p>Add the ground-surface topography to the main model layer.</p></li>
+<li><p>Add main model layers according to the stratigraphy, geologic
+information, or other data.</p></li>
+<li><p>If needed, add additional vertical model discretization using
+pinch-outs.</p></li>
+</ol>
+</div>
+<div class="section" id="adding-main-model-layers">
+<h3>7.2.2 Adding Main Model Layers<a class="headerlink" href="#adding-main-model-layers" title="Permalink to this headline">¶</a></h3>
+<p>After importing the mesh generated by <em>Rhinoceros 3D</em> and Grasshopper
+(Chapter 5), main layers can be added by selecting “<em>Define Main
+Layer</em>” from the “<em>Mesh</em>” drop-down menu found on the Main Menu
+banner. A main layer is defined as a layer that extends through the
+entire model domain. When “<em>Main Layer</em>” is selected, the dialog box
+shown in Figure 7.4 appears.</p>
+<p>To add a new main layer to the model, first select a main layer, then
+click “<em>Insert.</em>” The new main layer will appear above the selected
+main layer. The <em>“Method”</em> option will be “<em>Constant,”</em> and the
+<em>“Value”</em> field will be blank. Select the desired method from the
+drop-down box in the “<em>Method”</em> field if needed, and then enter the
+appropriate value in the <em>“Value”</em> field. Click “<em>OK</em>” to add the
+main layer with the desired elevation or thickness. Note: if the
+<em>“Average”</em> method is selected, then no value is needed in the <em>“Value”</em>
+field. The new main layer is placed above the originally selected main
+layer. An example of the information required for main layers is
+described below.</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/figure_7_4_manual.png"><img alt="_images/figure_7_4_manual.png" src="_images/figure_7_4_manual.png" style="width: 3.76042in; height: 3.93750in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.4 The “<em>Define Main Nodal Layers</em>” dialog box with layer
+definition</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>The method of defining the elevation of the main layers in Figure 7.4
+includes five options, as shown in Figure 7.5, below.</p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="_images/figure_7_5_manual.png"><img alt="_images/figure_7_5_manual.png" src="_images/figure_7_5_manual.png" style="width: 0.89596in; height: 1.01056in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.5 The “<em>Method</em>” drop-down box showing the available
+options</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>The five options available for main layer creation are the following:</p>
+<dl class="simple">
+<dt>No Change:</dt><dd><p>This option retains the existing elevation for the selected
+main layer.</p>
+</dd>
+<dt>Constant:</dt><dd><p>This option assigns a constant-elevation value.</p>
+</dd>
+<dt>Average:</dt><dd><p>This option assigns an average elevation of two layers to the
+newly created main layer or layers. This option is not available for the
+top and bottom main layers.</p>
+</dd>
+<dt>Thickness:</dt><dd><p>This option assigns the elevation by using the defined
+thickness from the main layer below. This option is not available when
+adding the bottom layer of the model.</p>
+</dd>
+<dt>Depth:</dt><dd><p>This option assigns the elevation by using the defined depth
+from the main layer above. This option is not available when defining
+the elevation of the top layer of the model.</p>
+</dd>
+</dl>
+<p>The following are examples for inserting several main model layers into
+<strong>MINEDW</strong>:</p>
+<ul class="simple">
+<li><p><em>Constant:</em> Adding a main layer using the <em>“Constant”</em> method will
+add a nodal layer at the elevation specified in the <em>“Value”</em> field.
+A nodal layer (creating two new element layers) can be added anywhere
+using this method, but care must be taken to ensure that the new
+layer falls between the nodes of the upper and lower node layers.</p></li>
+<li><p><em>Average:</em> To add a main layer with an average thickness (Figure
+7.6), select a layer and click “<em>Insert</em>.” <strong>MINEDW</strong> will insert
+a nodal layer above the selected layer. Select “<em>Average</em>” from
+the “<em>Method</em>” drop-down box and click “<em>OK</em>.” <strong>MINEDW</strong>
+adds a new nodal layer (as shown within the red box) between the top
+and bottom nodal layers, forming two element layers. Node elevations
+for this layer are calculated as the average of the top nodal layer
+and the bottom nodal layer.</p></li>
+</ul>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="_images/figure_7_6_manual.png"><img alt="_images/figure_7_6_manual.png" src="_images/figure_7_6_manual.png" style="width: 5.67in; height: 1.81in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.6 Layer definition using the “<em>Average”</em> method</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p><em>Thickness:</em> The <em>“Thickness”</em> option will create a nodal layer
+(shown within the red box) that is offset by a user-specified value
+from the nodal layer immediately below, as seen in Figure 7.7. This
+creates an element layer with elements of uniform thickness. Figure
+7.7 displays a nodal layer that has a constant elevation and an
+element layer of uniform thickness; however, it is possible to create
+a nodal layer that does not have a constant elevation but that forms
+an element layer of uniform thickness. This occurs when the reference
+nodal layer does not have a constant elevation.</p></li>
+</ul>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="_images/figure_7_7_manual.png"><img alt="_images/figure_7_7_manual.png" src="_images/figure_7_7_manual.png" style="width: 5.6in; height: 1.81in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.7 Layer definition using the “<em>Thickness”</em> method</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<ul class="simple">
+<li><p><em>Depth:</em> The “<em>Depth”</em> method is similar to the <em>“Thickness”</em>
+method, with the exception that the upper nodal layer (rather than
+the lower nodal layer) is used as the reference layer to calculate
+the location of the nodal layer that is being added. In contrast to
+the nodal layer with uniform elevation, shown in Figure 7.7, the
+nodal layer in Figure 7.8 does not have a uniform elevation because
+the upper nodal layer that was used as the reference to calculate the
+location of the new nodal layer did not have a uniform elevation.</p></li>
+</ul>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="_images/figure_7_8_manual.png"><img alt="_images/figure_7_8_manual.png" src="_images/figure_7_8_manual.png" style="width: 5.94in; height: 1.93in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.8 Layer definition using the “<em>Depth</em>” method</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="using-topography-data">
+<h3>7.2.3 Using Topography Data<a class="headerlink" href="#using-topography-data" title="Permalink to this headline">¶</a></h3>
+<p>The following describes how to add topographic information to the first
+model layer, but the same steps can be repeated to apply topography to
+any model layer.</p>
+<p>To incorporate topography in a model, select the “<em>List</em>” tab in the
+“<em>Control Panel</em>” Pane on the right-hand side of the <strong>MINEDW</strong>
+Main Menu. Expand the “<em>Node</em>” item by double-clicking “<em>Node</em>”
+or clicking on the small triangle next to “<em>Node.</em>” Next,
+double-click “<em>3D Contour,</em>” as shown in Figure 7.9. The mesh will
+be displayed in the View Pane.</p>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="_images/figure_7_9_manual.png"><img alt="_images/figure_7_9_manual.png" src="_images/figure_7_9_manual.png" style="width: 3.01084in; height: 4.21934in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.9 The expanded “<em>Node</em>” plot item group</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>Click the “<em>Select</em>” tool on the toolbar. From the “<em>Control
+Panel</em>” Pane on the right-hand side of the <strong>MINEDW</strong> window, select
+the “<em>Attributes</em>” tab. Make sure that “<em>Layer 1</em>” is selected
+and “<em>Elevation</em>” (in the “<em>Color By</em>” drop-down box) is
+selected, as shown in Figure 7.10.</p>
+<div class="figure align-center" id="id10">
+<a class="reference internal image-reference" href="_images/figure_7_10_manual.png"><img alt="_images/figure_7_10_manual.png" src="_images/figure_7_10_manual.png" style="width: 3.70885in; height: 4.33394in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.10 The “<em>Control Panel</em>” Pane showing the “<em>Attributes</em>”
+tab with “<em>Layer</em>” set to “<em>1</em>”</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<p>In the <strong>MINEDW</strong> View Pane, use the cursor to click and drag a box
+around the whole domain to select all of the nodes in Layer 1. Press the
+[Enter] key to open the dialog box shown in Figure 7.11. Click the
+button next to “<em>Interpolate From File,</em>” and the “<em>Open Data
+File</em>” dialog box appears. Select a file with XYZ data (this file is
+formatted as columns of x, y, and z data) that contains the topographic
+information that will be added to the model, and click “<em>Open.</em>” The
+“<em>Grid</em>” dialog box shown in Figure 7.12 appears. Define the
+interpolation method (“<em>Inverse</em> <em>Distance</em>” or “<em>Kriging</em>”) and
+the required parameters, and then click “<em>OK.</em>” <strong>MINEDW</strong> assigns
+the topographic information contained in the data file to the top layer
+of the model using the interpolation method. This method can be used to
+assign elevation data to all of the nodal layers in the model. To assign
+elevation data to other nodal layers, simply select the desired layer on
+the “<em>Attributes”</em> tab of the “<em>3-D Contour”</em> plot item and repeat
+the steps described above.</p>
+<div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="_images/figure_7_11_manual.png"><img alt="_images/figure_7_11_manual.png" src="_images/figure_7_11_manual.png" style="width: 5.18822in; height: 3.13585in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.11 The “<em>Assign Properties for Nodes</em>” dialog box</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id12">
+<a class="reference internal image-reference" href="_images/figure_7_12_manual.png"><img alt="_images/figure_7_12_manual.png" src="_images/figure_7_12_manual.png" style="width: 5.68681in; height: 1.77713in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.12 The “<em>Grid</em>” dialog box</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<p>To view the ground-surface elevation contours, add an “<em>Isoline”</em> plot
+item and select “<em>Elevation”</em> as the “<em>Color By”</em> attribute. The
+counter intervals may be manipulated by using the options under the
+<em>“Contour”</em> attribute of the “<em>Isoline”</em> plot item. Click on the
+“<em>Attributes</em>” tab in the “<em>Control Panel</em>” Pane, and then click
+on the small triangle next to “<em>Contour.</em>” Deselect the “<em>Auto</em>”
+box next to “<em>Interval</em>” and replace the current value with a
+different value, then press the [Enter] key, and elevation contours
+appear. An example of ground-surface elevation contours is shown in
+Figure 7.13.</p>
+<div class="figure align-center" id="id13">
+<a class="reference internal image-reference" href="_images/figure_7_13_manual.png"><img alt="_images/figure_7_13_manual.png" src="_images/figure_7_13_manual.png" style="width: 6.00000in; height: 3.79332in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.13 The <em>MINEDW</em> main window showing elevation contours</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="importing-node-elevations">
+<h3>7.2.4 Importing Node Elevations<a class="headerlink" href="#importing-node-elevations" title="Permalink to this headline">¶</a></h3>
+<p>Node elevations can be assigned to all of the nodes in the model domain
+by importing a node-elevation file. Node elevations are written to a
+file called “<em>node.fem”</em> by the <strong>MINEDW</strong> GUI. This file is a
+simple text file that can easily be created using another <strong>MINEDW</strong>
+model or other software. The file contains five columns of data: 1) node
+number, 2) <em>x</em> location of node, 3) y location of node, 4) <em>z</em> location
+(or elevation) of node, and 5) node layer.</p>
+<p>To import and assign node elevations for the entire domain, select
+“<em>Import Elevations From Node File”</em> found under the <em>“Project”</em>
+drop-down menu on the Main Menu banner. Use the <em>“Import Node File”</em>
+dialog box that opens to navigate to the location of the node elevation
+file. Select it and click <em>“Open”</em> to complete the assignment. The
+default file type for node elevations in <strong>MINEDW</strong> is the .FEM file
+type. <strong>MINEDW</strong> creates three files with the .FEM extension, but only
+the “node.fem” file can be used to import node elevations.</p>
+</div>
+<div class="section" id="defining-a-pinch-out">
+<h3>7.2.5 Defining a Pinch-Out<a class="headerlink" href="#defining-a-pinch-out" title="Permalink to this headline">¶</a></h3>
+<p><strong>MINEDW</strong> provides the option of adding areas of increased vertical
+discretization. The enhanced vertical discretization is referred to as a
+pinch-out because layers terminate in areas where increased vertical
+discretization is not needed. To define the pinch-out types, select
+“<em>Mesh</em>” from the Main Menu banner and then select “<em>Define
+Pinch-Out</em>.” The “<em>Define Pinch-Outs</em>” dialog box appears (Figure
+7.14).</p>
+<div class="figure align-center" id="id14">
+<a class="reference internal image-reference" href="_images/figure_7_14_manual.png"><img alt="_images/figure_7_14_manual.png" src="_images/figure_7_14_manual.png" style="width: 3.76094in; height: 4.90693in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.14 The “<em>Define Pinch-Outs</em>” dialog box</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<p>In <strong>MINEDW</strong>, various pinch-out configurations can be defined and
+simulated. Each configuration is defined as one type of pinch-out. Based
+on their modeling needs, the user can define as many pinch-out types as
+necessary. Each type can contain pinch-outs of as many layers as needed.</p>
+<p>Figure 7.15 illustrates the working principle of the pinch-out method.
+For example, a model has four regional layers that are each represented
+(sequentially, Layer 1 to Layer 4, from top to bottom) by a row of black
+squares in Figure 7.15. The left column shows the number of pinch-out
+layers (shown in blue) allowed for each model layer. For illustration
+purposes, three different combinations are represented, which are each
+defined as a different type in Figure 7.15. Type 1 consists of three
+pinch-outs on model Layer 2 (represented as red lines). Type 2 consists
+of three pinch-outs on model Layer 2 (represented as red lines) and two
+pinch-outs on model Layer 3 (represented as a green line). Type 3
+consists of two pinch-outs on model Layer 3 (represented as a green
+line). Only one number of pinch-outs can be defined for each model
+layer. For example, in Figure 7.15, model Layer 2 cannot have three
+pinch-outs in one area and two pinch-outs in another area. In this
+example, there will be exactly three pinch-outs anywhere pinch-outs are
+added to model Layer 2.</p>
+<div class="figure align-center" id="id15">
+<a class="reference internal image-reference" href="_images/figure_7_15_manual.png"><img alt="_images/figure_7_15_manual.png" src="_images/figure_7_15_manual.png" style="width: 4.47778in; height: 2.18681in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.15 Schematic explanation of pinch-outs</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+<p>To define pinch-outs, click the “<em>Add</em>” button on the right side of
+the “<em>Define Pinch-Outs</em>” dialog box. Type the number of pinch-outs
+for each layer in the column labeled <em>“# of Sublayers,</em>” and enable
+the pinch-out for the related layer by checking the box. Figure 7.16
+shows how to define pinch-outs to achieve the schematic shown in Figure
+7.15. When the pinch-out types are completely defined, click “<em>OK</em>.”</p>
+<div class="figure align-center" id="id16">
+<a class="reference internal image-reference" href="_images/figure_7_16_manual.png"><img alt="_images/figure_7_16_manual.png" src="_images/figure_7_16_manual.png" style="width: 5.83333in; height: 2.56250in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.16 The “<em>Define Pinch-Outs</em>” dialog box</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+<p>In this example, “<em>Type 1</em>” will have three pinch-outs in Layer 2,
+while “<em>Type 2</em>” will have the same three pinch-outs in Layer 2 as
+well as two pinch-outs in Layer 3. “<em>Type 3</em>” pinch-outs will have
+only two pinch-outs in Layer 3. To assign pinch-outs to an area, select
+the “<em>List</em>” tab in the “<em>Control Panel</em>” Pane. Expand the
+“<em>Element</em>” item and double-click “<em>Pinch-Out.</em>” From the main
+window, click the “<em>Select</em>” tool on the Main Menu banner. Then use
+the “<em>Select with Polygon</em>” tool to select the area where pinch-outs
+are to be added. Figure 7.17 shows an example of the nodes being
+selected for adding pinch-outs.</p>
+<div class="figure align-center" id="id17">
+<a class="reference internal image-reference" href="_images/figure_7_17_manual.png"><img alt="_images/figure_7_17_manual.png" src="_images/figure_7_17_manual.png" style="width: 6.00000in; height: 3.74525in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.17 The View Pane with the selected nodes for pinch-out Type 1</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+<p>Press the [Enter] key, and the “<em>Select Pinch-Out Type</em>” dialog box
+opens (Figure 7.18). Select the type of pinch-out to add to this
+location from the drop-down list and click “<em>OK.</em>”</p>
+<div class="figure align-center" id="id18">
+<a class="reference internal image-reference" href="_images/figure_7_18_manual.png"><img alt="_images/figure_7_18_manual.png" src="_images/figure_7_18_manual.png" style="width: 2.55244in; height: 1.07307in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.18 The “<em>Select Pinch-Out Type</em>” dialog box</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+<p>Figure 7.19 shows the pinch-outs described in Figures 7.15 and 7.16 in
+the View Pane.</p>
+<div class="figure align-center" id="id19">
+<a class="reference internal image-reference" href="_images/figure_7_19_manual.png"><img alt="_images/figure_7_19_manual.png" src="_images/figure_7_19_manual.png" style="width: 6.00000in; height: 3.50417in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.19 Cross-sectional view of the defined pinch-outs</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="modifying-the-mesh">
+<h3>7.2.6 Modifying the Mesh<a class="headerlink" href="#modifying-the-mesh" title="Permalink to this headline">¶</a></h3>
+<p>Using the “<em>Modify Mesh</em>” function in <strong>MINEDW</strong>, the user can
+extend the model domain and refine the mesh after it is created or at
+any time during the model setup. The mesh can be refined in a
+user-specified location or extended to cover a larger area.</p>
+<p>To refine the mesh, click “<em>Modify Mesh</em>” from the “<em>Mesh</em>”
+drop-down menu found on the Main Menu banner. This will open an “<em>Open
+BLN File</em>” dialog box (Figure 7.20). Select a .BLN file that defines
+an area inside the current model domain to refine and click “<em>Open.”</em></p>
+<div class="figure align-center" id="id20">
+<a class="reference internal image-reference" href="_images/figure_7_20_manual.png"><img alt="_images/figure_7_20_manual.png" src="_images/figure_7_20_manual.png" style="width: 6.00000in; height: 4.18750in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.20 The “<em>Open BLN File</em>” dialog box</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</div>
+<p>The “<em>Refine Mesh</em>” dialog box shown in Figure 7.21 appears. If the
+.BLN file defines an area unconnected to the current model mesh, the
+operation will yield a warning message. Enter the mesh density and click
+“<em>OK.</em>”</p>
+<div class="figure align-center" id="id21">
+<a class="reference internal image-reference" href="_images/figure_7_21_manual.png"><img alt="_images/figure_7_21_manual.png" src="_images/figure_7_21_manual.png" style="width: 2.10446in; height: 1.27101in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.21 The “<em>Refine Mesh</em>” dialog box</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id22">
+<a class="reference internal image-reference" href="_images/figure_7_22_manual.png"><img alt="_images/figure_7_22_manual.png" src="_images/figure_7_22_manual.png" style="width: 5.71875in; height: 1.82292in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.22 The mesh before (a) and after (b) an area of the mesh was
+refined</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id23">
+<a class="reference internal image-reference" href="_images/figure_7_23_manual.png"><img alt="_images/figure_7_23_manual.png" src="_images/figure_7_23_manual.png" style="width: 5.68750in; height: 2.42708in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.23 The mesh before (a) and after (b) mesh extension</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>MINEDW</strong> can also extend the mesh after it has been created. Click
+“<em>Modify Mesh</em>” from the “<em>Mesh</em>” drop-down menu found on the
+Main Menu banner. The area to be extended is defined by a .BLN file
+created in <em>Surfer™</em> or in a text editor. When “<em>Modify Mesh</em>” is
+selected from the “<em>Mesh</em>” drop-down menu, the “<em>Open BLN File</em>”
+dialog box shown in Figure 7.20 appears. Select the .BLN file defining
+the area to be extended. Click “<em>Open.</em>” The “<em>Refine Mesh</em>”
+dialog box shown in Figure 7.21 appears. Enter the mesh density and
+click “<em>OK.</em>” Figure 7.23 shows the mesh before and after the mesh
+extension.</p>
+</div>
+</div>
+<div class="section" id="zone-properties-hydraulic-parameters">
+<h2>7.3 Zone Properties – Hydraulic Parameters<a class="headerlink" href="#zone-properties-hydraulic-parameters" title="Permalink to this headline">¶</a></h2>
+<p>This section describes the zone properties (hydraulic parameters) that
+are assigned to the model. The term “zone” is a synonym for the type of
+aquifer material that composes the element; each element is assigned a
+zone type. Consequently, the zone definitions change only when the user
+moves a geologic boundary or defines a new geologic material (zone).
+Zone definitions include the hydraulic conductivity, specific storage,
+specific yield, and the principal directions of the hydraulic
+conductivity field, which can be specified in the <em>x</em>, <em>y</em>, and <em>z</em>
+directions.</p>
+<p>The hydraulic parameters that characterize each zone are defined by
+selecting “<em>Project</em>” and then “<em>Zone Properties</em>” (Figure
+7.24).</p>
+<div class="figure align-center" id="id24">
+<a class="reference internal image-reference" href="_images/figure_7_24_manual.png"><img alt="_images/figure_7_24_manual.png" src="_images/figure_7_24_manual.png" style="width: 6.00000in; height: 5.38264in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.24 The “<em>Zone Properties</em>” dialog box</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</div>
+<p>The information provided in the “<em>Zone Properties</em>” dialog box is
+described below.</p>
+<dl class="simple">
+<dt>Name:</dt><dd><p>Name of the geologic unit. The name is used in the display and
+output files.</p>
+</dd>
+<dt>K<sub>x</sub>:</dt><dd><p>Hydraulic conductivity in <em>x</em> direction (meters per day
+[m/day] or feet per day [ft/day]).</p>
+</dd>
+<dt>K<sub>y</sub>:</dt><dd><p>Hydraulic conductivity in <em>y</em> direction (m/day or ft/day).</p>
+</dd>
+<dt>K<sub>z</sub>:</dt><dd><p>Hydraulic conductivity in <em>z</em> direction (m/day or ft/day).</p>
+</dd>
+<dt>S<sub>s</sub>:</dt><dd><p>Specific storage (m<sup>-1</sup> or ft<sup>-1</sup>).</p>
+</dd>
+<dt>S<sub>y</sub>:</dt><dd><p>Specific yield (-).</p>
+</dd>
+<dt>Angle1 (Φ):</dt><dd><p>3-D anisotropy, the angle of rotation around the <em>z</em>-axis in degrees.</p>
+</dd>
+<dt>Angle2 (θ):</dt><dd><p>3-D anisotropy, the angle of rotation around the <em>y</em>-axis in degrees.</p>
+</dd>
+<dt>Angle3 (ψ):</dt><dd><p>3-D anisotropy, the angle of rotation around the <em>x</em>-axis in degrees.</p>
+</dd>
+</dl>
+<p>The angles (“<em>Angle1,</em>” “<em>Angle2,</em>” and “<em>Angle3</em>”) used to
+define the hydraulic conductivity tensor are illustrated in Figure 7.25.
+As described above, the direction of rotation is around the <em>z</em>-axis,
+<em>y</em>-axis, and finally the <em>x</em>-axis.</p>
+<div class="figure align-center" id="id25">
+<a class="reference internal image-reference" href="_images/figure_7_25_manual.png"><img alt="_images/figure_7_25_manual.png" src="_images/figure_7_25_manual.png" style="width: 6.00000in; height: 2.15704in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.25 A graphical illustration of Angle1 (Φ), Angle2 (θ), and
+Angle3 (Ψ)</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</div>
+<p>After defining the “<em>Zone Properties,</em>” see the explanation in
+Section 6.1 on how to select elements and assign them with the created
+hydrogeological zones.</p>
+<div class="section" id="zone-distributions-para-fem">
+<h3>7.3.1 Zone Distributions (para.fem)<a class="headerlink" href="#zone-distributions-para-fem" title="Permalink to this headline">¶</a></h3>
+<p>As described in Section 6.1, hydraulic zone properties can be assigned
+using the “<em>Select”</em> tool and the <em>“Select Geology Zone”</em> dialog box
+or a 3-D .DXF. Another method is to import a “para.fem” file, which
+contains the hydraulic zone definition for each element in the model
+domain. This file consists of three columns of data: 1) the element
+number, 2) the hydraulic zone number, and 3) the element layer number.
+This file can be created using another <strong>MINEDW</strong> model with the same
+domain or other software.</p>
+<p>To import a “para.fem” file and change the distribution of hydraulic
+parameters of a model, click on <em>“Import Zones from Parameter File”</em>
+under the <em>“Project”</em> drop-down menu on the Main Menu banner. Using the
+<em>“Import Zone File”</em> dialog box, navigate to the location of the
+“para.fem” file, select it, and click <em>“Open.”</em> The new hydraulic zone
+distribution will be assigned to the model domain.</p>
+</div>
+<div class="section" id="zone-properties-kfile-dat">
+<h3>7.3.2 Zone Properties (kfile.dat)<a class="headerlink" href="#zone-properties-kfile-dat" title="Permalink to this headline">¶</a></h3>
+<p>New parameter values for hydraulic zones can be imported into
+<strong>MINEDW</strong> from the “kfile.dat” file, which can be edited by any text
+editor. To import a new “kfile.dat,” open the <em>“Zone Properties”</em> dialog
+box (Figure 7.24). Using the <em>“Import”</em> button, open the <em>“Open Zone
+Properties File”</em> dialog box. Navigate to the location of the new or
+updated “kfile.dat,” select it, and click <em>“Open.”</em> The parameter values
+will be updated in the <em>“Zone Properties”</em> dialog box.</p>
+</div>
+</div>
+<div class="section" id="boundary-conditions">
+<h2>7.4 Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this headline">¶</a></h2>
+<p>A groundwater flow model requires an appropriate set of boundary
+conditions to describe the mathematical problem that will be solved. In
+<strong>MINEDW</strong>, six types of boundary conditions are available: 1)
+constant head, 2) variable flux, 3) pumping well, 4) rivers, 5)
+recharge, and 6) evaporation. Of these six types, constant head,
+variable flux, pumping wells, and rivers are assigned to nodes, while
+recharge and evaporation zones are assigned to elements.</p>
+<p>To define the boundary conditions, select “<em>BCs</em>” from the Main Menu
+banner, then choose the appropriate boundary-condition type from the
+“<em>BCs</em>” drop-down menu (Figure 7.26). Each boundary-condition type
+requires a different set of parameters, as described below. (Note that
+the data-input windows have similar features and functionality).</p>
+<div class="figure align-center" id="id26">
+<a class="reference internal image-reference" href="_images/figure_7_26_manual.png"><img alt="_images/figure_7_26_manual.png" src="_images/figure_7_26_manual.png" style="width: 1.54167in; height: 1.73958in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.26 The “<em>BCs</em>” drop-down menu</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+</div>
+<p>Boundary conditions are assigned using node or element plot items. Use
+the “<em>Assign Properties for Nodes”</em> dialog box to assign “<em>Constant
+Head &amp; Drain,</em>” “<em>Variable-Flux,”</em> and “<em>Pumping Well</em>” boundary
+conditions. The “<em>Assign Properties for Nodes</em>” dialog box shown in
+Figure 7.27 can be accessed by adding a “<em>2D Contour</em>” or “<em>3D
+Contour</em>” plot item from the “<em>Control Panel</em>” Pane. Select the
+desired nodes and then press [Enter] to bring up the dialog box.</p>
+<div class="figure align-center" id="id27">
+<a class="reference internal image-reference" href="_images/figure_7_27_manual.png"><img alt="_images/figure_7_27_manual.png" src="_images/figure_7_27_manual.png" style="width: 5.20903in; height: 3.20000in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.27 The “<em>Assign Node Properties</em>” dialog box</span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+</div>
+<p>Recharge and evaporation boundary conditions can be applied to the model
+using a “<em>2-D Plane”</em> plot item. To assign recharge or evaporation to
+the model, access the “<em>Select</em> <em>Recharge Zone</em>” or “<em>Select
+Evaporation Zone”</em> dialog box, shown in Figures 7.28 and 7.29,
+respectively, by adding a “<em>2-D Plane</em>” element plot item from the
+“<em>Control Panel</em>” and then selecting the desired “<em>Color By</em>”
+attribute, “<em>Recharge,</em>” or “<em>Evaporation</em>.”</p>
+<div class="figure align-center" id="id28">
+<a class="reference internal image-reference" href="_images/figure_7_28_manual.png"><img alt="_images/figure_7_28_manual.png" src="_images/figure_7_28_manual.png" style="width: 2.76042in; height: 1.07292in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.28 The “<em>Select Recharge Zone</em>” dialog box</span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+</div>
+<p>Next, select the desired elements using the methods described in Section
+6.1, press [Enter], and the “<em>Select Recharge Zone</em>” or “<em>Select
+Evaporation Zone</em>” dialog box appears. Assigning recharge and
+evaporation boundary conditions is described in more detail in Sections
+7.4.6 and 7.4.7.</p>
+<div class="figure align-center" id="id29">
+<a class="reference internal image-reference" href="_images/figure_7_29_manual.png"><img alt="_images/figure_7_29_manual.png" src="_images/figure_7_29_manual.png" style="width: 2.76042in; height: 1.07292in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.29 The “<em>Select Evaporation Zone</em>” dialog box</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+</div>
+<p>All boundary conditions can be applied as time-varying conditions. The
+implementation of these time-varying conditions is described in Section
+7.4.1 below, which is followed by a description of each type of boundary
+condition available in <strong>MINEDW</strong>.</p>
+<div class="section" id="time-series-data">
+<h3>7.4.1 Time-Series Data<a class="headerlink" href="#time-series-data" title="Permalink to this headline">¶</a></h3>
+<p>Time-series data can be imported from files or directly defined in the
+time-series dialog boxes (Figure 7.30) that are available within the
+different boundary-condition dialog boxes. A time series consists of a
+user-defined number of data pairs (time, value).</p>
+<div class="figure align-center" id="id30">
+<a class="reference internal image-reference" href="_images/figure_7_30_manual.png"><img alt="_images/figure_7_30_manual.png" src="_images/figure_7_30_manual.png" style="width: 6.00000in; height: 2.34653in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.30 The time-series editor</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+</div>
+<p>There are three different options in <strong>MINEDW</strong> for the input of
+time-series data (Figure 7.31):</p>
+<dl class="simple">
+<dt>Constant:</dt><dd><p>The boundary-condition data is constant, regardless of time.</p>
+</dd>
+<dt>Annual:</dt><dd><p>The values are defined for a year and repeated each year for
+the entire model-simulation time period.</p>
+</dd>
+<dt>Varied:</dt><dd><p>The values are defined over time.</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id31">
+<a class="reference internal image-reference" href="_images/figure_7_31_manual.png"><img alt="_images/figure_7_31_manual.png" src="_images/figure_7_31_manual.png" style="width: 2.23585in; height: 0.38018in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.31 Time-series input options</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+</div>
+<p>Time-series data can be imported from a text file (the format for the
+text file is described in Appendix B). The plot on the left-hand side
+displays the time-series data. For any period during which the pump is
+turned off, enter “0” for wells that are defined as “<em>Pumping Rate</em>”
+or “<em>LPE</em>” wells (lowest pumping elevation wells) and “N/A” or
+“-99999999” for wells that are defined as “<em>Specified Head</em>” wells.
+Time-series data can also be exported to a .DAT file. After any
+modifications, make sure to click <em>“Apply”</em> to save the changes.</p>
+</div>
+<div class="section" id="constant-head">
+<h3>7.4.2 Constant Head<a class="headerlink" href="#constant-head" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>Constant Head</em>” option is used to implement specified-head
+boundary conditions, which can take the following forms:</p>
+<ul class="simple">
+<li><p>The constant-head boundary is invariant with time (constant time
+series).</p></li>
+<li><p>The constant-head boundary varies with time in accordance with a
+specified hydrograph, which is input in the form of a table of the
+hydraulic heads at specified times (varied time series).</p></li>
+<li><p>The constant-head boundary varies annually in accordance with a
+specified hydrograph, which is input in the form of a table of the
+annual hydraulic heads (annual time series).</p></li>
+<li><p>The boundary condition is simulated as a drainage node. A drainage
+node is the condition in which water can discharge from—but not
+into—the groundwater system. This condition can exist if groundwater
+can discharge to a subsurface drainpipe, to the pit wall, or to
+underground workings. Time-series data can also be applied to drain
+nodes and represent the time-varying head (drain level) at the drain
+node. Ensure that drain levels are not lower than the elevation of
+the node that the drain is defined on and that drain levels do not
+exceed the elevation of the node directly above the drain. If this
+occurs, <strong>MINEDW</strong> will provide the user with a warning and the
+drain node will not be simulated properly.</p></li>
+</ul>
+<p>“<em>Constant Head</em>” nodes and “<em>Drain</em>” nodes can be deactivated
+(turned off) at any time during the simulation by entering the
+appropriate date and a value of “-99999999” in the time-series window.
+Entering a value of “0” for either boundary condition will not
+deactivate the boundary condition, but rather, it will assign the
+boundary condition a constant head or drain level of 0 m.</p>
+<p>When “<em>Constant Head</em>” is selected from the “<em>BCs</em>” drop-down
+menu, the dialog box in Figure 7.32 appears. The required data for a
+constant-head boundary condition are described below.</p>
+<div class="figure align-center" id="id32">
+<a class="reference internal image-reference" href="_images/figure_7_32_manual.png"><img alt="_images/figure_7_32_manual.png" src="_images/figure_7_32_manual.png" style="width: 6.00000in; height: 3.65193in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.32 The “<em>Constant-Head Boundary</em>” dialog box</span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Enable Nonlinear Flow:</dt><dd><p>Option to simulate nonlinear groundwater flow
+at drains and constant heads. If enabled, the user has the option to
+enable nonlinear flow for every group. If the user chooses to use
+nonlinear flow, they must define the nonlinear flow ratio. The nonlinear
+flow ratio is the ratio of Non-Darcian to Darcian flow; a value of 0
+indicates the flow is completely Darcian.</p>
+</dd>
+<dt>Group Definition:</dt><dd><p>The “<em>Group Definition”</em> portion of the “<em>Constant-Head Boundary”</em>
+dialog box allows the user to define groups of constant-head or drain
+boundary conditions.</p>
+</dd>
+</dl>
+<p>Constant-head or drain groups are added by clicking the “<em>Add</em>”
+button at the top of the dialog box. With the drop-down box (Figure
+7.32), next to the <em>“Activate”</em> checkbox select either <em>“Constant
+Head”</em> or <em>“Drain”</em> to define the type of boundary condition thegroup will be.
+Each group added will appear in the “<em>Groups</em>” drop-down list shown
+in Figure 7.33. The names of each group can be
+modified as desired, as shown in Figure 7.33. Use the “<em>Delete</em>”
+button to remove unneeded group names, and check or uncheck the
+“<em>Active”</em> box to activate or deactivate constant-head and drain
+groups. If nonlinear flow is to be simulated for the constant-head
+or drain group, check the box next to <em>“NonLinear Flow”</em> and input a
+value for <em>“Ratio.”</em></p>
+<p>Constant-head groups allow the user to group constant-head nodes or
+drain nodes together to calculate the flux for each constant-head
+group (e.g., a set of sub-horizontal drain holes or a regional
+constant-head boundary). Output flux with respect to time is
+calculated for each group and is output in the flow file (.FLW).</p>
+<div class="figure align-center" id="id33">
+<a class="reference internal image-reference" href="_images/figure_7_33_manual.png"><img alt="_images/figure_7_33_manual.png" src="_images/figure_7_33_manual.png" style="width: 4.12558in; height: 2.44776in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.33 The “<em>Define Group for Constant Heads and Drain Nodes</em>”
+dialog box</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Node #:</dt><dd><p>The node number where the constant-head boundary condition is defined.</p>
+</dd>
+<dt>Group:</dt><dd><p>The constant-head group to which a particular node is assigned.
+Using the drop-down box below “<em>Group Definition</em>,” the user can
+select any of the constant-head groups.</p>
+</dd>
+<dt>Type drop-down list:</dt><dd><p>This drop-down list is located to the right of
+the “Group” drop-down list. It is used to specify the type of
+constant-head node (constant-head or drain node).</p>
+</dd>
+<dt>Head:</dt><dd><p>Constant-head elevation; if constant, varied, or annual,
+constant-head elevations can be edited in the time-series data box on
+the right side of the <em>“Constant-Head Boundary”</em> dialog box.</p>
+</dd>
+<dt>Leakance:</dt><dd><p>Leakance factor (square meters per day [m<sup>2</sup>/day] or
+square feet per day [ft<sup>2</sup>/day]). Leakance factors can be
+“<em>Constant</em>,” “<em>Annual</em>,” or “<em>Varied</em>.” These options are
+available in the lower time-series data box on the right side of the
+<em>“Constant-Head Boundary”</em> dialog box.</p>
+</dd>
+</dl>
+<p>Once the constant-head groups are defined, constant-head nodes can be
+assigned in several different ways. First, a “<em>2D Contour”</em> or <em>“3D
+Contour”</em> plot item can be added and nodes can be selected (as described
+in Section 6.2) to bring up the “<em>Assign Properties for Nodes</em>”
+dialog box shown in Figure 7.34. Here, the boundary conditions for the
+selected nodes can be modified. Once the “<em>Add to Constant-Head
+Boundary</em>” button is clicked, the user has the option to select the
+constant-head group from a drop-down menu as well as the layers to which
+the constant head will be applied, with the top layer being the one
+selected in the “<em>Plot Item</em>” attributes menu.</p>
+<div class="figure align-center" id="id34">
+<a class="reference internal image-reference" href="_images/figure_7_34_manual.png"><img alt="_images/figure_7_34_manual.png" src="_images/figure_7_34_manual.png" style="width: 6.00000in; height: 2.40000in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.34 The “<em>Assign Properties for Nodes</em>” dialog box and
+constant-head groups</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
+</div>
+<p>Additionally, constant-head nodes can be created in the
+“<em>Constant-Head Boundary</em>” dialog box (Figure 7.32) in several
+different ways. First, a “chead.dat” file from a previous model data set
+can be imported using the “<em>Import</em>” button. Also, constant-head
+nodes can be defined using a .BLN file and the “<em>Create</em>” button.
+This function can be used to quickly create sub-horizontal drain holes,
+which are commonly used in mining operations to minimize pore pressures
+in the pit wall. To use this function, click “<em>Create,</em>” and a
+“<em>Select BLN File</em>” window opens. Select the .BLN file representing
+the sub-horizontal drain hole and click “<em>OK</em>.” Drain nodes will be
+created at nodes close to the .BLN file. The drain elevation assigned by
+default to each of the drain nodes will be the node elevation. Finally,
+constant-head nodes can be created manually by entering the required
+parameters in the table.</p>
+<p>Parameters of the constant-head nodes can be edited by group using the
+“<em>Group”</em> drop-down box. When the name of each constant-head group is
+selected, the nodes composing the group appear in the window below the
+drop-down box. After selecting the desired group, the constant-head
+nodes composing the group can be selected by clicking in the upper
+left-hand corner of the table. Once the nodes in the desired group are
+selected, they may be edited as a group by entering values for
+“<em>Head”</em> or <em>“Leakance”</em> in the appropriate time-series window.</p>
+<p>When a “<em>Constant Head</em>” or “<em>Drain</em>” record is selected, the
+time-series dialog becomes active. In the time-series dialog, the user
+is able to import time-series data for constant heads or drain nodes.
+The three options are 1) “<em>Constant,</em>” 2) “<em>Annual,</em>” and 3)
+“<em>Varied.</em>” These options are explained in the beginning of this
+section.</p>
+</div>
+<div class="section" id="variable-flux">
+<h3>7.4.3 Variable-Flux<a class="headerlink" href="#variable-flux" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>Variable-Flux</em>” boundary condition is used to specify
+variable-flux boundary conditions. The variable-flux boundary is used to
+simulate a domain of large extent without the need to greatly extend the
+model domain. The “<em>Variable-Flux</em>” option applies the analytical
+solution for a semi-infinite aquifer to the boundary of the modeled flow
+domain. To ensure that the variable-flux boundary conditions are
+implemented properly, the actual boundary of the model domain should be
+far enough from any hydraulic stress so that effects from these
+hydraulic stresses do not reach the variable-flux boundary condition.</p>
+<p>To add a variable-flux boundary condition to the model, add a <em>“2D
+Contour”</em> or <em>“3D Contour”</em> plot item to the View Pane. Next, toggle to
+the desired node layer using the <em>“Layer”</em> attribute of the <em>“2D
+Contour”</em> or <em>“3D Contour”</em> plot item. Use the “<em>Select</em>” tool from
+the toolbar to select the nodes on the edge of the model domain where
+the variable-flux boundary condition is to be assigned. When the nodes
+are selected, press the [Enter] key to open the <em>“Assign Properties for
+Nodes”</em> dialog box. Check the radio button next to <em>“Assign to
+Variable-Flux Boundary”;</em> this will activate additional options. The
+additional options are <em>“All nodes in between (counterclockwise) are
+selected,</em>” which will assign the variable-flux boundary condition to
+all the perimeter nodes of the model domain between two selected nodes
+in a counterclockwise direction, and <em>“From Current Layer # To,”</em> which
+will assign the variable-flux boundary condition from the currently
+selected layer to the chosen layer. The nodes that have a variable-flux
+boundary condition assigned can be modified using the <em>“Variable-Flux
+Boundary”</em> dialog box under the “<em>BCs</em>” drop-down menu found on the
+Main Menu banner at the top of the screen. The <em>“Variable-Flux
+Boundary”</em> dialog box is shown in Figure 7.35. The information that can
+be modified for the variable-flux boundary condition is described below.</p>
+<div class="figure align-center" id="id35">
+<a class="reference internal image-reference" href="_images/figure_7_35_manual.png"><img alt="_images/figure_7_35_manual.png" src="_images/figure_7_35_manual.png" style="width: 5.22990in; height: 5.33408in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.35 The “<em>Variable-Flux Boundary</em>” dialog box</span><a class="headerlink" href="#id35" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Node #:</dt><dd><p>The uppermost node number of the variable-flux boundary
+condition.</p>
+</dd>
+<dt>Top Layer:</dt><dd><p>The uppermost layer number in which the variable-flux
+boundary condition begins.</p>
+</dd>
+<dt>Bottom Layer:</dt><dd><p>The layer number in which the variable-flux boundary
+condition ends.</p>
+</dd>
+</dl>
+<p>Option to <em>Apply Constant Flux from Steady-State Simulation:</em> Note that
+this requires a .DRN file from a steady-state simulation. To import the
+.DRN file, click <em>“Import from DRN File”</em> and navigate to the location
+of the .DRN file using the <em>“Open Variable Flux File”</em> window.</p>
+</div>
+<div class="section" id="pumping-well">
+<h3>7.4.4 Pumping Well<a class="headerlink" href="#pumping-well" title="Permalink to this headline">¶</a></h3>
+<p>This option is used to specify values for source/sink terms modeled as
+pumping wells. When “<em>Pumping Well</em>” is selected from the
+“<em>BCs</em>” drop-down menu found on the Main Menu banner at the top of
+the screen, the dialog box shown in Figure 7.36 appears. In
+<strong>MINEDW</strong>, there are three options available for pumping wells.
+Pumping wells can be introduced to the model by defining pumping rates,
+specified heads, or pumping rates with an LPE (“<em>Pumping Rate,”
+“Specified Head</em>,” or “<em>Pumping with LPE”</em>).</p>
+<p>Pumping wells can be added to the model by importing a previously
+created “pumpwells.dat” file; the format of this file is discussed in
+Appendix B. To import the file, simply click on <em>“Import”</em> and, using
+the <em>“Open Pumping File”</em> window that opens, navigate to the location of
+the “pumpwells.dat” file, select it, and click <em>“Open.”</em> Note, if there
+are any existing wells in the <em>“Pumping Well”</em> dialog box, they will be
+overwritten and replaced with the contents of the “pumpwells.dat” file.</p>
+<p>Pumping wells can be created by <strong>MINEDW</strong> based on <em>x</em>, <em>y</em>, and <em>z</em>
+data in a .DAT file. To use this function, the file should contain three
+columns of <em>x</em>, <em>y</em>, and <em>z</em> data corresponding to the locations of the
+pumps to be created in the model. Click on the <em>“Create”</em> button and,
+using the <em>“Select DAT file”</em> window that opens, navigate to the
+directory containing the file with location data for the pumps, select
+it, and click <em>“Open</em>.” <strong>MINEDW</strong> will select the finite-element node
+at the specified <em>x</em>, <em>y</em>, and <em>z</em> locations, or if no node exists at a
+location, <strong>MINEDW</strong> will move the closest node to that specified
+location. The user can then use the <em>“Pumping Well”</em> dialog box to
+modify the screen intervals, pumping rate, and pumping well type.</p>
+<p>Another option for adding pumping wells to the model is to select the
+nodes where pumping wells are to be simulated using a <em>“2D Contour”</em> or
+<em>“3D Contour”</em> plot item and the “<em>Select</em>” tool and then choosing
+<em>“Add to Pumping Wells”</em> in the <em>“Assign Properties for Nodes”</em> dialog
+box as described in Section 6.2. The user must take care to select the
+correct node layer in the <em>“3D Contour”</em> plot item where the pumping
+well is to be simulated. For example, if the user inadvertently uses the
+top node layer, the pump or sink will be simulated at the top of the
+model domain and will likely be ineffective at removing groundwater from
+the system. Also, the user will have to specify the screen intervals,
+pumping well type, and pumping rates in the <em>“Pumping Well”</em> dialog box
+after adding pumping wells using this method.</p>
+<div class="figure align-center" id="id36">
+<a class="reference internal image-reference" href="_images/figure_7_36_manual.png"><img alt="_images/figure_7_36_manual.png" src="_images/figure_7_36_manual.png" style="width: 5.73155in; height: 3.71457in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.36 The “<em>Pumping Well</em>” dialog box</span><a class="headerlink" href="#id36" title="Permalink to this image">¶</a></p>
+</div>
+<p>In <strong>MINEDW,</strong> a “<em>Pumping Rate”</em> well allows the user to specify
+the exact pumping rates they want to use for a model simulation. This
+type of pumping well is useful for a model calibration simulation when
+field-recorded pumping-rate data are available. As mentioned above,
+using a “<em>Pumping Rate”</em> well may dry out the groundwater system
+within the vicinity of the pumping well if the pumping rate is too large
+or the hydraulic conductivity values assigned are too low. <strong>MINEDW</strong>
+will print a warning to the “MINEDW.err” file if this occurs during a
+model simulation, but it is the user’s responsibility to check this
+file, as <strong>MINEDW</strong> does not stop running when this occurs.</p>
+<p><em>“Pumping Rate”</em> wells have the option to move to the first wet node if
+the node where the pump is located becomes dry. This option should be
+exercised with care, as <strong>*MINEDW*</strong> will continue to move the pumping
+node lower, which may result in the pumping node moving to the bottom of
+the model domain. A pumping node located at the bottom of the model
+domain (on a no-flux boundary) is incorrect, as pumping stresses should
+not propagate to a boundary condition. If the user wishes to use this
+option, they are advised to check that pumping stresses never intersect
+other user-defined boundary conditions as the pumping node moves
+downward. To activate this option, check the box next to “<em>Well
+(Pumping Rate only) will be moved to first wet node when dry,</em>” and
+the nodes defined as a “<em>Pumping Rate”</em> well will be moved to the next
+wet node when the pumping nodes become dry.</p>
+<p>“<em>Enable</em> <em>Nonlinear Flow”</em> enables nonlinear flow for pumping wells.
+If this option is enabled, the <em>“Nonlinear”</em> field will become visible
+in the <em>“Pumping Well”</em> dialog box. Each well where nonlinear flow is to
+be simulated will need to be enabled individually. The required
+information for the “<em>Pumping Well</em>” dialog box is described below.</p>
+<dl class="simple">
+<dt>Name:</dt><dd><p>Name of the pumping well.</p>
+</dd>
+<dt>Node #:</dt><dd><p>Identity of node in the pumping data set.</p>
+</dd>
+<dt>Type:</dt><dd><p>Switch for the type of pumping well (options available are
+“<em>Pumping Rate</em>,” “<em>Specified Head</em>,” and “<em>Pumping with LPE</em>”).</p>
+</dd>
+<dt>Screen Top:</dt><dd><p>Elevation of screen top (in meters or feet).</p>
+</dd>
+<dt>Screen Bottom:</dt><dd><p>Elevation of screen bottom (in meters or feet).</p>
+</dd>
+<dt>Level:</dt><dd><p>Defined as either the LPE or the specified head depending on
+the type of well defined.</p>
+</dd>
+<dt>Nonlinear:</dt><dd><p>Enables nonlinear for the selected well.</p>
+</dd>
+<dt>Ratio:</dt><dd><p>The ratio to use for nonlinear flow.</p>
+</dd>
+</dl>
+<p>After selecting a pumping well in the “<em>Pumping Well”</em> dialog box, the
+time-series menu becomes active, as shown in Figure 7.36. In this menu,
+the user can import time-series data for each type of pumping. The three
+options are “<em>Constant</em>,” “<em>Annual</em>,” and “<em>Varied</em>” (as
+described in Section 7.4.1).</p>
+<p><em>“Specified Head”</em> pumping wells are analogues to drains because they
+can be used to achieve a specific-head value within the groundwater
+system surrounding the well by extracting the necessary amount of water.
+Unlike drains, however, no leakance values need to be defined for
+“<em>Specified Head”</em> wells. <em>“Specified Head”</em> wells are often used in
+predictive simulations to evaluate dewatering requirements. When used
+for this purpose, the objective is to achieve the dewatering needs of
+the project and quantify the amount of water that will need to be
+extracted to achieve the dewatering target. After quantifying the
+dewatering requirements, the physical well can be designed to achieve
+the simulated pumping rates. However, if a “<em>Specified Head”</em> well is
+used to simulate an existing well, it would be prudent to ensure that
+the calculated pumping rates of the simulated well do not exceed the
+maximum pumping rate of the physical well.</p>
+<p>Finally, the “<em>LPE</em>” well, which is typically used in a predictive
+simulation, is defined by assigning a pumping rate to the well and the
+LPE. The LPE allows the user to specify the minimum allowable head in a
+well. If the head within the well is equal to or less than the LPE, the
+pumping rate will be reduced in order to maintain the LPE until the head
+exceeds the LPE. If the head exceeds the LPE, then the <em>“LPE”</em> well will
+pump at the rate defined by the user. This feature allows the user to
+ensure that a proper water-column height is maintained or that the
+groundwater system does not become dry due to either high pumping rates
+or low permeability. If an “<em>LPE</em>” well is used during calibration,
+the user should compare pumping rates printed in the .FLW file with
+those that were assigned. If rates in the .FLW file are less than the
+rates that were assigned, this may indicate that the hydraulic
+parameters assigned to the model are too low. Conversely, assigning
+maximum pumping rates to <em>“LPE”</em> wells during predictive simulations
+allows the user to determine the maximum pumping rates that can be
+sustained with the assigned hydraulic parameters.</p>
+</div>
+<div class="section" id="rivers">
+<h3>7.4.5 Rivers<a class="headerlink" href="#rivers" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>River</em>” boundary condition is used to simulate interactions
+between a routed river and an aquifer. The routed-river function uses
+Manning’s equation to calculate the flow in an open channel. A given
+reach of the river is represented by a node and corresponding reach
+length. Each reach is connected to the next reach by sequencing the
+nodes from upstream to downstream. River-groundwater system interactions
+are simulated by comparing the head in the groundwater system to the
+head in the river over time and by transferring water across the
+riverbed accordingly. Rivers can be connected to form a river network.
+External sources of water to rivers are termed “tributaries.”</p>
+<p>The physical accuracy of a river’s representation depends upon the
+number of nodes used to resolve the geometry of the river in plan view
+and the physical coefficients used to calculate gains and losses to and
+from the river.</p>
+<p>When “<em>River</em>” is selected from the “<em>BCs</em>” drop-down menu on
+the Main Menu banner at the top of the screen, the dialog box shown in
+Figure 7.37 appears.</p>
+<div class="figure align-center" id="id37">
+<a class="reference internal image-reference" href="_images/figure_7_37_manual.png"><img alt="_images/figure_7_37_manual.png" src="_images/figure_7_37_manual.png" style="width: 6.00000in; height: 3.50972in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.37 The “<em>River</em>” tab of the “<em>River</em>” dialog box</span><a class="headerlink" href="#id37" title="Permalink to this image">¶</a></p>
+</div>
+<p>Rivers are defined by clicking the “<em>Add</em>” button at the top of the
+“<em>River”</em> tab of the “<em>River”</em> dialog box. Unlike boundary
+conditions such as pumping wells, constant heads, drains, or
+variable-flux boundaries, rivers cannot be created using any plot items.
+A river can only be created in the following two ways:</p>
+<ol class="arabic simple">
+<li><p>From a “BLN” File: This is done by clicking the “<em>Create</em>” button
+on the lower right of the “<em>River”</em> tab, which opens the
+<em>“Select BLN file”</em> dialog box. After selecting the appropriate
+.BLN file, click “<em>Open</em>” and <strong>MINEDW</strong> automatically
+selects the appropriate nodes based on distance from the .BLN
+defined line. <strong>MINEDW</strong> then calculates the riverbed
+elevations and the elevation difference between the upstream and
+downstream node.</p></li>
+<li><p>Manually: The user can manually enter node numbers; riverbed
+elevations can then be automatically generated by <strong>MINEDW</strong>
+using the “<em>Follow Topo</em>” button.</p></li>
+</ol>
+<p>For any river, the user has the choice of calculating the slope based
+off the topography using “<em>Follow Topo,”</em> which is the default
+setting, or applying a “<em>Constant Slope.</em>” For the “<em>Constant
+Slope”</em> option for the entire river channel, the <em>“Slope”</em> box will
+become active and the “<em>Bed Elev.”</em> column of the table will no longer
+be visible. The slope of all segments of the river will be constant. If
+the <em>“Constant Slope”</em> option is used, then the <em>“First (Lowest) Node
+Bed Elevation”</em> is used as a reference to calculate other bed
+elevations. When using “<em>Constant Slope,”</em> if the river is connected
+to another river, the elevation of the node that forms the river
+connection is used as the reference elevation rather than the <em>“First
+(Lowest) Node”</em> and “<em>Bed Elev.”</em></p>
+<p>For each river, the “<em>Manning Coefficient.</em>” river channel
+“<em>Width,</em>” “<em>First (Lowest) Node,</em>” <em>“Bed Elev.,”</em> and bed
+hydraulic conductivity must be defined. The following is an explanation
+of the required information:</p>
+<dl class="simple">
+<dt>Manning’s Coefficient:</dt><dd><p>Empirical coefficient for river depth [TL<sup>-1/3</sup>].</p>
+</dd>
+<dt>Width:</dt><dd><p>Coefficient for river width [L].</p>
+</dd>
+<dt>First (Lowest) Node:</dt><dd><p>The node number of the lowest node, which should
+correspond to the first node forming the river.</p>
+</dd>
+<dt>Bed Elev.:</dt><dd><p>The elevation of the riverbed at the downstream node
+forming the river [L].</p>
+</dd>
+</dl>
+<p><strong>Additionally</strong>, for each node composing the river, the following must be
+defined:</p>
+<dl class="simple">
+<dt>Node:</dt><dd><p>The node number for nodes forming the river.</p>
+</dd>
+<dt>Riverbed elevation:</dt><dd><p>The elevation of the riverbed at the node
+(optional if “<em>Constant Slope</em>” is used) [L].</p>
+</dd>
+<dt>Bed Conductivity:</dt><dd><p>The riverbed hydraulic conductivity [LT<sup>-1</sup>].</p>
+</dd>
+<dt>Output:</dt><dd><p>Option to print simulation results for the node to the output
+file. At a minimum the results at the end node, or any connected node,
+will be printed out.</p>
+</dd>
+</dl>
+<p>Next, “<em>Tributaries</em>” are entered. “<em>Tributaries”</em> are inflows of
+water to the river and can be used to simulate inflow from outside the
+model domain or discharge from an outfall such as a lined channel, pump,
+etc. inside of the model domain. The flow from a tributary can be
+“<em>Constant,</em>” “<em>Annual,</em>” or “<em>Varied</em>.” Figure 7.38 shows the
+“<em>Tributary</em>” tab of the “<em>River</em>” dialog box.</p>
+<div class="figure align-center" id="id38">
+<a class="reference internal image-reference" href="_images/figure_7_38_manual.png"><img alt="_images/figure_7_38_manual.png" src="_images/figure_7_38_manual.png" style="width: 6.00000in; height: 3.39583in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.38 The “<em>Tributary</em>” tab of the “<em>River</em>” dialog box</span><a class="headerlink" href="#id38" title="Permalink to this image">¶</a></p>
+</div>
+<p>Tributaries are added by clicking the “<em>Add</em>” button at the top of
+the window and specifying the node at which the inflow occurs. The start
+date of the inflow and the amount of inflow in m<sup>3</sup>/day or cubic
+feet per day (ft<sup>3</sup>/day) can be specified in the time-series table
+on the lower right. The graph to the left of the table shows the inflow
+values over time. A time series may be imported as a .DAT file using the
+“<em>Import</em> <em>Series</em>” button.</p>
+<p>The last tab in the “<em>River</em>” dialog box, shown in Figure 7.39,
+describes the connections between individual rivers and between rivers
+and tributaries. The user does not need to specify the connection points
+but can check here to ensure that the rivers and tributaries are
+connected correctly. If any changes to the river network have been made
+or a new river network has been created, clicking the “<em>Refresh</em>”
+button redefines the connections.</p>
+<div class="figure align-center" id="id39">
+<a class="reference internal image-reference" href="_images/figure_7_39_manual.png"><img alt="_images/figure_7_39_manual.png" src="_images/figure_7_39_manual.png" style="width: 6.00000in; height: 3.40625in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.39 The “<em>Connection</em>” tab of the “<em>River</em>” dialog box</span><a class="headerlink" href="#id39" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="recharge">
+<h3>7.4.6 Recharge<a class="headerlink" href="#recharge" title="Permalink to this headline">¶</a></h3>
+<p><strong>MINEDW</strong> can simulate temporal and spatial variation in recharge.
+Spatial variation in recharge can be added to a <strong>MINEDW</strong> model by
+creating any number of recharge zones and applying those zones to the
+model domain. Time-series precipitation data can be used to add temporal
+recharge information to each zone. With <strong>MINEDW</strong>, the user can also
+create zones with orographically controlled recharge, which may be
+useful for mountainous regions.</p>
+<p>When “<em>Recharge</em>” is selected from the “<em>BCs</em>” drop-down menu on
+the Main Menu banner at the top of the screen, the dialog box shown in
+Figure 7.40 appears. To create a recharge zone with only temporal
+variation in recharge, select the “<em>Temporal”</em> tab and then choose
+<em>“Constant,” “Annual,”</em> or “<em>Varied”</em> for the type of time-series
+recharge data that will be defined. Next, define the start date and
+recharge rate in the box below. Note that if the elevation function for
+recharge is used, then the values defined in the time-series window will
+not be precipitation rates but rather will be scaling factors. The
+elevation function for recharge and scaling factors that can be applied
+are explained on the following pages. A time-series chart appears in the
+window to the left, displaying the defined data. Note that the units
+used in this dialog box are specified in the uppermost portion of the
+window.</p>
+<div class="figure align-center" id="id40">
+<a class="reference internal image-reference" href="_images/figure_7_40_manual.png"><img alt="_images/figure_7_40_manual.png" src="_images/figure_7_40_manual.png" style="width: 5.70417in; height: 3.62292in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.40 The “<em>Recharge</em>” dialog box showing the
+“<em>Temporal</em>” tab</span><a class="headerlink" href="#id40" title="Permalink to this image">¶</a></p>
+</div>
+<p>The “<em>Elevation”</em> tab in the “<em>Recharge”</em> dialog box allows the user
+to create zones of orographically controlled recharge. Using this
+method, the net recharge to the groundwater system can be calculated as
+a percentage (0–100%) of the total precipitation that falls in
+orographically controlled precipitation zones. This method works well
+for groundwater models that include mountain and valley systems.</p>
+<p>Orographically controlled precipitation is calculated using a nonlinear
+relationship between precipitation and ground-surface elevation.
+Parameters for the equation below can be estimated by fitting the
+equation to observed precipitation for a range of elevations. The
+relationship is defined as follows:</p>
+<div class="math notranslate nohighlight">
+\[Precipitation = \left\lbrack A\ + B\ *\ z^{c}\ \right\rbrack\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[A = intercept\ \left\lbrack L/T \right\rbrack\]</div>
+<div class="math notranslate nohighlight">
+\[B = constant\ \left\lbrack L^{- c} \right\rbrack\]</div>
+<div class="math notranslate nohighlight">
+\[c = nonlinear\ scaling\ factor\ \left\lbrack - \right\rbrack\]</div>
+<div class="math notranslate nohighlight">
+\[z = Elevation\ \left\lbrack L \right\rbrack\]</div>
+<p>To activate this option, select the “<em>Elevation</em>” tab and check the
+box next to the elevation-based precipitation equation and define the
+required parameters in the now active dialog boxes (Figure 7.41). Below
+the area where the parameters for the elevation-based recharge equation
+are defined is a window where elevation factors can be defined. These
+factors can be used to specify the percentage of total precipitation,
+calculated by the elevation-based precipitation equation above, that
+will be applied as recharge to the aquifer for a specific elevation
+band. For example, consider two different elements with average
+elevations of 800 and 1,500 m and calculated precipitations of 25 and 80
+centimeters per year (cm/yr), respectively. Supposing that two elevation
+factors were defined as displayed in Figure 7.41, then recharge for the
+first and second elements would be 8.75 and 60 cm/yr, respectively. The
+following equation shows how these recharge values are calculated.</p>
+<p>Recharge calculated using elevation factors:</p>
+<div class="math notranslate nohighlight">
+\[Recharge\  = P\ * EF\ = \left\lbrack ( A\ + B\ * z^{c}\ ) * EF\ \right\rbrack\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[P = precipitation\ \left\lbrack \frac{L}{T} \right\rbrack\]</div>
+<div class="math notranslate nohighlight">
+\[EF = Elevation\ Factor\ \left\lbrack - \right\rbrack\]</div>
+<div class="figure align-center" id="id41">
+<a class="reference internal image-reference" href="_images/figure_7_41_manual.png"><img alt="_images/figure_7_41_manual.png" src="_images/figure_7_41_manual.png" style="width: 5.70442in; height: 3.62308in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.41 Defining parameters for elevation-based recharge</span><a class="headerlink" href="#id41" title="Permalink to this image">¶</a></p>
+</div>
+<p>Temporal factors can also be applied to precipitation calculated via the
+elevation-based precipitation equation. Temporal factors can be applied
+in addition to ground-surface elevation factors. To define temporal
+factors, first activate the elevation-based precipitation equation on
+the <em>“Elevation”</em> tab, define the necessary parameters, and, if desired,
+define elevation factors. Next, select the <em>“Temporal”</em> tab and create
+the temporal factors. Temporal factors are defined similarly to
+temporally varying recharge, as described at the beginning of Section
+7.4.1. The options for temporal factors are <em>“Constant,” “Annual,”</em> and
+<em>“Varied.”</em> For illustration purposes, suppose that recharge to an
+aquifer during winter is reduced because precipitation falls as snow and
+sublimates rather than melting and infiltrating. In order to account for
+this phenomenon in the model, the user could define temporal factors to
+reduce recharge during the winter months. Figure 7.42 shows an example
+of how the user might define these annually repeating temporal factors.
+For January and February, the recharge to the aquifer is 25% of what is
+calculated by the elevation-based precipitation equation, whereas for
+March, April, and May, it is 50% of precipitation. For summer months and
+into fall, recharge is 100% of precipitation, and, finally, for late
+fall into early winter, recharge is 75% of calculated precipitation. If
+elevation factors are also defined, then recharge will first be adjusted
+by the appropriate elevation factor and then by the temporal factor. The
+following equations show how recharge is calculated using only temporal
+factors as well as temporal factors with elevation factors.</p>
+<p>Recharge calculated using temporal factors:</p>
+<div class="math notranslate nohighlight">
+\[Recharge\  = P*TF = \left\lbrack ( A\ + B\ *\ z^{c}\ ) *\ TF\ \right\rbrack\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[TF = Temporal\ Factor\ \left\lbrack - \right\rbrack\]</div>
+<p>Recharge calculated using elevation and temporal factors:</p>
+<div class="math notranslate nohighlight">
+\[Recharge\  = P\ *\ EF\ *\ TF\ = \left\lbrack (( A\ + B * z^{c}\ ) * EF\ ) * TF\ \right\rbrack\]</div>
+<p>As previously noted, the values defined in the time series section of
+the <em>“Temporal”</em> tab of the <em>“Recharge”</em> dialog box represent scaling
+factors if the elevation function is activated. If the elevation
+function is not used, then these values will be used by the model as
+precipitation rates.</p>
+<div class="figure align-center" id="id42">
+<a class="reference internal image-reference" href="_images/figure_7_42_manual.png"><img alt="_images/figure_7_42_manual.png" src="_images/figure_7_42_manual.png" style="width: 6.00000in; height: 3.62308in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.42 Defining temporal factors for elevation-based recharge</span><a class="headerlink" href="#id42" title="Permalink to this image">¶</a></p>
+</div>
+<p>If the “<em>Recharge will be applied to first wet layer</em>” box is
+checked, then recharge is applied directly to the first wet layer;
+otherwise, it is applied to the top layer.</p>
+<p>The required information for recharge zones is described below.</p>
+<dl class="simple">
+<dt>Zone:</dt><dd><p>Number of recharge zones. Two options are available: constant
+(recharge is simulated constant over time) and time varied (recharge is
+simulated variable over time).</p>
+</dd>
+<dt>Date:</dt><dd><p>Time.</p>
+</dd>
+<dt>Rate:</dt><dd><p>Recharge rate (millimeters per day [mm/day] or feet per year [ft/yr]).</p>
+</dd>
+</dl>
+<p>To assign the created recharge zones, add a <em>“2-D Plane”</em> plot item to
+the View Pane and select “<em>Recharge”</em> as the “<em>Color By”</em> option.
+Click the <em>“Select”</em> tool in the “<em>Tool Bar”</em> and then select the
+elements where the first recharge zone is to be assigned. Press [Enter]
+when the selection is complete, and select the appropriate recharge zone
+in the drop-down list and click <em>“OK”</em> to complete the assignment.
+Repeat these steps until all the zones have been assigned.</p>
+</div>
+<div class="section" id="evaporation">
+<h3>7.4.7 Evaporation<a class="headerlink" href="#evaporation" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>Evaporation</em>” boundary condition is used to simulate the
+discharge of groundwater from a shallow water table due to
+evapotranspiration from vegetated areas or evaporation from a bare-soil
+area. In this option, the evapotranspiration rate depends on the local
+depth to the water table, the extinction depth, the potential
+evapotranspiration rate, and the size of the evaporation zone. The
+simulation assumes that discharge is linearly related to the depth from
+just below the ground surface down to the water table. The linear
+relation holds until a maximum depth is reached; this is the extinction
+depth. At the extinction depth, evapotranspiration (or evaporation)
+ceases, and its value is zero for any depth greater than the extinction
+depth.</p>
+<p>When “<em>Evaporation</em>” is selected from the “<em>BCs</em>” drop-down menu
+on the Main Menu banner found at the top of the screen, the dialog box
+shown in Figure 7.43 appears. The required information for evaporation
+zones is described below. Similar to recharge zones, evaporation
+parameters must be defined prior to applying them to the model.</p>
+<div class="figure align-center" id="id43">
+<a class="reference internal image-reference" href="_images/figure_7_43_manual.png"><img alt="_images/figure_7_43_manual.png" src="_images/figure_7_43_manual.png" style="width: 6.00000in; height: 3.28333in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.43 The “<em>Define Evaporation Zones</em>” dialog box</span><a class="headerlink" href="#id43" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Depth to Zero ET:</dt><dd><p>Extinction depth (depth below which there is zero
+evapotranspiration).</p>
+</dd>
+<dt>Maximum ET Rate:</dt><dd><p>Maximum evapotranspiration rate (m/yr or ft/yr).</p>
+</dd>
+<dt>Multiplier of ETMAX:</dt><dd><p>ETMAX is defined as the maximum
+evapotranspiration rate. This defines the multiplication factor of
+maximum evaporation for the time step. The multiplier of ETMAX can be
+defined as time-series data. The three options are constant, annual, and
+varied. Each is explained in the time-series data section (Section
+7.4.1).</p>
+</dd>
+</dl>
+<p>After defining the evapotranspiration zones, the plot item “<em>2-D
+Plane</em>” should be selected from the list provided in the “<em>Control
+Panel.</em>” In the “<em>Color By</em>” attribute, select “<em>Evaporation</em>.”
+Now, using the “<em>Select</em>” tool (see Chapter 6), elements can be
+selected and the newly created evaporation zones can be applied to the
+elements.</p>
+</div>
+</div>
+<div class="section" id="initial-conditions">
+<h2>7.5 Initial Conditions<a class="headerlink" href="#initial-conditions" title="Permalink to this headline">¶</a></h2>
+<p>To solve the groundwater flow equation, <strong>MINEDW</strong> requires an initial
+estimate for the head values (initial conditions). The initial
+conditions can be specified by either defining a constant-head value or
+reading varied head data from a file created in a previous model run.</p>
+<p>To define the initial conditions, select “<em>Initial Heads</em>” from the
+“<em>Project</em>” drop-down menu on the Main Menu banner found at the top
+of the screen, and the dialog box shown in Figure 7.44 appears.</p>
+<div class="figure align-center" id="id44">
+<a class="reference internal image-reference" href="_images/figure_7_44_manual.png"><img alt="_images/figure_7_44_manual.png" src="_images/figure_7_44_manual.png" style="width: 3.24809in; height: 1.43750in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.44 The “<em>Set Up Initial Head</em>” dialog box</span><a class="headerlink" href="#id44" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Constant:</dt><dd><p>The initial head for all the nodes is a constant value,
+which is input in the field provided.</p>
+</dd>
+<dt>Varied:</dt><dd><p>The initial head for all the nodes is imported from a file
+created by a previous model run. <strong>MINEDW</strong> records the groundwater
+head for the entire model domain at the last time step of a model run in
+an .MDL file. This is done for both steady-state and transient model
+simulations. To use this information as the initial condition for a
+subsequent model run, click on “<em>Varied</em>” and then the <em>“…”</em> button
+to the right. Select the .MDL file from the folder where <strong>MINEDW</strong>
+previously ran (it must be the same model domain). The format of the
+.MDL file is 10 columns of head data. The length of the file will vary
+with the size of the model, but the head value corresponds to the nodes
+in the model beginning with the first node and ending with the last
+node, reading from left to right and top to bottom.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="mining-plan">
+<h2>7.6 Mining Plan<a class="headerlink" href="#mining-plan" title="Permalink to this headline">¶</a></h2>
+<p><strong>MINEDW</strong> can simulate the progressive excavation of an open-pit
+mine. The simulation of open-pit excavation is performed by collapsing
+the elements (i.e., changing the <em>z</em> coordinates of nodes) in the
+finite-element mesh. The shape of the excavation is defined by the mine
+plan, usually provided as a 3-D .DXF file, and the excavation of the
+mine over time is simulated by interpolating between known pit
+geometries. There are two spatial interpolation options that can be used
+to calculate the new <em>z</em> coordinates of nodes as they are moved over
+time; these are explained in Section 7.6.1. The way in which the
+open-pit mine is excavated is based on either depth or volume, which is
+explained in the following paragraphs. Within the pit extent, a finer
+mesh area improves the accuracy of the simulated seepage face and
+pore-pressure distributions behind the pit wall.</p>
+<p>To create a mining plan, select the “<em>Mining</em>” drop-down menu and
+then the “<em>Create Mining Plan</em>” function (Figure 7.45).</p>
+<div class="figure align-center" id="id45">
+<a class="reference internal image-reference" href="_images/figure_7_45_manual.png"><img alt="_images/figure_7_45_manual.png" src="_images/figure_7_45_manual.png" style="width: 2.34306in; height: 1.07939in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.45 The “<em>Mining</em>” drop-down menu</span><a class="headerlink" href="#id45" title="Permalink to this image">¶</a></p>
+</div>
+<p>As described, the shape of the open pit is defined by XYZ data that may
+be provided as 3-D .DXF files by the mine for specific points in time.
+To simulate the excavation of the open pit between these known
+geometries, <strong>MINEDW</strong> provides two methods: depth and volume.
+Depth-based excavation simultaneously moves the pit surface outward in
+all directions, as shown in Figure 7.46. This is done by calculating the
+distance between two known open-pit geometries and dividing the distance
+by the number of time steps between the two dates associated with the
+geometries.</p>
+<div class="figure align-center" id="id46">
+<a class="reference internal image-reference" href="_images/figure_7_46_manual.png"><img alt="_images/figure_7_46_manual.png" src="_images/figure_7_46_manual.png" style="width: 6.00000in; height: 2.23934in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.46 Pit geometry when using “<em>Depth</em>”-based excavation</span><a class="headerlink" href="#id46" title="Permalink to this image">¶</a></p>
+</div>
+<p>Volume-defined excavation will move the pit surface downward, rather
+than outward, toward the next known pit geometry, as shown in Figure
+7.47. This is done by calculating the total volume to be excavated
+between two known geometries and dividing the volume by the number of
+time steps between the two dates associated with the geometries. This
+rate defines the volume of material excavated for each time step.</p>
+<div class="figure align-center" id="id47">
+<a class="reference internal image-reference" href="_images/figure_7_47_manual.png"><img alt="_images/figure_7_47_manual.png" src="_images/figure_7_47_manual.png" style="width: 6.00000in; height: 2.31265in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.47 Pit geometry when using “<em>Volume</em>”-based excavation</span><a class="headerlink" href="#id47" title="Permalink to this image">¶</a></p>
+</div>
+<p>The <em>“Create Mining Plan…”</em> function will allow the user to combine both
+excavation methods when creating a mining plan only if open-pit
+geometries are provided.</p>
+<div class="section" id="creating-a-mining-plan">
+<h3>7.6.1 Creating a Mining Plan<a class="headerlink" href="#creating-a-mining-plan" title="Permalink to this headline">¶</a></h3>
+<p><strong>MINEDW</strong> provides the user with two options for entering the
+mine-plan information, which is used to create the mining-plan file used
+to simulate progressive excavation of an open pit. The first option is
+to provide XYZ data of the open pit over time in .DAT files (Section
+7.6.1.2.). The second option is to provide XYZ data of the pit at the
+end of mining (ultimate pit) and pit-bottom elevations through time
+(Section 7.6.1.3).</p>
+<p>If the XYZ data for pit topography is provided in 3-D .DXF files, they
+will need to be converted into .DAT file format before they are used to
+create a mining plan. The <em>Rhino</em> “<em>Drop</em>” function can be used to
+achieve this or any other program that is capable of manipulating .DXF
+files. Alternatively, <strong>MINEDW</strong> provides a function that can be used
+to convert .DXF files to .DAT file format (Section 7.6.1.1).</p>
+<p>To create a mining plan, from the Main Menu banner click “<em>Mining,</em>”
+then select “<em>Create Mining Plan.</em>” The “<em>Create Mining Plan</em>”
+dialog box shown in Figure 7.48 appears.</p>
+<div class="figure align-center" id="id48">
+<a class="reference internal image-reference" href="_images/figure_7_48_manual.png"><img alt="_images/figure_7_48_manual.png" src="_images/figure_7_48_manual.png" style="width: 4.95925in; height: 3.81968in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.48 The “<em>Create Mining Plan</em>” dialog box</span><a class="headerlink" href="#id48" title="Permalink to this image">¶</a></p>
+</div>
+<p>In this menu, mining plans can be created using the following options:</p>
+<dl class="simple">
+<dt>Interpolated With:</dt><dd><p>Select <em>“Depth”</em> or “<em>Volume”</em> methods for
+temporal interpolation.</p>
+</dd>
+<dt>Input Data Directory:</dt><dd><p>The file path to the location where input files
+are located must be entered here. Two options are available: manual
+entry, or by clicking the <em>“…”</em> button, which opens the “<em>Select
+Directory”</em> dialog box. The “<em>Select Directory</em>” dialog box can be used
+to navigate to where the input files reside.</p>
+</dd>
+<dt>Start Date:</dt><dd><p>Define the start date of the mining stage.</p>
+</dd>
+<dt>End Date:</dt><dd><p>Define the end date of the mining stage. Periods of no
+excavation between mining stages can be created simply by ensuring that
+the start date of the next mining stage does not correspond with the end
+date of the previous stage. The mining periods for each of the stages,
+however, cannot overlap.</p>
+</dd>
+<dt>Ultimate-Pit Outline File:</dt><dd><p>Enter pit boundary file name. This file is
+required to be in a .BLN format.</p>
+</dd>
+<dt>Add:</dt><dd><p>Add additional records to be used in the mining plan.</p>
+</dd>
+<dt>Insert:</dt><dd><p>Insert additional records to be used in the mining plan.</p>
+</dd>
+<dt>Delete:</dt><dd><p>Delete records used in the mining plan.</p>
+</dd>
+<dt>Open:</dt><dd><p>Open a mining-schedule file that contains a list of records to
+be used in a mining plan. The file format for a mining-schedule file is
+described in Appendix B.</p>
+</dd>
+<dt>Save:</dt><dd><p>Save a mine plan file. This will save the records of the mining
+plan to a file that can be imported again with the “<em>Open</em>” option.</p>
+</dd>
+<dt>Options:</dt><dd><p>Menu defining mining-plan spatial-interpolation options.
+<strong>MINEDW</strong> uses inverse distance weighting or kriging interpolation
+methods to create the progressive excavation of the open pit from data
+files that are provided by the user. The interpolation methods can be
+changed in the options menu of the “<em>Create Mining Plan</em>” menu. The
+options menu is displayed in Figure 7.49 below.</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id49">
+<a class="reference internal image-reference" href="_images/figure_7_49_manual.png"><img alt="_images/figure_7_49_manual.png" src="_images/figure_7_49_manual.png" style="width: 4.39583in; height: 2.52083in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.49 The “<em>Mining Plan Interpolation</em>” dialog box</span><a class="headerlink" href="#id49" title="Permalink to this image">¶</a></p>
+</div>
+<p>This menu has the following options:</p>
+<dl class="simple">
+<dt>Inverse Distance:</dt><dd><p>Option to use the inverse-distance method for
+interpolation.</p>
+</dd>
+<dt>Kriging:</dt><dd><p>Option to use the kriging method for interpolation.</p>
+</dd>
+<dt>Number of Points to Search:</dt><dd><p>Data points to use in the kriging or
+inverse-distance method.</p>
+</dd>
+<dt>Power:</dt><dd><p>Power used in the inverse-distance method.</p>
+</dd>
+<dt>Range:</dt><dd><p>Range used in the kriging method.</p>
+</dd>
+<dt>Elevation Increase Is Not Allowed:</dt><dd><p>Option that does not allow
+elevation increases in the interpolation method.</p>
+</dd>
+<dt>Duplicate Data Keep:</dt><dd><p>Option to determine which elevation is valid if
+two elevations exist at one point in one .DAT file. The user can either
+keep the minimum elevation, maximum elevation, or an average of the
+elevations.</p>
+</dd>
+</dl>
+<div class="section" id="converting-dxf-to-dat-files">
+<h4>7.6.1.1 Converting .DXF to .DAT files<a class="headerlink" href="#converting-dxf-to-dat-files" title="Permalink to this headline">¶</a></h4>
+<p>Any .DXF file that will be used to create a mine plan needs to be
+converted to an XYZ data file (.DAT). To do so, on the “<em>List</em>” tab,
+double-click “<em>File Data,</em>” then double-click “<em>DXF</em>.” The
+“<em>Attributes</em>” tab appears. Select the “<strong>+</strong>” next to the
+“<em>File</em>” attribute as shown in the green box in Figure 7.50, and the
+<em>“Select DXF data file”</em> dialog box opens. Navigate to the location of
+the desired .DXF file, select it, and click “<em>Open.”</em> Next, select the
+icon next to “<em>To Data File</em>” to save the information from the .DXF
+file as a .DAT file. Repeat the same procedure for all mining .DXF files
+that are to be used in the mine plan. For .DXF files that have multiple
+layers, the user may choose the layers that will be used for the mine
+plan by activating or deactivating the layers using the “<em>Layers</em>”
+attribute.</p>
+<div class="figure align-center" id="id50">
+<a class="reference internal image-reference" href="_images/figure_7_50_manual.png"><img alt="_images/figure_7_50_manual.png" src="_images/figure_7_50_manual.png" style="width: 4.54230in; height: 4.00056in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.50 Reading a .DXF file and saving as a data file</span><a class="headerlink" href="#id50" title="Permalink to this image">¶</a></p>
+</div>
+<p>For any pit plan that is created in <strong>MINEDW</strong>, a pit outline is
+needed (e.g., the ultimate-pit boundary) to define the nodes that will
+be used for interpolation. This boundary needs to be defined using a
+.BLN file format and is always the first record in the mine plan file.
+This file defines the perimeter of the pit and does not contain
+elevation information because all elevations are assumed to be the top
+of the mesh.</p>
+<p>Note: All of the .DAT files that are used to create the mining plan file
+must be located in the same directory.</p>
+</div>
+<div class="section" id="creating-a-mining-plan-from-pit-topography-files">
+<h4>7.6.1.2 Creating a Mining Plan from Pit Topography files<a class="headerlink" href="#creating-a-mining-plan-from-pit-topography-files" title="Permalink to this headline">¶</a></h4>
+<p>The following is a guide to creating a mining plan and schedule based on
+XYZ data of pit topography stored in .DAT files.</p>
+<p>From the Main Menu, click “<em>Mining,</em>” and then select “<em>Create
+Mining Plan.</em>” Enter the file path to where the pit topography files
+(.DAT file format) are located in the “<em>Input Data Directory”</em> box.
+Enter the name of the ultimate-pit boundary file in the <em>“Ultimate Pit
+Outline File”</em> box. Next, click “<em>Add</em>” to add a record to the
+“<em>Create Mining Plan</em>” dialog box for each of the pit topography
+files. For each of the pit topography files, enter the file name and the
+corresponding start and end date, and choose <em>“Depth”</em> or <em>“Volume”</em>
+under <em>“Interpolated With.”</em> Next, enter a name for the new mining plan
+file in the “<em>Created Mining Plan File Name</em>” box or, to select a
+different directory than the directory where the mining files are
+located, click the button next to the data entry box and select the
+desired file location and enter a file name (Figure 7.51).</p>
+<p>Alternatively, the data detailed in the above steps can be imported from
+a “<em>Mine Plan File</em>.” If a “<em>Mine Plan File”</em> is available, click
+<em>“Open…”</em> in the “<em>Create Mining Plan”</em> dialog box and navigate to the
+location of the “<em>Mine Plan File.”</em> Select it and then click
+“<em>Open.”</em> The directory path, mining start date, ultimate-pit boundary
+file name, pit-geometry files, and associated dates will be populated.
+The default for <em>“Interpolated With”</em> is <em>“Depth.”</em> If the <em>“Volume”</em>
+method is desired, then be sure to select it for the appropriate mining
+stages. Finally, enter a name for the new mining plan file in the
+“<em>Created Mining Plan File Name</em>” box or, to select a different
+directory than the directory where the mining files are located, click
+the button next to the data entry box and select the desired file
+location and enter a file name.</p>
+<div class="figure align-center" id="id51">
+<a class="reference internal image-reference" href="_images/figure_7_51_manual.png"><img alt="_images/figure_7_51_manual.png" src="_images/figure_7_51_manual.png" style="width: 4.95849in; height: 3.81909in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.51 The “<em>Create Mining Plan</em>” dialog box with pit plan</span><a class="headerlink" href="#id51" title="Permalink to this image">¶</a></p>
+</div>
+<p>When the appropriate data have been entered in the “<em>Create Mining
+Plan</em>” dialog box, click “<em>OK</em>” and <strong>MINEDW</strong> creates the
+mining file. The file will need to be imported into the model using the
+<em>“Open Pit…”</em> menu, which is discussed in more detail in Section 7.6.2.</p>
+</div>
+<div class="section" id="creating-a-mining-plan-from-final-pit-topography">
+<h4>7.6.1.3 Creating a Mining Plan from Final-Pit Topography<a class="headerlink" href="#creating-a-mining-plan-from-final-pit-topography" title="Permalink to this headline">¶</a></h4>
+<p>From the Main Menu banner, click “<em>Mining,</em>” and then select
+“<em>Create Mining Plan.</em>” Next, enter the name of the ultimate-pit
+boundary file in the box next to “<em>Ultimate Pit Outline File.”</em> Click
+“<em>Add</em>” to add a record to the “<em>Create Mining Plan</em>” dialog box
+and enter the name of the .DAT file containing the ultimate-pit
+topography. Enter the appropriate start and end date and file name under
+“<em>Date</em>” and “<em>File</em>,” respectively, for the ultimate pit.</p>
+<p>Click “<em>Insert</em>” to add records above the previously created record.
+For these newly created records, enter the pit-bottom elevation and the
+start and end date in the “<em>File/Elevation,</em>” “<em>Start Date,”</em> and
+“<em>End Date</em>” columns (Figure 7.52).</p>
+<div class="figure align-center" id="id52">
+<a class="reference internal image-reference" href="_images/figure_7_52_manual.png"><img alt="_images/figure_7_52_manual.png" src="_images/figure_7_52_manual.png" style="width: 3.94719in; height: 3.19695in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.52 The “<em>Create Mining Plan</em>” dialog box with pit plan</span><a class="headerlink" href="#id52" title="Permalink to this image">¶</a></p>
+</div>
+<p>Once the appropriate data have been entered in the “<em>Create Mining
+Plan</em>” dialog box, click “<em>OK</em>” to create the mining plan file.</p>
+</div>
+</div>
+<div class="section" id="importing-a-mine-plan-into-minedw">
+<h3>7.6.2 Importing a Mine Plan into MINEDW<a class="headerlink" href="#importing-a-mine-plan-into-minedw" title="Permalink to this headline">¶</a></h3>
+<p>After creating the mine plan, select “<em>Open Pit</em>” in the
+“<em>Mining</em>” drop-down menu to assign the mining file to the model.
+After the “<em>Open Pit</em>” dialog box opens (Figure 7.53), click
+“<em>Add</em>” and browse to the mining plan file; select it and click
+“<em>Open</em>” in the “<em>Open Mining Plan File</em>” dialog box.</p>
+<div class="figure align-center" id="id53">
+<a class="reference internal image-reference" href="_images/figure_7_53_manual.png"><img alt="_images/figure_7_53_manual.png" src="_images/figure_7_53_manual.png" style="width: 6.00000in; height: 4.96134in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.53 The “<em>Open Pit</em>” dialog box</span><a class="headerlink" href="#id53" title="Permalink to this image">¶</a></p>
+</div>
+<p>For each pit, there are four different menus: 1) “<em>General,</em>” 2)
+“<em>Pit Lake,</em>” 3) “<em>ZOR,</em>” and 4) “<em>Backfilling.</em>” Under the
+general tab, pit-plan information is provided, including the pit name,
+the start and end dates, and the pit-bottom elevations. In this menu,
+the user can open a different mining file using the “<em>Replace with</em>”
+command or create a different mining plan using the “<em>Create</em>”
+command. Under the other three tabs, a pit lake (Section 7.6.3), a zone
+of relaxation (ZOR) (Section 7.6.4), and backfilling (Section 7.6.5) can
+be defined.</p>
+<p>Once a mining plan has been imported into <strong>MINEDW</strong>, the user may
+visualize the open-pit excavation through time by selecting the
+“<em>List</em>” tab in the “<em>Control Panel</em>” Pane on the right-hand
+side of the Main Menu and adding a “<em>3-D Element</em>” plot item. The
+mesh will be displayed in the View Pane in plan view with geological
+units. To view pit excavation at a particular time step, enter the
+time-step number in the box on the time-step slider; otherwise, click on
+the time-step slider (Figure 7.54) and move it to the right to view the
+progressive excavation of the pit through time.</p>
+<div class="figure align-center" id="id54">
+<a class="reference internal image-reference" href="_images/figure_7_54_manual.png"><img alt="_images/figure_7_54_manual.png" src="_images/figure_7_54_manual.png" style="width: 2.37533in; height: 0.32296in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.54 Time-step slider</span><a class="headerlink" href="#id54" title="Permalink to this image">¶</a></p>
+</div>
+<p>The collapsed mesh showing the open pit with geology will be displayed
+in the View Pane, as shown in Figure 7.55.</p>
+<div class="figure align-center" id="id55">
+<a class="reference internal image-reference" href="_images/figure_7_55_manual.png"><img alt="_images/figure_7_55_manual.png" src="_images/figure_7_55_manual.png" style="width: 6.00000in; height: 3.42185in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.55 The collapsed mesh showing the open pit with geology</span><a class="headerlink" href="#id55" title="Permalink to this image">¶</a></p>
+</div>
+<p>The elevation change in the pit area through time can be visualized by
+selecting the “<em>List</em>” tab in the “<em>Control Panel</em>” Pane on the
+right-hand side of the Main Menu banner. Expand the “<em>Node</em>” item
+and double-click “<em>3-D Contour</em>.” The mesh will be displayed on the
+View Pane in plan view with elevation values. You can deactivate and
+activate “<em>3-D Element</em>” and “<em>3-D Contour</em>” to switch between
+the views at desired time steps to visualize the changes in both geology
+and elevation.</p>
+<p>Mining plans for any model simulation can be activated and deactivated
+by unchecking the “<em>Activate</em>” checkbox. Click “<em>OK</em>” to save
+the changes and exit the “<em>Open Pit</em>” dialog box.</p>
+</div>
+<div class="section" id="pit-lake">
+<h3>7.6.3 Pit Lake<a class="headerlink" href="#pit-lake" title="Permalink to this headline">¶</a></h3>
+<p>When mine operations cease, a pit lake can form if the pit bottom is
+below the pre-mining water table. To simulate the pit-lake formation in
+<strong>MINEDW</strong>, select “<em>Open Pit</em>” from the “<em>Mining</em>” drop-down
+menu. In the “<em>Open Pit</em>” dialog box (Figure 7.56), select the pit
+plan that a pit lake forms under, and then select the “<em>Pit Lake</em>”
+tab and check the box next to “<em>Activate</em>.” To define a pit-lake
+simulation, enter a date in the “<em>Start Date</em>” box for the start of
+the pit-lake formation, an “<em>Initial Lake Elevation,</em>”
+“<em>Evaporation</em>” rate (if any), and the <em>“# of Stages</em>” in the
+lake. These options are described in more detail below.</p>
+<div class="figure align-center" id="id56">
+<a class="reference internal image-reference" href="_images/figure_7_56_manual.png"><img alt="_images/figure_7_56_manual.png" src="_images/figure_7_56_manual.png" style="width: 6.00000in; height: 4.05707in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.56 The “<em>Pit Lake</em>” tab</span><a class="headerlink" href="#id56" title="Permalink to this image">¶</a></p>
+</div>
+<p>The following are options are available in the <em>“Pit Lake”</em> tab:</p>
+<dl class="simple">
+<dt>Start Date:</dt><dd><p>Date of when pit-lake infilling will begin. This date must
+be after mining has ended and equal to or later than the backfilling
+date if backfilling is applied.</p>
+</dd>
+<dt>Initial Lake Elevation:</dt><dd><p>This value must be equal to or greater than
+the minimum pit elevation or the pit bottom after backfilling
+operations. In the case of a sump or area of the pit that already holds
+water at the start of pit-lake formation, you would enter an “<em>Initial
+Lake Elevation</em>” greater than the pit bottom.</p>
+</dd>
+<dt>Evaporation:</dt><dd><p>Evaporation rate of the pit lake (millimeters per year
+[mm/yr] or ft/yr).</p>
+</dd>
+<dt># of Stages:</dt><dd><p>Number of stages to be used in the simulation. The user
+must specify the “<em>Elevation”</em> of each stage in the dialog box below
+the input for the number of stages. <strong>*MINEDW*</strong> will calculate the
+<em>“Area”</em> and “<em>Volume”</em> of the stages.</p>
+</dd>
+<dt>Create:</dt><dd><p>The <em>“Create”</em> function will automatically calculate the area
+and volume of each stage based on the <em>“# of Stages”</em> the user selects.</p>
+</dd>
+<dt>Import:</dt><dd><p>Using the <em>“Import”</em> function, the user can import a pit-lake
+file.</p>
+</dd>
+<dt>Additional Pump/Recharge:</dt><dd><p>Switch for additional sources of discharge
+(-) or recharge (+) (excluding groundwater seepage) when the elevation
+is lower than a user-specified elevation. When the pit-lake recharge
+option is activated, click the “<em>Define</em> <em>Rate</em>” button and a new
+menu (Figure 7.57) will appear. In this menu, the user can define any
+additional recharge and pumping to/from a pit lake based on time-series
+data.</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id57">
+<a class="reference internal image-reference" href="_images/figure_7_57_manual.png"><img alt="_images/figure_7_57_manual.png" src="_images/figure_7_57_manual.png" style="width: 6.00000in; height: 5.41935in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.57 Pumping/recharge menu for a pit lake</span><a class="headerlink" href="#id57" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="zone-of-relaxation-for-pit">
+<h3>7.6.4 Zone of Relaxation for Pit<a class="headerlink" href="#zone-of-relaxation-for-pit" title="Permalink to this headline">¶</a></h3>
+<p>In <strong>MINEDW</strong>, a ZOR can be created around excavations, backfilling
+operations, longwall coal mining, room-and-pillar coal mining,
+freeze-thaw conditions, or other scenarios in which hydraulic
+conductivity may change during the simulation period.</p>
+<p>To create a ZOR for an open pit, select “<em>Open Pit</em>” from the
+“<em>Mining</em>” drop-down menu. Select the open-pit plan from the
+drop-down box on the upper left-hand corner of the dialog box and then
+select the “<em>ZOR</em>” tab (Figure 7.58).</p>
+<div class="figure align-center" id="id58">
+<a class="reference internal image-reference" href="_images/figure_7_58_manual.png"><img alt="_images/figure_7_58_manual.png" src="_images/figure_7_58_manual.png" style="width: 5.04624in; height: 4.44298in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.58 The “<em>Open Pit</em>” dialog box with “<em>ZOR</em>” active</span><a class="headerlink" href="#id58" title="Permalink to this image">¶</a></p>
+</div>
+<p><strong>MINEDW</strong> offers two options for specifying the thickness and shape
+of the ZOR: as a ratio of the pit depth or by user-defined thicknesses.</p>
+<p>Using the first option, the user can further subdivide the ZOR into
+layers that are also defined using a thickness that is calculated as a
+ratio of the pit depth. This results in a ZOR that has a minimum
+thickness at the perimeter of the pit and thickens toward the center of
+the pit (Figure 7.59). Layering within the ZOR is defined in percentages
+of the total ZOR. The sum of user-defined percentages must be less than
+or equal to 100. In either case, <strong>MINEDW</strong> will add a layer such that
+the “<em>ZOR Definition</em>” dialog box will always contain <em>n</em> + 1 ZOR
+layers (where <em>n</em> is the number defined by the user) (Figure 7.58). The
+input file created by <strong>MINEDW</strong> will always contain <em>n</em> + 1 layers,
+but the layer added by <strong>MINEDW</strong> will only be used if the
+user-defined percentages are less than 100. For example, in a 120-m deep
+pit with a ZOR thickness equal to ¼ of the pit depth, the ZOR will have
+a maximum thickness of 30 m. The ZOR can then be divided into two equal
+layers by entering “2” in the box next to “<em># of Additional ZOR
+Layers”</em> and then entering “50%” for both layers. When <em>“Search Zone”</em>
+is clicked, <strong>MINEDW</strong> adds an additional layer for a total of three
+ZOR layers, as displayed in Figure 7.59a. The ZOR layers that are used
+in the simulation are “<em>Layer#1”</em> and <em>“Layer#2.”</em> The layer added by
+<strong>MINEDW</strong>, “<em>Layer#3,”</em> is not used<em>.</em> Alternatively, the ZOR
+could have been created by creating one ZOR layer, entering “50%” for
+the layer, and then clicking “<em>Search Zone.”</em> In this scenario, the
+layer created by <strong>MINED*</strong> is used and accounts for the remaining 50%
+of the ZOR (Figure 7.59b). Also, it is important to remember that, when
+<strong>MINEDW</strong> searches for geological units within the ZOR, it displays
+all the units for each layer even though the unit may not form part of
+the ZOR. For example, if the model contains a surficial unit such as
+alluvium that does not form part of the ZOR, it will be shown in the ZOR
+dialog window but can be excluded by using a factor of 1 for the
+hydraulic conductivity multiplier.</p>
+<div class="figure align-center" id="id59">
+<a class="reference internal image-reference" href="_images/figure_7_59_manual.jpeg"><img alt="_images/figure_7_59_manual.jpeg" src="_images/figure_7_59_manual.jpeg" style="width: 6.00000in; height: 5.45730in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.59 Defining the ZOR. A) Default layer is inactive, B) Default
+layer is active</span><a class="headerlink" href="#id59" title="Permalink to this image">¶</a></p>
+</div>
+<p>Using option two, in which the user defines the absolute thickness, the
+user specifies the number of layers in the ZOR and the thickness (m or
+ft) of each layer. The sum of these layers will be the ZOR thickness no
+matter the pit depth, as shown in Figure 7.60.</p>
+<div class="figure align-center" id="id60">
+<a class="reference internal image-reference" href="_images/figure_7_60_manual.png"><img alt="_images/figure_7_60_manual.png" src="_images/figure_7_60_manual.png" style="width: 6.00000in; height: 2.52830in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.60 Defining the ZOR thickness using absolute thickness layers.</span><a class="headerlink" href="#id60" title="Permalink to this image">¶</a></p>
+</div>
+<p>To create a ZOR using option one, click the “<em>ZOR thickness = 1/ of
+Pit Depth</em>” checkbox to activate the ZOR thickness proportionality
+option and then choose an appropriate ratio. Next, define the number of
+layers to use in the ZOR using the toggle buttons next to the “<em># of
+Additional ZOR Layers”</em> box or by typing in a number. After that,
+specify the thickness as a percentage for each ZOR layer, keeping in
+mind that the cumulative sum of percentages must not exceed 100.
+<strong>MINEDW</strong> will provide the user a warning if the cumulative sum is
+greater than 100%. Layers are ordered from top down, where the top layer
+forms around the pit surface. Once layer percentages are defined, click
+the “<em>Search ZOR Units</em>” button and <strong>MINEDW</strong> finds the
+geological zones that lie within the defined ZOR. The “<em>ZOR
+Definition</em>” box, at the right (Figure 7.58), will contain the
+results.</p>
+<p>To create a ZOR using option two, define the number of layers to use and
+the thickness of each layer, then click <em>“Search ZOR Units.”</em></p>
+<p>For either method, factors of the original hydraulic conductivity values
+are entered in the columns labeled “<em>Layer#1</em>,” “<em>Layer#2</em>,” etc.
+After finishing, click “<em>Create ZOR</em>” to create the ZOR for the open
+pit and then check the box next to “<em>Activate</em>” at the top left of
+the “<em>Open Pit</em>” dialog box. Click “<em>OK</em>” to save the changes
+and close the “<em>Open Pit</em>” dialog box.</p>
+<p>Once a ZOR has been created, it can be visualized by selecting the
+“<em>List</em>” tab in the “<em>Control</em> <em>Panel</em>” Pane on the right-hand
+side of the Main Menu banner. Expand the “<em>Element</em>” item and
+double-click “<em>Time Varied Conductivity</em>” (Figure 7.61).</p>
+<p>If the mining plan is modified or replaced with a different mining plan,
+the ZOR will need to be recreated.</p>
+<div class="figure align-center" id="id61">
+<a class="reference internal image-reference" href="_images/figure_7_61_manual.png"><img alt="_images/figure_7_61_manual.png" src="_images/figure_7_61_manual.png" style="width: 6.00000in; height: 3.82849in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.61 ZOR in the model</span><a class="headerlink" href="#id61" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="open-pit-backfilling">
+<h3>7.6.5 Open-Pit Backfilling<a class="headerlink" href="#open-pit-backfilling" title="Permalink to this headline">¶</a></h3>
+<p><strong>MINEDW</strong> can simulate open-pit backfilling. Backfilling may be used
+in some mining applications to prevent the formation of a pit lake or to
+dispose of tailings after mining has ceased. To use this option, select
+“<em>Open Pit</em>” from the “<em>Mining</em>” drop-down menu. Select the
+desired pit plan on the left and then click the “<em>Backfilling</em>” tab
+(Figure 7.62). Check the “<em>Activate</em>” box and define the
+“<em>Implement Date</em>” for backfilling. The “<em>Implement Date</em>” of
+backfilling must be before or the same time as the “<em>Start Date</em>” of
+pit-lake formation. <strong>MINEDW</strong> does not support the backfilling of an
+existing pit lake and automatically adjusts the “<em>Start Date</em>” or
+“<em>Implement Date</em>” for pit-lake or backfilling operations to prevent
+backfilling of a pit lake. Backfilling operations are simulated in one
+time step rather than progressive backfilling over multiple time steps.
+The backfill elevation can be defined as constant by checking the
+“<em>Constant Elevation</em>” option and entering a value. Otherwise, if
+more detailed information is available for the backfill, “<em>Varied</em>”
+can be checked and the file containing elevation information, in .DAT
+file format, can be selected in the “<em>Open Data File</em>” dialog box
+that opens. In the “<em>Grid</em>” dialog box, choose the interpolation
+method and enter the appropriate parameters. The surface for the
+backfill is then created. Finally, the hydraulic parameters for the
+backfill can be selected from the drop-down list (Figure 7.62). The
+entire backfilled zone will have the same hydraulic properties and
+cannot be subdivided. When the “<em>Backfilling</em>” parameters are
+completely defined, click “<em>OK</em>” in the “<em>Open Pit</em>” dialog box
+to ensure that the changes are saved.</p>
+<div class="figure align-center" id="id62">
+<a class="reference internal image-reference" href="_images/figure_7_62_manual.png"><img alt="_images/figure_7_62_manual.png" src="_images/figure_7_62_manual.png" style="width: 3.99886in; height: 3.52080in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.62 The “<em>Backfilling”</em> tab available in the “<em>Open Pit</em>”
+dialog box</span><a class="headerlink" href="#id62" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="zone-of-relaxation-for-caving">
+<h3>7.6.5 Zone of Relaxation for Caving<a class="headerlink" href="#zone-of-relaxation-for-caving" title="Permalink to this headline">¶</a></h3>
+<p>In <strong>MINEDW</strong>, the time-varied hydraulic conductivity related to the
+displacement of rock caused by underground mining can be simulated.</p>
+<p>To create this hydrogeologic zone, select “<em>Zone of Relaxation for
+Caving</em>” from the “<em>Mining</em>” menu on the Main Menu banner. The
+“<em>Create Zone of Relaxation for Cave Zone</em>” dialog box appears
+(Figure 7.63). Information required for creating this hydrogeologic zone
+is described below.</p>
+<div class="figure align-center" id="id63">
+<a class="reference internal image-reference" href="_images/figure_7_63_manual.png"><img alt="_images/figure_7_63_manual.png" src="_images/figure_7_63_manual.png" style="width: 5.27083in; height: 5.82292in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.63 The “<em>Create Zone of Relaxation for Cave Zone</em>” dialog
+box</span><a class="headerlink" href="#id63" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Mining Schedule:</dt><dd><p>The spatial extent of displaced rock over time due to
+block caving, which includes the date when the mining phase begins and
+the file names of 3-D .DXF files delimiting the extent of the inner and
+outer ZOR layers for the mining phase.</p>
+</dd>
+<dt>ZOR Definition:</dt><dd><p>The factors by which hydraulic conductivity
+increases/decreases for each hydrogeologic zone that is displaced by
+caving.</p>
+</dd>
+</dl>
+<p>Date and file name information can be entered manually in the <em>“Mining
+Schedule”</em> window or automatically using a mining schedule file. If
+<em>“Mining Schedule”</em> information is to be entered manually, enter the
+date when the first mining phase will begin and then enter the file name
+of the .DXF file defining the inner ZOR layer in the column labeled
+<em>“Layer #1 File.”</em> Next, enter the file name of the file defining the
+outer ZOR layer in the column labeled <em>“Layer #2 File.”</em> Click “<em>Add”</em>
+on the top right of the dialog box to add a new entry, and repeat the
+steps described above until the ZOR for caving is completely defined. To
+use a mining schedule file to enter information into the <em>“Mining
+Schedule,”</em> click <em>“Open…”</em> and locate the mining schedule file. Select
+it and then click <em>“Open”</em> in the <em>“Open Caving ZOR File”</em> dialog box.
+Note that <strong>MINEDW</strong> only supports two ZOR layers for caving, unlike
+the option for open pits, in which the user can define as many ZOR
+layers as desired.</p>
+<p>After entering the necessary data, click “<em>Search Zone</em>.” The relevant
+hydrogeologic zone appears. Enter the factors by which hydraulic
+conductivity will change for each ZOR layer under the columns labeled
+“<em>Layer #1”</em> and <em>“Layer #2.”</em></p>
+<p>Enter the file name of the cave-zone ZOR file to be created in the box
+at the bottom of the “<em>Create Zone of Relaxation for Cave Zone</em>”
+dialog box and then click “<em>OK</em>.” To assign the created time-varied
+conductivity file for a cave zone to the model, please see the following
+section.</p>
+</div>
+<div class="section" id="dewatering-and-underground-mining">
+<h3>7.6.6 Dewatering and Underground Mining<a class="headerlink" href="#dewatering-and-underground-mining" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>Dewatering and Underground Mining</em>” menu is used to assign the
+underground ZOR mining file to the model and to define groundwater
+recovery in the mined area at the end of mining. The drop-down box at
+the top of the dialog box contains a list of underground mines already
+defined (this list may be blank if none have been defined). The <em>“Add”</em>
+and “<em>Delete”</em> buttons to the right of the drop-down box are used to
+add or delete mines from the model. The “<em>Dewatering and Underground
+Mining</em>” dialog box is divided into three tabs: 1) <em>“General,” 2)
+“ZOR,”</em> and 3) <em>“Recover”</em> (Figure 7.64), which are explained below.</p>
+<div class="figure align-center" id="id64">
+<a class="reference internal image-reference" href="_images/figure_7_64_manual.png"><img alt="_images/figure_7_64_manual.png" src="_images/figure_7_64_manual.png" style="width: 4.02760in; height: 5.01042in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.64 The “<em>Dewatering and Underground Mining</em>” dialog box</span><a class="headerlink" href="#id64" title="Permalink to this image">¶</a></p>
+</div>
+<p>The following options are available in the <em>“General”</em> tab:</p>
+<dl class="simple">
+<dt>Activate:</dt><dd><p>This checkbox is a switch to activate the selected
+underground mine in the model.</p>
+</dd>
+<dt>Name:</dt><dd><p>Defines the name of the underground mine.</p>
+</dd>
+<dt>Drain Group Used:</dt><dd><p>This window is used to define the groups of drain
+nodes that are associated with a particular underground mine. This
+option does not affect how the model runs but does change the location
+of output. Drain groups that appear in the <em>“Drain Groups Used”</em> window
+also appear in the <em>“Mine”</em> column of the .BUD file and in the .MNE file.
+This option makes post-processing much easier but is not necessary
+to correctly set up a model run.</p>
+</dd>
+</dl>
+<p>To assign the underground mining ZOR file to the model and define any
+groundwater recovery, select “<em>Dewatering and Underground Mining</em>”
+from the “<em>Mining</em>” drop-down menu. The “<em>Dewatering and
+Underground Mining</em>” dialog box (Figure 7.64) appears. Click the
+“<em>Add</em>” button, and the “<em>General”</em> tab becomes active. On this
+tab, the user can change the name of the mine, if desired, using the
+“<em>Name”</em> option. Next, select the drain groups associated with the
+underground mine from the drop-down box next to the <em>“Drain Group Used”</em>
+window and click <em>“Add”</em> to move the drain group to the <em>“Drain Group
+Used”</em> box. Click <em>“OK”</em> to save the changes and close the <em>“Dewatering
+and Underground Mining”</em> dialog box or select the <em>“ZOR”</em> tab to define
+the ZOR.</p>
+<div class="figure align-center" id="id65">
+<a class="reference internal image-reference" href="_images/figure_7_65_manual.png"><img alt="_images/figure_7_65_manual.png" src="_images/figure_7_65_manual.png" style="width: 3.98166in; height: 5.01042in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.65 “<em>ZOR</em>” definition for an underground mine</span><a class="headerlink" href="#id65" title="Permalink to this image">¶</a></p>
+</div>
+<p>The <em>“ZOR”</em> tab is used to add the ZOR file created using the <em>“Zone of
+Relaxation for Caving”</em> dialog box to the model. The <em>“ZOR”</em> tab has the
+following options:</p>
+<dl class="simple">
+<dt>Activate:</dt><dd><p>This checkbox is a switch to activate the ZOR for the
+selected underground mine in the model.</p>
+</dd>
+<dt>Assign:</dt><dd><p>This button opens the <em>“Open Time-Varied Conductivity File”</em>
+dialog box, which is used to select the desired ZOR file.</p>
+</dd>
+<dt>Remove:</dt><dd><p>Removes the ZOR from the underground-mine definition.</p>
+</dd>
+<dt>Create:</dt><dd><p>Opens the “<em>Create Zone of Relaxation for Cave Zone”</em> dialog
+box.</p>
+</dd>
+</dl>
+<p>On the <em>“ZOR”</em> tab, locate the <em>“Assign…”</em> button at the bottom of the
+dialog box. Click the <em>“Assign…”</em> button and, using the <em>“Open
+Time-Varied Conductivity File”</em> dialog box, browse to the previously
+created ZOR file, select it, and click “<em>Open</em>.”</p>
+<p>If the ZOR factors need to be altered, they can be updated using the
+“<em>ZOR</em>” tab (Figure 7.65). After all changes to the ZOR factors have
+been made, check the box next to <em>“Activate”</em> to activate the ZOR in the
+model.</p>
+<div class="figure align-center" id="id66">
+<a class="reference internal image-reference" href="_images/figure_7_66_manual.png"><img alt="_images/figure_7_66_manual.png" src="_images/figure_7_66_manual.png" style="width: 6.00000in; height: 5.77640in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.66 “<em>Recover</em>” tab parameters</span><a class="headerlink" href="#id66" title="Permalink to this image">¶</a></p>
+</div>
+<p>Using the <em>“Recover”</em> menu, the user can define groundwater recovery and
+inflow into the underground workings after the end of mining. The
+<em>“Recover”</em> tab has the following options:</p>
+<dl class="simple">
+<dt>Activate:</dt><dd><p>This checkbox is a switch to activate groundwater recovery
+for the selected underground mine in the model.</p>
+</dd>
+<dt>Start Date:</dt><dd><p>Defines the start of groundwater recovery, which should be
+after the end of mining.</p>
+</dd>
+<dt># of Stages:</dt><dd><p>The number of stages to use to calculate groundwater
+inflow into the underground workings.</p>
+</dd>
+<dt>Create:</dt><dd><p>Function used to calculate the elevation and volume of each
+stage. This function is described in further detail below.</p>
+</dd>
+<dt>Import:</dt><dd><p>Function that can be used to import a file containing the
+stage elevation and volume relationship for groundwater recovery. The
+file format of this input file is detailed in Appendix B.</p>
+</dd>
+<dt>Additional pumping/recharge; if elevation is lower than:</dt><dd><p>These options allow the user to define an elevation below which additional
+pumping or recharge is active.</p>
+</dd>
+<dt>Define Rate:</dt><dd><p>This button opens a time-series window that is used to
+define the rate of additional pumping or recharge for groundwater
+elevations below the specified level.</p>
+</dd>
+</dl>
+<p>On the <em>“Recover”</em> tab, define the “<em>Start Date</em>” of groundwater
+recovery and inflow into the underground workings. Next, specify the
+<em>“Initial Lake Elevation”</em> if the value <strong>MINEDW</strong> has automatically
+assigned is not desired. The default value is based on the lowest mined
+elevation. In the box next to <em>“# of Stages,”</em> enter the number of
+stages to use to calculate groundwater recovery in the underground
+workings. Note that if importing a file containing the stage elevation
+and volume recovery information, the <em>“# of Stages”</em> will be
+auto-populated. Next, click on <em>“Create”</em> to open the <em>“Create
+Underground Recover Stage”</em> dialog box shown in Figure 7.67 below. This
+function is used to calculate the stage elevation and volume information
+for groundwater recovery using a 3-D .DXF file and the <em>“# of Stages”</em>
+input by the user. The input for the dialog box is discussed below.</p>
+<div class="figure align-center" id="id67">
+<a class="reference internal image-reference" href="_images/figure_7_67_manual.png"><img alt="_images/figure_7_67_manual.png" src="_images/figure_7_67_manual.png" style="width: 3.67760in; height: 1.96902in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.67 The “<em>Create Underground Mine Recover Stage</em>” dialog
+box</span><a class="headerlink" href="#id67" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>DXF File:</dt><dd><p>Input for the file path and file name of the 3-D .DXF file
+to use to calculate the stage elevation and volume information for
+groundwater recovery.</p>
+</dd>
+<dt>Maximum Elevation:</dt><dd><p>The maximum elevation of the underground workings.</p>
+</dd>
+<dt>Minimum Elevation:</dt><dd><p>The minimum elevation of the underground workings.</p>
+</dd>
+<dt>Stage Space:</dt><dd><p>The space of each stage, which is calculated by
+<strong>MINEDW</strong> based on the input 3˗D .DXF file and number of stages. This
+value can be modified by the user if necessary.</p>
+</dd>
+</dl>
+<p>After selecting the appropriate .DXF file and verifying the <strong>MINEDW</strong>
+calculated information for the stages, click <em>“OK”</em> to close the window.
+The information for <em>“Elevation”</em> and <em>“Volume”</em> in the <em>“Dewatering and
+Underground Mining”</em> dialog box is automatically updated. If there is
+any additional pumping or recharge to be defined, check the <em>“Additional
+pumping/recharge”</em> box and enter the elevation below which additional
+pumping or recharge is active in the box to the right. Next, click the
+checkbox next to <em>“Define Rate”</em> to open the time-series window where
+pumping or recharge rates are defined. Figure 7.66 shows the <em>“Recover”</em>
+tab with the necessary input.</p>
+<div class="figure align-center" id="id68">
+<a class="reference internal image-reference" href="_images/figure_7_68_manual.png"><img alt="_images/figure_7_68_manual.png" src="_images/figure_7_68_manual.png" style="width: 4.35477in; height: 5.41742in;" /></a>
+<p class="caption"><span class="caption-text">Figure 7.68 The “<em>Recover</em>” tab of the “<em>Dewatering and
+Underground Mining</em>” dialog box</span><a class="headerlink" href="#id68" title="Permalink to this image">¶</a></p>
+</div>
+<p>The <em>“Backfill”</em> tab in the <em>“Dewatering and Underground Mining”</em> dialog
+box is used to specify backfilling operations of an underground mine.
+The <em>“Backfill”</em> tab is shown above in Figure 7.68, and the inputs are
+discussed below.</p>
+<dl class="simple">
+<dt>Import:</dt><dd><p>Import will allow the user to import a file describing the
+backfilling of underground workings.</p>
+</dd>
+<dt>Create Backfill:</dt><dd><p>This will open the <em>“Create Zone of Relaxation for
+Cave Zone”</em> dialog box, which will allow the user to create a file
+describing the backfill of the underground workings. The same procedures
+as described in Section 7.6.5 should be followed.</p>
+</dd>
+<dt>Turn Off All Drain When Backfill:</dt><dd><p>This option will turn off all drain
+nodes that were used to simulate the dewatering of the underground
+workings. In order for this function to work, the appropriate drain node
+groups must be added to the <em>“Drain Group Used”</em> window on the
+<em>“General”</em> tab (Figure 7.64).</p>
+</dd>
+<dt>Reference Node:</dt><dd><p>The node that is used for a reference elevation.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="8_model_execution_manual.html" class="btn btn-neutral float-right" title="8.0 Model Execution" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="6_nodes_and_elements_manual.html" class="btn btn-neutral float-left" title="6.0 Nodes and Elements" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Itasca Denver, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'G-VY7FB9D8LM', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

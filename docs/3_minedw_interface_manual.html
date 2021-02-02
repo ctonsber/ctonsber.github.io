@@ -1,0 +1,2330 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.0 MINEDW Interface &mdash; MINEDW 3.05 225 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4.0 Importing Data Sets" href="4_importing_data_sets_manual.html" />
+    <link rel="prev" title="2.0 Features of MINEDW" href="2_features_of_minedw_manual.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MINEDW 3.05
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">USER MANUAL</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="1_introduction_manual.html">1.0 Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_features_of_minedw_manual.html">2.0 Features of MINEDW</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3.0 MINEDW Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#view-pane">3.1 View Pane</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main-menu">3.2 Main Menu</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-file-menu">3.2.1 The File Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-project-menu">3.2.2 The Project Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-mesh-menu">3.2.3 The Mesh Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-bcs-menu">3.2.4 The BCs Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-mining-menu">3.2.5 The Mining Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-run-menu">3.2.6 The Run Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-results-menu">3.2.7 The Results Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-view-menu">3.2.8 The View Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-tools-menu">3.2.9 The Tools Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-windows-menu">3.2.10 The Windows Menu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-help-menu">3.2.11 The Help Menu</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#toolbar">3.3 Toolbar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#control-panel-pane">3.4 Control Panel Pane</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#plot-items">3.4.1 Plot Items</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#legend">3.4.1.1 Legend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#display-settings">3.4.1.2 Display Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#global-settings">3.4.1.3 Global Settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axes">3.4.1.4 Axes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#observation">3.4.1.5 Observation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#boundary-conditions">3.4.1.6 Boundary Conditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#element">3.4.1.7 Element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-data">3.4.1.8 File Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#node">3.4.1.9 Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#post-processing">3.4.1.10 Post Processing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cutting-planes">3.4.1.11 Cutting Planes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clip-box">3.4.1.12 Clip Box</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#view">3.4.2 View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#information">3.4.3 Information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="4_importing_data_sets_manual.html">4.0 Importing Data Sets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4_importing_data_sets_manual.html#importing-earlier-versions-of-minedw-model-data-sets">4.1 Importing Earlier Versions of <strong>MINEDW</strong> Model Data Sets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_importing_data_sets_manual.html#display-the-imported-model">4.2 Display the Imported Model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="5_mesh_generator_manual.html">5.0 Mesh Generator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#creating-a-mesh">5.1 Creating a Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#the-mesh-components">5.2 The Mesh Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-domain-component">5.2.1 The “Domain” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-mining-area-mining-and-fine-area-components">5.2.2 The “Mining Area,” “Mining,” and “Fine Area” Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-fault-component">5.2.3 The “Fault” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-points-component">5.2.4 The “Points” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-polylines-component">5.2.5 The “Polylines” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-regions-component">5.2.6 The “Regions” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-all-faults-component">5.2.7 The “All Faults” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-mmesh-component">5.2.8 The “MMesh” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-toggle-component">5.2.9 The “Toggle” Component</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5_mesh_generator_manual.html#the-area-tolerance-component">5.2.10 The “Area Tolerance” Component</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#exporting-a-completed-mesh">5.3 Exporting a Completed Mesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_mesh_generator_manual.html#the-rhino-drop-command">5.4 The Rhino “Drop” Command</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="6_nodes_and_elements_manual.html">6.0 Nodes and Elements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="6_nodes_and_elements_manual.html#selecting-elements">6.1 Selecting Elements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="6_nodes_and_elements_manual.html#selecting-elements-in-2-d">6.1.1 Selecting Elements in 2-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="6_nodes_and_elements_manual.html#selecting-elements-in-3-d">6.1.2 Selecting Elements in 3-D</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="6_nodes_and_elements_manual.html#selecting-nodes">6.2 Selecting Nodes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="7_model_input_data_manual.html">7.0 Model Input Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#project-definition">7.1 Project Definition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#project-properties">7.1.1 Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#time-steps">7.1.2 Time Steps</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#model-geometry">7.2 Model Geometry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#generating-the-mesh">7.2.1 Generating the Mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#adding-main-model-layers">7.2.2 Adding Main Model Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#using-topography-data">7.2.3 Using Topography Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#importing-node-elevations">7.2.4 Importing Node Elevations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#defining-a-pinch-out">7.2.5 Defining a Pinch-Out</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#modifying-the-mesh">7.2.6 Modifying the Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#zone-properties-hydraulic-parameters">7.3 Zone Properties – Hydraulic Parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#zone-distributions-para-fem">7.3.1 Zone Distributions (para.fem)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#zone-properties-kfile-dat">7.3.2 Zone Properties (kfile.dat)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#boundary-conditions">7.4 Boundary Conditions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#time-series-data">7.4.1 Time-Series Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#constant-head">7.4.2 Constant Head</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#variable-flux">7.4.3 Variable-Flux</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#pumping-well">7.4.4 Pumping Well</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#rivers">7.4.5 Rivers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#recharge">7.4.6 Recharge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#evaporation">7.4.7 Evaporation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#initial-conditions">7.5 Initial Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_model_input_data_manual.html#mining-plan">7.6 Mining Plan</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#creating-a-mining-plan">7.6.1 Creating a Mining Plan</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="7_model_input_data_manual.html#converting-dxf-to-dat-files">7.6.1.1 Converting .DXF to .DAT files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="7_model_input_data_manual.html#creating-a-mining-plan-from-pit-topography-files">7.6.1.2 Creating a Mining Plan from Pit Topography files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="7_model_input_data_manual.html#creating-a-mining-plan-from-final-pit-topography">7.6.1.3 Creating a Mining Plan from Final-Pit Topography</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#importing-a-mine-plan-into-minedw">7.6.2 Importing a Mine Plan into MINEDW</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#pit-lake">7.6.3 Pit Lake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#zone-of-relaxation-for-pit">7.6.4 Zone of Relaxation for Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#open-pit-backfilling">7.6.5 Open-Pit Backfilling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#zone-of-relaxation-for-caving">7.6.5 Zone of Relaxation for Caving</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7_model_input_data_manual.html#dewatering-and-underground-mining">7.6.6 Dewatering and Underground Mining</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="8_model_execution_manual.html">8.0 Model Execution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="8_model_execution_manual.html#validate">8.1 Validate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_model_execution_manual.html#create-data-set">8.2 Create Data Set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_model_execution_manual.html#execute">8.3 Execute</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="9_model_output_manual.html">9.0 Model Output</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#read-results-and-export-results-as-text-file">9.1 Read Results and Export Results as Text File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#observations">9.2 Observations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#hydrograph">9.3 Hydrograph</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#particle-tracking">9.4 Particle Tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#section-flux">9.5 Section Flux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#seepage-component-to-pit">9.6 Seepage Component to Pit</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="9_model_output_manual.html#calculating-seepage-to-the-pit">9.6.1 Calculating Seepage to the Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9_model_output_manual.html#visualizing-seepage-and-drains">9.6.2 Visualizing Seepage and Drains</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#pit-node-elevation-and-water-table">9.7 Pit Node Elevation and Water Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#export-state">9.8 Export State</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#exporting-pore-pressure">9.9 Exporting Pore Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#export-cross-section-pore-pressure">9.10 Export Cross-Section Pore Pressure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#drawdown-base-time-step">9.11 Drawdown-Base Time Step</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#visualizing-the-results">9.12 Visualizing the Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#cross-sections">9.13 Cross Sections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#pit-lake-water-level-vs-time">9.14 Pit Lake – Water Level vs. Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_model_output_manual.html#pumping-well-discharge-vs-time">9.15 Pumping Well – Discharge vs. Time</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references_manual.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acronyms_abbreviations_manual.html">Acronyms and Abbreviations</a></li>
+</ul>
+<p class="caption"><span class="caption-text">TUTORIAL</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="1_steady_state_tutorial.html">Tutorial 1 - Initial Condition</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="1_steady_state_tutorial.html#problem-description">1.1 Problem Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_steady_state_tutorial.html#minedw-model-construction">1.2 <em>MINEDW</em> Model Construction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-1-generating-a-mesh">Step 1. Generating a Mesh</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1_steady_state_tutorial.html#building-the-model-in-minedw">1.3 Building the model in <em>MINEDW</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-2-defining-project-properties">Step 2. Defining Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-3-defining-time-steps">Step 3. Defining Time Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-4-importing-ground-surface-elevation">Step 4. Importing Ground-Surface Elevation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-5-adding-layers">Step 5. Adding Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-6-defining-zone-properties">Step 6. Defining Zone Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-7-assigning-hydraulic-zones-to-elements">Step 7. Assigning Hydraulic Zones to Elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-8-defining-pinch-outs">Step 8. Defining “Pinch-Outs”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-9-defining-initial-heads">Step 9. Defining Initial Heads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-10-assigning-the-boundary-conditions">Step 10. Assigning the Boundary Conditions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="1_steady_state_tutorial.html#constant-head-boundary">Constant-Head Boundary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="1_steady_state_tutorial.html#river-boundary-condition">River Boundary Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="1_steady_state_tutorial.html#no-flow-boundary">No-Flow Boundary</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-11-assigning-recharge">Step 11. Assigning Recharge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-12-adding-evaporation">Step 12. Adding Evaporation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1_steady_state_tutorial.html#step-13-saving-the-project">Step 13. Saving the Project</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="1_steady_state_tutorial.html#running-the-model">1.4 Running the Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="1_steady_state_tutorial.html#results">1.5 Results</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html">Tutorial 2 - Open Pit Mining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#problem-description">2.1 Problem Description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-1-opening-the-project-file">Step 1. Opening the Project File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-2-defining-project-properties">Step 2. Defining Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-3-defining-model-time-steps">Step 3. Defining Model Time Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-3-defining-initial-heads">Step 3. Defining Initial Heads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-4-creating-a-mining-plan-for-an-open-pit">Step 4. Creating a Mining Plan for an Open Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-5-creating-a-zone-of-relaxation-for-an-open-pit">Step 5. Creating a Zone of Relaxation for an Open Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-6-open-pit-backfilling">Step 6. Open-Pit Backfilling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-7-creating-a-pit-lake">Step 7. Creating a Pit Lake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-8-adding-pumping-wells">Step 8. Adding Pumping Wells</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#step-9-defining-the-boundary-conditions">Step 9. Defining the Boundary Conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#running-the-model">2.2 Running the Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#results">2.3 Results</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#creating-monitoring-points">Creating Monitoring Points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#creating-hydrographs">Creating Hydrographs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#pit-node-elevation-and-water-table">Pit-Node Elevation and Water Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#head-distribution-in-3-d">Head Distribution in 3-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#head-distribution-cross-section">Head Distribution Cross Section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#exporting-pore-pressures-to-a-different-grid-in-2-d">Exporting Pore Pressures to a Different Grid in 2-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#exporting-pore-pressures-to-a-different-grid-in-3-d">Exporting Pore Pressures to a Different Grid in 3-D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#seepage-component-to-pit">Seepage Component to Pit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#pit-lake-water-level-vs-time">Pit Lake – Water Level vs. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#pumping-wells-discharge-vs-time">Pumping Wells – Discharge vs. Time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2_transient_state_open_pit_tutorial.html#particle-tracking">Particle Tracking</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_transient_state_underground_tutorial.html">Tutorial 3 - Underground Mining</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#problem-description">3.1 Problem Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#transient-simulation">3.2 Transient Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-1-opening-the-project-file">Step 1. Opening the Project File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-2-defining-project-properties">Step 2. Defining Project Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-3-defining-initial-heads">Step 3. Defining Initial Heads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-4-creating-the-zor-file-for-caving">Step 4. Creating the ZOR file for Caving</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-5-adding-the-zor-for-caving-to-the-model">Step 5. Adding the ZOR for Caving to the Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3_transient_state_underground_tutorial.html#step-6-adding-the-drain-nodes-for-the-cave-zone">Step 6. Adding the Drain Nodes for the Cave Zone</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#running-the-model">3.5 Running the Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_transient_state_underground_tutorial.html#results">3.6 Results</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MINEDW 3.05</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>3.0 MINEDW Interface</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/3_minedw_interface_manual.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="4_importing_data_sets_manual.html" class="btn btn-neutral float-right" title="4.0 Importing Data Sets" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2_features_of_minedw_manual.html" class="btn btn-neutral float-left" title="2.0 Features of MINEDW" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="minedw-interface">
+<h1>3.0 MINEDW Interface<a class="headerlink" href="#minedw-interface" title="Permalink to this headline">¶</a></h1>
+<p>Chapter 3 of the <strong>MINEDW</strong> manual provides an overview of the menu
+and display options in the <strong>MINEDW</strong> graphical user interface (GUI).
+The layout of the main <strong>MINEDW</strong> interface is shown in Figure 3.1</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="_images/figure_3_1_manual.png"><img alt="_images/figure_3_1_manual.png" src="_images/figure_3_1_manual.png" style="width: 5.88462in; height: 3.18750in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.1 The <em>MINEDW</em> main interface</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>The main interface shown in Figure 3.1 consists of the following
+components:</p>
+<ol class="arabic simple">
+<li><p>View Pane (shown in the purple frame),</p></li>
+<li><p>Main Menu banner (shown in the red frame),</p></li>
+<li><p>Toolbar (shown in the green frame), and</p></li>
+<li><p>Control Panel (shown in the yellow frame).</p></li>
+</ol>
+<div style="text-align: center; margin-bottom: 2em;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/r9GNjkQRCnk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><div class="section" id="view-pane">
+<h2>3.1 View Pane<a class="headerlink" href="#view-pane" title="Permalink to this headline">¶</a></h2>
+<p>View Panes are used to store plots and function as a window that can be
+opened and closed. The View Pane without any plot items is defined as
+the base View Pane as shown in Figure 3.1 The base View Pane is a
+unique View Pane (there is only one) in that it is permanent and cannot
+be closed, although it can be hidden from view.</p>
+<p>The assembly of plot items within a View Pane is performed using the
+Control Panel, which provides tools that can be used to define the
+contents of the plot (plot items) and the appearance of those items. A
+description of the Control Panel is provided in later sections. Plots
+typically consist of a model mesh, geologic setting, wells, boundary
+conditions, model outputs, and legend, as shown in Figure 3.2 Note that
+the Control Panel is turned off in Figure 3.2 in order to illustrate the
+View Pane.</p>
+<p>The plot items in a specific View Pane can be saved in views using the
+“<em>View</em>” menu. There is no limit to the number of View Panes that
+can be created and saved. Each saved View Pane is listed under the
+“<em>View</em>” menu and can be retrieved for viewing or permanently
+deleted using this menu.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="_images/figure_3_2_manual.png"><img alt="_images/figure_3_2_manual.png" src="_images/figure_3_2_manual.png" style="width: 6.00000in; height: 3.76913in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.2 Typical layout of a View Pane</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="main-menu">
+<h2>3.2 Main Menu<a class="headerlink" href="#main-menu" title="Permalink to this headline">¶</a></h2>
+<p>The Main Menu banner in <strong>MINEDW</strong> includes the major functions of the
+<strong>MINEDW</strong> GUI. It contains 11 items: 1) “<em>File</em>,” 2) “<em>Project</em>,”
+3) “<em>Mesh</em>,” 4) “<em>BCs</em>,” 5) “<em>Mining</em>,” 6) “<em>Run</em>,” 7)
+“<em>Results</em>,” 8) “<em>View</em>,” 9) “<em>Tools</em>,” 10) “<em>Windows</em>,” and 11)
+“<em>Help</em>,” as shown in Figure 3.3</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="_images/figure_3_3_manual.png"><img alt="_images/figure_3_3_manual.png" src="_images/figure_3_3_manual.png" style="width: 5.46428in; height: 0.37500in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.3 Main Menu banner</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="the-file-menu">
+<h3>3.2.1 The File Menu<a class="headerlink" href="#the-file-menu" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>File</em>” drop-down menu contains the items shown in Figure 3.4
+Detailed descriptions of each menu item are also provided in Figure 3.4</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="_images/figure_3_4_manual.png"><img alt="_images/figure_3_4_manual.png" src="_images/figure_3_4_manual.png" style="width: 3.62551in; height: 3.16711in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.4 “<em>File</em>” drop-down menu</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>New Project:</dt><dd><p>Creates a new project.</p>
+</dd>
+<dt>Open Project:</dt><dd><p>Opens an existing project.</p>
+</dd>
+<dt>Save Project:</dt><dd><p>Saves the current project file. This menu item remains inactive
+unless there is a change to the modeling components such as geologic
+setting, boundary condition, etc.</p>
+</dd>
+<dt>Save Project As:</dt><dd><p>Saves a copy of the current project file using a different file name.</p>
+</dd>
+<dt>Close Project:</dt><dd><p>Closes the project.</p>
+</dd>
+<dt>Print Base:</dt><dd><p>Selects the printing device and prints the base image.</p>
+</dd>
+<dt>Export Base:</dt><dd><p>Exports the base image as a bitmap, .DXF, .VRML, postscript, or .SVG file.</p>
+</dd>
+<dt>Import:</dt><dd><p>Imports a <strong>MINEDW</strong> project, <em>a</em> <em>FEFLOW</em> data set or a
+stereolithography file containing a finite-element mesh. After the
+“<em>Import</em>” button is clicked, an “<em>Import File</em>” dialog box
+opens and provides four options. A user can import a <strong>MINEDW</strong>
+data-file list (.FEL) that was created for <strong>MINEDW</strong> model
+simulations, a <strong>MINEDW</strong> geometry file (.PST) that was created with
+the mesh generator from <strong>MINEDW</strong> <strong>2.10</strong>, a geometry file (.STL)
+that was created using <em>Rhinoceros 3D</em>, a <em>FEFLOW</em> ASCII data file
+(.FEM), or a <em>FEFLOW</em> ASCII result file (.DAC). If a <strong>MINEDW</strong>
+data-set file (.FEL) is used, then all information related to the
+model—except the results—is imported; however, if a <strong>MINEDW</strong>
+geometry file (.PST) is used, then only the geometry and the geologic
+zone information are imported. Importing model data sets is discussed in
+detail in Chapter 4.</p>
+</dd>
+<dt>Export:</dt><dd><p>Exports the model in a <em>FEFLOW</em>-supported format that can be
+imported into <em>FEFLOW</em> for simulation.</p>
+</dd>
+<dt>Quit:</dt><dd><p>Exits <strong>MINEDW</strong>. When the “<em>Quit</em>” menu item is selected,
+a warning message appears reminding the user to save the project if it
+has not been saved, as shown in Figure 3.5. If “<em>Discard</em>” is
+selected, then all unsaved changes to the model are lost. To save a
+project or changes to an existing project, the file must be saved before
+the “<em>Quit</em>” command is used.</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="_images/figure_3_5_manual.png"><img alt="_images/figure_3_5_manual.png" src="_images/figure_3_5_manual.png" style="width: 2.71875in; height: 1.23958in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.5 The <em>MINEDW</em> “<em>Quit</em>” dialog box</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="the-project-menu">
+<h3>3.2.2 The Project Menu<a class="headerlink" href="#the-project-menu" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>Project</em>” drop-down menu is available from the Main Menu
+banner and includes the items shown in Figure 3.6.</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="_images/figure_3_6_manual.png"><img alt="_images/figure_3_6_manual.png" src="_images/figure_3_6_manual.png" style="width: 3.75625in; height: 2.81736in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.6 The “<em>Project</em>” drop-down menu</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Project Properties:</dt><dd><p>Contains specifications for the simulation
+parameters, including units, type of simulation, closure criteria,
+solver type and solver parameters, and output names. A detailed
+description of the parameters specified in the “<em>Project
+Properties</em>” dialog box (Figure 7.1) is provided in Section 7.1.1.</p>
+</dd>
+<dt>Time Steps:</dt><dd><p>Contains information on time steps, the maximum number of
+time steps, and simulation time steps for model simulations. The
+parameters specified in the “<em>Setup Time Step</em>” dialog box (Figure
+7.2) are described in Section 7.1.2.</p>
+</dd>
+<dt>Zone Properties:</dt><dd><p>Defines the hydraulic properties for each geologic
+unit simulated in the model. Each zone represents a geologic unit with
+unique hydraulic properties. A detailed description of material
+properties is provided in Section 7.3.</p>
+</dd>
+<dt>Initial Head:</dt><dd><p>Defines the initial conditions for hydraulic head in the
+model. Section 7.5 provides detailed information about the assignment of
+initial head values.</p>
+</dd>
+<dt>Import Elevations from Node File:</dt><dd><p>Allows for the importing of a node
+elevation file (node.fem) if changes have been made to node elevations
+using other editing tools or in another <strong>MINEDW</strong> model. A brief
+description on how to import node elevations is provided in Section
+7.2.4.</p>
+</dd>
+<dt>Import Zones from Parameter File:</dt><dd><p>Allows for the importing of a zone
+parameter file (para.fem) if changes have been made to the distribution
+of hydraulic properties using other editing tools or in another
+<strong>MINEDW</strong> model. A detailed description of this function is provided
+in Section 7.3.1.</p>
+</dd>
+<dt>Undo:</dt><dd><p>Allows the user to undo changes that were made to the
+groundwater flow model, except in cases where the nodes were changed. A
+detailed description of this function is provided in Section 3.3.</p>
+</dd>
+<dt>Redo:</dt><dd><p>Allows the user to redo any undone changes to the model, except
+in cases where the nodes were changed. A detailed description of this
+function is provided in Section 3.3.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="the-mesh-menu">
+<h3>3.2.3 The Mesh Menu<a class="headerlink" href="#the-mesh-menu" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>Mesh</em>” drop-down menu is available from the Main Menu banner
+and includes the items shown in Figure 3.7 Detailed information about
+these menu items is available in Section 7.2.</p>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="_images/figure_3_7_manual.png"><img alt="_images/figure_3_7_manual.png" src="_images/figure_3_7_manual.png" style="width: 1.70857in; height: 0.95847in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.7 The “<em>Mesh</em>” drop-down menu</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Define Main Layer:</dt><dd><p>This menu is used to create main layers for the
+model. Main layers are defined as layers that are present throughout the
+whole model domain. Details about layers can be found in Section 7.2.2.</p>
+</dd>
+<dt>Define Pinch-Out:</dt><dd><p>This menu is used to refine the vertical
+discretization of the main layers in selected areas. Details about the
+pinch-out method can be found in Section 7.2.5.</p>
+</dd>
+<dt>Modify Mesh:</dt><dd><p>This menu is used to refine or extend the mesh for a
+selected area using a boundary line file (.BLN). Details about mesh
+refinement can be found in Section 7.2.6.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="the-bcs-menu">
+<h3>3.2.4 The BCs Menu<a class="headerlink" href="#the-bcs-menu" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>BCs</em>” menu is a drop-down menu (Figure 3.8) that includes the
+menu items listed below. Detailed information about these menu items is
+provided in Section 7.4.</p>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="_images/figure_3_8_manual.png"><img alt="_images/figure_3_8_manual.png" src="_images/figure_3_8_manual.png" style="width: 1.54167in; height: 1.73958in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.8 The “<em>BCs</em>” menu</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Constant Head:</dt><dd><p>Menu for assigning constant-head boundary conditions
+(e.g., boundary head invariable with time, boundary head variable with
+time, and drain nodes). See Section 7.4.2 for complete details on
+constant-head assignment.</p>
+</dd>
+<dt>Variable Flux:</dt><dd><p>Menu for assigning variable-flux boundary conditions.
+See Section 7.4.3 for complete details on the assignment of
+variable-flux boundaries.</p>
+</dd>
+</dl>
+<div style="text-align: center; margin-bottom: 2em;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FdfG6bMMVyc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><dl class="simple">
+<dt>Pumping Well:</dt><dd><p>Menu for specifying source-sink terms (e.g., pumping
+wells). See Section 7.4.4 for complete details on source-sink terms.</p>
+</dd>
+<dt>River:</dt><dd><p>Menu for creating rivers and tributaries. See Section 7.4.5 for
+complete details on river boundary conditions.</p>
+</dd>
+<dt>Recharge:</dt><dd><p>Menu for assigning recharge zones to the groundwater system.
+See Section 7.4.6 for complete details on recharge.</p>
+</dd>
+<dt>Evaporation:</dt><dd><p>Menu for assigning the loss of groundwater from a shallow
+water table due to evapotranspiration and/or evaporation. See Section
+7.4.7 for complete details on evaporation.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="the-mining-menu">
+<h3>3.2.5 The Mining Menu<a class="headerlink" href="#the-mining-menu" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>Mining</em>” drop-down menu contains the options shown in Figure
+3.9. Note that this menu is not active for a steady-state simulation.
+Details about these menu items can be found in Section 7.6.</p>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="_images/figure_3_9_manual.png"><img alt="_images/figure_3_9_manual.png" src="_images/figure_3_9_manual.png" style="width: 2.34408in; height: 1.07986in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.9 The “<em>Mining</em>” drop-down menu</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Open Pit:</dt><dd><p>This menu is used to simulate open-pit mining in
+<strong>MINEDW</strong>. It allows the user to import a previously created mining
+plan, create new mine plans, set up input parameters for pit-lake
+simulation, create a ZOR, and define backfilling operations for open
+pits. Details about this function can be found in Sections 7.6.1
+to 7.6.5.</p>
+</dd>
+<dt>Dewatering and Underground Mining:</dt><dd><p>This function is used to construct
+a simulation involving underground mining. The menu allows the user to
+create a time-varied hydraulic conductivity file for the model to
+simulate the changing hydraulic conductivity that results from
+underground mining operations, freeze-thaw conditions, or other
+scenarios wherein hydraulic conductivity changes. This menu also allows
+the user to specify details to simulate the groundwater recovery after
+the end of mining and to simulate backfilling of the underground
+excavation if desired. Details about options can be found in Section
+7.6.7.</p>
+</dd>
+<dt>Create Mining Plan:</dt><dd><p>Creates a mining file that simulates the
+progressive excavation of an open-pit mine. Mining plans are then
+imported into the model using the “<em>Open Pit</em>” menu. Details about
+creating a mining plan can be found in Section 7.6.1.</p>
+</dd>
+<dt>Zone of Relaxation for Caving:</dt><dd><p>Creates an input file related to
+caving. Details about ZORs for caving can be found in Section 7.6.6.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="the-run-menu">
+<h3>3.2.6 The Run Menu<a class="headerlink" href="#the-run-menu" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>Run</em>” drop-down menu contains the items listed in Figure 3.10
+Details about these menu items can be found in Section 8.</p>
+<div class="figure align-center" id="id10">
+<a class="reference internal image-reference" href="_images/figure_3_10_manual.png"><img alt="_images/figure_3_10_manual.png" src="_images/figure_3_10_manual.png" style="width: 1.55230in; height: 0.95847in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.10 The “<em>Run</em>” drop-down menu</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Validate:</dt><dd><p>Verifies that the groundwater model is correctly defined.</p>
+</dd>
+<dt>Create Data Set:</dt><dd><p>Creates the data files in ASCII format. These files
+are used in the <strong>MINEDW</strong> calculation.</p>
+</dd>
+<dt>Execute:</dt><dd><p>Starts the simulation.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="the-results-menu">
+<h3>3.2.7 The Results Menu<a class="headerlink" href="#the-results-menu" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>Results</em>” drop-down menu contains the items shown in Figure
+3.11 Details about these menu items can be found in Section 9.</p>
+<div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="_images/figure_3_11_manual.png"><img alt="_images/figure_3_11_manual.png" src="_images/figure_3_11_manual.png" style="width: 2.48586in; height: 3.25000in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.11 The “<em>Results</em>” drop-down menu</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Read Results:</dt><dd><p>Reads the results from a .PLB file. The .PLB file
+contains the output of groundwater head at specified time-step intervals
+from the model simulation. After the results have been read, they can be
+visualized in the View Pane (described in Section 9.1).</p>
+</dd>
+<dt>Export Results As Text File:</dt><dd><p>This function allows the user to convert
+a .PLB file (binary file of <strong>MINEDW</strong> simulation results) to a .PLT
+file (ASCII file).</p>
+</dd>
+<dt>Observations:</dt><dd><p>Defines the locations and screen intervals of monitoring
+borehole(s) and the locations of piezometer(s) that can be used to
+export simulated water levels in ASCII format for external plotting.
+Details about observations are provided in Section 9.2.</p>
+</dd>
+<dt>Hydrograph:</dt><dd><p>Creates an output data file—in ASCII format and with the
+file extension .DAT—for plotting a hydrograph based on the observation
+locations defined in the “<em>Observations</em>” menu. The output data file
+contains time steps, date and time, and water levels for each
+observation point. Details about hydrographs are provided in Section
+9.3.</p>
+</dd>
+<dt>Particle Tracking:</dt><dd><p>Defines the parameters for particle-tracking
+simulations and runs the simulations. A detailed explanation of the
+particle-tracking simulations is provided in Section 9.4.</p>
+</dd>
+<dt>Section Flux:</dt><dd><p>Computes the flux passing through a plane defined by the
+user using the start and end locations of the plane and vertical height
+of the plane, as described in detail in Section 9.5.</p>
+</dd>
+<dt>Seepage Component to Pit:</dt><dd><p>Computes seepage to the pit from each
+geologic unit through time. Details about seepage are provided in
+Section 9.6.</p>
+</dd>
+<dt>Pit Node Elevation and Water Table:</dt><dd><p>Plots changes in pit node
+elevation and the water table below the pit node through time for nodes
+selected by the user. Details about “<em>Pit Node Elevation and Water
+Table</em>” plots are provided in Section 9.7.</p>
+</dd>
+<dt>Export State:</dt><dd><p>Exports simulation results in either 2-D or 3-D (e.g.,
+<em>x</em>, <em>y</em>, elevation, pressure, drawdown, head, water table, head
+difference) for the time step selected using the time-step slider.
+Details about exporting results are discussed in Section 9.8.</p>
+</dd>
+<dt>Export Pore Pressure:</dt><dd><p>Exports pore pressures in 3-D with a specified
+grid space and dimensions. Details about exporting pore pressures in 3-D
+are provided in Section 9.9.</p>
+</dd>
+<dt>Export Cross-Section Pore Pressure:</dt><dd><p>Exports pore pressures in 2-D with
+a specified grid space and section. Details about exporting pore
+pressures of cross sections are provided in Section 9.10.</p>
+</dd>
+<dt>Export Pore Pressure to FLAC3D:</dt><dd><p>Exports the simulated pore pressure to a <em>FLAC3D</em> format.</p>
+</dd>
+<dt>Drawdown Base Time Step:</dt><dd><p>Defines the time step at which the simulated
+water level is used as the reference for calculating the drawdown or
+head difference of a given time. The drawdown is calculated according to
+the reference time and the selected time step. Detailed information can
+be found in Section 9.11.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="the-view-menu">
+<h3>3.2.8 The View Menu<a class="headerlink" href="#the-view-menu" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>View</em>” drop-down menu contains the items shown in Figure 3.12.</p>
+<div class="figure align-center" id="id12">
+<a class="reference internal image-reference" href="_images/figure_3_12_manual.png"><img alt="_images/figure_3_12_manual.png" src="_images/figure_3_12_manual.png" style="width: 1.86484in; height: 2.29199in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.12 The “<em>View</em>” drop-down menu</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Vertical Exaggeration:</dt><dd><p>Vertically exaggerates the view of plot items.
+This exaggeration applies to all plot items in the view.</p>
+</dd>
+<dt>New:</dt><dd><p>Creates a new view that can be stored.</p>
+</dd>
+<dt>Save:</dt><dd><p>Saves the current view. View items can be saved with the project
+file and be reloaded when a project file is loaded in <strong>MINEDW</strong>. To
+save the view items that will be reloaded with the project file, the
+user must also click “<em>Save</em>” in the “<em>File”</em> menu to save the
+project that contains the saved view items.</p>
+</dd>
+<dt>Save As:</dt><dd><p>Saves a copy of the current view using a different name.</p>
+</dd>
+<dt>Options:</dt><dd><p>Opens “<em>View Options”</em> dialog box, which allows the user to
+export, import, and delete saved views.</p>
+</dd>
+<dt>Listed Views:</dt><dd><p>If views have been created and saved to the <strong>MINEDW</strong>
+.PRJ file, a list of the saved views that are available appears in the
+drop-down menu (e.g., in Figure 3.12, the listed views are “<em>3D
+Element,</em>” “<em>Elevation,</em>” and “<em>Geology</em>”). In order to reload
+these saved view items when reloading a saved project, the project file
+needs to be saved before termination of the model operation.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="the-tools-menu">
+<h3>3.2.9 The Tools Menu<a class="headerlink" href="#the-tools-menu" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>Tools</em>” drop-down menu contains the items listed in Figure
+3.13.</p>
+<div class="figure align-center" id="id13">
+<a class="reference internal image-reference" href="_images/figure_3_13_manual.png"><img alt="_images/figure_3_13_manual.png" src="_images/figure_3_13_manual.png" style="width: 1.57361in; height: 0.95625in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.13 The “<em>Tools</em>” drop-down menu</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Options:</dt><dd><p>The user-specified configuration options in <strong>MINEDW</strong> are
+shown in Figure 3.14 and described below. These options are accessed via
+the “<em>Options</em>” dialog box. The dialog box is divided into areas of
+functionality that correspond to the buttons shown below.</p>
+</dd>
+<dt>Disable Tooltips:</dt><dd><p>Disables the descriptions that pop up when the mouse
+hovers on top of a function such as the “<em>Select</em>” tool.</p>
+</dd>
+<dt>Restore Layout:</dt><dd><p>The “<em>Control Panel”</em> Pane, as well as the View
+Pane, can be moved within the <strong>MINEDW</strong> window and toggled on or off.
+To revert back to the default layout of <strong>MINEDW,</strong> use the
+“<em>Restore Layout”</em> option.</p>
+</dd>
+</dl>
+<p>The “<strong>MINEDW</strong> Options*” dialog box (Figure 3.14) presents the
+options listed below. The “<em>Display</em>” and “<em>Movie</em>” tabs are
+discussed in Sections 3.4.1.1 to 3.4.1.3.</p>
+<div class="figure align-center" id="id14">
+<a class="reference internal image-reference" href="_images/figure_3_14_manual.PNG"><img alt="_images/figure_3_14_manual.PNG" src="_images/figure_3_14_manual.PNG" style="width: 2.42288in; height: 2.58333in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.14 The “<em>MINEDW</em> <em>Options</em>” dialog box</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>Show Startup Dialog:</dt><dd><p>After selecting this option (see Figure 3.14) and
+restarting <strong>MINEDW</strong>, the “<em>Startup Options</em>” dialog box is
+displayed (Figure 3.15, below). This enables a user to select what to do
+next (e.g., “<em>Open Last Project</em>,” “<em>Open Existing Project</em>,”
+“<em>Create New Project</em>,” or “<em>Cancel</em>”), as shown in Figure 3.15.
+The “<em>Startup Options</em>” dialog box can be disabled by checking the box
+at the bottom if the user does not wish to see this option upon startup
+(see Figure 3.15).</p>
+</dd>
+<dt>Open Most Recent:</dt><dd><p>When selected, this control sets <strong>MINEDW</strong> to
+open the most recent project upon startup and to hide the startup dialog
+box.</p>
+</dd>
+<dt>Start New:</dt><dd><p>When selected, this control sets <strong>MINEDW</strong> to start a
+new project upon startup and to hide the startup dialog box.</p>
+</dd>
+<dt>Do Nothing:</dt><dd><p>When selected, this control sets <strong>MINEDW</strong> to open with
+no project loaded and to hide the startup dialog box.</p>
+</dd>
+<dt>Splash Screen:</dt><dd><p>When enabled, this control sets the <strong>MINEDW</strong> splash
+screen to be shown at the startup of <strong>MINEDW</strong>.</p>
+</dd>
+</dl>
+<div class="figure align-center" id="id15">
+<a class="reference internal image-reference" href="_images/figure_3_15_manual.png"><img alt="_images/figure_3_15_manual.png" src="_images/figure_3_15_manual.png" style="width: 3.38589in; height: 2.21906in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.15 The “<em>Startup Options</em>” dialog box</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="the-windows-menu">
+<h3>3.2.10 The Windows Menu<a class="headerlink" href="#the-windows-menu" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>Windows</em>” drop-down menu allows the user to toggle the Control
+Panel and the available plots on or off. By default, it contains the
+“<em>1 Control</em> <em>Panel</em>” and “<em>2</em> <em>Plot 1 - Base</em>” file (Figure
+3.16). Clicking on the “<em>1 Control Panel”</em> and “<em>2</em> <em>Plot 1 - Base”</em>
+options turns the Control Panel and Plot 1 - Base on (as indicated by a
+check mark) or off. If any plots have been created, they will appear in
+the “<em>Windows”</em> drop-down menu below <em>“2 Plot 1 - Base”</em> and can be
+toggled on or off by clicking on the plot name. In Figure 3.16, the plot
+file named <em>“3 Plot 2 - View004”</em> has been created but is turned off.
+Clicking on the plot file will turn it on.</p>
+<div class="figure align-center" id="id16">
+<a class="reference internal image-reference" href="_images/figure_3_16_manual.png"><img alt="_images/figure_3_16_manual.png" src="_images/figure_3_16_manual.png" style="width: 2.14583in; height: 0.95833in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.16 The “<em>Windows</em>” drop-down menu</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="the-help-menu">
+<h3>3.2.11 The Help Menu<a class="headerlink" href="#the-help-menu" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>Help</em>” (Figure 3.17) drop-down menu provides some information
+about <strong>MINEDW</strong> as well as contact information for Itasca Denver and
+a short description of the Qt library that was used to develop the
+<strong>MINEDW</strong> interface.</p>
+<div class="figure align-center" id="id17">
+<a class="reference internal image-reference" href="_images/figure_3_17_manual.png"><img alt="_images/figure_3_17_manual.png" src="_images/figure_3_17_manual.png" style="width: 3.00000in; height: 0.98958in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.17 The “<em>Help</em>” drop-down menu</span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="toolbar">
+<h2>3.3 Toolbar<a class="headerlink" href="#toolbar" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>MINEDW</strong> Main Menu toolbar (Figure 3.18) is found next to the
+menu banner at the top of the screen. It contains the tools shown in
+Table 3.1 (below).</p>
+<div class="figure align-center" id="id18">
+<a class="reference internal image-reference" href="_images/figure_3_18_manual.png"><img alt="_images/figure_3_18_manual.png" src="_images/figure_3_18_manual.png" style="width: 5.15524in; height: 0.24968in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.18 The <em>MINEDW</em> Main Menu toolbar</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+<p>Table 3.1 (below) describes the functions of the Main Menu toolbar
+items.</p>
+<p>Table 3.1 The Main Menu Toolbar Item Descriptions</p>
+<table border="1" class="docutils" style="width:100%">
+<tbody valign="top">
+<!-- the span block followed by the &nbsp; is a work around for this table, need to figure out a good fix -->
+
+<tr class="row-odd"><td><a class="reference internal" href="_images/figure_3_1a_manual.png"><span style="width:200px" class="problematic" id="id33"><img alt="figure_3_1a_manual" src="_images/figure_3_1a_manual.png" style="width: 0.27094in; height: 0.33347in;" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></td>
+<td>Create New Plot</td>
+<td>Creates a new plot in a new View Pane in the active window.</td>
+</tr>
+
+<tr class="row-even"><td><a class="reference internal" href="_images/figure_3_1b_manual.png"><img alt="figure_3_1b_manual" src="_images/figure_3_1b_manual.png" style="width: 0.27094in; height: 0.33347in;" /></a></td>
+<td>Regenerate Current Plot (F5)</td>
+<td>Refreshes the current plot to reflect the current model data.</td>
+</tr>
+
+<tr class="row-odd"><td><a class="reference internal" href="_images/figure_3_1c_manual.png"><img alt="figure_3_1c_manual" src="_images/figure_3_1c_manual.png" style="width: 0.23968in; height: 0.33347in;" /></a></td>
+<td>Print the Current Plot (CTRL+P)</td>
+<td>Sends the current plot to the printer.</td>
+</tr>
+
+<tr class="row-even"><td><a class="reference internal" href="_images/figure_3_1d_manual.png"><img alt="figure_3_1d_manual" src="_images/figure_3_1d_manual.png" style="width: 0.28136in; height: 0.33347in;" /></a></td>
+<td>Export to File</td>
+<td>Exports the current plot to a bitmap, .DXF, .VRML, Postscript, or .SVG file format.</td>
+</tr>
+
+<tr class="row-odd"><td><a class="reference internal" href="_images/figure_3_1e_manual.png"><img alt="figure_3_1e_manual" src="_images/figure_3_1e_manual.png" style="width: 0.28136in; height: 0.33347in;" /></a></td>
+<td>View Mode ‒ Change View Perspective</td>
+<td>Changes the cursor to the mode used for basic view manipulation (e.g., rotation, translation, and magnification).</td>
+</tr>
+
+<tr class="row-even"><td><a class="reference internal" href="_images/figure_3_1f_manual.png"><img alt="figure_3_1f_manual" src="_images/figure_3_1f_manual.png" style="width: 0.23125in; height: 0.29600in;" /></a></td>
+<td>Select</td>
+<td>Changes the cursor to the mode for selecting elements or nodes.</td>
+</tr>
+
+<tr class="row-odd"><td><a class="reference internal" href="_images/figure_3_1g_manual.png"><img alt="figure_3_1g_manual" src="_images/figure_3_1g_manual.png" style="width: 0.25312in; height: 0.30000in;" /></a></td>
+<td>Move Node</td>
+<td>Moves finite-element mesh nodes.</td>
+</tr>
+
+<tr class="row-even"><td><a class="reference internal" href="_images/figure_3_1h_manual.png"><img alt="figure_3_1h_manual" src="_images/figure_3_1h_manual.png" style="width: 0.24193in; height: 0.30000in;" /></a></td>
+<td>Search Node/Element</td>
+<td>Searches for nodes or elements by node or element number.</td>
+</tr>
+
+<tr class="row-odd"><td><a class="reference internal" href="_images/figure_3_1i_manual.png"><img alt="figure_3_1i_manual" src="_images/figure_3_1i_manual.png" style="width: 0.28136in; height: 0.32305in;" /></a></td>
+<td>Measure Distance</td>
+<td>Calculates the distance between two points.</td>
+</tr>
+
+<tr class="row-even"><td><a class="reference internal" href="_images/figure_3_1j_manual.png"><img alt="figure_3_1j_manual" src="_images/figure_3_1j_manual.png" style="width: 0.28136in; height: 0.33347in;" /></a></td>
+<td>Define Plane</td>
+<td>Calculates the dip, dip direction, and normal direction of a plane defined by three selected points.</td>
+</tr>
+
+<tr class="row-odd"><td><a class="reference internal" href="_images/figure_3_1k_manual.png"><img alt="figure_3_1k_manual" src="_images/figure_3_1k_manual.png" style="width: 0.30000in; height: 0.27857in;" /></a></td>
+<td>Create Plane</td>
+<td>Creates a cross section using two points defined by the user.</td>
+</tr>
+
+<tr class="row-even"><td><a class="reference internal" href="_images/figure_3_1l_manual.png"><img alt="figure_3_1l_manual" src="_images/figure_3_1l_manual.png" style="width: 0.30000in; height: 0.28000in;" /></a></td>
+<td>Select with Polygon</td>
+<td>Selects nodes or elements in a desired area defined by a polygon drawn with the mouse pointer.</td>
+</tr>
+
+<tr class="row-odd"><td><a class="reference internal" href="_images/figure_3_1m_manual.png"><img alt="figure_3_1m_manual" src="_images/figure_3_1m_manual.png" style="width: 0.30000in; height: 0.30000in;" /></a></td>
+<td>Select with Overlay</td>
+<td>Selects nodes or elements using a point, polyline, or polygon from “*.DAT,” “*.BLN,” or “*.SHP” files.</td>
+</tr>
+
+<tr class="row-even"><td><a class="reference internal" href="_images/figure_3_1n_manual.png"><img alt="figure_3_1n_manual" src="_images/figure_3_1n_manual.png" style="width: 0.23968in; height: 0.21884in;" /></a></td>
+<td>Plot Items</td>
+<td>Shows or hides the <em>“Plot Items”</em> control panel.</td>
+</tr>
+
+<tr class="row-odd"><td><a class="reference internal" href="_images/figure_3_1o_manual.png"><img alt="figure_3_1o_manual" src="_images/figure_3_1o_manual.png" style="width: 0.23968in; height: 0.21884in;" /></a></td>
+<td>View Controls</td>
+<td>Shows or hides the <em>“View”</em> control panel.</td>
+</tr>
+
+<tr class="row-even"><td><a class="reference internal" href="_images/figure_3_1p_manual.png"><img alt="figure_3_1p_manual" src="_images/figure_3_1p_manual.png" style="width: 0.23968in; height: 0.21884in;" /></a></td>
+<td>View Information</td>
+<td>Shows or hides the <em>“Information”</em> control panel.</td>
+</tr>
+
+</table><p>To view the desired time step, enter it in the variable field and press
+[Enter], move the time-step slider (found on the right side, as shown in
+Figure 3.19), or click the up or down arrow to the desired time step.</p>
+<div class="figure align-center" id="id19">
+<a class="reference internal image-reference" href="_images/figure_3_19_manual.png"><img alt="_images/figure_3_19_manual.png" src="_images/figure_3_19_manual.png" style="width: 2.59480in; height: 0.33347in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.19 Time-step slider</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+<p>To undo an action, click the “<em>Undo Action</em>” button (Figure 3.20).
+You can see a list of the actions available to undo in the “<em>Show Undo
+Stack</em>” window.</p>
+<div class="figure align-center" id="id20">
+<a class="reference internal image-reference" href="_images/figure_3_20_manual.png"><img alt="_images/figure_3_20_manual.png" src="_images/figure_3_20_manual.png" style="width: 1.26122in; height: 0.42041in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.20 “<em>Undo</em>,” “<em>Redo</em>,” and <em>“Show Undo Stack”</em> buttons</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</div>
+<p>To redo an action that you undid, click the “<em>Redo Action</em>” button.
+The action is then reversed.</p>
+</div>
+<div class="section" id="control-panel-pane">
+<h2>3.4 Control Panel Pane<a class="headerlink" href="#control-panel-pane" title="Permalink to this headline">¶</a></h2>
+<p>The Control Panel displays a plot file created through “<em>Create New
+Plot</em>.” Each of the plot files is listed under the View Pane. A specific
+plot file will display in the Control Panel after it is selected.</p>
+<p>The attributes of the selected plot are displayed in three sub-panes of
+the “<em>Control Panel</em>” Pane: 1) “<em>Plot Items</em>,” 2) “<em>View</em>,” and
+3) “<em>Information</em>” (as shown in Figure 3.1). The “<em>Plot Item</em>”
+sub-pane is used to build plots by adding items to the view and
+specifying their appearance using the available options. The
+“<em>View</em>” sub-pane provides tools for manipulating the view (e.g.,
+rotation, magnification, and position). The “<em>Information</em>” sub-pane
+displays information (e.g., location and ID) pertaining to items in the
+current plot when the cursor is positioned over a specific item in the
+view. The “<em>Plot Items</em>” and “<em>View</em>” sub-panes are each divided
+into two sections that can be independently minimized. Each sub-pane set
+can be displayed or hidden using the control buttons on the
+<a class="reference external" href="mk:&#64;MSITStore:C:Program%20FilesItascaFlac3d400flac3d400help.chm::/toolbar.html">toolbar</a>
+(shown in Figure 3.21).</p>
+<div class="figure align-center" id="id21">
+<a class="reference internal image-reference" href="_images/figure_3_21_manual.png"><img alt="_images/figure_3_21_manual.png" src="_images/figure_3_21_manual.png" style="width: 0.84409in; height: 0.33347in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.21 Sub-pane control buttons on the toolbar</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="plot-items">
+<h3>3.4.1 Plot Items<a class="headerlink" href="#plot-items" title="Permalink to this headline">¶</a></h3>
+<p>Each plot file may consist of several plot items. In <strong>MINEDW,</strong> plot
+items are 2-D or 3-D representations of node or element properties and
+model output such as particle tracks and open-pit seepage. As shown in
+Figure 3.22 (the <strong>MINEDW</strong> interface), the “<em>Plot Items</em>”
+sub-pane contains two sections. The upper section shows the list of plot
+items, and the lower section offers the option of displaying the
+attributes (“<em>Attributes</em>”) or selecting other plot items to be
+displayed (“<em>List</em>”). When a plot item is highlighted, the attributes
+associated with that item become active. The plot item can be activated
+(made visible) or deactivated (made invisible) by clicking the ellipse
+icon to the left of the plot item. Additionally, right-clicking on a
+plot item brings up a menu that allows the user to activate, deactivate,
+or delete a plot item from a plot file.</p>
+<div class="figure align-center" id="id22">
+<a class="reference internal image-reference" href="_images/figure_3_22_manual.png"><img alt="_images/figure_3_22_manual.png" src="_images/figure_3_22_manual.png" style="width: 6.00000in; height: 4.50000in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.22 The <em>MINEDW</em> main interface</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+<div style="text-align: center; margin-bottom: 2em;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tXk6FGCnJl8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><p>The “<em>Plot Items</em>” sub-pane contains three groups, differentiated by
+color as shown in Figure 3.23. The first group, which is in blue,
+contains three special plot items, 1) “<em>Legend</em>,” 2) “<em>Display
+Settings</em>,” and 3) “<em>Global Settings.</em>” These three plot items are
+included for all plots. The second group, which is in black, consists of
+1) “<em>Axes</em>,” 2) “<em>Observation</em>,” 3) “<em>Boundary Conditions</em>,” 4)
+“<em>Element</em>,” 5) “<em>File Data</em>,” 6) “<em>Node</em>,” and 7) “<em>Post
+Processing.</em>” Each item in the second group can be added to a plot.
+The third group of plot items, which is in green, contains “<em>Cutting
+Planes</em>” and “<em>Clip Box.</em>” The plot items in the third group can
+be added to a plot to create different cross-section views through the
+model domain.</p>
+<div class="figure align-center" id="id23">
+<a class="reference internal image-reference" href="_images/figure_3_23_manual.png"><img alt="_images/figure_3_23_manual.png" src="_images/figure_3_23_manual.png" style="width: 1.81in; height: 2.63in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.23 <em>MINEDW</em> plot items</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="legend">
+<h4>3.4.1.1 Legend<a class="headerlink" href="#legend" title="Permalink to this headline">¶</a></h4>
+<p>“<em>Legend</em>” is a local copy of the legend’s settings that are in
+effect for the current plot. The legend is displayed on the Legend Pane.
+On top of the Legend Pane is the <strong>*MINEDW*</strong> version and time stamp
+when the plot was created. There are two alternatives for setting the
+legend:</p>
+<ul class="simple">
+<li><p>Alternative 1 is to set legend attributes before the creation of a
+plot file. Legend attributes of this alternative are set through
+the “<em>Options</em>” dialog box under the “<em>Tools</em>” menu on
+the Main Menu banner. The attributes from Alternative 1 will
+apply to all new plot files.</p></li>
+<li><p>Alternative 2 is to set the legend attributes for the currently
+displayed plot file in the Control Panel Pane. Legend attributes
+from this alternative only apply to the currently selected plot
+file and will not affect other plot files or new plot files that
+will be created.</p></li>
+</ul>
+<p>The attributes associated with legends are described below:</p>
+<dl class="simple">
+<dt>Placement:</dt><dd><p>Sets the position of the Legend Panel to one of three
+preset options: 1) “<em>Left”</em> (side of View Pane), 2) “<em>Right”</em> (side
+of View Pane), or 3) “<em>Floating</em>” (inside the View Pane).</p>
+</dd>
+<dt>Width:</dt><dd><p>Sets the width of the legend as a percentage of the View Pane
+containing the plot. The minimum value of width is 25. The width can be
+increased for all three placement options of the Legend Panel.</p>
+</dd>
+<dt>Height:</dt><dd><p>Sets the height of the Legend Panel as a percentage of the
+View Pane containing the plot. This setting is only applicable if the
+“<em>Placement</em>” attribute is set to “<em>Floating</em>.”</p>
+</dd>
+<dt>Position:</dt><dd><p>Specifies the left-side position and bottom position of the
+plot item as a percentage of the available rendering area. It uses a
+scale of 0 to 100, in which 0 indicates the bottom-left corner and 100
+indicates the top-right corner. Continuous adjustment of the upward
+vertical position once the top of the Legend Panel reaches the top of
+View Pane will reduce the height of the Legend Panel. The
+“<em>Position</em>” setting is only applicable if the legend
+“<em>Placement</em>” attribute is set to “<em>Floating</em>.”</p>
+</dd>
+<dt>Outline:</dt><dd><p>Sets the visibility, color, and thickness of the plot item’s
+outline.</p>
+</dd>
+<dt>Heading:</dt><dd><p>Sets the color of the legend heading.</p>
+</dd>
+<dt>Copyright:</dt><dd><p>Sets the color of the copyright notice in the legend.</p>
+</dd>
+<dt>View Info:</dt><dd><p>Sets the visibility of the current view orientation report
+in the legend. The report can include the following items—each of which
+can be selected individually for inclusion in the view info in the
+legend—“<em>Center</em>,” “<em>Eye</em>,” “<em>Dip/DD/Roll</em>,” “<em>Normal</em>,”
+“<em>Radius</em>,” and “<em>Projection</em>.” Sub-controls for each of the items
+are provided for specifying the size, font, style, and color of the text
+used.</p>
+</dd>
+<dt>Step:</dt><dd><p>This option is inactive in <strong>MINEDW</strong>.</p>
+</dd>
+<dt>Time:</dt><dd><p>Sets the visibility of the time in the legend. The time used is
+that at which the view was last modified. The sub-controls provided can
+specify the size, font, style, and color of the text used to display the
+time in the legend.</p>
+</dd>
+<dt>Customer Title:</dt><dd><p>This option is not active in <strong>MINEDW</strong>.</p>
+</dd>
+</dl>
+<p>On the <em>“Attributes”</em> tab for the <em>“Legend”</em> item, the legend settings
+for each of the plot items that the user has added to the current plot
+are also listed beneath the “<em>Customer Title”</em> attribute. The controls
+provided can add or remove the plot item from the legend and specify the
+size, font, style, and color of the text. In the case of plot items that
+have multiple sub-parts, such as contours or units, the user can add or
+remove the individual sub-labels from the legend.</p>
+</div>
+<div class="section" id="display-settings">
+<h4>3.4.1.2 Display Settings<a class="headerlink" href="#display-settings" title="Permalink to this headline">¶</a></h4>
+<p>“<em>Display Settings</em>” is a local copy of the display settings that
+are in effect for the plot items currently selected. There are two
+alternatives for setting display:</p>
+<ul class="simple">
+<li><p>Alternative 1 is to set display attributes before the creation of a
+plot file. Display attributes of this alternative are set through the
+“<em>Options</em>” dialog box under the “<em>Tools</em>” menu on the Main
+Menu banner. The attributes from Alternative 1 will apply to all new
+plot files.</p></li>
+<li><p>Alternative 2 is to set the display attributes for the currently
+displayed plot file in the Control Panel Pane. Display attributes
+from this alternative only apply to the currently selected plot file
+and will not affect other plot files or new plot files that will be
+created.</p></li>
+</ul>
+<p>The attributes available under “<em>Display Settings</em>” and their
+descriptions are presented below:</p>
+<dl class="simple">
+<dt>Name:</dt><dd><p>Indicates the name of the active view. For all views except the
+Base View, this control can be used to name or rename the current view.</p>
+</dd>
+<dt>Active:</dt><dd><p>Controls whether the view is active or inactive.</p>
+</dd>
+<dt>Auto Update:</dt><dd><p>Sets the option of whether to auto-update the view while
+cycling (this is enabled via a checkbox). The interval for updating is
+found under the “<em>Global Settings</em>” plot item because the interval
+is the same for all auto-updating views.</p>
+</dd>
+<dt>Background:</dt><dd><p>Sets the background color of the view.</p>
+</dd>
+<dt>Outline:</dt><dd><p>Sets the visibility, color, and thickness of the item’s outline.</p>
+</dd>
+<dt>Job Title:</dt><dd><p>This option is inactive in <strong>MINEDW</strong>.</p>
+</dd>
+<dt>View Title:</dt><dd><p>Sets the visibility of the title. The sub-controls
+provided can specify the size, font, style, color, and title displayed
+in the plot.</p>
+</dd>
+<dt>Target:</dt><dd><p>This option is inactive in <strong>MINEDW</strong>.</p>
+</dd>
+<dt>Movie:</dt><dd><p>This option is inactive in <strong>MINEDW</strong>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="global-settings">
+<h4>3.4.1.3 Global Settings<a class="headerlink" href="#global-settings" title="Permalink to this headline">¶</a></h4>
+<p>“<em>Global Settings</em>” is a local copy of the global settings that are
+in effect for the current plot. The options can be set in the “<em>Plot
+Items</em>” sub-pane or via the “<a class="reference external" href="mk:&#64;MSITStore:C:Program%20FilesItascaFlac3d400flac3d400help.chm::/options.html">Options”
+dialog</a>
+box found under the “<em>Tools</em>” menu on the Main Menu banner. Changing
+the settings on the current plot also sets them in the “<em>Options</em>”
+dialog box and subsequently affects all plot files because these changes
+are applied globally. The attributes available under “<em>Global
+Settings</em>” and their descriptions are listed below.</p>
+<dl class="simple">
+<dt>Vertex Arrays:</dt><dd><p>Specifies whether vertex arrays are used to draw
+objects in Open Graphics Library. The default setting is “on.” When
+using older OpenGL display drivers, disabling this attribute can improve
+images sometimes. Note that disabling this attribute implies that the
+vertex buffer objects are also turned off.</p>
+</dd>
+<dt>Vertex Buffer Objects:</dt><dd><p>Determines whether the vertex buffer object
+OpenGL extension is used (if available). The default setting is “on.”
+Note that disabling this attribute can improve images when using display
+drivers that presently report this extension but do not properly support
+it.</p>
+</dd>
+<dt>Interactive1:</dt><dd><p>This option is inactive in <strong>MINEDW</strong>.</p>
+</dd>
+<dt>Interactive2:</dt><dd><p>This option is inactive in <strong>MINEDW</strong>.</p>
+</dd>
+<dt>Picking:</dt><dd><p>This option is inactive in <strong>MINEDW</strong>.</p>
+</dd>
+<dt>Sketch Mode:</dt><dd><p>Renders the item using a reduced (rather than full)
+rendering method, which can accelerate response in certain rendering
+situations (e.g., model rotation).</p>
+</dd>
+<dt>Update Interval:</dt><dd><p>This option is inactive in <strong>MINEDW</strong>.</p>
+</dd>
+<dt>Print Size:</dt><dd><p>Sets the width and height of the output sent to a printer
+or to a bitmap file.</p>
+</dd>
+<dt>DXF Warning:</dt><dd><p>Option to display the warning about styling when a .DXF
+file is exported.</p>
+</dd>
+<dt>VRML Warning:</dt><dd><p>Option to display the warning about styling when a .VRML
+file is exported.</p>
+</dd>
+<dt>Movie:</dt><dd><p>This option is inactive in <strong>MINEDW</strong>.</p>
+</dd>
+</dl>
+<p>The second group in the “<em>Plot Items</em>” sub-pane consists of
+“<em>Axes</em>,” “<em>Observation</em>,” “<em>Boundary</em> <em>Conditions</em>,”
+“<em>Element</em>,” “<em>File</em> <em>Data</em>,” “<em>Node</em>,” and “<em>Post</em>
+<em>Processing</em>” (shown in <strong>MINEDW</strong> and Figure 3.23 in black), which
+can be added to the plot items. These are discussed in more detail in
+the following sections.</p>
+</div>
+<div class="section" id="axes">
+<h4>3.4.1.4 Axes<a class="headerlink" href="#axes" title="Permalink to this headline">¶</a></h4>
+<p>The “<em>Axes</em>” plot item is an interactive orientation indicator that
+can be displayed as <em>x</em>-, <em>y</em>-, and <em>z</em>-axes or as compass points
+(easting and northing). The attributes available for axes and their
+descriptions are given below.</p>
+<dl class="simple">
+<dt>AutoConf:</dt><dd><p>Sets the axes display as either <em>x</em>-, <em>y</em>-, and <em>z</em>-axes or
+as compass points (easting and northing) by clicking the icons shown.</p>
+</dd>
+<dt>X-Axis:</dt><dd><p>The <em>x</em>-axis display with sub-controls for specifying color,
+draw (in positive, negative, or both directions), “+” label, and “-”
+label (the axis label in positive and negative directions).</p>
+</dd>
+<dt>Y-Axis:</dt><dd><p>The <em>y</em>-axis display with sub-controls for specifying color,
+draw (in positive, negative, or both directions), “+” label, and “-”
+label (the axis label in positive and negative directions).</p>
+</dd>
+<dt>Z-Axis:</dt><dd><p>The <em>z</em>-axis display with sub-controls for specifying color,
+draw (in positive, negative, or both directions), “+” label, and “-”
+label (the axis label in positive and negative directions).</p>
+</dd>
+<dt>Fixed:</dt><dd><p>When enabled, this control fixes the axes to a location on the
+screen. Use the “Screen” attribute to specify the position. When
+disabled, this control positions the axes in model space.</p>
+</dd>
+<dt>Scale:</dt><dd><p>Specifies a size in percentage units when the axes are fixed.</p>
+</dd>
+<dt>Screen:</dt><dd><p>Specifies the <em>x</em> and <em>y</em> position of the axis center in
+percentage units (0, 0 = bottom left; 100, 100 = top right) when the axes are fixed.</p>
+</dd>
+<dt>Size:</dt><dd><p>Specifies the axes size in model units when the axes are not fixed.</p>
+</dd>
+<dt>Position:</dt><dd><p>Places the origin of the axis at the <em>x</em>-, <em>y</em>-, and
+<em>z</em>-position (in model units) specified when the axes are not fixed.</p>
+</dd>
+<dt>Font:</dt><dd><p>Specifies the font, size, and style (e.g., normal, bold, italic)
+used by the plot item.</p>
+</dd>
+<dt>Transparency:</dt><dd><p>Specifies the plot item’s transparency (70–100). When
+transparency is toggled off, the point and its label are displayed in
+opaque state.</p>
+</dd>
+<dt>Caption:</dt><dd><p>When enabled, this control shows the plot item (labeled,
+described, and enumerated as needed) in the plot legend. The
+sub-attributes provided are dynamic and contingent on the plot item and
+its display requirements in the legend. At a minimum, all captions have
+a “<em>Title</em>” sub-attribute.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="observation">
+<h4>3.4.1.5 Observation<a class="headerlink" href="#observation" title="Permalink to this headline">¶</a></h4>
+<p>The “<em>Observation</em>” plot item includes the display settings for
+observation wells such as stand pipe with screen (Borehole in
+Observation) and grouted-in vibrating piezometers (Piezo in
+Observation). For Piezo, the location of the transducer can also be
+displayed (Transducer in Observation). The display attributes available
+for observation wells and their descriptions are given below.</p>
+<dl class="simple">
+<dt>Map:</dt><dd><p>This attribute positions, scales, and orients the plot item via
+the sub-attributes. Sub-attributes include 1) axes, which specify a
+coordinate substitution to use assuming a standard order of “<em>x</em>, <em>y</em>,
+<em>z</em>” (“<em>xzy</em>,” for instance, indicates that the <em>y</em> and <em>z</em>
+coordinates are to be swapped); 2) translate (or offset), which
+specifies values for <em>x</em>, <em>y</em>, and <em>z</em> plot-item position offsets; and
+3) scale, which multiplies the coordinate system by the specified value.
+These attributes are generally not required to change if the coordinates
+of the observation points are the same as other plot items of the plot
+file.</p>
+</dd>
+<dt>Colors:</dt><dd><p>Specifies the number of colors to use on the plot. Includes
+sub-attributes that enumerate the indexed items to enable specification
+of color by item. Observation wells are colored by borehole, piezometer,
+and transducer.</p>
+</dd>
+<dt>Line:</dt><dd><p>Sets the thickness and style of the line(s) used to represent the
+screen interval of the observation well or piezometer.</p>
+</dd>
+<dt>Scale:</dt><dd><p>Specifies a size in percentage units when the axes are fixed.</p>
+</dd>
+<dt>Text:</dt><dd><p>Displays the labels of the observation wells. By toggling the
+arrow, the label can be displayed or hidden.</p>
+</dd>
+<dt>Transparency:</dt><dd><p>Specifies the plot item’s transparency (70–100). When
+transparency is toggled off, the point and its label are displayed in
+opaque state.</p>
+</dd>
+<dt>Caption:</dt><dd><p>When this control is selected, the plot item is shown
+(labeled, described, and enumerated as needed) in the plot legend. The
+sub-attributes provided are dynamic and contingent on the plot item and
+its display requirements in the legend. At a minimum, all captions have
+“<em>Title</em>” or <em>“Line”</em> and “<em>Color”</em> sub-attributes. In the case
+where the Legend Pane is occupied by the legend of other plot items
+(such as hydrogeologic units), the user can disable the display of
+selected plot items (such as “<em>Element</em>” or “<em>Node</em>”) to see the
+caption attributes of the “<em>Observation</em>” plot item.</p>
+</dd>
+<dt>Toggle Well:</dt><dd><p>Provides a list of each observation well that is included
+in the plot. Individual observation wells can be removed from the View
+Pane. This function allows the user to include some or all observation
+wells when exporting a .DXF file from <strong>MINEDW</strong>.</p>
+</dd>
+<dt>Section Distance:</dt><dd><p>This feature is used in conjunction with a
+cross-section view. It allows the user to specify which observation
+locations to display by using a distance. For example, if a user creates
+a cross section and wishes to display observation locations within 100
+meters of the cross-section plane, they would enter “100” in the box
+next to the attribute label if the coordinate system used in the model
+is in meters.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="boundary-conditions">
+<h4>3.4.1.6 Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this headline">¶</a></h4>
+<p>The “<em>Boundary Conditions</em>” plot item includes the display settings
+for boundary conditions. The boundary conditions include “<em>Constant
+Head &amp; Drain</em>,” “<em>Pumping Well</em>,” “<em>River</em>,” and “<em>Variable
+Flux</em>.” The display attributes available for boundary conditions and
+their descriptions are given below. Detailed information about the
+boundary conditions can be found in Section 7.4.</p>
+<p><strong>Constant Head &amp; Drain</strong></p>
+<dl class="simple">
+<dt>Map:</dt><dd><p>This attribute positions, scales, and orients the plot item via
+the sub-attributes. Sub-attributes include 1) axes, which specify a
+coordinate substitution to use assuming a standard order of “<em>x</em>, <em>y</em>,
+<em>z”</em> (“<em>xzy</em>,” for instance, indicates that the <em>y</em> and <em>z</em> coordinates
+are to be swapped); 2) translate (or offset), which specifies values for
+<em>x</em>, <em>y</em>, and <em>z</em> plot-item position offsets; and 3) scale, which
+multiplies the coordinate system by the specified value. These
+attributes are generally not required to change if the coordinates of
+the constant head or drain are the same as other plot items of the plot
+file.</p>
+</dd>
+<dt>Scale:</dt><dd><p>Specifies the size of the plot item.</p>
+</dd>
+<dt>Groups:</dt><dd><p>Constant-head boundary nodes can be grouped to represent a
+specified hydrogeologic component, such as a surface-water body, an
+underground drift, or a pumping well. Each group of constant-head nodes
+can be presented in a different color in <strong>MINEDW</strong>.</p>
+</dd>
+<dt>Text:</dt><dd><p>This attribute sets the font style, text size, and text style of
+the labels of the boundary conditions displayed in the View Pane.</p>
+</dd>
+<dt>Transparency:</dt><dd><p>Specifies the plot item’s transparency (70–100). The
+minimum value for transparency setting is 70. When the transparency is
+toggled off, the plot item is displayed in opaque state.</p>
+</dd>
+<dt>Caption:</dt><dd><p>When enabled, the plot item is shown (labeled, described, and
+enumerated as needed) in the plot legend. The sub-attributes provided
+are dynamic and contingent on the plot item and its display requirements
+in the legend. At a minimum, all captions have “<em>Title</em>” or <em>“Line”</em>
+and “<em>Color”</em> sub-attributes. In the case where the Legend Pane is
+occupied by the legend of other plot items (such as hydrogeologic
+units), the user can disable the display of selected plot items (such as
+“<em>Element</em>” or “<em>Node</em>”) to see the caption attributes of the
+“<em>Boundary Conditions</em>” plot item.</p>
+</dd>
+<dt>Maximum Flux:</dt><dd><p>By specifying a value, the user can specify the upper
+limit of flux values to display. Flux values larger than the specified
+value will not be displayed.</p>
+</dd>
+<dt>Excluded Flux:</dt><dd><p>By specifying a value, the user can exclude certain
+flux values from display.</p>
+</dd>
+<dt>Dynamic:</dt><dd><p>This option only applies to “<em>Constant Head &amp; Drain</em>”
+boundary conditions and is used to visualize boundary conditions that
+become active/inactive at different times through the model simulation.</p>
+</dd>
+</dl>
+<p><strong>Pumping Well</strong></p>
+<p>There are three types of pumping wells in <strong>MINEDW</strong>:</p>
+<ol class="arabic simple">
+<li><p>Rate: The well is simulated with the assigned pumping rate.</p></li>
+<li><p>Head: The well is simulated as a specified head and the pumping rate
+is derived from the model simulation.</p></li>
+<li><p>LPE: The well is simulated with the assigned lowest pumping elevation
+(LPE). If the simulated water level of the well reaches the LPE, the
+active pumping will be switched to passive draining to prevent the
+drying up of the well and pump.</p></li>
+</ol>
+<dl class="simple">
+<dt>Map:</dt><dd><p>Same as in “<em>Constant Head &amp; Drain.</em>”</p>
+</dd>
+<dt>Color:</dt><dd><p>Each type of pumping well is presented in a different color.
+Deselecting a specific type will remove that type of well from the View
+Pane and Legend Pane.</p>
+</dd>
+<dt>Line:</dt><dd><p>Sets the thickness and style of the lines used to represent the well depth.</p>
+</dd>
+<dt>Scale:</dt><dd><p>When the “<em>Scale</em>” box is checked, increasing the scale
+value will increase the size of the dot of each well. Unchecking the
+“<em>Scale</em>” box will display the default size of the dot.</p>
+</dd>
+<dt>Text:</dt><dd><p>Same as in “<em>Constant Head &amp; Drain</em>.”</p>
+</dd>
+<dt>Transparency:</dt><dd><p>Same as in “<em>Constant Head &amp; Drain</em>.”</p>
+</dd>
+<dt>Caption:</dt><dd><p>Same as in “<em>Constant Head &amp; Drain</em>.”</p>
+</dd>
+<dt>Toggle Well:</dt><dd><p>This feature is used to toggle the display of each well.</p>
+</dd>
+<dt>Section Distance:</dt><dd><p>This feature is used in conjunction with a
+cross-section view and only applies to the “<em>Pumping Well”</em> plot item.
+It allows the user to specify which pumping well to display by using a
+distance in model units. For example, if a user creates a cross section
+and wishes to display pumping wells within 100 meters of the
+cross-section plane, they would enter “<em>100</em>” in the box next to the
+attribute label.</p>
+</dd>
+</dl>
+<p><strong>Variable Flux</strong></p>
+<dl class="simple">
+<dt>Map:</dt><dd><p>Same as in “<em>Constant Head &amp; Drain.”</em></p>
+</dd>
+<dt>Scale:</dt><dd><p>Same as in “<em>Constant Head &amp; Drain.”</em></p>
+</dd>
+<dt>Transparency:</dt><dd><p>Same as in “<em>Constant Head &amp; Drain.”</em></p>
+</dd>
+<dt>Caption:</dt><dd><p>Same as in “<em>Constant Head &amp; Drain.”</em></p>
+</dd>
+<dt>Flux View:</dt><dd><p>Same as in “<em>Constant Head &amp; Drain.”</em></p>
+</dd>
+<dt>File:</dt><dd><p>Same as in “<em>Constant Head &amp; Drain.”</em></p>
+</dd>
+<dt>Minimum Flux:</dt><dd><p>Same as in “<em>Constant Head &amp; Drain.”</em></p>
+</dd>
+<dt>Maximum Flux:</dt><dd><p>Same as in “<em>Constant Head &amp; Drain.”</em></p>
+</dd>
+<dt>Excluded Flux:</dt><dd><p>Same as in “<em>Constant Head &amp; Drain.”</em></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="element">
+<h4>3.4.1.7 Element<a class="headerlink" href="#element" title="Permalink to this headline">¶</a></h4>
+<p>The “<em>Element</em>” plot items include 2-D and 3-D plot items that can
+be used to display hydrogeologic properties of elements. These
+properties include geologic zones, recharge, evaporation, hydraulic
+properties, and time-varied conductivity. “<em>Element</em>” plot items
+also include the “<em>Pinch-Out</em>” plot item, which can be used to view
+and assign pinch-outs in the model.</p>
+<dl class="simple">
+<dt>2D Plane:</dt><dd><p>Displays element information for the geologic zone
+(“<em>Zone</em>”), recharge (“<em>Recharge</em>”), or evaporation
+(“<em>Evaporation</em>”) in 2-D plane view.</p>
+</dd>
+<dt>3D Element:</dt><dd><p>Displays element information for the hydrogeologic zone in 3-D.</p>
+</dd>
+<dt>Pinch-Out:</dt><dd><p>Allows the user to create areas of refined vertical
+discretization and display these areas.</p>
+</dd>
+<dt>Properties:</dt><dd><p>Displays hydraulic properties (<em>K:sub:`x`</em>,
+<em>K:sub:`y`</em>, <em>K:sub:`z`</em>, <em>S:sub:`y`</em>, and <em>S:sub:`s`</em>) in 3-D.</p>
+</dd>
+<dt>Time-Varied Conductivity:</dt><dd><p>Displays the ZOR created for an open pit or
+cave zone for underground mining in the “<em>Mining</em>” menu.</p>
+</dd>
+</dl>
+<p>The attributes related to these plot items are described below.</p>
+<p><strong>2D Plane</strong></p>
+<dl class="simple">
+<dt>Color By:</dt><dd><p>Specifies which attribute is used for the plot. The
+attributes include “<em>Zone</em>,” “<em>Recharge</em>,” and “<em>Evaporation</em>.”</p>
+</dd>
+<dt>Layer:</dt><dd><p>Indicates which layer of the model to display on the plot.</p>
+</dd>
+<dt>Map:</dt><dd><p>This attribute positions, scales, and orients the plot item via
+the sub-attributes. Sub-attributes include 1) axes, which specify a
+coordinate substitution to use assuming a standard order of “<em>x</em>, <em>y</em>,
+<em>z”</em> (“<em>xzy</em>,” for instance, indicates that the <em>y</em> and <em>z</em> coordinates
+are to be swapped); 2) offset (or translate), which specifies values for
+<em>x</em>, <em>y</em>, and <em>z</em> plot-item position offsets; and 3) scale, which
+multiplies the coordinate system by the specified value.</p>
+</dd>
+<dt>Colors:</dt><dd><p>Allows the user to specify the colors to be used in the plot.
+This attribute also allows the user to select which items they wish to
+display in the plot by activating the checkbox next to the item.</p>
+</dd>
+<dt>Fill:</dt><dd><p>Specifies whether polygons rendered by a plot item should be filled.</p>
+</dd>
+<dt>Wireframe:</dt><dd><p>Specifies whether the plot item should be displayed with a
+wireframe and determines the color and the line thickness of the
+displayed wireframe.</p>
+</dd>
+<dt>Wire Trans:</dt><dd><p>Not active.</p>
+</dd>
+<dt>Cull Backface:</dt><dd><p>Specifies whether backface culling is enabled. When set
+to “<em>On</em>,” the backfaces of polygons are not rendered (it is often
+necessary to disable this function to see the far side of some cut-plane
+plots).</p>
+</dd>
+<dt>Lighting:</dt><dd><p>Option to turn lighting on or off. Lighting provides depth
+to the plot item because it creates natural shadows.</p>
+</dd>
+<dt>Offset:</dt><dd><p>Specifies settings for the OpenGL polygon offset. If the
+polygons are rendered poorly, then setting these values close to zero
+might improve performance. The first value specifies a scale factor to
+create a variable-depth offset for each polygon; the second value
+creates a constant-depth offset.</p>
+</dd>
+<dt>Cutline:</dt><dd><p>Specifies the line thickness of lines plotted on a cutting
+plane, with a range of 1 to 10.</p>
+</dd>
+<dt>Cutplane:</dt><dd><p>This option is only active when a cutplane plot item is
+added to the plot view. The options for “<em>Cutplane</em>” are “<em>On,</em>”
+“<em>Front,</em>” and “<em>Back,</em>” which turn on the cutplane, make the
+model domain on the front of the cutplane visible, and make the model
+domain on the back of the cutplane visible, respectively. In order to
+show the entire plane, the “<em>Cull Backface</em>” option should be
+unchecked.</p>
+</dd>
+<dt>Clip Box:</dt><dd><p>Specifies which of the clip box items available in the
+current view to apply to the current plot item. This option is only
+active when a clip box plot item is added to the plot view.</p>
+</dd>
+<dt>Transparency:</dt><dd><p>Specifies the plot item’s transparency (70–100). When
+unchecked, the plot item is displayed in opaque state.</p>
+</dd>
+<dt>Caption:</dt><dd><p>When enabled, the plot item is shown (labeled, described, and
+enumerated as needed) in the plot legend. The sub-attributes provided
+are dynamic and contingent on the plot item and its display requirements
+in the legend. At a minimum, all captions have “<em>Title</em>” or
+“<em>Colors</em>” and “<em>Label</em>” sub-attributes.</p>
+</dd>
+</dl>
+<p><strong>3D Plane</strong></p>
+<dl class="simple">
+<dt>Layer:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Map:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Zones:</dt><dd><p>Allows the user to specify which of the geologic zones are
+visible in the plot.</p>
+</dd>
+<dt>Fill:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Wireframe:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Wire Trans:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Cull Backface:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Lighting:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Offset:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Cutline:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Cutplane:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Clip Box:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Transparency:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Caption:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+</dl>
+<p><strong>Pinch-Out</strong></p>
+<dl class="simple">
+<dt>Map:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Colors:</dt><dd><p>Change the color of each pinch-out zone.</p>
+</dd>
+<dt>Fill:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Wireframe:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Wire Trans:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Cull Backface:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Lighting:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Offset:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Cutline:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Cutplane:</dt><dd><p>Not active.</p>
+</dd>
+<dt>Clip Box:</dt><dd><p>Not active.</p>
+</dd>
+<dt>Transparency:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Caption:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+</dl>
+<p><strong>Properties</strong></p>
+<dl class="simple">
+<dt>Color By:</dt><dd><p>Select a hydraulic parameter for display.</p>
+</dd>
+<dt>Layer:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Map:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Contour:</dt><dd><p>Provides sub-attributes for controlling contour display.
+These are 1) “<em>Ramp</em>,” which defines the color ramp to use (grayscale,
+rainbow, etc.); 2) “<em>Maximum</em>,” which specifies (or automatically
+calculates) the maximum value (right-hand end of the ramp); 3)
+“<em>Minimum</em>,” which specifies (or automatically calculates) the minimum
+value (left-hand end of the ramp); 4) “<em>Interval</em>,” which specifies
+(or automatically calculates) the interval between colors on the ramp;
+5) “<em>Reversed</em>,” which inverts the display of the maximum and minimum
+values relative to the ramp; 6) “<em>Below</em>,” which specifies (or
+automatically selects) the color to use for displaying values that are
+less than those specified by “<em>Minimum</em>”; and 7) “<em>Above</em>,” which
+specifies (or automatically selects) the color to use for displaying
+values that are greater than those specified by “<em>Maximum</em>.” This
+attribute is only available for the “<em>Properties”</em> plot item.</p>
+</dd>
+<dt>Fill:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Wireframe:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Wire Trans.:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Cull Backface:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Lighting:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Offset:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Cutline:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Cutplane:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Clip Box:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Transparency:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Caption:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+</dl>
+<p><strong>Time-Varied Conductivity</strong></p>
+<dl class="simple">
+<dt>Map:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Colors:</dt><dd><p>Change the color of each pinch-out zone.</p>
+</dd>
+<dt>Fill:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Wireframe:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Wire Trans.:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Cull Backface:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Lighting:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Offset:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Cutline:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Cutplane:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Clip Box:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Transparency:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+<dt>Caption:</dt><dd><p>Same as in “<em>2D Plane</em>.”</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="file-data">
+<h4>3.4.1.8 File Data<a class="headerlink" href="#file-data" title="Permalink to this headline">¶</a></h4>
+<p>The “<em>File Data</em>” item contains options for importing source files
+that were not generated by the <strong>MINEDW</strong> program. These options are
+described below.</p>
+<p><strong>BLN (Boundary Line File)</strong></p>
+<p>The “<em>BLN</em>” (boundary line) plot item is used to import and display
+a .BLN file. The attributes available for “<em>BLN</em>” and their
+descriptions are provided below.</p>
+<dl class="simple">
+<dt>File:</dt><dd><p>Clicking on the plus sign (+) opens the “<em>Select BLN file</em>”
+dialog box. Once loaded, the file name is shown in this attribute.</p>
+</dd>
+<dt>Project to Surface:</dt><dd><p>Projects the BLN lines to the ground surface.</p>
+</dd>
+<dt>Map:</dt><dd><p>This attribute positions, scales, and orients a plot item via the
+sub-attributes. Sub-attributes include 1) axes, which specify a
+coordinate substitution to use assuming a standard order of “<em>x</em>, <em>y</em>,
+<em>z</em>” (“<em>xzy</em>,” for instance, indicates that the <em>y</em> and <em>z</em>
+coordinates are to be swapped); 2) offset (or translate), which
+specifies values for <em>x</em>, <em>y</em>, and <em>z</em> plot-item position offsets; and
+3) scale, which multiplies the coordinate system by the specified value.</p>
+</dd>
+<dt>Colors:</dt><dd><p>Specifies the color of the BLN lines.</p>
+</dd>
+<dt>Line:</dt><dd><p>Specifies the thickness of the BLN lines.</p>
+</dd>
+<dt>Text:</dt><dd><p>Specifies the font used for labels.</p>
+</dd>
+<dt>Transparency:</dt><dd><p>Specifies the plot item’s transparency (0 = solid, 100 = invisible).</p>
+</dd>
+<dt>Caption:</dt><dd><p>When enabled, the plot item is shown (labeled, described, and
+enumerated as needed) in the plot legend. The sub-attributes provided
+are dynamic and contingent on the plot item and its display requirements
+in the legend. At a minimum, all captions have “<em>Title</em>” or
+“<em>Colors</em>” and “<em>Label</em>” sub-attributes.</p>
+</dd>
+</dl>
+<p><strong>DXF (Drawing Exchange Format)</strong></p>
+<p>This plot item is used to import and display a .DXF file in the View
+Pane. The attributes available for this option and their descriptions
+are provided below.</p>
+<dl class="simple">
+<dt>File:</dt><dd><p>The plus sign (+) available for this attribute can be used to
+display a “<em>Select DXF data file</em>” dialog box for selecting the .DXF
+file to load. Once loaded, the file name is shown in this attribute.</p>
+</dd>
+<dt>Layers:</dt><dd><p>Indicates the number of layers in a .DXF plot item and
+provides sub-attributes to control the visibility and color for each
+layer in the .DXF.</p>
+</dd>
+<dt>Map:</dt><dd><p>This control positions, scales, and orients the plot item via the
+sub-attributes. Sub-attributes include 1) axes, which specify a
+coordinate substitution to use assuming a standard order of “<em>x</em>, <em>y</em>,
+<em>z</em>” (“<em>xzy</em>,” for instance, indicates that the <em>y</em> and <em>z</em>
+coordinates are to be swapped); 2) offset (or translate), which
+specifies values for <em>x</em>, <em>y</em>, and <em>z</em> plot-item position offsets; and
+3) scale, which multiplies the coordinate system by the specified value.</p>
+</dd>
+<dt>Faces:</dt><dd><p>Provides controls for rendering the faces of the plot item,
+including fill, wireframe, wireframe transparency, cull backface,
+lighting, offset, and cutline.</p>
+</dd>
+<dt>Cut Faces:</dt><dd><p>Specifies the thickness and style used to render the
+outline of faces on the plot item. A plane should be generated before
+the operation of this attribute.</p>
+</dd>
+<dt>Cutplane:</dt><dd><p>Specifies which of the cutplanes available in the current
+view to apply to the current plot item. A plane should be generated
+before the operation of this attribute.</p>
+</dd>
+<dt>Clip Box:</dt><dd><p>Specifies which of the clip box items available in the
+current view to apply to the current plot item.</p>
+</dd>
+<dt>Transparency:</dt><dd><p>Specifies the plot item’s transparency (0 = solid, 100 = invisible).</p>
+</dd>
+<dt>Caption:</dt><dd><p>When enabled, the plot item is shown (labeled, described, and
+enumerated as needed) in the plot legend. The sub-attributes provided
+are dynamic and contingent on the plot item and its display requirements
+in the legend. At a minimum, all captions have “<em>Title</em>” or
+“<em>Colors</em>” and “<em>Label</em>” sub-attributes.</p>
+</dd>
+<dt>To Zone:</dt><dd><p>Selects elements contained within a 3-D .DXF object based on
+the criteria selected by the user and assigns them to the selected group
+(options are “<em>To Zone,</em>” “<em>Select With</em>,” “<em>Element Selected
+When Including,</em>” and “<em>Layer Thickness</em>”).</p>
+</dd>
+<dt>To Data File:</dt><dd><p>Saves the .DXF file to a text file format that can be
+used for creating an open-pit mine plan.</p>
+</dd>
+</dl>
+<p><strong>ESRI Shapefile (SHP)</strong></p>
+<p>This plot item is used to import a shapefile (.SHP), a common
+<em>ArcGIS</em><sup>©</sup> file format, to the current view. A shapefile is a
+popular geospatial vector data format for geographic information systems
+software. Shapefiles spatially describe geometries—points, polylines,
+and polygons. A shapefile is actually a group of several files, three of
+which are required to form a valid set. A valid shapefile set contains
+at least a main file (.SHP), a dBASE file (.DBF), and an index file
+(.SHX). The main file contains spatial information about features (e.g.,
+coordinates along a line or polygon), the dBASE file contains a table of
+attributes related to those spatial features (e.g., the name of a
+feature or some measurement taken at a feature), and the index file
+indexes the byte-location of features within a .SHP file. The attributes
+available for this option and their descriptions are provided below.</p>
+<dl class="simple">
+<dt>File:</dt><dd><p>Use the plus sign (+) available for this attribute to display
+the “<em>Select SHP file</em>” dialog box to select which .SHP files to
+load. Once loaded, the file name is shown in this attribute.</p>
+</dd>
+<dt>Attribute Table:</dt><dd><p>Displays the contents of the dBASE file. A dBASE file
+contains a table of attributes associated with the features defined in a
+shapefile.</p>
+</dd>
+<dt>Coordinate Info:</dt><dd><p>Displays the contents of a .PRJ file (a .PRJ
+shapefile is not related to the .PRJ file created by <strong>*MINEDW*</strong>). A
+.PRJ file contains information about the coordinate system and
+projection in which the shapefile features are defined. A .PRJ file may
+or may not be present.</p>
+</dd>
+<dt>Group by:*</dt><dd><p>Specifies an attribute of the dBASE file with which to group
+features. Each group is given a unique color and label in the legend and
+view. To display all features as separate entities, select the last item
+(Record ID) from the drop-down menu.</p>
+</dd>
+<dt>Label by:</dt><dd><p>Specifies an attribute of the dBASE file by which to label
+features within the view. Because an apparently single feature may be
+defined in a shapefile as several features (e.g., a line composed of
+line segments), duplicate labels may appear.</p>
+</dd>
+<dt>Project to Surface:</dt><dd><p>Projects the .SHP file to the ground surface.</p>
+</dd>
+<dt>Symbol:</dt><dd><p>Specifies the symbol to represent the data.</p>
+</dd>
+<dt>Scale:</dt><dd><p>Specifies the size of the symbol.</p>
+</dd>
+<dt>Colors:</dt><dd><p>Specifies the colors of features in the shapefile.</p>
+</dd>
+<dt>Line:</dt><dd><p>Specifies line thickness of the data.</p>
+</dd>
+<dt>Map:</dt><dd><p>This control positions, scales, and orients the plot item via the
+sub-attributes. Sub-attributes include 1) axes, which specify a
+coordinate substitution to use assuming a standard order of “<em>x</em>, <em>y</em>,
+<em>z</em>” (“<em>xzy</em>,” for instance, indicates that the <em>y</em> and <em>z</em>
+coordinates are to be swapped); 2) offset (or translate), which
+specifies values for <em>x</em>, <em>y</em>, and <em>z</em> plot-item position offsets; and
+3) scale, which multiplies the coordinate system by the specified value.</p>
+</dd>
+<dt>Text:</dt><dd><p>Specifies the font used for labels.</p>
+</dd>
+<dt>Transparency:</dt><dd><p>Specifies the plot item’s transparency (70–100). The
+lowest value for transparency is 70. When unchecked, the plot item is
+displayed in opaque state.</p>
+</dd>
+<dt>Caption:</dt><dd><p>When enabled, the plot item is shown (labeled, described, and
+enumerated as needed) in the plot legend. The sub-attributes provided
+are dynamic and contingent on the plot item and its display requirements
+in the legend. At a minimum, all captions have “<em>Title</em>” or
+“<em>Colors</em>” and “<em>Label</em>” sub-attributes.</p>
+</dd>
+</dl>
+<p><strong>Point Data</strong></p>
+<p>This plot item is used to display x, y, and z data as points. The
+attributes available for this option and their descriptions are given
+below.</p>
+<dl class="simple">
+<dt>File:</dt><dd><p>Use the plus sign (+) available for this attribute to display
+the “<em>Select Data File</em>” dialog box to select which .DAT files to
+load. Once loaded, the file name is shown in this attribute.</p>
+</dd>
+<dt>Project to Surface:</dt><dd><p>Projects the .DAT file to the ground surface.</p>
+</dd>
+<dt>Text:</dt><dd><p>Specifies the font used for labels.</p>
+</dd>
+<dt>Map:</dt><dd><p>This control positions, scales, and orients the plot item via the
+sub-attributes. Sub-attributes include 1) axes, which specify a
+coordinate substitution to use assuming a standard order of “<em>x</em>, <em>y</em>,
+<em>z</em>” (“<em>xzy</em>,” for instance, indicates that the <em>y</em> and <em>z</em>
+coordinates are to be swapped); 2) offset (or translate), which
+specifies values for <em>x</em>, <em>y</em>, and <em>z</em> plot-item position offsets; and
+3) scale, which multiplies the coordinate system by the specified value.</p>
+</dd>
+<dt>Scale:</dt><dd><p>Specifies the size of the symbol.</p>
+</dd>
+<dt>Colors:</dt><dd><p>Specifies the color of the points.</p>
+</dd>
+<dt>Transparency:</dt><dd><p>Specifies the plot item’s transparency (0 = solid, 100 = invisible).</p>
+</dd>
+<dt>Caption:</dt><dd><p>When enabled, the plot item is shown (labeled, described, and
+enumerated as needed) in the plot legend. The sub-attributes provided
+are dynamic and contingent on the plot item and its display requirements
+in the legend. At a minimum, all captions have “<em>Title</em>” or
+“<em>Colors</em>” and “<em>Label</em>” sub-attributes.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="node">
+<h4>3.4.1.9 Node<a class="headerlink" href="#node" title="Permalink to this headline">¶</a></h4>
+<p>The “<em>Node</em>” plot item includes 2-D and 3-D plots that are related
+to properties of finite-element nodes. These properties include nodal
+elevation, groundwater head, pore pressure, drawdown at a given time,
+and head difference for two different dates in both 2-D and 3-D.</p>
+<dl class="simple">
+<dt>2D Contour:</dt><dd><p>Displays groundwater head, pressure, elevation, head
+difference, water table, and drawdown in 2-D.</p>
+</dd>
+<dt>3D Contour:</dt><dd><p>Displays groundwater head, pressure, elevation, and head
+difference in 3-D.</p>
+</dd>
+<dt>Isoline:</dt><dd><p>Displays isolines for elevation, pore pressure, head, head
+difference, water table, and drawdown.</p>
+</dd>
+<dt>IsoSurface:</dt><dd><p>Displays isosurfaces for elevation, head, pore pressure,
+and head difference.</p>
+</dd>
+</dl>
+<p>The attributes related to these four plot items are described below.</p>
+<p><strong>2D Contour and 3D Contour</strong></p>
+<dl class="simple">
+<dt>Color By:</dt><dd><p>Specifies which attribute is used for the plot.</p>
+</dd>
+<dt>Layer:</dt><dd><p>Specifies which layer of the model is displayed on the plot.</p>
+</dd>
+<dt>Map:</dt><dd><p>This attribute positions, scales, and orients the plot item via
+the sub-attributes. Sub-attributes include 1) axes, which specify a
+coordinate substitution to use assuming a standard order of “<em>x</em>, <em>y</em>,
+<em>z</em>” (“<em>xzy</em>,” for instance, indicates that the <em>y</em> and <em>z</em>
+coordinates are to be swapped); 2) offset (or translate), which
+specifies values for <em>x</em>, y, and <em>z</em> plot-item position offsets; and 3)
+scale, which multiplies the coordinate system by the specified value.</p>
+</dd>
+<dt>Contour:</dt><dd><p>Provides sub-attributes for controlling contour display.
+These are 1) “Ramp,” which defines the color ramp to use (grayscale,
+rainbow, etc.); 2) “<em>Maximum</em>,” which specifies (or automatically
+calculates) the maximum value (right-hand end of the ramp); 3)
+“<em>Minimum</em>,” which specifies (or automatically calculates) the minimum
+value (left-hand end of the ramp); 4) “<em>Interval</em>,” which specifies
+(or automatically calculates) the interval between colors on the ramp;
+5) “<em>Reversed</em>,” which inverts the display of the maximum and minimum
+values relative to the ramp; 6) “<em>Below</em>,” which specifies (or
+automatically selects) the color to use for displaying values that are
+less than those specified by “<em>Minimum</em>”; and 7) “<em>Above</em>,” which
+specifies (or automatically selects) the color to use for displaying
+values that are greater than those specified by “<em>Maximum</em>.”</p>
+</dd>
+<dt>Fill:</dt><dd><p>Specifies whether polygons rendered by a plot item should be filled.</p>
+</dd>
+<dt>Line:</dt><dd><p>Sets the thickness and color of the lines used to represent the
+plot item. The attribute is only available for the <em>Isoline</em> plot item.</p>
+</dd>
+<dt>Wireframe:</dt><dd><p>Specifies whether the plot item should display with a
+finite-element mesh wireframe as well as the color and the line
+thickness of the wireframe.</p>
+</dd>
+<dt>Wire Trans:</dt><dd><p>Specifies the wireframe’s transparency (0 = solid, 100 = invisible).</p>
+</dd>
+<dt>Cull Backface:</dt><dd><p>Specifies whether backface culling is enabled. When
+this setting is enabled, the backfaces of polygons are not rendered (it
+often is necessary to turn off this feature to see the far side of some
+cutplane plots).</p>
+</dd>
+<dt>Lighting:</dt><dd><p>Enables the lighting.</p>
+</dd>
+<dt>Offset:</dt><dd><p>Specifies settings for the OpenGL polygon offset. If the
+polygons are rendered poorly, then setting these values close to zero
+might improve performance. The first value is a factor that specifies a
+scale factor to create a variable-depth offset for each polygon; the
+second value is used to create a constant-depth offset.</p>
+</dd>
+<dt>Cutline:</dt><dd><p>Specifies the line thickness of lines plotted on a cutting plane.</p>
+</dd>
+<dt>Cutplane:</dt><dd><p>Option for displaying the model domain in front of or behind
+(or both) a cross-section plane. This option is useful when orienting
+the cross-section plane.</p>
+</dd>
+<dt>Clip Box:</dt><dd><p>Specifies which of the clip box items available in the
+current view to apply to the current plot item.</p>
+</dd>
+<dt>Transparency:</dt><dd><p>Specifies the plot item’s transparency (70–100). The
+lowest value for transparency is 70. When unchecked, the plot item is
+displayed in opaque state.</p>
+</dd>
+<dt>Caption:</dt><dd><p>When enabled, the plot item is shown (labeled, described, and
+enumerated as needed) in the plot legend. The sub-attributes provided
+are dynamic and contingent on the plot item and its display requirements
+in the legend. At a minimum, all captions have “<em>Title</em>” or
+“<em>Colors</em>” and “<em>Label</em>” sub-attributes.</p>
+</dd>
+</dl>
+<p><strong>Isoline</strong></p>
+<p>The attributes of “<em>Isoline</em>” are the same as those described in the
+“<em>2D Contour/3D Contour</em>” section with the exception of following:</p>
+<dl class="simple">
+<dt>Cutplane:</dt><dd><p>Though a cutplane is not very meaningful for “<em>Isoline</em>,”
+a user can generate a plane through the “<em>Cutplane</em>” option from
+“<em>List</em>.”</p>
+</dd>
+<dt>Clip Box:</dt><dd><p>This operation is functional but does not provide meaningful
+display.</p>
+</dd>
+</dl>
+<p><strong>Isosurface</strong></p>
+<p>The attributes of “<em>Isosurface</em>” are the same as those described in
+the “<em>2D Contour/3D Contour</em>” section with the exception of
+“<em>Cutplane</em>.” A cutplane can only be created through the “<em>Plane</em>”
+option under “<em>Cutting Planes</em>” in “<em>List</em>.”</p>
+</div>
+<div class="section" id="post-processing">
+<h4>3.4.1.10 Post Processing<a class="headerlink" href="#post-processing" title="Permalink to this headline">¶</a></h4>
+<dl class="simple">
+<dt>Particle Tracking:</dt><dd><p>Displays particle-tracking results (Section 9.4).</p>
+</dd>
+<dt>Pit Flux:</dt><dd><p>This option can be used to display the seepage that occurs
+at the pit wall, which is recorded by <strong>MINEDW</strong> during the model
+simulation in the file with a .SEP extension (Section 9.6).</p>
+</dd>
+</dl>
+<p><strong>Particle Tracking</strong></p>
+<p>To operate the attributes related to particle tracking, a
+particle-tracking result should be inputted as a <strong>MINEDW</strong> plot item.
+The attributes related to the “<em>Particle Tracking</em>” plot item are
+described below.</p>
+<dl class="simple">
+<dt>File:</dt><dd><p>The icon next to the “<em>File”</em> attribute opens a dialog box
+that is used to import particle tracks.</p>
+</dd>
+<dt>Arrow Scale:</dt><dd><p>This attribute controls the size of the arrow displayed
+on the particle tracks that indicate direction. It does not apply to the
+last time step.</p>
+</dd>
+<dt>ColorByMag:</dt><dd><p>The magnitude of the velocity along the displayed particle
+tracks can be shown by using this attribute. This attribute allows the
+selection of a number of color ramps and allows the “<em>Maximum</em>,”
+“<em>Minimum,”</em> and “<em>Interval”</em> to be defined. It does not apply to
+the last time step.</p>
+</dd>
+<dt>Map:</dt><dd><p>This attribute positions, scales, and orients the plot item via
+the sub-attributes. Sub-attributes include 1) axes, which specify a
+coordinate substitution to use assuming a standard order of “<em>x</em>, <em>y</em>,
+<em>z</em>” (“<em>xzy</em>,” for instance, indicates that the <em>y</em> and <em>z</em>
+coordinates are to be swapped); 2) offset (or translate), which
+specifies values for <em>x</em>, y, and <em>z</em> plot-item position offsets; and 3)
+scale, which multiplies the coordinate system by the specified value.</p>
+</dd>
+<dt>Colors:</dt><dd><p>This attribute can be used to control the display color of particle tracks.</p>
+</dd>
+<dt>Line:</dt><dd><p>Sets the thickness and style of the lines used to represent the
+“<em>Particle Tracking”</em> plot item.</p>
+</dd>
+<dt>Transparency:</dt><dd><p>Specifies the plot item’s transparency (0 = solid, 100 = invisible).</p>
+</dd>
+<dt>Caption:</dt><dd><p>When enabled, the plot item is shown (labeled, described, and
+enumerated as needed) in the plot legend. The sub-attributes provided
+are dynamic and contingent on the plot item and its display requirements
+in the legend. At a minimum, all captions have “<em>Title</em>” or
+“<em>Colors</em>” and “<em>Label</em>” sub-attributes.</p>
+</dd>
+<dt>Scale:</dt><dd><p>Controls the size of the displayed seepage point.</p>
+</dd>
+<dt>Colors:</dt><dd><p>This attribute can be used to control the display color of seepage points.</p>
+</dd>
+<dt>Transparency:</dt><dd><p>The same as in “<em>Particle Tracking</em>.”</p>
+</dd>
+<dt>Caption:</dt><dd><p>The same as in “<em>Particle Tracking</em>.”</p>
+</dd>
+<dt>Flux View:</dt><dd><p>This option enables the display of flux values from the
+“<em>Pit Flux</em>” boundary conditions using both color and marker size to
+represent the relative magnitudes of flux.</p>
+</dd>
+<dt>File:</dt><dd><p>The icon next to the “<em>File”</em> attribute opens a dialog box
+that is used to import a pit-flux file.</p>
+</dd>
+<dt>Minimum Flux:</dt><dd><p>Sets the minimum absolute flux value to display using
+the “<em>Pit Flux</em>” boundary condition.</p>
+</dd>
+<dt>Maximum Flux:</dt><dd><p>Sets the maximum absolute flux value to display using
+the “<em>Pit Flux</em>” boundary condition.</p>
+</dd>
+<dt>Excluded Flux:</dt><dd><p>Option to enable the display of flux values outside of
+the specified minimum and maximum flux values.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="cutting-planes">
+<h4>3.4.1.11 Cutting Planes<a class="headerlink" href="#cutting-planes" title="Permalink to this headline">¶</a></h4>
+<p>The third “<em>Plot Items</em>” group consists of “<em>Cutting Planes</em>”
+and “<em>Clip Box</em>.” “<em>Cutting Planes,</em>” contains “<em>Plane,”
+“Wedge,”</em> and <em>“Octant.”</em> Both “<em>Cutting Planes</em>” and “<em>Clip
+Box</em>” are displayed in green in <strong>MINEDW</strong>. These items are similar
+to plot items (and are handled as plot items) in that they are
+independent objects appearing in the plot. They are distinct from plot
+items in that they are applied to one or more plot items for the purpose
+of visualization and, as such, are dependent on plot items. For example,
+a cutplane can be defined as part of a plot, but until it is applied to
+at least one plot item, its rendering is incomplete and is not visible
+in the View Pane.</p>
+<p>The “<em>Cutting Planes</em>” group contains three items: 1) “<em>Plane</em>,”
+2) “<em>Wedge</em>,” and 3) “<em>Octant</em>.” The function of each item is
+described below:</p>
+<dl class="simple">
+<dt>Plane:</dt><dd><p>The plane can be applied to plot items to “slice” them into
+2-D. A plane is manipulated using its “<em>Origin</em>,” which can be
+repositioned to move the cutplane, and the visible surface of the plane
+itself can be rotated in the View Pane to view different aspects of the
+plane.</p>
+</dd>
+<dt>Wedge:</dt><dd><p>The wedge cutplane can be applied to plot items to “slice” the
+model into a wedge shape that is defined by two planes joined along an
+origin. The plane is manipulated using its “<em>Origin</em>,” which can be
+changed to reposition the location of the cutplane.</p>
+</dd>
+<dt>Octant:</dt><dd><p>The octant cutplane provides a cubical cutplane that can be
+applied to plot items to “slice” them in three orthogonal directions
+simultaneously. The plane is manipulated using its “<em>Origin</em>,” which
+can be repositioned. The visible surface of the plane itself can be
+dragged to rotate the plane three-dimensionally.</p>
+</dd>
+</dl>
+<p>The attributes available for cutting planes and their descriptions are
+given below.</p>
+<p><strong>Plane</strong></p>
+<dl class="simple">
+<dt>Name:</dt><dd><p>Sets or indicates the name of the cutplane. This name is used to
+label the cutplane as it is listed in the “<em>Plot Items</em>” list, on
+the “<em>Cutplane</em>” selector in the attribute list for all plot items
+(under the “<em>Cutplane</em>” attribute), and in the legend (if its
+“<em>Caption</em>” attribute is enabled).</p>
+</dd>
+<dt>Origin:</dt><dd><p>The origin of the plane.</p>
+</dd>
+<dt>Normal (1, 2, 3):</dt><dd><p>Defines the orientation of the indicated cutplane via a normal vector.</p>
+</dd>
+<dt>Dip/DD (1, 2, 3):</dt><dd><p>Sets the dip and dip direction, respectively, of the
+selected plane. There are two of these controls on a wedge and three on
+an octant; they are labeled with numerals (e.g., 1, 2, 3).</p>
+</dd>
+<dt>Snap View:</dt><dd><p>Snaps the view to a perpendicular orientation so that the
+user sees the side of the plane. One click will display normal
+orientation; the second click will display the view in reverse
+orientation.</p>
+</dd>
+<dt>Move Normal:</dt><dd><p>Moves the cutting plane along the normal direction. The
+user can enter the interval of each move or use the default value.</p>
+</dd>
+<dt>Target:</dt><dd><p>This attribute is not used in “<em>Move Normal</em>.”</p>
+</dd>
+<dt>Caption:</dt><dd><p>When enabled, the plot item is shown (labeled, described, and
+enumerated as needed) in the plot legend. The sub-attributes provided
+are dynamic and contingent on the plot item and its display requirements
+in the legend. At a minimum, all captions have “<em>Title</em>” or <em>“Line”</em>
+and “<em>Color”</em> sub-attributes.</p>
+</dd>
+</dl>
+<p><strong>Wedge</strong></p>
+<dl class="simple">
+<dt>Name:</dt><dd><p>Same as in “<em>Plane</em>.”</p>
+</dd>
+<dt>Origin:</dt><dd><p>The origin of the wedge plane.</p>
+</dd>
+<dt>Normal 1:</dt><dd><p>Defines the orientation of one side of the wedge plane via a normal vector.</p>
+</dd>
+<dt>Dip 1/DD 1:</dt><dd><p>Sets the dip and dip direction of one side of the wedge plane.</p>
+</dd>
+<dt>Snap View:</dt><dd><p>Same as in “<em>Plane</em>” for one plane of the wedge.</p>
+</dd>
+<dt>Normal 2:</dt><dd><p>Defines the orientation of the other side of the wedge plane via a normal vector.</p>
+</dd>
+<dt>Dip 2/DD 2:</dt><dd><p>Sets the dip and dip direction of the other side of the wedge plane.</p>
+</dd>
+<dt>Snap View:</dt><dd><p>Same as in “<em>Plane</em>” for the other plane of the wedge.</p>
+</dd>
+<dt>Wedge Angle:</dt><dd><p>Sets the angle of the wedge cutting plane.</p>
+</dd>
+<dt>Caption:</dt><dd><p>Same as in “<em>Plane</em>.”</p>
+</dd>
+</dl>
+<p><strong>Octant</strong></p>
+<p>The attributes of “<em>Octant</em>” are the same as in “<em>Wedge</em>” with
+the following exceptions:</p>
+<ol class="arabic simple">
+<li><p>There are three attributes of “<em>Normal</em>,” “<em>Dip/DD</em>,” and
+“<em>Snap View</em>.”</p></li>
+<li><p>There is no “<em>Wedge Angle</em>.”</p></li>
+</ol>
+</div>
+<div class="section" id="clip-box">
+<h4>3.4.1.12 Clip Box<a class="headerlink" href="#clip-box" title="Permalink to this headline">¶</a></h4>
+<p>When applied to a plot item, the “<em>Clip Box</em>” control constrains the
+display of the plot item according to its size, position, and
+orientation. It is similar to a cutplane in that it is applied to plot
+items and, although a view can have multiple clip boxes in it, only one
+clip box can be applied to a given plot item at a time. Both a cutplane
+and clip box can be applied to a plot item simultaneously. The
+attributes available for the “<em>Clip Box</em>” controls and their
+descriptions are given below.</p>
+<dl class="simple">
+<dt>Name:</dt><dd><p>Sets or indicates the name of the clip box. This name is used to
+label the clip box as it is listed in the “<em>Plot Items</em>” list, on
+the “<em>Clip Box</em>” selector in the attribute list for all plot items
+(under the “<em>Clip Box</em>” attribute), and in the legend if its
+“<em>Caption</em>” attribute is enabled.</p>
+</dd>
+<dt>Center:</dt><dd><p>Sets the position of the plot item’s center in model units.</p>
+</dd>
+<dt>Dip:</dt><dd><p>Sets the dip of the clip box.</p>
+</dd>
+<dt>Dip Dir:</dt><dd><p>Sets the dip direction of the clip box.</p>
+</dd>
+<dt>Clip Axis (1, 2, 3):</dt><dd><p>Activates a specified axis that will determine
+the direction of clipping. If “<em>Clip Axis 1</em>” is selected, clipping
+only occurs along the x direction.</p>
+</dd>
+<dt>Axis Radii:</dt><dd><p>Specifies the radius of clip axis 1, clip axis 2, and clip
+axis 3, respectively, away from the current center.</p>
+</dd>
+<dt>Axis Offsets:</dt><dd><p>Specifies the offset from the center of each of the
+three axes.</p>
+</dd>
+<dt>Interactive:</dt><dd><p>This option is not active in <strong>MINEDW</strong>.</p>
+</dd>
+<dt>Caption:</dt><dd><p>When enabled, the plot item is shown (labeled, described, and
+enumerated as needed) in the plot legend. The sub-attributes provided
+are dynamic and contingent on the plot item and its display requirements
+in the legend. At a minimum, all captions have a “<em>Title</em>” sub-attribute.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="view">
+<h3>3.4.2 View<a class="headerlink" href="#view" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>View</em>” sub-pane of the “<em>Control Panel</em>” Pane (Figure
+3.24) is discussed in this section. As shown in Figure 3.24, the
+“<em>View</em>” sub-pane is divided into two sections that can be minimized
+independently and provides tools for manipulating (i.e., rotating,
+magnifying, positioning) the view. The functions available in the
+“<em>View</em>” sub-pane are shown in Figure 3.24 and are described below.</p>
+<div class="figure align-center" id="id24">
+<a class="reference internal image-reference" href="_images/figure_3_24_manual.png"><img alt="_images/figure_3_24_manual.png" src="_images/figure_3_24_manual.png" style="width: 3.28187in; height: 3.42708in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.24 A “<em>View</em>” pane and sub-panes</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</div>
+<dl class="simple">
+<dt>3D Rotate:</dt><dd><p>Use the roller tool to rotate the view in 3-D.</p>
+</dd>
+<dt>Reset View:</dt><dd><p>Re-centers the model in the View Pane and zooms to the model extent.</p>
+</dd>
+<dt>Slide Vertical Translation:</dt><dd><p>Change the vertical translation by dragging the slider in the desired direction.</p>
+</dd>
+<dt>Slide Rotation:</dt><dd><p>Change the rotation by dragging the slider in the desired direction;
+rotation is normal (perpendicular) to the screen.</p>
+</dd>
+<dt>Slide Horizontal Translation:</dt><dd><p>Change the horizontal translation by dragging the slider in the desired direction.</p>
+</dd>
+<dt>Slide Magnification:</dt><dd><p>Change the magnification level by dragging the slider in the desired direction.</p>
+</dd>
+<dt>Eye:</dt><dd><p>Reports the <em>x</em>, <em>y</em>, and <em>z</em> positions of the “<em>Eye</em>” in
+model coordinates. Enter the desired values in the boxes and press the
+[Enter] key to “snap” the view as specified.</p>
+</dd>
+<dt>Center:</dt><dd><p>Reports the <em>x</em>, <em>y</em>, and <em>z</em> positions of the view center in
+model coordinates. Enter desired values in the boxes and press the
+[Enter] key to snap the view as specified.</p>
+</dd>
+<dt>Rotation:</dt><dd><p>Reports the dip, dip direction, and roll of the current View
+Pane in model coordinates. Enter desired values in the boxes and press
+the [Enter] key to snap the view as specified.</p>
+</dd>
+<dt>Scale:</dt><dd><p>Describes the view’s radius (extent from view center to view
+edge), eye distance, and magnification (respectively, from left to
+right). Radius and magnification both affect the apparent magnification
+of the view; however, radius uses a fixed angle for model perspective;
+thereby, reducing the value makes the model appear closer, and
+increasing the value makes the model appear farther away. In both cases,
+the eye position is moved accordingly to satisfy the fixed angle of the
+model perspective. Magnification increases or decreases the view without
+changing the eye position but correspondingly changes the radius value.
+The result is that increasing the value enlarges the model and reduces
+the radius value, and decreasing the value reduces the model and
+enlarges the radius value.</p>
+</dd>
+<dt>Mode:</dt><dd><p>This option can be used to choose the view mode, which changes
+the perspective of the View Pane.</p>
+</dd>
+<dt>Clip:</dt><dd><p>Clips the view shown in the View Pane.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="information">
+<h3>3.4.3 Information<a class="headerlink" href="#information" title="Permalink to this headline">¶</a></h3>
+<p>The “<em>Information</em>” control set provides information about the plot
+item located at the current cursor position (Figure 3.25). For this
+specific plot item, it shows the element ID, hydrogeologic zone
+simulated in the model for this element, and the x, y, z values of the
+cursor.</p>
+<div class="figure align-center" id="id25">
+<a class="reference internal image-reference" href="_images/figure_3_25_manual.png"><img alt="_images/figure_3_25_manual.png" src="_images/figure_3_25_manual.png" style="width: 3.55258in; height: 0.71885in;" /></a>
+<p class="caption"><span class="caption-text">Figure 3.25 Sample “<em>Information</em>” control set</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="4_importing_data_sets_manual.html" class="btn btn-neutral float-right" title="4.0 Importing Data Sets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="2_features_of_minedw_manual.html" class="btn btn-neutral float-left" title="2.0 Features of MINEDW" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Itasca Denver, Inc.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'G-VY7FB9D8LM', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

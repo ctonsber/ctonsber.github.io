@@ -1,0 +1,103 @@
+Acronyms and Abbreviations
+==========================
+cm/yr = centimeters per year
+
+ft = foot/feet
+
+ft/day = feet per day
+
+ft/yr = feet per year
+
+ft\ :sup:`2` day = square feet per day
+
+ft\ :sup:`3` day = cubic feet per day
+
+K\ :sub:`x` = hydraulic conductivity in *x* direction (meters per day or feet per day)
+
+K\ :sub:`y` = hydraulic conductivity in *y* direction (meters per day or feet per day)
+
+K\ :sub:`z` = hydraulic conductivity in *z* direction (meters per day or feet per day)
+
+m = meters
+
+m/day = meter(s) per day
+
+m\ :sup:`2`/day = square meters per day
+
+m\ :sup:`3`/day = cubic meters per day
+
+mm/day = millimeter(s) per day
+
+mm/yr = millimeter(s) per year
+
+S\ :sub:`s` = specific storage (m\ :sup:`-1` or ft\ :sup:`-1`)
+
+S\ :sub:`y` = specific yield
+
+BC = boundary condition
+
+.BLN = boundary line file extension used in ITASCA codes
+
+.BUD = budget file
+
+C = Head constant-head boundary
+
+.DAC = *FEFLOW* ASCII result file
+
+.DBF = dBASE file in shapefile
+
+.DAT = data file
+
+.DXF = AutoCAD “Drawing Exchange Format” file
+
+ET = evapotranspiration
+
+.FEL = *MINEDW* data file list
+
+.FEM = *FEFLOW* ASCII data file
+
+*FEMFLOW3D* = United States Geological Survey code/program
+
+*FLAC3D* = ITASCA code, “Fast Lagrangian Analysis of Continua in Three Dimensions”
+
+.FLW = flow file
+
+GUI = graphical user interface
+
+ID = identification
+
+.LAK = pit-lake file
+
+OpenGL = OpenGL graphics file format
+
+.OUT = output file
+
+.PLB = simulated head output file
+
+.PLT = ASCII file
+
+.PRJ = project file
+
+.PST = *MINEDW* geometry file
+
+.SEP = seepage file
+
+.SHP = shapefile file format
+
+.SHX = index file in shapefile
+
+.STL = stereolithography file
+
+.SVG = scalable vector graphic file format
+
+USGS = United States Geological Survey
+
+.VRML = Virtual Reality Modeling Language file format
+
+ZOR = zone of relaxation
+
+2-D = two-dimensional/two dimensions
+
+3-D = three-dimensional/three dimensions
+
+*3DEC* = ITASCA code, “Three-Dimensional Distinct Element Code”

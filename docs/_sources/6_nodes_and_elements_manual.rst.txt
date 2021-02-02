@@ -1,0 +1,423 @@
+6.0 Nodes and Elements
+======================
+
+6.1 Selecting Elements
+----------------------
+
+The **MINEDW** software provides tools for selecting nodes and
+elements to perform the following tasks:
+
+1. Assign and edit properties that are defined on elements, such as
+   hydraulic conductivity and storage zones, recharge zones, and
+   evaporation zones;
+
+2. Assign and edit the boundary conditions related to nodes, such as
+   constant heads, pumping wells, and variable-flux boundary conditions;
+
+3. Move nodes within the finite-element mesh;
+
+4. Add pinch-outs for increased vertical model discretization; and
+
+5. Refine and extend the mesh.
+
+The tool buttons that are used to select nodes and elements are listed
+in Table 6.1, below.
+
+Table 6.1 The Nodes and Elements Tool Buttons
+
+.. raw:: html
+
+	<table border="1" class="docutils" style="width:100%">
+	<tbody valign="top">
+	
+	<tr class="row-odd">
+		<td>
+			<a class="reference internal" href="_images/figure_3_1f_manual.png">
+				<img alt="figure_3_1f_manual" src="_images/figure_3_1f_manual.png" style="width: 0.23437in; height: 0.30000in;" />
+			</a>
+		</td>
+		<td>Select Elements or Nodes</td>
+	</tr>
+	
+	<tr class="row-even">
+		<td>
+			<a class="reference internal" href="_images/figure_3_1l_manual.png">
+				<img alt="figure_3_1l_manual" src="_images/figure_3_1l_manual.png" style="width: 0.32143in; height: 0.30000in;" />
+			</a>
+		</td>
+		<td>Select with Polygon</td>
+	</tr>
+	
+	<tr class="row-odd">
+		<td>
+			<a class="reference internal" href="_images/figure_3_1m_manual.png">
+				<img alt="figure_3_1m_manual" src="_images/figure_3_1m_manual.png" style="width: 0.30000in; height: 0.30000in;" />
+			</a>
+		</td>
+		<td>Select with Overlay</td>
+	</tr>
+	
+	<tr class="row-even">
+		<td>
+			<a class="reference internal" href="_images/figure_3_1g_manual.png">
+				<img alt="figure_3_1g_manual" src="_images/figure_3_1g_manual.png" style="width: 0.25312in; height: 0.30000in;" />
+			</a>
+		</td>
+		<td>Move Nodes</td>
+	</tr>
+	
+	<tr class="row-odd">
+		<td>
+			<a class="reference internal" href="_images/figure_3_1h_manual.png">
+				<img alt="figure_3_1h_manual" src="_images/figure_3_1h_manual.png" style="width: 0.24193in; height: 0.30000in;" />
+			</a>
+		</td>
+		<td>Search Node/Element</td>
+	</tr>
+	
+	<tr class="row-even">
+		<td>
+			<a class="reference internal" href="_images/figure_3_1e_manual.png">
+				<img alt="figure_3_1e_manual" src="_images/figure_3_1e_manual.png" style="width: 0.25312in; height: 0.30000in;" />
+			</a>
+		</td>
+		<td>View Mode</td>
+	</tr>
+	
+	</table>
+
+When modifying the element- or node-related properties, it is important
+that the plot item being modified (node or element) is the first active
+plot item in the “\ *Plot Items*\ ” pane. When selecting elements and
+assigning new hydrogeologic zones, for example, the “\ *Element*\ ” plot
+item should be the first active plot item in the “\ *Plot Items*\ ”
+pane. Conversely, when selecting nodes and assigning a ground-surface
+elevation, the “\ *Node*\ ” plot item should be the first active plot
+item in the “\ *Plot Items*\ ” pane. To select elements, use the
+“\ *Select*\ ” tool when element-related plots are displayed in the View
+Pane. Element-related plots include “\ *2-D Plane”* and “\ *3D Element”*
+plots, which can be found in the “\ *Control Panel*\ ” under the
+“\ *List*\ ” menu. In the “\ *Control Panel*\ ” Pane, under either the
+2-D or 3-D plot attributes, the user can specify the elemental data
+(e.g., hydraulic zones using the “\ *3D Element*\ ” plot item or
+evaporation and recharge using *“2-D Plane”* plot items) to view,
+select, and edit.
+
+6.1.1 Selecting Elements in 2-D
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If an element-related plot is displayed, then the elements can be
+selected using the following approaches:
+
+-  Click the “\ *Select*\ ” tool and then click individual elements in
+   the View Pane. To deselect individual elements, right-click on the
+   selected element. To deselect all selected elements, press the [Esc]
+   key.
+
+-  Click the “\ *Select*\ ” tool and then click and drag the cursor to
+   select the elements in a rectangle. Right-clicking and dragging a
+   selection box around selected elements will deselect the elements.
+
+-  Click the “\ *Select*\ ” tool and then click the “\ *Select with
+   Polygon*\ ” tool, shown in Table 6.1 Use the “\ *Select with
+   Polygon*\ ” tool to select multiple elements in a desired area in the
+   model domain. To close the polygon, press the [Enter] key.
+
+-  Add a point, polyline, or polygon file to the View Pane using the
+   *“BLN,” “ESRI Shape File*,” or “\ *Point Data*\ ” plot items. The
+   file that will be used as an overlay must be added to the View Pane
+   (see Section 3.4.1.8) before the “\ *Select with Overlay*\ ” tool is
+   clicked. If multiple overlays are added to the View Pane, only the
+   topmost listed in the *“Plot Items”* pane will be used to select. To
+   use the overlay below the topmost overlay, the latter should be
+   deactivated. Click the “\ *Select*\ ” tool and then click the
+   “\ *Select with Overlay*\ ” tool. When the “\ *Select with
+   Overlay*\ ” tool is activated, the dialog box shown in Figure 6.1
+   appears. To deselect a selected element, right-click on that element
+   or right-click and drag a rectangle around multiple selected
+   elements. Press the [ESC] key to deselect all selected elements.
+
+.. figure:: media/figure_6_1_manual.png
+   :width: 2.29167in
+   :height: 1.47902in
+   :align: center
+
+   Figure 6.1 The “\ *Choose Method of Selection*\ ” dialog box
+
+To exit the select mode, click the “\ *View Mode*\ ” tool. To deselect
+all elements before editing, press the [ESC] key.
+
+As previously described, there are three options when selecting elements
+with an overlay file. If the “\ *Point*\ ” option is selected, then the
+closest elements for each point are selected. If the “\ *Polyline*\ ”
+option is selected, then elements along the polyline are selected. If
+the “\ *Polygon*\ ” option is selected, then the elements inside the
+polygon are selected.
+
+After the elements are selected, press the [Enter] key, and one of the
+dialog boxes shown in Figures 6.2, 6.3, and 6.4 appears. These dialog
+boxes can be used to edit the recharge zone (Figure 6.2), evaporation
+zone (Figure 6.3), or geological zone (Figure 6.4) input data.
+
+.. figure:: media/figure_6_2_manual.png
+   :width: 2.66667in
+   :height: 1.07292in
+   :align: center
+
+   Figure 6.2 The “\ *Select Recharge Zone*\ ” dialog box
+
+To edit the spatial distribution of recharge zones, select elements
+using a “\ *2-D Plane*\ ” plot item and change the “\ *Color By*\ ”
+attribute to “\ *Recharge*.” When the “\ *Select Recharge Zone*\ ”
+dialog box appears, the recharge zone for the selected elements can be
+assigned using the drop-down box next to “\ *Zone*.”
+
+.. figure:: media/figure_6_3_manual.png
+   :width: 2.67708in
+   :height: 1.07292in
+   :align: center
+
+   Figure 6.3 The “\ *Select Evaporation Zone*\ ” dialog box
+
+Evaporation zones can be assigned and modified in a manner similar to
+recharge zones. Change the “\ *Color By*\ ” attribute on the “\ *2-D
+Plane*\ ” plot item to “\ *Evaporation*,” select the desired region as
+previously described, and then press the [Enter] key; the “\ *Select
+Evaporation Zone*\ ” dialog box then appears. Using the drop-down box in
+the “\ *Select Evaporation Zone*\ ” dialog box, select the desired
+evaporation zone to assign the zone to the selected elements. More
+information on assigning recharge and evaporation is provided in Section
+7.4.
+
+Use a “\ *2D Element*\ ” or “\ *3D Element*\ ” plot item to assign
+geologic properties to elements. When the desired elements are selected,
+press the [Enter] key, and then the “\ *Select Geological Zone*\ ”
+dialog box shown in Figure 6.4 appears.
+
+.. figure:: media/figure_6_4_manual.png
+   :width: 4.72983in
+   :height: 1.98986in
+   :align: center
+
+   Figure 6.4 The “\ *Select Geological Zone*\ ” dialog box
+
+Element properties in multiple layers can be changed by entering the
+layer to extend the selected elements to, as shown in Figure 6.5. The
+layer selected in the attribute panel of the “\ *Element*\ ” plot item
+determines the uppermost layer that the change affects.
+
+.. figure:: media/figure_6_5_manual.png
+   :width: 4.62565in
+   :height: 0.28129in
+   :align: center
+
+   Figure 6.5 The “\ *Select Geological Zone*\ ” dialog box showing the
+   multiple layers option
+
+Selected element numbers can be exported by using the “\ *Export*\ ”
+function shown in Figure 6.4 and specifying an output file. If elements
+are exported, then the output file will contain the selected element
+numbers.
+
+6.1.2 Selecting Elements in 3-D
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Another option to select elements and assign the zone properties to the
+elements is to use a .DXF file. To assign a geologic unit to an element
+using a 3-D .DXF file, add a “\ *DXF”* plot item to the View Pane by
+selecting “\ *List*\ ” and then “\ *File Data.*\ ” Under “\ *File
+Data*,” double-click “\ *DXF*.” The “\ *Attributes*\ ” tab then appears.
+Click on the “\ **+**\ ” next to “\ *File*\ ” and the *“Select DXF Data
+File”* dialog box opens. Select the desired 3-D .DXF file and click
+“\ *Open*.” If multiple geologic units are represented in the .DXF file,
+the assignment of each geologic unit to the model elements should be
+done individually. Click the “\ *Layers*\ ” button under the
+“\ *Attributes*\ ” tab shown in Figure 6.6 and disable the other units
+if there are multiple.
+
+.. figure:: media/figure_6_6_manual.png
+   :width: 3.51091in
+   :height: 2.59411in
+   :align: center
+
+   Figure 6.6 The “\ *Attributes*\ ” dialog box
+
+Click the symbol next to “\ *To Zone*,” as shown in Figure 6.6. The
+“\ *DXF to Zone*\ ” dialog box appears. Select the desired zone to
+assign to the elements in the drop-down box. For geologic units (i.e.,
+objects that have a volume), select “\ *Volume*\ ”; for structures
+(e.g., faults), select “\ *Face*,” as shown in Figure 6.7. For element
+selection, if the “\ *Whole*\ ” option is selected, only the elements
+that are completely inside of the .DXF file are selected. If the
+“\ *Center*\ ” option is selected, the elements are selected if the
+element centers are inside the .DXF file. Click “\ *OK*\ ” to complete
+the assignment.
+
+.. figure:: media/figure_6_7_manual.png
+   :width: 3.20878in
+   :height: 1.81275in
+   :align: center
+
+   Figure 6.7 The “\ *DXF to Zone*\ ” dialog box
+
+To exit the *“Select”* mode, click the “\ *View Mode*\ ” button. To
+deselect all elements before editing, press the [ESC] key.
+
+6.2 Selecting Nodes
+-------------------
+
+The “\ *Select*\ ” tool can also be used when node-related plots are
+displayed in the View Pane. Node-related plots include 2-D and 3-D
+contour plots, which can be found in the “\ *Control Panel*\ ” on the
+“\ *List*\ ” tab under the *“Node”* plot items group. The operations
+that can be performed are described in the sections that follow. To
+select the node, the node plot item should be the first active plot item
+in the “\ *Plot Item*\ ” pane. Nodes can be selected using the following
+methods:
+
+-  Click the “\ *Select*\ ” tool and then click on the nodes in the View
+   Pane. To deselect individual nodes, right-click on the selected node.
+
+-  Click the “\ *Select*\ ” tool and then click and drag the cursor to
+   select nodes in a rectangle. Deselect with a right click.
+
+-  Click the “\ *Select*\ ” tool and then click the “\ *Select with
+   Polygon*\ ” tool. Use the “\ *Select with Polygon*\ ” tool to select
+   multiple nodes in a desired area in the model domain. To close the
+   polygon, press the [Enter] key.
+
+-  Add a point, polyline, or polygon file to the View Pane using the
+   *“BLN,” “ESRI Shape File*,” or “\ *Point Data*\ ” plot items. Click
+   the “\ *Select*\ ” tool and then click the “\ *Select with
+   Overlay*\ ” tool. When the “\ *Select with Overlay*\ ” tool is
+   activated, the *“Choose Method of Selection:”* dialog box appears
+   (Figure 6.1). The file that will be used as an overlay must be added
+   to the View Pane before the “\ *Select with Overlay*\ ” tool is
+   clicked. If multiple overlays are added to the View Pane, only the
+   topmost listed in the *“Plot Items”* pane will be used to select. To
+   use the overlay below the topmost overlay, the latter should be
+   deactivated. To deselect a selected node, right-click on that node or
+   right-click and drag a rectangle around multiple selected nodes.
+   Press the [ESC] key to deselect all selected nodes.
+
+After the nodes are selected, press the [Enter] key to open the
+“\ *Assign Properties for Nodes*\ ” dialog box shown in Figure 6.8.
+
+.. figure:: media/figure_6_8_manual.png
+   :width: 6.00000in
+   :height: 2.37708in
+   :align: center
+
+   Figure 6.8 The “\ *Assign Properties for Nodes*\ ” dialog box
+
+Several operations can be performed on the selected nodes.
+
+-  Assign boundary conditions (constant head, variable flux, or pumping
+   wells), as shown in Figure 6.9 After selecting one of the options,
+   the number of layers to be assigned with the boundary conditions
+   should also be specified, as discussed later in this section.
+
+.. figure:: media/figure_6_9_manual.png
+   :width: 4.11516in
+   :height: 1.07307in
+   :align: center
+
+   Figure 6.9 Assign boundary conditions to selected nodes
+
+-  Change the elevation of the selected nodes, as shown in Figure 6.10
+
+.. figure:: media/figure_6_10_manual.png
+   :width: 2.81364in
+   :height: 0.28136in
+   :align: center
+
+   Figure 6.10 Assign constant elevation to selected nodes
+
+-  Interpolate the elevations of the selected nodes using a data file by
+   clicking on the button next to “\ *Interpolated from File*,\ *”* as
+   shown in Figure 6.11. The format of the data file is a series of x,
+   y, z space delimited data.
+
+.. figure:: media/figure_6_11_manual.png
+   :width: 3.89741in
+   :height: 0.31263in
+   :align: center
+
+   Figure 6.11 Assign elevation by interpolating elevation data
+
+-  After the selection of one of the boundary conditions as shown in
+   Figure 6.9, specify the number of layers. If nodes in more than one
+   layer are to be selected, then the number of layers to be modified
+   can be selected (Figure 6.12).
+
+.. figure:: media/figure_6_12_manual.png
+   :width: 2.70871in
+   :height: 0.71885in
+   :align: center
+
+   Figure 6.12 The multiple layers specification dialog box
+
+-  Export the data. The selected node numbers can be exported to a .DAT
+   file by using the export button, as shown in Figure 6.13. If nodes
+   are exported, then the output file will contain the selected node
+   numbers and the corresponding node elevations.
+
+.. figure:: media/figure_6_13_manual.png
+   :width: 2.56250in
+   :height: 0.34375in
+   :align: center
+
+   Figure 6.13 The options available for both nodes and elements
+
+To exit out of the *“Select”* mode, click the “\ *View Mode*\ ” tool
+after closing the *“Assign Properties for Nodes”* dialog box. To
+deselect all the selected elements before editing, press the [ESC] key.
+
+.. |figure_3_1a_manual| image:: media/figure_3_1a_manual.png
+   :width: 0.27094in
+   :height: 0.33347in
+.. |figure_3_1b_manual| image:: media/figure_3_1b_manual.png
+   :width: 0.27094in
+   :height: 0.33347in
+.. |figure_3_1c_manual| image:: media/figure_3_1c_manual.png
+   :width: 0.23968in
+   :height: 0.33347in
+.. |figure_3_1d_manual| image:: media/figure_3_1d_manual.png
+   :width: 0.28136in
+   :height: 0.33347in
+.. |figure_3_1e_manual| image:: media/figure_3_1e_manual.png
+   :width: 0.28136in
+   :height: 0.33347in
+.. |figure_3_1f_manual| image:: media/figure_3_1f_manual.png
+   :width: 0.23125in
+   :height: 0.29600in
+.. |figure_3_1g_manual| image:: media/figure_3_1a_manual.png
+   :width: 0.25312in
+   :height: 0.30000in
+.. |figure_3_1h_manual| image:: media/figure_3_1h_manual.png
+   :width: 0.24193in
+   :height: 0.30000in
+.. |figure_3_1i_manual| image:: media/figure_3_1i_manual.png
+   :width: 0.28136in
+   :height: 0.32305in
+.. |figure_3_1j_manual| image:: media/figure_3_1j_manual.png
+   :width: 0.28136in
+   :height: 0.33347in
+.. |figure_3_1k_manual| image:: media/figure_3_1k_manual.png
+   :width: 0.30000in
+   :height: 0.27857in
+.. |figure_3_1l_manual| image:: media/figure_3_1l_manual.png
+   :width: 0.30000in
+   :height: 0.28000in
+.. |figure_3_1m_manual| image:: media/figure_3_1m_manual.png
+   :width: 0.30000in
+   :height: 0.30000in
+.. |figure_3_1n_manual| image:: media/figure_3_1n_manual.png
+   :width: 0.23968in
+   :height: 0.21884in
+.. |figure_3_1o_manual| image:: media/figure_3_1o_manual.png
+   :width: 0.23968in
+   :height: 0.21884in
+.. |figure_3_1p_manual| image:: media/figure_3_1p_manual.png
+   :width: 0.23968in
+   :height: 0.21884in

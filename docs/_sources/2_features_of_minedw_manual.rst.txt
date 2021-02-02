@@ -1,0 +1,67 @@
+2.0 Features of MINEDW
+======================
+
+The **MINEDW** software includes special features that facilitate
+the 3-D simulation of dewatering operations in open-pit and underground
+mines. Some of these features are as follows:
+
+-  The progressive excavation of an open pit can be simulated in the
+   model by changing the elevation of the nodes affected by mining over
+   time.
+
+-  A groundwater flow problem is simulated as saturated-unsaturated
+   groundwater flow. This allows the finite-element mesh to remain fixed
+   with time (except for excavations) and the saturated flow domain to
+   adjust with time in accordance with changes in the position of the
+   water table. The fixed mesh, in contrast to a deforming mesh,
+   facilitates the representation of the spatial hydrogeologic
+   variability of a groundwater system by the finite-element mesh.
+
+-  **MINEDW** provides 3-D graphic representations of geology, model
+   domain, pit geometry, groundwater heads, groundwater flux, recharge
+   and evaporation zones, particle tracking, and pore pressures.
+
+-  Specified-head boundary conditions can be imposed using heads that
+   are either invariable with time or variable with time. In the latter
+   case, the boundary heads are specified in terms of tables
+   representing a hydrograph of the heads.
+
+-  Specified-flux boundary conditions and internal source-sink terms are
+   defined by a group of data sets that can be combined in different
+   configurations for each time step.
+
+-  Variable-flux boundary conditions can be imposed to simulate
+   time-variant boundary fluxes in response to changing boundary heads.
+   This boundary condi­tion allows the finite volume of the modeled flow
+   domain to be “extended” to infinity by “attaching” the analytical
+   solution for a semi-infinite, linear aquifer to the boundary of the
+   flow domain. [II]_
+
+-  The interaction between the groundwater system and river networks can
+   be realistically simulated. Streams are simulated as a river network
+   (or networks) that consists of a main river channel and tributary
+   channels. The model accounts for streamflow depletions or additions
+   by simulating the exchange of water between the stream and the
+   groundwater system.
+
+-  In addition, evapotranspiration of groundwater from vegetated areas
+   or evaporation from bare-soil areas can be simulated. The
+   evapotranspiration rate is assumed to be inversely proportional to
+   the depth from the ground surface to the water table elevation.
+   **MINEDW** uses the maximum evaporation rate and the extinction
+   depth as constraints.
+
+-  Spatial and temporal variation in precipitation across the model
+   domain can be simulated. In areas with steep relief, **MINEDW** has
+   the capability to simulate orographically controlled precipitation.
+
+-  Open-pit excavation, open-pit backfilling, and pit-lake formation can
+   be efficiently simulated within a **MINEDW** model.
+
+-  **MINEDW** can efficiently simulate the formation of a zone of
+   relaxation (ZOR) around a pit excavation or underground mining
+   operation through time according to the mining schedule.
+
+-  Outputs of pore-pressure distribution can be seamlessly used in both
+   two-dimensional (2-D) and 3-D geomechanical models using Itasca’s
+   geomechanical codes.

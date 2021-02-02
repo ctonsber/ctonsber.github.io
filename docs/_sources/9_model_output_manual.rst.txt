@@ -1,0 +1,776 @@
+9.0 Model Output
+================
+
+This chapter provides information on the following:
+
+-  Reading,
+
+-  Visualizing,
+
+-  Exporting, and
+
+-  Working with model outputs.
+
+Different options to display, customize, and export the simulation
+results are described in the following sections.
+
+9.1 Read Results and Export Results as Text File
+------------------------------------------------
+
+The “\ *Read Results*\ ” function is used to read the simulated-head
+output file. The simulated heads are stored in a file with a .PLB
+extension in binary format. The “\ *Read Results”* function reads the
+results for simulated time steps. To visualize and export the simulation
+results, click “\ *Results*\ ” from the Main Menu and then choose
+“\ *Read Results*.” Select the .PLB file from the folder where
+**MINEDW** was executed. There is another option for result files
+(e.g., a .PLT file) in the “\ *Open Result File*\ ” dialog box. The .PLT
+file is an older text-file format used by previous versions of
+**MINEDW**. The .PLT file is no longer created by **MINEDW** during
+a model run but can be created using the *“Export Results as Text
+File*\ ” function. When using the “\ *Export Results as Text File”*
+function, a .PLB file can be converted to a .PLT file. First, the .PLB
+file must be imported using the “\ *Read Results”* function. Then, using
+the “\ *Export Results as Text File”* function, a .PLT file can be
+created. To view model results at a desired time step, enter the time
+step in the variable field of the time-step slider or move the time-step
+slider to the desired time step.
+
+9.2 Observations
+----------------
+
+Observation locations can be defined using the “\ *Observations*\ ”
+function. This information is used to create the hydrographs for
+user-specified locations. In **MINEDW**, observations are input as
+either “\ *Monitoring Boreholes*\ ” with screened intervals or as
+“\ *Piezometers*\ ” with measurements at discrete *x*, *y*, and *z*
+locations. “\ *Piezometers*\ ” differ from “\ *Monitoring*
+*Boreholes*\ ” because results are extracted from a discrete *x*, *y*,
+and *z* location, whereas “\ *Monitoring Boreholes*\ ” extract results
+that have been averaged along a screened vertical interval.
+
+To add a new monitoring borehole, select the “\ *Monitoring Borehole*\ ”
+tab and then click “\ *Add*\ ” at the right of the dialog box. A new
+entry is added. Enter the name of the monitoring borehole and the
+corresponding “\ *X*\ ” and “\ *Y*\ ” as well as *“Screen Top”* and
+*“Screen Bottom”* information. The information required for monitoring
+wells is described below. The “\ *Add*,” “\ *Insert*,” and
+“\ *Delete*\ ” buttons on the right of the “\ *Monitoring Borehole*\ ”
+tab add or delete monitoring boreholes.
+
+.. figure:: media/figure_9_1_manual.png
+   :width: 3.60184in
+   :height: 4.62500in
+   :align: center
+
+   Figure 9.1 The “\ *Edit Observations*\ ” dialog box
+
+Name: 
+	The name (or other identifier) of the monitoring borehole.
+
+X: 
+	The *x* coordinate of the monitoring borehole (m or ft).
+
+Y: 
+	The *y* coordinate of the monitoring borehole (m or ft).
+
+Screen Top: 
+	Elevation at the top of the screen (m or ft).
+
+Screen Bottom: 
+	Elevation at the bottom of the screen (m or ft).
+
+To add a new piezometer, select the “\ *Piezometer*\ ” tab and then
+click “\ *Add*\ ” at the top of the dialog box. This adds a new
+“\ *Piezometer*\ ” group to the model, but no observations can be
+extracted unless individual piezometers are added to the group. Under
+each piezometer, different measurement points can be input (e.g.,
+multi-level piezometers). To add individual measurement points, click
+“\ *Add*\ ” on the lower right of the “\ *Edit Observations*\ ” dialog
+box and a new blank entry is added. Enter the name of the piezometer and
+the corresponding *x*, *y*, and *z* location.
+
+To navigate between different piezometers, a drop-down menu is available
+at the top. The “\ *Add*,” “\ *Insert*,” and “\ *Delete*\ ” buttons at
+the top of the “\ *Piezometer*\ ” tab add or delete piezometer groups.
+
+The information required for a piezometer is described below.
+
+.. figure:: media/figure_9_2_manual.png
+   :width: 3.59501in
+   :height: 4.61458in
+   :align: center
+
+   Figure 9.2 The “\ *Edit Observations*\ ” dialog box
+
+Name: 
+	The name (or other identifier) of the piezometer.
+
+X: 
+	The *x* coordinate of the piezometer (m or ft).
+
+Y: 
+	The *y* coordinate of the piezometer (m or ft).
+
+Z: 
+	The *z* coordinate of the piezometer (m or ft).
+
+At the base of the “\ *Edit Observation*\ ” menu, the user can import or
+export observation files using the “\ *Import”* and *“Export”* buttons.
+
+9.3 Hydrograph
+--------------
+
+To create hydrographs from simulation results, use the
+“\ *Hydrograph*\ ” function under the “\ *Results*\ ” drop-down menu.
+Ensure that model results have been imported from the .PLB file. In the
+“\ *Create Hydrograph File”* dialog box that opens, choose a directory
+to export the hydrograph file to and enter a name, then click *“Save.”*
+The groundwater-head data from monitoring boreholes and piezometers are
+then exported to a .DAT file. This file will include time steps,
+corresponding dates, well identification (ID), and corresponding
+groundwater-head data for all of the time steps. If the monitoring
+location becomes dewatered during the simulation, i.e., the groundwater
+head drops below the monitoring level, the hydrograph file will contain
+*“unsat”* appended to the head value. Also, if the monitoring location
+is mined out during the simulation, the hydrograph file will contain
+*“mined”* appended to the head value for that location. Data from this
+file can easily be plotted using Microsoft Excel\ :sup:`TM` or another
+plotting software, as shown in Figure 9.3.
+
+.. figure:: media/figure_9_3_manual.png
+   :width: 6.00000in
+   :height: 3.60178in
+   :align: center
+
+   Figure 9.3 Plotting hydrograph data from *MINEDW*
+
+9.4 Particle Tracking
+---------------------
+
+The particle tracking function (Figure 9.4) in **MINEDW** allows the
+user to investigate potential capture zones for pumping wells or the
+general movement of groundwater in the system. Particle tracks are
+calculated after a model run is completed using data stored in the .PLB
+file. The information required for particle tracking simulations is
+described below.
+
+.. figure:: media/figure_9_4_manual.png
+   :width: 4.18750in
+   :height: 4.70983in
+   :align: center
+
+   Figure 9.4 The “\ *Particle Tracking”* dialog box in *MINEDW*
+
+Start/End Time: 
+	Defines the start or end date and time for particle
+	tracking. If *“Forward”* is selected as the *“Tracking Direction,”* this
+	represents the start date time of the particle. Conversely, if
+	*“Backward”* is selected, it represents the end date time.
+
+Tracking Time (days): 
+	Defines the period through which particle tracking is conducted.
+
+Step Size (m): 
+	Defines the distance particles traverse in each step.
+
+Tracking Direction: 
+	Defines the direction (forward or reverse in time)
+	in which particle tracks are calculated.
+
+Add: 
+	Adds an entry in the window to the left where the starting or
+	ending XYZ data can be defined for a particle.
+
+Delete: 
+	Deletes the currently selected entry in the window to the left.
+
+Import: 
+	Imports a particle-tracking file that contains all of the
+	necessary information for a particle-tracking calculation.
+
+Export: 
+	Exports a particle-tracking file that contains the necessary
+	information for a particle-tracking calculation.
+
+OK: 
+	Calculates particle tracks if all parameters are defined and
+	closes the “\ *Particle Tracking*\ ” dialog box.
+
+Cancel: 
+	Closes the *“Particle Tracking”* dialog box.
+
+Results Output: 
+	Specifies the location and file name of the
+	particle-tracking file that is to be created.
+
+X: 
+	The *x* coordinate of the starting or ending position of the
+	particle.
+
+Y: 
+	The *y* coordinate of the starting or ending position of the
+	particle.
+
+Z: 
+	The *z* coordinate of the starting or ending position of the
+	particle.
+
+Advanced: 
+	Opens the *“Advanced Options”* dialog box (Figure 9.5).
+
+.. figure:: media/figure_9_5_manual.png
+   :width: 2.45833in
+   :height: 1.61458in
+   :align: center
+
+   Figure 9.5 The “\ *Advanced Options*\ ” dialog box
+
+Variogram Model: 
+	Allows the user to select *“Exponential,”*
+	*“Spherical,”* or *“Gaussian”* variograms for interpolation of head data
+	from a triangular mesh to a rectangular mesh.
+
+Variogram Range: 
+	Defines the range to use for the chosen variogram.
+
+Number of Neighbors: 
+	Defines the number of points to use in the interpolation.
+
+OK: 
+	Saves the changes and closes the *“Advanced Options”* dialog box.
+
+Cancel: 
+	Discards any changes and closes the *“Advanced Options”* dialog box.
+
+To use the particle-tracking function, first import the .PLB file using
+the *“Read Results…”* function under the *“Results”* menu. Next, open
+the *“Particle Tracking”* dialog box by clicking on *“Particle
+Tracking…”* under the *“Results”* menu. In the open dialog box, define
+the *“Start/End Time”* for particle tracking, the amount of time to
+track the particles in the box next to *“Tracking Time (days),”* and the
+*“Step Size (m).”* Choose “\ *Forward”* or “\ *Backward*\ ” for the type
+of particle tracking. To add particles, click *“Add,”* which is to the
+right of the *“Particle Tracking”* dialog box. This creates an entry
+where the *x*, *y*, and *z* location of the start or end of the particle
+track can be defined. When all the particles have been added, click the
+button next to “\ *Result Output*\ ”; this opens the *“Particle-Tracking
+Results”* dialog box. Using this dialog box, choose the location to save
+the particle-track file and enter a name for the file, then click
+“\ *Save.”* Finally, click “\ *OK”* to create the particle-tracking
+file.
+
+To visualize the particle tracks created in the preceding steps,
+navigate to the *“Post Processing”* plot items on the *“List”* tab of
+the *“Control Panel”* Pane and add a *“Particle Tracking”* plot item.
+Click the icon next to *“File”* on the “\ *Attribute”* tab to open the
+*“Select Particle-Tracking File”* dialog box. Using this dialog box,
+navigate to the location where the particle-tracking file was saved;
+select it and click *“Open.”* The particle tracks appear in the View
+Pane. The options described in Section 3.4.1.10 can be used to customize
+the particle tracks as needed.
+
+9.5 Section Flux
+----------------
+
+This function calculates groundwater flux across a cross-sectional area
+defined by the user. The inputs, as displayed in Figure 9.6, are *x* and
+*y* coordinates of the start and end points of the cross-sectional area
+as well as the *z* coordinates of the top and bottom of the area across
+which flux will be calculated. When *“Calculate”* is pressed,
+**MINEDW** will calculate the flux in m\ :sup:`3`/day or
+ft\ :sup:`3`/day and display the result in the bottom of the dialog box.
+Click *“OK”* to close the *“Section Flux”* dialog box.
+
+.. figure:: media/figure_9_6_manual.png
+   :width: 2.84415in
+   :height: 2.86498in
+   :align: center
+
+   Figure 9.6 The “\ *Section Flux”* dialog box
+
+9.6 Seepage Component to Pit
+----------------------------
+
+**MINEDW** provides the user with a function to compute seepage to the
+pit and a plot item to view the locations where seepage is occurring.
+Seepage to the pit is recorded in a file with an .SEP extension. Seepage
+recorded in this file includes seepage during mining operations and
+seepage during pit-lake formation. Seepage is recorded for each time
+step at each node that forms the open pit. Using the “\ *Seepage
+Component to Pit*\ ” function and the .SEP file, the user can compute
+seepage to the pit by geological unit or by another user-specified
+division. This output can be plotted or used in geochemical modeling for
+pit-lake chemistry predictions. With the “\ *Pit Flux”* plot item and
+the .SEP file, the user can visualize the locations and relative
+magnitude of seepage that is occurring at any time step after the start
+of mining. This output may be used to assess future dewatering needs and
+optimum locations for in-pit dewatering solutions. The “\ *Seepage
+Component to Pit*\ ” function and “\ *Flux”* plot item are explained in
+the following sections.
+
+9.6.1 Calculating Seepage to the Pit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+The “\ *Seepage Component to Pit*\ ” function computes the total seepage
+to the pit and contributions of each geologic unit to total seepage
+through time. To compute seepage to the pit, click “\ *Results*\ ” on
+the Main Menu banner, and then choose “\ *Seepage Component to Pit*.”
+The “\ *Seepage Component to Pit*\ ” dialog box appears (Figure 9.7).
+Select the .SEP file from the folder where **MINEDW** was executed.
+Choose “\ *Geological Units*\ ” to determine the seepage rate from each
+geologic unit. To define an output name and location, click the button
+at the bottom right box. The “\ *Save Pit Flow File*\ ” dialog box
+appears (Figure 9.8).
+
+.. figure:: media/figure_9_7_manual.png
+   :width: 3.62551in
+   :height: 1.70857in
+   :align: center
+
+   Figure 9.7 The “\ *Seepage Component to Pit*\ ” dialog box
+
+.. figure:: media/figure_9_8_manual.png
+   :width: 6.00000in
+   :height: 4.18750in
+   :align: center
+
+   Figure 9.8 The “\ *Save Pit Flow File*\ ” dialog box
+
+Type a name at the bottom of the window and click “\ *Save*.” In the
+following dialog box, click “\ *OK*.” The seepage file is then created.
+
+The created file can be imported to Microsoft Excel\ :sup:`TM` or other
+graphing software in which total seepage versus time (Figure 9.9) and
+seepage from each geologic unit through time (Figure 9.10) can be
+plotted.
+
+.. figure:: media/figure_9_9_manual.png
+   :width: 4.92782in
+   :height: 3.07128in
+   :align: center
+
+   Figure 9.9 Total seepage to the pit through time
+
+.. figure:: media/figure_9_10_manual.png
+   :width: 5.03860in
+   :height: 3.13153in
+   :align: center
+
+   Figure 9.10 Seepage rate from each geologic unit through time
+
+9.6.2 Visualizing Seepage and Drains
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As previously mentioned, it is possible to visualize the location where
+seepage to the pit is occurring, as shown in Figure 9.11. To do this,
+expand the *“Post Processing”* item under the *“List”* tab in the
+“\ *Control Panel*\ ” Pane. Add a *“Flux”* plot item to the View Pane by
+double-clicking it. On the *“Attributes”* tab for the *“Flux”* plot
+item, select “\ **+**\ ” next to the *“File”* attribute. In the *“Select
+Flux File”* dialog box that opens, change the type of file to *“Seepage
+Flux Files (mdw\_output.SEP)”* using the drop-down list next to *“Files
+of Type.”* Now navigate to the location where the model was executed and
+select the file ending in .SEP. The nodes where seepage to the pit
+occurred are visible as colored squares. The colors indicate the
+magnitude of seepage occurring at the node forming part of the open pit.
+The size and color ramp can be modified on the attributes tab of the
+“\ *Flux”* plot item.
+
+.. figure:: media/figure_9_11_manual.png
+   :width: 6.00000in
+   :height: 3.60320in
+   :align: center
+
+   Figure 9.11 Visualizing seepage locations within the open pit
+
+The *“Flux”* plot item can also be used to visualize the magnitude of
+flow through *“Drain”* boundary conditions. Seepage nodes that form the
+pit shell are considered drains and are automatically created when a
+mine plan is created (Section 7.6). *“Drains,”* in contrast, are created
+by the user and can be used to simulate sinks such as underground
+excavation, sub-horizontal drains, and sumps. The workflow for
+visualizing “\ *Drains”* is similar to the workflow for seepage, with
+one exception: instead of choosing “\ *mdw\_output.SEP,”* select the
+“\ *mdw\_output.DRN”* option if it is not already selected, then
+navigate to the .DRN file and select it. Flow through user-created
+drains is displayed in the View Pane. The size and color of the drain
+nodes can be altered using the “\ *Contour”* and “\ *Point”* attributes.
+
+9.7 Pit Node Elevation and Water Table
+--------------------------------------
+
+**MINEDW** enables the user to plot pit node elevations and the water
+table beneath the pit over time. Click “\ *Results*\ ” from the Main
+Menu banner, and then choose “\ *Pit Node Elevation and Water Table*.”
+The “\ *Elevation of Pit Node*\ ” dialog box appears (Figure 9.12).
+Enter the “\ *Node Number*\ ” on the left and click “\ *View*.” For the
+specified node, the changes in the water table beneath the node and the
+pit-surface elevation are plotted as shown in Figure 9.12.
+
+.. figure:: media/figure_9_12_manual.png
+   :width: 6.00000in
+   :height: 3.83013in
+   :align: center
+
+   Figure 9.12 The “\ *Elevation of Pit Node*\ ” dialog box
+
+If multiple nodes are to be plotted, click “\ *Add*\ ” and insert
+additional node numbers. Then click “\ *View.*\ ”
+
+9.8 Export State
+----------------
+
+Data from **MINEDW** simulations can be exported for all of the nodes
+to a .DAT file. 2-D data, which include “\ *X*,” “\ *Y*,”
+“\ *Elevation*,” “\ *Head*,” “\ *Pressure*,” “\ *Water* *Table*,”
+“\ *Drawdown*,” and “\ *Head* *Difference,*\ ” can be exported for each
+model layer. For 3-D data, the options are 1) “\ *X*,” 2) “\ *Y*,” 3)
+“\ *Elevation*,” 4) “\ *Head*,” 5) “\ *Pressure*,” and 6) “\ *Head*
+*Difference.*\ ” To export these data in 2-D or 3-D, choose “\ *Export
+State*\ ” from the “\ *Results*\ ” drop-down menu. Using the “\ *Choose
+Export Items*\ ” dialog box (Figure 9.13), select the appropriate data
+set in *“2-D”* or *“3-D”* and then click *“OK”* to generate the file.
+Note, if neither the *“X”* nor *“Y”* box is checked, the data are
+exported as a list of values. The coordinates associated with these
+values correspond to the nodes in the model for the selected time step.
+They are ordered using the same order as nodes in the “node.fem” file
+(i.e., 1 to *n*) generated by **MINEDW**. Alternatively, checking the
+boxes next to *“X,” “Y,”* and “\ *Elevation*\ ” adds coordinates for
+each of the exported data values.
+
+.. figure:: media/figure_9_13_manual.png
+   :width: 2.34375in
+   :height: 2.47917in
+   :align: center
+
+   Figure 9.13 The “\ *Choose Export Items*\ ” dialog box with “\ *2D*\ ”
+   selected
+
+9.9 Exporting Pore Pressure
+---------------------------
+
+To export the pore pressures in 3-D, click “\ *Results*\ ” from the Main
+Menu banner and then choose “\ *Export Pore Pressure*.” The “\ *Output
+Pore Pressure*\ ” dialog box appears (Figure 9.14).
+
+.. figure:: media/figure_9_14_manual.png
+   :width: 6.00000in
+   :height: 4.03910in
+   :align: center
+
+   Figure 9.14 The “\ *Output Pore Pressure*\ ” dialog box
+
+Select the folder and type a file name at the bottom of the “\ *Output
+Pore Pressure*\ ” dialog box, and then click “\ *Save.*\ ” The
+“\ *Grid-Export Pore Pressure*\ ” dialog box opens. Choose the
+interpolation method (Inverse Distance or Kriging) and define the
+related parameters (Figure 9.15). The options for this menu are
+described below.
+
+Inverse Distance: 
+	Option to use the inverse-distance method for interpolation.
+
+Kriging: 
+	Option to use the kriging method for interpolation.
+
+Number of Points to Search: 
+	Data points to use in the kriging or inverse-distance method.
+
+Power: 
+	Power used in the inverse-distance method.
+
+Range: 
+	Range used in the kriging method.
+
+X Direction (Minimum, Maximum): 
+	The region defined along the x-axis to include in the export.
+
+Y Direction (Minimum, Maximum): 
+	The region defined along the y-axis to include in the export.
+
+Z Direction (Minimum, Maximum): 
+	The region defined along the z-axis to include in the export.
+
+# of Lines (X, Y, Z): 
+	The grid spacing in the *x*, *y*, and *z* directions.
+
+Save: 
+	Option to save a file with the parameters for exporting pore pressures.
+
+Open: 
+	Opens a saved parameter file.
+
+Define the minimum and maximum *x*, *y*, and *z* coordinates and the
+number of lines (the number of lines defines the grid space), then click
+“\ *OK*.”
+
+.. figure:: media/figure_9_15_manual.png
+   :width: 4.97200in
+   :height: 3.53125in
+   :align: center
+
+   Figure 9.15 The “\ *Grid – Export Pore Pressure*\ ” dialog box
+
+The pore pressures are be interpolated to the defined grid and saved in
+a .DAT file. The .DAT file includes *x*, *y*, and *z* coordinates as
+well as pore pressures.
+
+9.10 Export Cross-Section Pore Pressure
+---------------------------------------
+
+**MINEDW** can export the pore pressures in both 2-D and 3-D to a .DAT
+file with a specified grid space and dimensions for geomechanical
+models. To export the pore pressures in a cross section (2-D), click
+“\ *Results*\ ” from the Main Menu banner and then choose “E\ *xport
+Cross-Section Pore Pressure.*\ ” The “\ *Output Cross-Section Pore
+Pressure*\ ” dialog box appears (Figure 9.16).
+
+.. figure:: media/figure_9_16_manual.png
+   :width: 6.00000in
+   :height: 4.03910in
+   :align: center
+
+   Figure 9.16 The “\ *Output Cross-Section Pore Pressure*\ ” dialog box
+
+Select the folder and type a file name at the bottom of the “\ *Output
+Cross-Section Pore Pressure*\ ” dialog box and click “\ *Save*.” The
+“\ *Grid – Export Cross-Section Pore Pressure*\ ” dialog box appears.
+Choose the interpolation method (Inverse Distance or Kriging) and define
+the related parameters (Figure 9.17). The options for this menu are
+described below.
+
+Inverse Distance: 
+	Option to use the inverse-distance method for interpolation.
+
+Kriging: 
+	Option to use the kriging method for interpolation.
+
+Number of Points to Search: 
+	Data points to use in the kriging or inverse-distance method.
+
+Power: 
+	Power used in the inverse-distance method.
+
+Range: 
+	Range used in the kriging method.
+
+Vertical (Minimum, Maximum): 
+	The height (Minimum Z, Maximum Z) of the cross section to be exported.
+
+Start X/Y: 
+	The starting location of the cross section.
+
+End X/Y: 
+	The ending location of the cross section.
+
+# of Lines (Horizontal, Vertical): 
+	The discretization in the *x* and *y* directions.
+
+.. figure:: media/figure_9_17_manual.png
+   :width: 4.77705in
+   :height: 3.53125in
+   :align: center
+
+   Figure 9.17 The “Grid – Export Cross-Section Pore Pressure” dialog box
+
+Define the minimum and maximum *x* and *y* coordinates of the cross
+section and the number of lines (changing the number of lines changes
+the grid space), then click “\ *OK*.” The pore pressures are
+interpolated to the defined grid and are saved in a .DAT file. The .DAT
+file includes *x* and *y* coordinates as well as pore pressures.
+
+9.11 Drawdown-Base Time Step
+----------------------------
+
+The “\ *Drawdown-Base Time Step*\ ” option enables users to select a
+date from which drawdown is calculated. In most cases, the initial date
+is the first time step of the simulation. If the drawdown is to be
+calculated using a different time step, then the date for the first time
+step should be entered. Select “\ *Drawdown-Base Time Step*\ ” from the
+“\ *Results*\ ” drop-down menu to open the “\ *Define Drawdown Initial
+Date/Time*\ ” dialog box (Figure 9.18).
+
+.. figure:: media/figure_9_18_manual.png
+   :width: 3.26087in
+   :height: 1.07307in
+   :align: center
+
+   Figure 9.18 The “\ *Define Drawdown Initial Time/Date*\ ” dialog box
+
+9.12 Visualizing the Results
+----------------------------
+
+**MINEDW** offers different options for presenting the simulation
+results graphically. The “\ *Control Panel*\ ” options can be used to
+display the results. Choose the “\ *Node*\ ” plot items under the
+“\ *List*\ ” tab in the “\ *Control Panel*\ ” Pane to produce both 2-D
+and 3-D contours. Using “\ *2D Contour”* plot items, 2-D color floods of
+head, pore pressure, head difference, water table, and drawdown can be
+produced. Using “\ *3D Contour”* plot items, 3-D contours of head, pore
+pressure, and head difference can be created. The display for each of
+these plots can be customized using the *“Attributes”* tab in the
+“\ *Control Panel*\ ” Pane (Chapter 3). The figures below are examples
+of the 2-D and 3-D plots (Figures 9.19 and 9.20).
+
+.. figure:: media/figure_9_19_manual.png
+   :width: 5.75in
+   :height: 4.29in
+   :align: center
+
+   Figure 9.19 Sample 2-D contour plots
+
+.. figure:: media/figure_9_20_manual.png
+   :width: 5.74in
+   :height: 4.12in
+   :align: center
+
+   Figure 9.20 Sample 3-D contour plots
+
+To create a 3-D pore-pressure plot, select the “\ *List*\ ” tab from the
+“\ *Control Panel*\ ” Pane, expand the “\ *Node*\ ” item, and then
+double-click the “\ *3D Contour*\ ” option (Figure 9.21). Next, select
+the “\ *Attribute*\ ” tab from the “\ *Control Panel*\ ” Pane and select
+“\ *Pressure*\ ” from the “\ *Color By*\ ” setting. Pore pressures are
+visible in the View Pane. By changing the time step on the time-step
+slider, the desired time step can be viewed.
+
+.. figure:: media/figure_9_21_manual.png
+   :width: 3.66718in
+   :height: 4.49021in
+   :align: center
+
+   Figure 9.21 Attributes of the “\ *3D Contour*\ ” plot item
+
+To export an image of the 3-D pore-pressure plot, ensure that the
+desired time step is selected, then choose “\ *Export Base*\ ” from the
+“\ *File*\ ” item on the Main Menu banner and select “\ *Bitmap*.” The
+exported bitmap is shown in Figure 9.22.
+
+.. figure:: media/figure_9_22_manual.png
+   :width: 5.53604in
+   :height: 3.50000in
+   :align: center
+
+   Figure 9.22 Screen display of head distribution in 3-D
+
+9.13 Cross Sections
+-------------------
+
+Cross sections are useful because they allow the user to visualize
+different types of data together at any point within the model domain.
+For example, a user may wish to view a cross section of the open pit
+showing geological units overlaid by contours of pore pressure, head, or
+head difference. This can be achieved by using the “\ *3D Element*,”
+“\ *Isosurface,”* and “\ *Plane”* plot items.
+
+To draw a cross section, the first step is to plot the desired “\ *3D
+Contour*\ ” (*Elevation*, *Head*, *Pressure,* or *Head Difference*) or
+“\ *3D Element*\ ” plot item. Model geology and pore pressures are used
+as an example; however, similar steps can be followed to plot a cross
+section of any other model results.
+
+To view model geology and pore pressures, select the “\ *List*\ ” tab
+from the “\ *Control Panel*\ ” Pane, expand the “\ *Element”* item, and
+double-click *“3D Element.”* Now, add an “\ *Isosurface*\ ” plot item
+(be sure to import results) by expanding the “\ *Node*\ ” item and
+double-clicking *“Isosurface”* (Figure 9.23). On the *“Attributes”* tab
+for the *“Isosurface”* plot item, select “\ *Pressure*\ ” as the
+“\ *Color By*\ ” attribute. A 3-D color flood of model geology with
+*“Isosurfaces”* of pore pressures appears in the View Pane, but the
+*“Isosurfaces”* are not visible, as they are hidden by the *“3D
+Element*.” Select the desired time step to view with the time-step
+slider.
+
+.. figure:: media/figure_9_23_manual.png
+   :width: 3.56597in
+   :height: 5.57569in
+   :align: center
+
+   Figure 9.23 The “\ *3D Element*\ ” and “\ *Isosurface*\ ” plot items
+
+The easiest method for creating a cross section is to use the *“Plane”*
+tool located on the Toolbar. To use it, click on it, then select two
+points on the displayed *“3D Element*\ ” plot item. The *“3D Element”*
+and *“Isosurface”* plot items will be cut by a plane that passes through
+the two points that were selected.
+
+Alternatively, create a cross section by selecting the “\ *List*\ ” tab
+from the “\ *Control Panel*\ ” Pane, expanding “\ *Cutting Planes,*\ ”
+and double-clicking “\ *Plane*\ ” (Figure 9.24).
+
+.. figure:: media/figure_9_24_manual.png
+   :width: 3.52847in
+   :height: 4.34931in
+   :align: center
+
+   Figure 9.24 The *“Plane”* plot item
+
+On the “\ *Attributes*\ ” tab, define the origin, dip, and dip direction
+of the plane (Figure 9.25).
+
+.. figure:: media/figure_9_25_manual.png
+   :width: 3.50972in
+   :height: 3.79236in
+   :align: center
+
+   Figure 9.25 The attributes of the “\ *Plane*\ ” plot item
+
+For both methods of creating a cross section, display the front or back
+sections that have been cut (i.e., to turn a 2-D item into a 3-D item)
+by selecting “\ *3D Element*\ ” from the list in the “\ *Plot Items*\ ”
+pane and checking the box for “\ *Front*\ ” or “\ *Back*\ ” under
+“\ *Cutplane*\ ” on the “\ *Attributes*\ ” tab (Figure 9.26).
+
+.. figure:: media/figure_9_26_manual.png
+   :width: 3.56597in
+   :height: 5.60347in
+   :align: center
+
+   Figure 9.26 The attributes of the “\ *3D Element*\ ” plot item
+
+The cross section will display model geology through the open-pit area
+overlaid by contours of pore pressure (Figure 9.27). To export the plot
+as a bitmap, select “\ *Export Base*\ ” under the “\ *File*\ ” menu and
+choose the “\ *Bitmap*\ ” option.
+
+.. figure:: media/figure_9_27_manual.png
+   :width: 6.00000in
+   :height: 3.79332in
+   :align: center
+
+   Figure 9.27 Screen display of output from the model run
+
+9.14 Pit Lake – Water Level vs. Time
+------------------------------------
+
+The water-level change in a pit lake can be computed in **MINEDW** if
+a pit lake is simulated in a model. To plot pit-lake level changes over
+time, import the .LAK file (Appendix B) from the folder where
+**MINEDW** was executed to *Microsoft Excel* :sup:`TM` or other
+plotting software (Figure 9.28). The .LAK file also contains other
+useful information about the pit lake. This file contains the net flux
+to the pit lake as well as seepage to and from the pit lake. Evaporative
+losses, volume, and lake area are also recorded in this file. Note that
+these data are only recorded in time steps during which a pit lake is
+active. If seepage to the pit occurs during mining operations, it is not
+recorded in the .LAK file. This seepage data can be located in the .SEP
+file (Section 9.6).
+
+.. figure:: media/figure_9_28_manual.png
+   :width: 4.50000in
+   :height: 2.77083in
+   :align: center
+
+   Figure 9.28 Pit-lake water level with time
+
+9.15 Pumping Well – Discharge vs. Time
+--------------------------------------
+
+Pumping rates are reported in the output file with an .FLW extension.
+This file also contains the flux for each of the constant-head groups
+defined in the “\ *Constant-Head Boundary*\ ” dialog box. The .FLW file
+reports extraction of groundwater from the model as negative numbers and
+addition of groundwater as positive numbers. Flux into or out of the
+model domain is reported for each time step.
